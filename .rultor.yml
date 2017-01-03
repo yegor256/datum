@@ -1,0 +1,15 @@
+install: |
+  sudo apt-get update
+  sudo gem install pdd
+release:
+  script: |-
+    sudo bundle install
+    rake
+  commanders:
+  - yegor256
+architect:
+- yegor256
+- davvd
+merge:
+  commanders: []
+deploy: {}
