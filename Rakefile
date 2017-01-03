@@ -18,6 +18,7 @@
 require 'nokogiri'
 require 'rake'
 require 'rake/clean'
+require 'date'
 
 task default: [:clean, :xsd, :copyright]
 
