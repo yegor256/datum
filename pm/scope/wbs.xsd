@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright (c) 2016 Zerocracy
+ * Copyright (c) 2016-2017 Zerocracy
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to read
@@ -22,7 +22,7 @@
             <xs:element name="name" minOccurs="0" maxOccurs="1">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:pattern value="[A-Z0-9a-z.-#]{3,}"/>
+                        <xs:pattern value="[A-Z0-9a-z.\-#]{3,}"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
