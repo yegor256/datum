@@ -6,7 +6,5 @@ and rules of usage.
 
 Files:
 
-  * `scope.xml`
-  * `schedule.xml`
-  * `budget.xml`
+  * `wbs.xml`
 
