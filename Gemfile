@@ -16,7 +16,6 @@
 # SOFTWARE.
 
 source 'https://rubygems.org'
-ruby '2.3.3'
 
 gem 'rake', '12.0.0'
 gem 'nokogiri', '1.7.0'
