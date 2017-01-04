@@ -26,12 +26,13 @@ desc 'Validate all XML/XSD files'
 task :xsd do
   total = 0
   Dir['xml/**/*.xml'].each do |p|
+    puts "Checking #{p}..."
     xsd = Nokogiri::XML::Schema(
-      File.read(p.sub(/xml\//, '').sub(/\/[^\/]+\.xml$/, '.xsd'))
+      File.read(p.sub(/xml\//, 'xsd/').sub(/\/[^\/]+\.xml$/, '.xsd'))
     )
     xml = Nokogiri::XML(File.read(p))
     xsd.validate(xml).each do |error|
-      puts "#{p}: #{error.message}"
+      puts "#{p} #{error.line}: #{error.message}"
       total += 1
     end
   end
