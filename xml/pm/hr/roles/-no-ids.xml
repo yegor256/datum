@@ -17,11 +17,9 @@
  -->
 <roles>
   <person id="U98TYNF0L">
-    <role>PO</role>
-    <role>PO</role>
     <role>ARC</role>
   </person>
-  <person id="U98TYNF0T">
+  <person>
     <role>DEV</role>
   </person>
 </roles>

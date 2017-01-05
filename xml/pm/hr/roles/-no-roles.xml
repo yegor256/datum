@@ -16,14 +16,9 @@
  * SOFTWARE.
  -->
 <roles>
-  <person>
-    <alias>github:yegor256</alias>
-    <alias>slack:U3F081G9K</alias>
-    <role>PO</role>
-    <role>ARC</role>
+  <person id="U98TYNF0L">
   </person>
-  <person>
-    <alias>slack:U3F081G9K</alias>
+  <person id="U98TYNF0F">
     <role>DEV</role>
   </person>
 </roles>

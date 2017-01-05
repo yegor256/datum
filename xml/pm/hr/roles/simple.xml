@@ -16,16 +16,18 @@
  * SOFTWARE.
  -->
 <roles>
-  <person>
-    <alias>github:yegor256</alias>
-    <alias>slack:U3F081G9K</alias>
+  <person id="U98TYNF0L">
+    <role>ARC</role>
+    <role>PO</role>
+  </person>
+  <person id="U0000000">
     <role>PO</role>
     <role>ARC</role>
+    <role>DEV</role>
   </person>
-  <person>
-    <alias>github:dmarkov</alias>
-    <alias>slack:U0000000</alias>
+  <person id="U0000001">
     <role>PO</role>
+    <role>TEST</role>
     <role>ARC</role>
     <role>DEV</role>
   </person>
