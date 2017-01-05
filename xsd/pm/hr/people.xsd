@@ -17,8 +17,23 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:complexType name="link">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="rel" use="required" type="xs:string"/>
+                <xs:attribute name="href" use="required" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
     <xs:complexType name="person">
-        <xs:sequence>
+        <xs:all>
+            <xs:element name="name" minOccurs="0" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value=".{3,120}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
             <xs:element name="rate" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                     <xs:simpleContent>
@@ -34,17 +49,25 @@
                     </xs:simpleContent>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="link" minOccurs="0" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:simpleContent>
-                        <xs:extension base="xs:string">
-                            <xs:attribute name="rel" use="required" type="xs:string"/>
-                            <xs:attribute name="href" use="required" type="xs:string"/>
-                        </xs:extension>
-                    </xs:simpleContent>
-                </xs:complexType>
+            <xs:element name="email" minOccurs="0" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
+                    </xs:restriction>
+                </xs:simpleType>
             </xs:element>
-        </xs:sequence>
+            <xs:element name="links" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="link" type="link" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:unique name="personLink">
+                    <xs:selector xpath="link" />
+                    <xs:field xpath="@rel" />
+                </xs:unique>
+            </xs:element>
+        </xs:all>
         <xs:attribute name="id" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -56,12 +79,7 @@
     <xs:element name="people">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="person" type="person" minOccurs="0" maxOccurs="unbounded">
-                    <xs:unique name="personLink">
-                        <xs:selector xpath="link" />
-                        <xs:field xpath="@rel" />
-                    </xs:unique>
-                </xs:element>
+                <xs:element name="person" type="person" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
         <xs:unique name="uniqueID">

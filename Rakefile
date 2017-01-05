@@ -27,9 +27,13 @@ task :xsd do
   total = 0
   Dir['xml/**/*.xml'].each do |p|
     puts "Checking #{p}..."
-    xsd = Nokogiri::XML::Schema(
-      File.read(p.sub(/xml\//, 'xsd/').sub(/\/[^\/]+\.xml$/, '.xsd'))
-    )
+    f = p.sub(/xml\//, 'xsd/').sub(/\/[^\/]+\.xml$/, '.xsd')
+    begin
+      xsd = Nokogiri::XML::Schema(File.read(f))
+    rescue Nokogiri::XML::SyntaxError => e
+      puts "#{f} #{e.line}: #{e.message}"
+      raise 'XSD is invalid'
+    end
     xml = Nokogiri::XML(File.read(p))
     if File.basename(p).start_with?('-')
       if xsd.validate(xml).empty?

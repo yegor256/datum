@@ -17,7 +17,9 @@
  -->
 <people>
   <person id="7YY78T99S">
-    <link rel="github" href="yegor256"/>
-    <link rel="github" href="dmarkov"/>
+    <links>
+      <link rel="github" href="yegor256"/>
+      <link rel="github" href="dmarkov"/>
+    </links>
   </person>
 </people>
