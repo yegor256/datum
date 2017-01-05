@@ -17,6 +17,11 @@
  -->
 <people>
   <person id="7YY78T99S">
+    <rate currency="EUR">30.50</rate>
     <link rel="github" href="yegor256"/>
+  </person>
+  <person id="7YYZZT99S">
+    <rate>25</rate>
+    <link rel="github" href="davvd"/>
   </person>
 </people>
