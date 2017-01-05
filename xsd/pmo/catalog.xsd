@@ -32,6 +32,7 @@
     </xs:complexType>
     <xs:complexType name="project">
         <xs:all>
+            <xs:element name="parent" minOccurs="0" maxOccurs="1" type="id"/>
             <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
             <xs:element name="prefix" minOccurs="0" maxOccurs="1">
                 <xs:simpleType>
