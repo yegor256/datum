@@ -31,9 +31,16 @@ task :xsd do
       File.read(p.sub(/xml\//, 'xsd/').sub(/\/[^\/]+\.xml$/, '.xsd'))
     )
     xml = Nokogiri::XML(File.read(p))
-    xsd.validate(xml).each do |error|
-      puts "#{p} #{error.line}: #{error.message}"
-      total += 1
+    if File.basename(p).start_with?('-')
+      if xsd.validate(xml).empty?
+        puts "#{p} no errors, but we are expecting some"
+        total += 1
+      end
+    else
+      xsd.validate(xml).each do |error|
+        puts "#{p} #{error.line}: #{error.message}"
+        total += 1
+      end
     end
   end
   raise "#{total} errors" unless total == 0
