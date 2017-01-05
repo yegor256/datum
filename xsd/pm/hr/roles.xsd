@@ -17,34 +17,42 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:complexType name="role">
-        <xs:all>
-            <xs:element name="name" minOccurs="1" maxOccurs="1">
+    <xs:complexType name="person">
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="role">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:pattern value="[A-Z]{2,4}"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="person" minOccurs="1" maxOccurs="1">
+            <xs:element name="alias">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:pattern value="[a-z]{2,}:.+"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-        </xs:all>
+        </xs:choice>
     </xs:complexType>
     <xs:element name="roles">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="role" type="role" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="person" type="person" minOccurs="0" maxOccurs="unbounded">
+                    <xs:unique name="aliasUnique">
+                        <xs:selector xpath="alias" />
+                        <xs:field xpath="." />
+                    </xs:unique>
+                    <xs:unique name="roleUnique">
+                        <xs:selector xpath="role" />
+                        <xs:field xpath="." />
+                    </xs:unique>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
-        <xs:unique name="roleUnique">
-            <xs:selector xpath="role" />
-            <xs:field xpath="name" />
-            <xs:field xpath="person" />
+        <xs:unique name="aliasesUnique">
+            <xs:selector xpath="person/alias" />
+            <xs:field xpath="." />
         </xs:unique>
     </xs:element>
 </xs:schema>
