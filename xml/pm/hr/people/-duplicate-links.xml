@@ -16,10 +16,8 @@
  * SOFTWARE.
  -->
 <people>
-  <user id="7YY78T99S">
-    <created>2016-12-29T09:03:21.684Z</created>
-    <prefix>users/2016/12/7YY78T99S/</prefix>
+  <person id="7YY78T99S">
     <link rel="github" href="yegor256"/>
     <link rel="github" href="dmarkov"/>
-  </user>
+  </person>
 </people>
