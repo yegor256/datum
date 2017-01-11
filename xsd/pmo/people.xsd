@@ -17,6 +17,19 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:complexType name="cash">
+        <xs:simpleContent>
+            <xs:extension base="xs:float">
+                <xs:attribute name="currency" use="optional">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[A-Z]{3}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
     <xs:complexType name="link">
         <xs:simpleContent>
             <xs:extension base="xs:string">
@@ -34,21 +47,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="rate" minOccurs="0" maxOccurs="1">
-                <xs:complexType>
-                    <xs:simpleContent>
-                        <xs:extension base="xs:float">
-                            <xs:attribute name="currency" use="optional">
-                                <xs:simpleType>
-                                    <xs:restriction base="xs:string">
-                                        <xs:pattern value="[A-Z]{3}"/>
-                                    </xs:restriction>
-                                </xs:simpleType>
-                            </xs:attribute>
-                        </xs:extension>
-                    </xs:simpleContent>
-                </xs:complexType>
-            </xs:element>
+            <xs:element name="rate" type="cash" minOccurs="0" maxOccurs="1"/>
             <xs:element name="email" minOccurs="0" maxOccurs="1">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
