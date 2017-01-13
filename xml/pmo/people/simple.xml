@@ -38,4 +38,13 @@
       <skill>csharp</skill>
     </skills>
   </person>
+  <person id="7YYZZUYTS">
+    <links>
+      <link rel="github" href="dude"/>
+    </links>
+    <rate>25</rate>
+    <skills>
+      <skill>java8</skill>
+    </skills>
+  </person>
 </people>
