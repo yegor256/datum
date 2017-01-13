@@ -29,5 +29,13 @@
     <links>
       <link rel="github" href="davvd"/>
     </links>
+    <skills>
+      <skill>java8</skill>
+      <skill>java.spring</skill>
+      <skill>ruby.sinatra</skill>
+      <skill>jquery</skill>
+      <skill>cpp</skill>
+      <skill>csharp</skill>
+    </skills>
   </person>
 </people>
