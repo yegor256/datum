@@ -69,6 +69,7 @@
                 <xs:unique name="personLink">
                     <xs:selector xpath="link" />
                     <xs:field xpath="@rel" />
+                    <xs:field xpath="@href" />
                 </xs:unique>
             </xs:element>
             <xs:element name="skills" minOccurs="0" maxOccurs="1">
@@ -86,7 +87,7 @@
         <xs:attribute name="id" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
-                    <xs:pattern value="[A-Z0-9]{9,}"/>
+                    <xs:pattern value="[a-z0-9\-]{3,}"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>

@@ -16,18 +16,18 @@
  * SOFTWARE.
  -->
 <people>
-  <person id="7YY78T99S">
+  <person id="yegor256">
     <name>Yegor Bugayenko</name>
     <rate currency="EUR">30.50</rate>
     <email>yegor256@gmail.com</email>
     <links>
-      <link rel="github" href="yegor256"/>
+      <link rel="slack" href="7YYZZT99S"/>
     </links>
   </person>
-  <person id="7YYZZT99S">
+  <person id="davvd">
     <rate>25</rate>
     <links>
-      <link rel="github" href="davvd"/>
+      <link rel="slack" href="7YYZZT99F"/>
     </links>
     <skills>
       <skill>java8</skill>
@@ -38,9 +38,11 @@
       <skill>csharp</skill>
     </skills>
   </person>
-  <person id="7YYZZUYTS">
+  <person id="alex-palevsky">
     <links>
-      <link rel="github" href="dude"/>
+      <link rel="slack" href="7YYZZT9RR"/>
+      <link rel="slack" href="7YYKYT9RR"/>
+      <link rel="slack" href="U66KYT9RR"/>
     </links>
     <rate>25</rate>
     <skills>
