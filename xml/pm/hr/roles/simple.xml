@@ -16,16 +16,16 @@
  * SOFTWARE.
  -->
 <roles>
-  <person id="U98TYNF0L">
+  <person id="yegor256">
     <role>ARC</role>
     <role>PO</role>
   </person>
-  <person id="U0000000">
+  <person id="davvd">
     <role>PO</role>
     <role>ARC</role>
     <role>DEV</role>
   </person>
-  <person id="U0000001">
+  <person id="alex-palevsky">
     <role>PO</role>
     <role>TEST</role>
     <role>ARC</role>
