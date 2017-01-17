@@ -50,6 +50,7 @@
                 <xs:unique name="uniqueLink">
                     <xs:selector xpath="link" />
                     <xs:field xpath="@rel" />
+                    <xs:field xpath="@href" />
                 </xs:unique>
             </xs:element>
         </xs:all>

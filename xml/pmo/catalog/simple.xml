@@ -22,6 +22,8 @@
     <prefix>2016/12/7YY78T99S/</prefix>
     <links>
       <link rel="github" href="yegor256/pdd"/>
+      <link rel="github" href="yegor256/est"/>
+      <link rel="github" href="yegor256/hoc"/>
       <link rel="jira" href="https://jira.example.com"/>
     </links>
   </project>
