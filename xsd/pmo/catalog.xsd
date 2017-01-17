@@ -47,11 +47,6 @@
                         <xs:element name="link" type="link" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:sequence>
                 </xs:complexType>
-                <xs:unique name="uniqueLink">
-                    <xs:selector xpath="link" />
-                    <xs:field xpath="@rel" />
-                    <xs:field xpath="@href" />
-                </xs:unique>
             </xs:element>
         </xs:all>
         <xs:attribute name="id" type="id" use="required"/>
@@ -69,6 +64,11 @@
         <xs:unique name="uniquePrefix">
             <xs:selector xpath="project" />
             <xs:field xpath="prefix" />
+        </xs:unique>
+        <xs:unique name="uniqueLink">
+            <xs:selector xpath="project/links/link" />
+            <xs:field xpath="@rel" />
+            <xs:field xpath="@href" />
         </xs:unique>
     </xs:element>
 </xs:schema>
