@@ -20,10 +20,25 @@
     <xs:complexType name="cash">
         <xs:simpleContent>
             <xs:extension base="xs:float">
-                <xs:attribute name="currency" use="optional">
+                <xs:attribute name="currency" use="required">
                     <xs:simpleType>
                         <xs:restriction base="xs:string">
                             <xs:pattern value="[A-Z]{3}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="wallet">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="bank" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="paypal" />
+                            <xs:enumeration value="btc" />
+                            <xs:enumeration value="upwork" />
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:attribute>
@@ -53,6 +68,7 @@
                 </xs:simpleType>
             </xs:element>
             <xs:element name="rate" type="cash" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="wallet" type="wallet" minOccurs="0" maxOccurs="1"/>
             <xs:element name="email" minOccurs="0" maxOccurs="1">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
