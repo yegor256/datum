@@ -34,7 +34,7 @@
                 </xs:simpleType>
             </xs:element>
             <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-            <xs:element name="wire" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="token" minOccurs="0" maxOccurs="1"/>
             <xs:element name="params" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                     <xs:sequence>
