@@ -17,6 +17,11 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:simpleType name="github">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z0-9\-]{3,}"/>
+        </xs:restriction>
+    </xs:simpleType>
     <xs:complexType name="cash">
         <xs:simpleContent>
             <xs:extension base="xs:float">
@@ -100,13 +105,7 @@
                 </xs:unique>
             </xs:element>
         </xs:all>
-        <xs:attribute name="id" use="required">
-            <xs:simpleType>
-                <xs:restriction base="xs:string">
-                    <xs:pattern value="[a-z0-9\-]{3,}"/>
-                </xs:restriction>
-            </xs:simpleType>
-        </xs:attribute>
+        <xs:attribute name="id" use="required" type="github"/>
     </xs:complexType>
     <xs:element name="people">
         <xs:complexType>

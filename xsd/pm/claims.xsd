@@ -17,6 +17,11 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:simpleType name="github">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z0-9\-]{3,}"/>
+        </xs:restriction>
+    </xs:simpleType>
     <xs:complexType name="param">
         <xs:simpleContent>
             <xs:extension base="xs:string">
@@ -34,6 +39,7 @@
                 </xs:simpleType>
             </xs:element>
             <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+            <xs:element name="author" minOccurs="0" maxOccurs="1" type="github"/>
             <xs:element name="token" minOccurs="0" maxOccurs="1"/>
             <xs:element name="params" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
