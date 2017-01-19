@@ -17,7 +17,11 @@
  -->
 <claims>
   <claim id="5">
-    <type>roles assign</type>
+    <type>roles.assign</type>
+    <created>2016-12-29T09:03:21.684Z</created>
+  </claim>
+  <claim id="5">
+    <type>roles.resign</type>
     <created>2016-12-29T09:03:21.684Z</created>
   </claim>
 </roles>
