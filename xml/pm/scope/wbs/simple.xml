@@ -16,7 +16,6 @@
  * SOFTWARE.
  -->
 <wbs>
-  <job>
-    <name>yegor256/pdd#3</name>
-  </job>
+  <job id="gh:yegor256/pdd#3"/>
+  <job id="gh:yegor256/pdd#4"/>
 </wbs>
