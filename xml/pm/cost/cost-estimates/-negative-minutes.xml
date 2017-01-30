@@ -15,9 +15,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<wbs>
+<estimates>
   <job id="gh:yegor256/pdd#3">
-    <performer>yegor256</performer>
+    <minutes>15</minutes>
   </job>
-  <job id="gh:yegor256/pdd#4"/>
-</wbs>
+  <job id="gh:yegor256/pdd#3">
+    <minutes>-3</minutes>
+  </job>
+</estimates>
