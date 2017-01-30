@@ -26,26 +26,30 @@ desc 'Validate all XML/XSD files'
 task :xsd do
   total = 0
   Dir['xml/**/*.xml'].each do |p|
-    puts "Checking #{p}..."
+    print "Checking #{p}... "
     f = p.sub(/xml\//, 'xsd/').sub(/\/[^\/]+\.xml$/, '.xsd')
     begin
       xsd = Nokogiri::XML::Schema(File.read(f))
     rescue Nokogiri::XML::SyntaxError => e
-      puts "#{f} #{e.line}: #{e.message}"
+      print "\n#{f} #{e.line}: #{e.message}"
       raise 'XSD is invalid'
     end
+    ok = true
     xml = Nokogiri::XML(File.read(p))
     if File.basename(p).start_with?('-')
       if xsd.validate(xml).empty?
-        puts "#{p} no errors, but we are expecting some"
+        print "#{p} no errors, but we are expecting some\n"
         total += 1
+        ok = false
       end
     else
       xsd.validate(xml).each do |error|
-        puts "#{p} #{error.line}: #{error.message}"
+        puts "\n#{p} #{error.line}: #{error.message}"
         total += 1
+        ok = false
       end
     end
+    print "OK\n" if ok
   end
   raise "#{total} errors" unless total == 0
   puts 'All XML/XSD files are clean'
