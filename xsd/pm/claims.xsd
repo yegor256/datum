@@ -22,6 +22,31 @@
             <xs:pattern value="[a-z0-9\-]{3,}"/>
         </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="hello"/>
+            <xs:enumeration value="ping"/>
+            <xs:enumeration value="notify"/>
+            <xs:enumeration value="pmo.links.add"/>
+            <xs:enumeration value="pmo.links.remove"/>
+            <xs:enumeration value="pmo.links.show"/>
+            <xs:enumeration value="pmo.parent.set"/>
+            <xs:enumeration value="pmo.profile.rate.set"/>
+            <xs:enumeration value="pmo.profile.rate.show"/>
+            <xs:enumeration value="pmo.profile.wallet.set"/>
+            <xs:enumeration value="pmo.profile.wallet.show"/>
+            <xs:enumeration value="pmo.profile.skills.set"/>
+            <xs:enumeration value="pmo.profile.skills.show"/>
+            <xs:enumeration value="pmo.profile.aliases.show"/>
+            <xs:enumeration value="pm.hr.roles.add"/>
+            <xs:enumeration value="pm.hr.roles.remove"/>
+            <xs:enumeration value="pm.hr.roles.show"/>
+            <xs:enumeration value="pm.scope.wbs.show"/>
+            <xs:enumeration value="pm.scope.wbs.in"/>
+            <xs:enumeration value="pm.scope.wbs.out"/>
+            <xs:enumeration value="pm.scope.wbs.assign"/>
+        </xs:restriction>
+    </xs:simpleType>
     <xs:complexType name="param">
         <xs:simpleContent>
             <xs:extension base="xs:string">
@@ -31,13 +56,7 @@
     </xs:complexType>
     <xs:complexType name="claim">
         <xs:all>
-            <xs:element name="type" minOccurs="1" maxOccurs="1">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="[a-z]+(\.[a-z]+)*"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
+            <xs:element name="type" minOccurs="1" maxOccurs="1" type="type"/>
             <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
             <xs:element name="author" minOccurs="0" maxOccurs="1" type="github"/>
             <xs:element name="token" minOccurs="0" maxOccurs="1"/>
