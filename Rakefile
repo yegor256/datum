@@ -29,7 +29,7 @@ task :xsd do
     print "Checking #{p}... "
     f = p.sub(/xml\//, 'xsd/').sub(/\/[^\/]+\.xml$/, '.xsd')
     begin
-      xsd = Nokogiri::XML::Schema(File.read(f))
+      xsd = Nokogiri::XML::Schema(File.open(f))
     rescue Nokogiri::XML::SyntaxError => e
       print "\n#{f} #{e.line}: #{e.message}"
       raise 'XSD is invalid'

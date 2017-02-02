@@ -17,16 +17,8 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:simpleType name="jobID">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[a-z]{2}:[A-Z0-9a-z.\-#/]{3,}"/>
-        </xs:restriction>
-    </xs:simpleType>
-    <xs:simpleType name="github">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[a-z0-9\-]{3,}"/>
-        </xs:restriction>
-    </xs:simpleType>
+    <xs:include schemaLocation="http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pmo/types.xsd"/>
+    <xs:include schemaLocation="http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pm/scope/types.xsd"/>
     <xs:complexType name="job">
         <xs:all>
             <xs:element name="performer" type="github" minOccurs="0" maxOccurs="1"/>

@@ -17,27 +17,24 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:include schemaLocation="http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pm/hr/types.xsd"/>
-    <xs:complexType name="person">
-        <xs:sequence>
-            <xs:element name="role" type="role" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-        <xs:attribute name="id" type="github" use="required" />
+    <xs:include schemaLocation="http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pmo/types.xsd"/>
+    <xs:include schemaLocation="http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pm/scope/types.xsd"/>
+    <xs:complexType name="order">
+        <xs:all>
+            <xs:element name="performer" type="login" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+        </xs:all>
+        <xs:attribute name="job" use="required" type="jobID"/>
     </xs:complexType>
-    <xs:element name="roles">
+    <xs:element name="orders">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="person" type="person" minOccurs="0" maxOccurs="unbounded">
-                    <xs:unique name="roleUnique">
-                        <xs:selector xpath="role" />
-                        <xs:field xpath="." />
-                    </xs:unique>
-                </xs:element>
+                <xs:element name="order" type="order" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
-        <xs:unique name="idUnique">
-            <xs:selector xpath="person" />
-            <xs:field xpath="@id" />
+        <xs:unique name="orderID">
+            <xs:selector xpath="order" />
+            <xs:field xpath="@job" />
         </xs:unique>
     </xs:element>
 </xs:schema>

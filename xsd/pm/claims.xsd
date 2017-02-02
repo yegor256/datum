@@ -17,11 +17,7 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:simpleType name="github">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[a-z0-9\-]{3,}"/>
-        </xs:restriction>
-    </xs:simpleType>
+    <xs:include schemaLocation="http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pmo/types.xsd"/>
     <xs:simpleType name="type">
         <xs:restriction base="xs:string">
             <xs:enumeration value="hello"/>
