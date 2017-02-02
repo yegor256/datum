@@ -50,10 +50,10 @@
             <xs:enumeration value="pm.scope.wbs.added"/>
             <xs:enumeration value="pm.scope.wbs.out"/>
             <xs:enumeration value="pm.scope.wbs.removed"/>
-            <xs:enumeration value="pm.scope.wbs.assign"/>
-            <xs:enumeration value="pm.scope.wbs.assigned"/>
-            <xs:enumeration value="pm.scope.wbs.resign"/>
-            <xs:enumeration value="pm.scope.wbs.resigned"/>
+            <xs:enumeration value="pm.in.orders.start"/>
+            <xs:enumeration value="pm.in.orders.started"/>
+            <xs:enumeration value="pm.in.orders.stop"/>
+            <xs:enumeration value="pm.in.orders.stopped"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="param">
