@@ -19,37 +19,50 @@ require 'nokogiri'
 require 'rake'
 require 'rake/clean'
 require 'date'
+require 'fileutils'
 
 task default: [:clean, :xsd, :copyright]
 
 desc 'Validate all XML/XSD files'
 task :xsd do
   total = 0
-  Dir['xml/**/*.xml'].each do |p|
-    print "Checking #{p}... "
-    f = p.sub(/xml\//, 'xsd/').sub(/\/[^\/]+\.xml$/, '.xsd')
-    begin
-      xsd = Nokogiri::XML::Schema(File.open(f))
-    rescue Nokogiri::XML::SyntaxError => e
-      print "\n#{f} #{e.line}: #{e.message}"
-      raise 'XSD is invalid'
+  Dir.mktmpdir do |temp|
+    FileUtils.cp_r('xsd/', temp)
+    Dir[temp + '/**/*.xsd'].each do |f|
+      File.write(
+        f,
+        File.read(f).gsub(
+          'http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd',
+          temp + '/xsd'
+        )
+      )
     end
-    ok = true
-    xml = Nokogiri::XML(File.read(p))
-    if File.basename(p).start_with?('-')
-      if xsd.validate(xml).empty?
-        print "#{p} no errors, but we are expecting some\n"
-        total += 1
-        ok = false
+    Dir['xml/**/*.xml'].each do |p|
+      print "Checking #{p}... "
+      f = p.sub(/xml\//, temp + '/xsd/').sub(/\/[^\/]+\.xml$/, '.xsd')
+      begin
+        xsd = Nokogiri::XML::Schema(File.open(f))
+      rescue Nokogiri::XML::SyntaxError => e
+        print "\n#{f} #{e.line}: #{e.message}"
+        raise 'XSD is invalid'
       end
-    else
-      xsd.validate(xml).each do |error|
-        puts "\n#{p} #{error.line}: #{error.message}"
-        total += 1
-        ok = false
+      ok = true
+      xml = Nokogiri::XML(File.read(p))
+      if File.basename(p).start_with?('-')
+        if xsd.validate(xml).empty?
+          print "#{p} no errors, but we are expecting some\n"
+          total += 1
+          ok = false
+        end
+      else
+        xsd.validate(xml).each do |error|
+          puts "\n#{p} #{error.line}: #{error.message}"
+          total += 1
+          ok = false
+        end
       end
+      print "OK\n" if ok
     end
-    print "OK\n" if ok
   end
   raise "#{total} errors" unless total == 0
   puts 'All XML/XSD files are clean'

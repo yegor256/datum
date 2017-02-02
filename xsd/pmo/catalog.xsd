@@ -28,7 +28,7 @@
     </xs:complexType>
     <xs:complexType name="project">
         <xs:all>
-            <xs:element name="parent" minOccurs="0" maxOccurs="1" type="id"/>
+            <xs:element name="parent" minOccurs="0" maxOccurs="1" type="projectID"/>
             <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
             <xs:element name="prefix" minOccurs="0" maxOccurs="1">
                 <xs:simpleType>
@@ -45,7 +45,7 @@
                 </xs:complexType>
             </xs:element>
         </xs:all>
-        <xs:attribute name="id" type="id" use="required"/>
+        <xs:attribute name="id" type="projectID" use="required"/>
     </xs:complexType>
     <xs:element name="catalog">
         <xs:complexType>

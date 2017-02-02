@@ -17,12 +17,13 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pmo/types.xsd"/>
     <xs:include schemaLocation="http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pm/hr/types.xsd"/>
     <xs:complexType name="person">
         <xs:sequence>
             <xs:element name="role" type="role" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
-        <xs:attribute name="id" type="github" use="required" />
+        <xs:attribute name="id" type="login" use="required" />
     </xs:complexType>
     <xs:element name="roles">
         <xs:complexType>

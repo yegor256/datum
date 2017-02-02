@@ -21,7 +21,7 @@
     <xs:include schemaLocation="http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pm/scope/types.xsd"/>
     <xs:complexType name="job">
         <xs:all>
-            <xs:element name="performer" type="github" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="performer" type="login" minOccurs="0" maxOccurs="1"/>
         </xs:all>
         <xs:attribute name="id" use="required" type="jobID"/>
     </xs:complexType>

@@ -101,7 +101,7 @@
                 </xs:unique>
             </xs:element>
         </xs:all>
-        <xs:attribute name="id" use="required" type="github"/>
+        <xs:attribute name="id" use="required" type="login"/>
     </xs:complexType>
     <xs:element name="people">
         <xs:complexType>
