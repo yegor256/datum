@@ -17,8 +17,8 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:include schemaLocation="http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pmo/types.xsd"/>
-    <xs:include schemaLocation="http://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pm/scope/types.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pmo/types.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pm/scope/types.xsd"/>
     <xs:complexType name="order">
         <xs:all>
             <xs:element name="performer" type="login" minOccurs="1" maxOccurs="1"/>
