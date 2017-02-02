@@ -55,6 +55,8 @@
             <xs:enumeration value="pm.scope.wbs.removed"/>
             <xs:enumeration value="pm.scope.wbs.assign"/>
             <xs:enumeration value="pm.scope.wbs.assigned"/>
+            <xs:enumeration value="pm.scope.wbs.resign"/>
+            <xs:enumeration value="pm.scope.wbs.resigned"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="param">
