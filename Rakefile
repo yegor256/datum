@@ -19,6 +19,7 @@ require 'nokogiri'
 require 'rake'
 require 'rake/clean'
 require 'date'
+require 'tmpdir'
 require 'fileutils'
 
 task default: [:clean, :xsd, :copyright]
