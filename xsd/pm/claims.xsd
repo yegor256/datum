@@ -43,6 +43,7 @@
             <xs:enumeration value="pmo.profile.skills.added"/>
             <xs:enumeration value="pmo.profile.skills.show"/>
             <xs:enumeration value="pmo.profile.aliases.show"/>
+            <xs:enumeration value="pm.bootstrap"/>
             <xs:enumeration value="pm.hr.roles.add"/>
             <xs:enumeration value="pm.hr.roles.added"/>
             <xs:enumeration value="pm.hr.roles.remove"/>
