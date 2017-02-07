@@ -3,6 +3,7 @@ install: |
   sudo gem install pdd
 release:
   script: |-
+    pdd -f /dev/null
     sudo bundle install
     rake
     find . -name '*.xsd' -exec sed -i "s/SNAPSHOT/${tag}/g" \{} \;
@@ -11,7 +12,7 @@ release:
     cp -r xsd /tmp
     git checkout gh-pages
     mkdir "${tag}"
-    cp /tmp/xsd "${tag}"
+    cp -r /tmp/xsd "${tag}"
     git add "${tag}"
     git commit -m "XSD ${tag}"
     git push origin gh-pages
