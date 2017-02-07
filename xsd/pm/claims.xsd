@@ -35,7 +35,7 @@
             <xs:enumeration value="pmo.profile.wallet.set"/>
             <xs:enumeration value="pmo.profile.wallet.changed"/>
             <xs:enumeration value="pmo.profile.wallet.show"/>
-            <xs:enumeration value="pmo.profile.skills.set"/>
+            <xs:enumeration value="pmo.profile.skills.add"/>
             <xs:enumeration value="pmo.profile.skills.added"/>
             <xs:enumeration value="pmo.profile.skills.show"/>
             <xs:enumeration value="pmo.profile.aliases.show"/>
