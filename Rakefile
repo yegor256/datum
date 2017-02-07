@@ -33,7 +33,7 @@ task :xsd do
       File.write(
         f,
         File.read(f).gsub(
-          'https://raw.githubusercontent.com/zerocracy/datum/0.16/xsd',
+          'http://datum.zerocracy.com/SNAPSHOT/xsd',
           temp + '/xsd'
         )
       )

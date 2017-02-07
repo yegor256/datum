@@ -17,7 +17,7 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:include schemaLocation="https://raw.githubusercontent.com/zerocracy/datum/0.16/xsd/pmo/types.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
     <xs:complexType name="link">
         <xs:simpleContent>
             <xs:extension base="xs:string">
