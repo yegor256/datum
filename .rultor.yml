@@ -15,7 +15,6 @@ release:
     cp -r /tmp/xsd "${tag}"
     git add "${tag}"
     git commit -m "XSD ${tag}"
-    git push origin gh-pages
   commanders:
   - yegor256
 architect:
