@@ -8,6 +8,10 @@ release:
     find . -name '*.xsd' -exec sed -i "s/SNAPSHOT/${tag}/g" \{} \;
     find . -name '*.xsd' -exec git add \{} \;
     git commit -m "version set to ${tag}"
+    cp -r xsd /tmp
+    git checkout gh-pages
+    mkdir "${tag}"
+    cp /tmp/xsd "${tag}"
   commanders:
   - yegor256
 architect:
