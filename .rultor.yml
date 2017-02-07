@@ -12,6 +12,9 @@ release:
     git checkout gh-pages
     mkdir "${tag}"
     cp /tmp/xsd "${tag}"
+    git add "${tag}"
+    git commit -m "XSD ${tag}"
+    git push origin gh-pages
   commanders:
   - yegor256
 architect:
