@@ -18,44 +18,9 @@
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
-    <xs:simpleType name="type">
+    <xs:simpleType name="java_class">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="hello"/>
-            <xs:enumeration value="ping"/>
-            <xs:enumeration value="notify"/>
-            <xs:enumeration value="pmo.links.add"/>
-            <xs:enumeration value="pmo.links.added"/>
-            <xs:enumeration value="pmo.links.remove"/>
-            <xs:enumeration value="pmo.links.removed"/>
-            <xs:enumeration value="pmo.links.show"/>
-            <xs:enumeration value="pmo.parent.set"/>
-            <xs:enumeration value="pmo.parent.changed"/>
-            <xs:enumeration value="pmo.profile.rate.set"/>
-            <xs:enumeration value="pmo.profile.rate.changed"/>
-            <xs:enumeration value="pmo.profile.rate.show"/>
-            <xs:enumeration value="pmo.profile.wallet.set"/>
-            <xs:enumeration value="pmo.profile.wallet.changed"/>
-            <xs:enumeration value="pmo.profile.wallet.show"/>
-            <xs:enumeration value="pmo.profile.skills.add"/>
-            <xs:enumeration value="pmo.profile.skills.added"/>
-            <xs:enumeration value="pmo.profile.skills.show"/>
-            <xs:enumeration value="pmo.profile.aliases.show"/>
-            <xs:enumeration value="pm.bootstrap"/>
-            <xs:enumeration value="pm.bootstraped"/>
-            <xs:enumeration value="pm.hr.roles.add"/>
-            <xs:enumeration value="pm.hr.roles.added"/>
-            <xs:enumeration value="pm.hr.roles.remove"/>
-            <xs:enumeration value="pm.hr.roles.removed"/>
-            <xs:enumeration value="pm.hr.roles.show"/>
-            <xs:enumeration value="pm.scope.wbs.show"/>
-            <xs:enumeration value="pm.scope.wbs.in"/>
-            <xs:enumeration value="pm.scope.wbs.added"/>
-            <xs:enumeration value="pm.scope.wbs.out"/>
-            <xs:enumeration value="pm.scope.wbs.removed"/>
-            <xs:enumeration value="pm.in.orders.start"/>
-            <xs:enumeration value="pm.in.orders.started"/>
-            <xs:enumeration value="pm.in.orders.stop"/>
-            <xs:enumeration value="pm.in.orders.stopped"/>
+            <xs:pattern value="([a-z]+\.)+[A-Za-z]+"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="param">
@@ -67,7 +32,7 @@
     </xs:complexType>
     <xs:complexType name="claim">
         <xs:all>
-            <xs:element name="type" minOccurs="1" maxOccurs="1" type="type"/>
+            <xs:element name="type" minOccurs="1" maxOccurs="1" type="java_class"/>
             <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
             <xs:element name="author" minOccurs="0" maxOccurs="1" type="login"/>
             <xs:element name="token" minOccurs="0" maxOccurs="1"/>
