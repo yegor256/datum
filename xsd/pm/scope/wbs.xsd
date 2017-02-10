@@ -21,6 +21,7 @@
     <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
     <xs:complexType name="job">
         <xs:all>
+            <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
         </xs:all>
         <xs:attribute name="id" use="required" type="jobID"/>
     </xs:complexType>

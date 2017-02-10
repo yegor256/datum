@@ -16,10 +16,10 @@
  * SOFTWARE.
  -->
 <estimates>
-  <job id="gh:yegor256/pdd#3">
+  <order id="gh:yegor256/pdd#3">
     <cash currency="EUR">25.7</cash>
-  </job>
-  <job id="gh:yegor256/pdd#3">
+  </order>
+  <order id="gh:yegor256/pdd#3">
     <cash currency="EUR">25.7</cash>
-  </job>
+  </order>
 </estimates>

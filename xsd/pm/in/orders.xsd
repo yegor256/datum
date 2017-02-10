@@ -23,6 +23,7 @@
         <xs:all>
             <xs:element name="performer" type="login" minOccurs="1" maxOccurs="1"/>
             <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+            <xs:element name="closed" minOccurs="0" maxOccurs="1" type="xs:dateTime"/>
         </xs:all>
         <xs:attribute name="job" use="required" type="jobID"/>
     </xs:complexType>
