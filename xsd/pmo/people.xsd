@@ -18,19 +18,8 @@
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
-    <xs:complexType name="cash">
-        <xs:simpleContent>
-            <xs:extension base="xs:float">
-                <xs:attribute name="currency" use="required">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:pattern value="[A-Z]{3}"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:attribute>
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>
+    <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/cost/types.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/hr/types.xsd"/>
     <xs:complexType name="wallet">
         <xs:simpleContent>
             <xs:extension base="xs:string">
@@ -70,13 +59,7 @@
             </xs:element>
             <xs:element name="rate" type="cash" minOccurs="0" maxOccurs="1"/>
             <xs:element name="wallet" type="wallet" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="email" minOccurs="0" maxOccurs="1">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
+            <xs:element name="email" minOccurs="0" maxOccurs="1" type="email"/>
             <xs:element name="links" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                     <xs:sequence>

@@ -29,6 +29,7 @@
             <xs:enumeration value="pmo.links.removed"/>
             <xs:enumeration value="pmo.links.show"/>
             <xs:enumeration value="pmo.parent.set"/>
+            <xs:enumeration value="pmo.parent.changed"/>
             <xs:enumeration value="pmo.profile.rate.set"/>
             <xs:enumeration value="pmo.profile.rate.changed"/>
             <xs:enumeration value="pmo.profile.rate.show"/>
@@ -40,6 +41,7 @@
             <xs:enumeration value="pmo.profile.skills.show"/>
             <xs:enumeration value="pmo.profile.aliases.show"/>
             <xs:enumeration value="pm.bootstrap"/>
+            <xs:enumeration value="pm.bootstraped"/>
             <xs:enumeration value="pm.hr.roles.add"/>
             <xs:enumeration value="pm.hr.roles.added"/>
             <xs:enumeration value="pm.hr.roles.remove"/>

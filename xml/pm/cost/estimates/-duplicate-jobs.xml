@@ -17,9 +17,9 @@
  -->
 <estimates>
   <job id="gh:yegor256/pdd#3">
-    <minutes>15</minutes>
+    <cash currency="EUR">25.7</cash>
   </job>
-  <job id="gh:yegor256/pdd#4">
-    <minutes>30</minutes>
+  <job id="gh:yegor256/pdd#3">
+    <cash currency="EUR">25.7</cash>
   </job>
 </estimates>
