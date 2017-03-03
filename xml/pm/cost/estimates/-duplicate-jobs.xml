@@ -17,9 +17,9 @@
  -->
 <estimates>
   <order id="gh:yegor256/pdd#3">
-    <cash currency="EUR">25.7</cash>
+    <cash>EUR 25.7</cash>
   </order>
   <order id="gh:yegor256/pdd#3">
-    <cash currency="EUR">25.7</cash>
+    <cash>USD 25.7</cash>
   </order>
 </estimates>

@@ -17,22 +17,9 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:simpleType name="cash_value">
-        <xs:restriction base="xs:float">
-            <xs:minInclusive value="0" />
+    <xs:simpleType name="cash">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([A-Z]{3} \-?|\-?($|€|£|¥))\d+(\.\d{1,2})?"/>
         </xs:restriction>
     </xs:simpleType>
-    <xs:complexType name="cash">
-        <xs:simpleContent>
-            <xs:extension base="cash_value">
-                <xs:attribute name="currency" use="required">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:pattern value="[A-Z]{3}"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:attribute>
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>
 </xs:schema>

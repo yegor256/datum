@@ -18,7 +18,7 @@
 <people>
   <person id="yegor256">
     <name>Yegor Bugayenko</name>
-    <rate currency="EUR">30.50</rate>
+    <rate>£30.50</rate>
     <wallet bank="paypal">yegor256@gmail.com</wallet>
     <email>yegor256@gmail.com</email>
     <links>
@@ -26,7 +26,7 @@
     </links>
   </person>
   <person id="davvd">
-    <rate currency="USD">25</rate>
+    <rate>$25</rate>
     <links>
       <link rel="slack" href="7YYZZT99F"/>
     </links>
@@ -45,7 +45,7 @@
       <link rel="slack" href="7YYKYT9RR"/>
       <link rel="slack" href="U66KYT9RR"/>
     </links>
-    <rate currency="USD">25</rate>
+    <rate>¥25</rate>
     <skills>
       <skill>java8</skill>
     </skills>
