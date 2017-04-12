@@ -15,13 +15,14 @@ We promise to do our best to resolve them as soon as possible.
 
 ## How it works
 
-Project Owner (PO) is a representative of the project sponsor.
+Product Owner (`PO`) is a representative of the project sponsor.
 As a PO you can:
 
   - [x] [Invite](http://www.0crat.com/invite) `@0crat` to your Slack
   - [x] Create a new channel for the project
   - [x] Start talking to the bot: `@0crat hello`
-  - [x] Bootstrap it: `@0crat bootstrap`
+  - [x] Bootstrap it: `@0crat bootstrap` (with invitation code)
+  - [ ] Request invitation codes for friends
   - [ ] Fund it using credit card: `@0crat fund`
   - [x] Link it with GitHub repository: `@0crat links`
   - [x] Register `ARC` and `DEV` roles: `@0crat roles`
@@ -31,12 +32,13 @@ As a PO you can:
   - [ ] See the budget: `@0crat budget`
   - [ ] See the schedule: `@0crat schedule`
 
-An architect (ARC) is the key technical decision maker
-in the project. As an architect or a product owner you can:
+An Architect (`ARC`) is the key technical decision maker
+in the project. As an ARC or a PO you can:
 
   - [x] Assign a performer to a job: `@0crat assign`
+  - [x] Resign a performer: `@0crat resign`
 
-As a Developer you can:
+As a Developer (`DEV`) you can:
 
   - [x] Join one of Slack teams
   - [x] Start talking to the bot in a private channel: `@0crat hello`
@@ -46,7 +48,11 @@ As a Developer you can:
   - [ ] Set/reset "away" mode: `@0crat away`
   - [x] Reject a job: `@0crat resign`
   - [ ] Announce an impediment: `@0crat hold`
-  - [ ] your statistics and metrics: `@0crat metrics`
+  - [ ] Request your profile metrics: `@0crat metrics`
+
+As a Quality Assurance (`QA`) you can:
+
+  - [ ] Confirm the quality of a task: `@0crat quality`
 
 The bot can:
 
@@ -54,5 +60,6 @@ The bot can:
   - [ ] Announce job budget
   - [ ] Announce job deadline
   - [ ] Resign a performer
+  - [ ] Request quality control
   - [ ] Pay performer for task completion
 
