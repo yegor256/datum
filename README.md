@@ -61,5 +61,6 @@ The bot can:
   - [ ] Announce job deadline
   - [ ] Resign a performer
   - [ ] Request quality control
+  - [ ] Update performer's metrics
   - [ ] Pay performer for task completion
 
