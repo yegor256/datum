@@ -37,6 +37,8 @@ in the project. As an ARC or a PO you can:
 
   - [x] Assign a performer to a job: `@0crat assign`
   - [x] Resign a performer: `@0crat resign`
+  - [ ] Increase/decrease job budget: `@0crat boost`
+  - [ ] Attach job to a milestone: `@0crat milestone`
 
 As a Developer (`DEV`) you can:
 
@@ -45,9 +47,11 @@ As a Developer (`DEV`) you can:
   - [x] Modify your hourly rate: `@0crat rate`
   - [x] Modify your payment details: `@0crat wallet`
   - [x] Modify your set of skills: `@0crat skills`
+  - [ ] Quit a project: `@0crat quit`
   - [ ] Set/reset "away" mode: `@0crat away`
   - [x] Reject a job: `@0crat resign`
   - [ ] Announce an impediment: `@0crat hold`
+  - [ ] Check the status of a job: `@0crat status`
   - [ ] Request your profile metrics: `@0crat metrics`
 
 As a Quality Assurance (`QA`) you can:
@@ -62,5 +66,6 @@ The bot can:
   - [ ] Resign a performer
   - [ ] Request quality control
   - [ ] Update performer's metrics
+  - [ ] Pay for bugs reported
   - [ ] Pay performer for task completion
 
