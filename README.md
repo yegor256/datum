@@ -15,16 +15,16 @@ We promise to do our best to resolve them as soon as possible.
 
 ## How it works
 
-Product Owner (`PO`) is a representative of the project sponsor.
+Product Owner (`PO`) is a representative of a project sponsor.
 As a PO you can:
 
   - [x] [Invite](http://www.0crat.com/invite) `@0crat` to your Slack
-  - [x] Create a new channel for the project
+  - [x] [Create](https://get.slack.help/hc/en-us/articles/201402297-Create-a-channel) a new Slack channel for a project
   - [x] Start talking to the bot: `@0crat hello`
-  - [x] Bootstrap it: `@0crat bootstrap` (with invitation code)
+  - [x] Bootstrap a project: `@0crat bootstrap` (with invitation code)
   - [ ] Request invitation codes for friends
-  - [ ] Fund it using credit card: `@0crat fund`
-  - [x] Link it with GitHub repository: `@0crat links`
+  - [ ] Fund the project using credit card: `@0crat fund`
+  - [x] Link the project with GitHub repositor(ies): `@0crat links`
   - [x] Register `ARC` and `DEV` roles: `@0crat roles`
   - [x] Add tickets to scope in GitHub: `@0crat in`
   - [x] Remote tickets from scope: `@0crat out`
