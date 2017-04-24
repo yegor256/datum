@@ -21,13 +21,13 @@ As a PO you can:
   - [x] [Invite](http://www.0crat.com/invite) `@0crat` to your Slack
   - [x] [Create](https://get.slack.help/hc/en-us/articles/201402297-Create-a-channel) a new Slack channel for a project
   - [x] Start talking to the bot: `@0crat hello`
-  - [x] Bootstrap a project: `@0crat bootstrap` (with invitation code)
+  - [x] Bootstrap a project: `@0crat bootstrap` (with an invitation code)
   - [ ] Request invitation codes for friends
-  - [ ] Fund the project using credit card: `@0crat fund`
+  - [ ] Fund the project using a credit card: `@0crat fund`
   - [x] Link the project with GitHub repositor(ies): `@0crat links`
   - [x] Register `ARC` and `DEV` roles: `@0crat roles`
-  - [x] Add tickets to scope in GitHub: `@0crat in`
-  - [x] Remote tickets from scope: `@0crat out`
+  - [x] Add tickets to the scope in GitHub: `@0crat in`
+  - [x] Remote tickets from the scope: `@0crat out`
   - [x] See the WBS: `@0crat wbs`
   - [ ] See the budget: `@0crat budget`
   - [ ] See the schedule: `@0crat schedule`
@@ -38,7 +38,7 @@ in the project. As an ARC or a PO you can:
   - [x] Assign a performer to a job: `@0crat assign`
   - [x] Resign a performer: `@0crat resign`
   - [ ] Increase/decrease job budget: `@0crat boost`
-  - [ ] Attach job to a milestone: `@0crat milestone`
+  - [ ] Attach a job to a milestone: `@0crat milestone`
 
 As a Developer (`DEV`) you can:
 
