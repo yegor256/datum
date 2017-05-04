@@ -20,9 +20,9 @@ As a PO you can:
 
   - [x] [Invite](http://www.0crat.com/invite) `@0crat` to your Slack
   - [x] [Create](https://get.slack.help/hc/en-us/articles/201402297-Create-a-channel) a new Slack channel for a project
+  - [ ] Invite a friend
   - [x] Start talking to the bot: `@0crat hello`
-  - [x] Bootstrap a project: `@0crat bootstrap` (with an invitation code)
-  - [ ] Request invitation codes for friends
+  - [x] Bootstrap a project: `@0crat bootstrap`
   - [ ] Fund the project using a credit card: `@0crat fund`
   - [x] Link the project with GitHub repositor(ies): `@0crat links`
   - [x] Register `ARC` and `DEV` roles: `@0crat roles`
@@ -69,3 +69,14 @@ The bot can:
   - [ ] Pay for bugs reported
   - [ ] Pay performer for task completion
 
+## Invite Only
+
+You can use the system only if someone invites you. That person has to
+know your GitHub login and say this to `@0crat` bot (provided your name
+is `yegor256`):
+
+```
+@0crat invite yegor256
+```
+
+That's enough. From that moment you have a "mentor."
