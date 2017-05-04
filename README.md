@@ -20,7 +20,7 @@ As a PO you can:
 
   - [x] [Invite](http://www.0crat.com/invite) `@0crat` to your Slack
   - [x] [Create](https://get.slack.help/hc/en-us/articles/201402297-Create-a-channel) a new Slack channel for a project
-  - [ ] Invite a friend
+  - [ ] [Invite](#invite-only) a friend
   - [x] Start talking to the bot: `@0crat hello`
   - [x] Bootstrap a project: `@0crat bootstrap`
   - [ ] Fund the project using a credit card: `@0crat fund`
