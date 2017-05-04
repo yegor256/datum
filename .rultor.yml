@@ -4,7 +4,7 @@ install: |
 release:
   script: |-
     pdd -f /dev/null
-    sudo bundle install
+    bundle install
     rake
     find . -name '*.xsd' -exec sed -i "s/SNAPSHOT/${tag}/g" \{} \;
     find . -name '*.xsd' -exec git add \{} \;
