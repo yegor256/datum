@@ -50,6 +50,7 @@
     </xs:simpleType>
     <xs:complexType name="person">
         <xs:all>
+            <xs:element name="mentor" type="login" minOccurs="0" maxOccurs="1"/>
             <xs:element name="name" minOccurs="0" maxOccurs="1">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
