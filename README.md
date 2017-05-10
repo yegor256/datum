@@ -20,43 +20,44 @@ As a PO you can:
 
   - [x] [Invite](http://www.0crat.com/invite) `@0crat` to your Slack
   - [x] [Create](https://get.slack.help/hc/en-us/articles/201402297-Create-a-channel) a new Slack channel for a project
-  - [ ] [Invite](#invite-only) a friend
-  - [x] Start talking to the bot: `@0crat hello`
-  - [x] Bootstrap a project: `@0crat bootstrap`
-  - [ ] Fund the project using a credit card: `@0crat fund`
-  - [x] Link the project with GitHub repositor(ies): `@0crat links`
-  - [x] Register `ARC` and `DEV` roles: `@0crat roles`
-  - [x] Add tickets to the scope in GitHub: `@0crat in`
-  - [x] Remote tickets from the scope: `@0crat out`
-  - [x] See the WBS: `@0crat wbs`
-  - [ ] See the budget: `@0crat budget`
-  - [ ] See the schedule: `@0crat schedule`
+  - [x] [Invite](#invite-only) a friend: `invite`
+  - [x] Start talking to the bot: `hello`
+  - [x] Bootstrap a project: `bootstrap`
+  - [ ] Fund the project using a credit card: `fund`
+  - [ ] Transfer funds from project to project: `transfer`
+  - [x] Link the project with GitHub repositor(ies): `links`
+  - [x] Register `ARC` and `DEV` roles: `roles`
+  - [x] Add tickets to the scope in GitHub: `in`
+  - [x] Remote tickets from the scope: `out`
+  - [x] See the WBS: `wbs`
+  - [ ] See the budget: `budget`
+  - [ ] See the schedule: `schedule`
 
 An Architect (`ARC`) is the key technical decision maker
 in the project. As an ARC or a PO you can:
 
-  - [x] Assign a performer to a job: `@0crat assign`
-  - [x] Resign a performer: `@0crat resign`
-  - [ ] Increase/decrease job budget: `@0crat boost`
-  - [ ] Attach a job to a milestone: `@0crat milestone`
+  - [x] Assign a performer to a job: `assign`
+  - [x] Resign a performer: `resign`
+  - [ ] Increase/decrease job budget: `boost`
+  - [ ] Attach a job to a milestone: `milestone`
 
 As a Developer (`DEV`) you can:
 
   - [x] Join one of Slack teams
-  - [x] Start talking to the bot in a private channel: `@0crat hello`
-  - [x] Modify your hourly rate: `@0crat rate`
-  - [x] Modify your payment details: `@0crat wallet`
-  - [x] Modify your set of skills: `@0crat skills`
-  - [ ] Quit a project: `@0crat quit`
-  - [ ] Set/reset "away" mode: `@0crat away`
-  - [x] Reject a job: `@0crat resign`
-  - [ ] Announce an impediment: `@0crat hold`
-  - [ ] Check the status of a job: `@0crat status`
-  - [ ] Request your profile metrics: `@0crat metrics`
+  - [x] Start talking to the bot in a private channel: `hello`
+  - [x] Modify your hourly rate: `rate`
+  - [x] Modify your payment details: `wallet`
+  - [x] Modify your set of skills: `skills`
+  - [ ] Quit a project: `quit`
+  - [ ] Set/reset "away" mode: `away`
+  - [x] Reject a job: `resign`
+  - [ ] Announce an impediment: `hold`
+  - [ ] Check the status of a job: `status`
+  - [ ] Request your profile metrics: `metrics`
 
 As a Quality Assurance (`QA`) you can:
 
-  - [ ] Confirm the quality of a task: `@0crat quality`
+  - [ ] Confirm the quality of a task: `quality`
 
 The bot can:
 
