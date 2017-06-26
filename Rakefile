@@ -24,6 +24,17 @@ require 'fileutils'
 
 task default: [:clean, :xsd, :copyright]
 
+desc 'Enlist all upgrades and generate _list files'
+task :enlist_upgrades do
+  Dir['upgrades/**/*.xsl'].map { |f| File.dirname(f) }.uniq.each do |dir|
+      File.write(
+        dir + '/_list',
+        Dir[dir + '/*.xsl'].sort.join("\n")
+      )
+    end
+  end
+end
+
 desc 'Validate all XML/XSD files'
 task :xsd do
   total = 0

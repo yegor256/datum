@@ -11,15 +11,18 @@ release:
     find . -name '*.xsd' -exec git add \{} \;
     git commit -m "version set to ${tag}"
     cp -r xsd /tmp
+    rake enlist_upgrades
+    cp -r upgrades /tmp
     git checkout gh-pages
     mkdir "${tag}"
     cp -r /tmp/xsd "${tag}"
-    git add "${tag}"
-    rm -rf latest
-    mkdir latest
+    git add "${tag}" && git commit -m "XSD ${tag}"
+    rm -rf latest && mkdir latest
     cp -r /tmp/xsd latest
-    git add latest
-    git commit -m "XSD ${tag}"
+    git add latest && git commit -m "latest XSD at ${tag}"
+    rm -rf upgrades && mkdir upgrades
+    cp -r /tmp/upgrades upgrades
+    git add upgrades && git commit -m "XSL upgrades at ${tag}"
   commanders:
   - yegor256
 architect:
