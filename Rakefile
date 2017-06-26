@@ -24,6 +24,18 @@ require 'fileutils'
 
 task default: [:clean, :xsd, :copyright]
 
+desc 'Enlist all upgrades and generate _list files'
+task :enlist_upgrades do
+  Dir['upgrades/**/*.xsl'].map { |f| File.dirname(f) }.uniq.each do |dir|
+    File.write(
+      dir + '/_list',
+      Dir[dir + '/*.xsl'].sort.map do |f|
+        File.basename(f).gsub(/-.*$/, '') + ' ' + f + "\n"
+      end.join('')
+    )
+  end
+end
+
 desc 'Validate all XML/XSD files'
 task :xsd do
   total = 0
@@ -49,6 +61,10 @@ task :xsd do
       end
       ok = true
       xml = Nokogiri::XML(File.read(p))
+      Dir[p.gsub(/^xml\//, 'upgrades/').gsub(/\/[^\/]+$/, '/*.xsl')].each do |xsl|
+        xslt = Nokogiri::XSLT(File.read(xsl))
+        xml = xslt.transform(xml)
+      end
       if File.basename(p).start_with?('-')
         if xsd.validate(xml).empty?
           print "#{p} no errors, but we are expecting some\n"

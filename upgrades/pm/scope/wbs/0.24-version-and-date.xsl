@@ -15,15 +15,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<elections>
-  <job id="gh:yegor256/pdd#3">
-    <election date="2016-11-20T09:03:21.684Z">
-      <vote author="com.zerocracy.pm.staff.voter.NoRoom" weight="-100">
-        <person login="yegor256" points="0.44">There are 23 tasks in the agenda already</person>
-      </vote>
-      <vote author="com.zerocracy.pm.staff.voter.NoRoom" weight="-100">
-        <person login="yegor256" points="0.44">There are 23 tasks in the agenda already</person>
-      </vote>
-    </election>
-  </job>
-</elections>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="xml"/>
+    <xsl:strip-space elements="*" />
+    <xsl:template match="/*[not(@version) and not(@updated)]">
+        <xsl:copy>
+            <xsl:attribute name="version">0.24</xsl:attribute>
+            <xsl:attribute name="updated">2017-06-26T09:03:21.684Z</xsl:attribute>
+            <xsl:apply-templates select="@*|node()" />
+        </xsl:copy>
+    </xsl:template>
+    <xsl:template match="@*|node()">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+</xsl:stylesheet>

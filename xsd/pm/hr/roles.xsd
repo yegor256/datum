@@ -17,6 +17,7 @@
  -->
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
     <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
     <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/hr/types.xsd"/>
     <xs:complexType name="person">
@@ -36,6 +37,7 @@
                 </xs:element>
             </xs:sequence>
             <xs:attribute name="updated" use="required" type="xs:dateTime"/>
+            <xs:attribute name="version" use="required" type="version"/>
         </xs:complexType>
         <xs:unique name="idUnique">
             <xs:selector xpath="person" />
