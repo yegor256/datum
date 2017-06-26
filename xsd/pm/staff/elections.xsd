@@ -21,7 +21,12 @@
     <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
     <xs:complexType name="job">
         <xs:sequence>
-            <xs:element name="election" type="election" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="election" type="election" minOccurs="1" maxOccurs="unbounded">
+                <xs:unique name="voteAuthor">
+                    <xs:selector xpath="vote" />
+                    <xs:field xpath="@author" />
+                </xs:unique>
+            </xs:element>
         </xs:sequence>
         <xs:attribute name="id" use="required" type="jobID"/>
     </xs:complexType>
