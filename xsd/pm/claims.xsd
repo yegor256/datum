@@ -52,6 +52,7 @@
             <xs:sequence>
                 <xs:element name="claim" type="claim" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
+            <xs:attribute name="updated" use="required" type="xs:dateTime"/>
         </xs:complexType>
         <xs:unique name="uniqueID">
             <xs:selector xpath="claim" />

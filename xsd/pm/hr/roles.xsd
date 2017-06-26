@@ -35,6 +35,7 @@
                     </xs:unique>
                 </xs:element>
             </xs:sequence>
+            <xs:attribute name="updated" use="required" type="xs:dateTime"/>
         </xs:complexType>
         <xs:unique name="idUnique">
             <xs:selector xpath="person" />

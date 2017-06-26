@@ -22,6 +22,7 @@
     <xs:complexType name="order">
         <xs:all>
             <xs:element name="performer" type="login" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="reason" minOccurs="1" maxOccurs="1" type="xs:string"/>
             <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
             <xs:element name="closed" minOccurs="0" maxOccurs="1" type="xs:dateTime"/>
         </xs:all>
@@ -32,6 +33,7 @@
             <xs:sequence>
                 <xs:element name="order" type="order" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
+            <xs:attribute name="updated" use="required" type="xs:dateTime"/>
         </xs:complexType>
         <xs:unique name="orderID">
             <xs:selector xpath="order" />

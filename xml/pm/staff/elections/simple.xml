@@ -15,10 +15,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<ext>
-  <system id="github">
-    <prop id="login">yegor256</prop>
-    <prop id="password">secret</prop>
-    <prop id="password">secret</prop>
-  </system>
-</ext>
+<elections updated="2016-12-29T09:03:21.684Z">
+  <job id="gh:yegor256/pdd#3">
+    <election date="2016-11-20T09:03:21.684Z">
+      <vote author="com.zerocracy.pm.staff.voter.NoRoom" weight="-100">
+        <person login="yegor256" points="0.44">There are 23 tasks in the agenda already</person>
+        <person login="jeff" points="0.0">There are just 3 tasks in the agenda</person>
+      </vote>
+      <vote author="com.zerocracy.pm.staff.voter.Fastest" weight="2">
+        <person login="yegor256" points="0.4">Average speed is 8.6 days (rather slow)</person>
+        <person login="jeff" points="0.9">Average speed is 3.2 days</person>
+      </vote>
+    </election>
+  </job>
+</elections>

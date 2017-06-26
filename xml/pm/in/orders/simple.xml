@@ -15,13 +15,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<orders>
+<orders updated="2016-12-29T09:03:21.684Z">
   <order job="gh:yegor256/pdd#3">
     <performer>yegor256</performer>
+    <reason>Just for fun</reason>
     <created>2016-12-29T09:03:21.684Z</created>
   </order>
   <order job="gh:yegor256/pdd#4">
     <performer>yegor256</performer>
+    <reason>Just for fun</reason>
     <created>2016-11-19T09:03:21.684Z</created>
     <closed>2016-11-20T09:03:21.684Z</closed>
   </order>

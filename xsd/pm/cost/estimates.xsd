@@ -31,6 +31,7 @@
             <xs:sequence>
                 <xs:element name="order" type="order" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
+            <xs:attribute name="updated" use="required" type="xs:dateTime"/>
         </xs:complexType>
         <xs:unique name="jobName">
             <xs:selector xpath="order" />
