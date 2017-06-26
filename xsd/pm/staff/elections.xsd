@@ -32,7 +32,12 @@
     </xs:complexType>
     <xs:complexType name="election">
         <xs:sequence>
-            <xs:element name="vote" type="vote" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="vote" type="vote" minOccurs="1" maxOccurs="unbounded">
+                <xs:unique name="personLogin">
+                    <xs:selector xpath="person" />
+                    <xs:field xpath="@login" />
+                </xs:unique>
+            </xs:element>
         </xs:sequence>
         <xs:attribute name="date" use="required" type="xs:dateTime"/>
     </xs:complexType>
