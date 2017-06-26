@@ -30,8 +30,8 @@ task :enlist_upgrades do
     File.write(
       dir + '/_list',
       Dir[dir + '/*.xsl'].sort.map do |f|
-        File.basename(f).gsub(/-.*$/, '') + ' ' + f
-      end.join("\n")
+        File.basename(f).gsub(/-.*$/, '') + ' ' + f + "\n"
+      end.join('')
     )
   end
 end
