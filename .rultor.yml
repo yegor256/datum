@@ -20,10 +20,18 @@ release:
     git add latest
     git commit -m "XSD ${tag}"
   commanders:
-  - yegor256
+    - yegor256
 architect:
 - yegor256
 - davvd
 merge:
-  commanders: []
-deploy: {}
+  commanders:
+    - yegor256
+  script: |-
+    pdd -f /dev/null
+    bundle install
+    rake
+deploy:
+  script: |-
+    echo 'There is no such thing as deploy'
+    exit -1
