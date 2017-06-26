@@ -29,7 +29,9 @@ task :enlist_upgrades do
   Dir['upgrades/**/*.xsl'].map { |f| File.dirname(f) }.uniq.each do |dir|
     File.write(
       dir + '/_list',
-      Dir[dir + '/*.xsl'].sort.join("\n")
+      Dir[dir + '/*.xsl'].sort.map do |f|
+        File.basename(f).gsub(/-.*$/, '') + ' ' + f
+      end.join("\n")
     )
   end
 end
