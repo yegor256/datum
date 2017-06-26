@@ -15,7 +15,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<elections updated="2016-12-29T09:03:21.684Z">
+<elections>
   <job id="gh:yegor256/pdd#3">
     <election date="2016-11-20T09:03:21.684Z">
       <vote author="com.zerocracy.pm.staff.voter.NoRoom" weight="-100">

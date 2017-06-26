@@ -49,6 +49,10 @@ task :xsd do
       end
       ok = true
       xml = Nokogiri::XML(File.read(p))
+      Dir[p.gsub(/^xml\//, 'upgrades/').gsub(/\/[^\/]+$/, '/*.xsl')].each do |xsl|
+        xslt = Nokogiri::XSLT(File.read(xsl))
+        xml = xslt.transform(xml)
+      end
       if File.basename(p).start_with?('-')
         if xsd.validate(xml).empty?
           print "#{p} no errors, but we are expecting some\n"

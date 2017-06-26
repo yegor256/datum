@@ -34,6 +34,7 @@
                 <xs:element name="order" type="order" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
             <xs:attribute name="updated" use="required" type="xs:dateTime"/>
+            <xs:attribute name="version" use="required" type="xs:int"/>
         </xs:complexType>
         <xs:unique name="orderID">
             <xs:selector xpath="order" />
