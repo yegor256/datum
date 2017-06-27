@@ -28,7 +28,7 @@ desc 'Enlist all upgrades and generate _list files'
 task :enlist_upgrades do
   Dir['upgrades/**/*.xsl'].map { |f| File.dirname(f) }.uniq.each do |dir|
     File.write(
-      dir + '/_list',
+      dir + '/list',
       Dir[dir + '/*.xsl'].sort.map do |f|
         File.basename(f).gsub(/-.*$/, '') + ' ' + f + "\n"
       end.join('')

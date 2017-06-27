@@ -20,7 +20,6 @@ release:
     rm -rf latest && mkdir latest
     cp -r /tmp/xsd latest
     git add latest && git commit -m "latest XSD at ${tag}"
-    rm -rf upgrades
     cp -r /tmp/upgrades latest
     git add latest/upgrades && git commit -m "XSL upgrades at ${tag}"
   commanders:
