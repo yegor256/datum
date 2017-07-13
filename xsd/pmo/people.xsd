@@ -20,7 +20,7 @@
     <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
     <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
     <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/cost/types.xsd"/>
-    <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/hr/types.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/staff/types.xsd"/>
     <xs:complexType name="wallet">
         <xs:simpleContent>
             <xs:extension base="xs:string">
