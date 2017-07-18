@@ -15,7 +15,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<roles>
+<roles updated="2017-07-17T22:52:16Z" version="0.1">
   <person id="yegor256">
     <role>ARC</role>
     <role>PO</role>
