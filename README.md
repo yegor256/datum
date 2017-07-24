@@ -86,8 +86,8 @@ That's enough. From that moment you have a "mentor."
 
 We keep XSD Schema files in the [`xsd`](https://github.com/zerocracy/datum/tree/master/xsd)
 directory. You can modify them as you wish. However, keep in mind that you
-need 1) to test them, and 2) make sure existing XML files in the projects will
-be upgraded to your changes.
+need 1) to test them, 2) make sure existing XML files in the projects will
+be upgraded to your changes, and 3) modify XSL views.
 
 First, in order to test an `.xsd` file you should create `.xml` files
 in the [`xml`](https://github.com/zerocracy/datum/tree/master/xml) directory.
@@ -98,11 +98,14 @@ If it won't fail, the build will break.
 
 Second, every time you introduce some changes to the `.xsd` file, make sure
 you add an XSL Transformation to the
-[`upgrades`](https://github.com/zerocracy/datum/tree/master/xml) directory.
+[`upgrades`](https://github.com/zerocracy/datum/tree/master/upgrades) directory.
 Each `.xsl` file must be named as `XXX-name.xsl`, where `XXX` is the version
 number it upgrades an `.xml` file to. All versions are
 [here](https://github.com/zerocracy/datum/releases) (we're using
 [semantic versioninig](http://semver.org/)).
+
+Third, don't forget to add or modify XSL views in
+[`upgrades`](https://github.com/zerocracy/datum/tree/master/xsl) directory.
 
 After all changes are made, don't forget to run
 [`rake`](https://github.com/ruby/rake).
