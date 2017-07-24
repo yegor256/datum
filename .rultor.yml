@@ -7,7 +7,7 @@ release:
     pdd -f /dev/null
     bundle install
     rake
-    find . -name '*.xsl' -o -name '*.xsd' -exec sed -i "s/SNAPSHOT/${tag}/g" \{} \; git add \{} \;
+    find . -name '*.xsl' -o -name '*.xsd' -exec sed -i "s/SNAPSHOT/${tag}/g" \{} \; -exec git add \{} \;
     git commit -m "version set to ${tag}"
     cp -r xsl /tmp
     cp -r xsd /tmp
