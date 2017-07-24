@@ -20,24 +20,26 @@
   <xsl:template match="/estimates">
     <html lang="en">
       <body>
-        <table>
-          <thead>
-            <tr>
-              <th>
-                <xsl:text>ID</xsl:text>
-              </th>
-              <th>
-                <xsl:text>Cash</xsl:text>
-              </th>
-              <th>
-                <xsl:text>Created</xsl:text>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <xsl:apply-templates select="order"/>
-          </tbody>
-        </table>
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <xsl:text>ID</xsl:text>
+                </th>
+                <th>
+                  <xsl:text>Cash</xsl:text>
+                </th>
+                <th>
+                  <xsl:text>Created</xsl:text>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <xsl:apply-templates select="order"/>
+            </tbody>
+          </table>
+        </section>
       </body>
     </html>
   </xsl:template>

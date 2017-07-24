@@ -20,7 +20,9 @@
   <xsl:template match="/elections">
     <html lang="en">
       <body>
-        <xsl:apply-templates select="job"/>
+        <section>
+          <xsl:apply-templates select="job"/>
+        </section>
       </body>
     </html>
   </xsl:template>

@@ -99,10 +99,10 @@ task :xsl do
     begin
       xslt = Nokogiri::XSLT(File.open(p))
       label = p.sub(/.+\/([^\/]+)\.xsl$/, '\1.html')
-      File.write(
-        'target/views/' + label,
-        xslt.transform(Nokogiri::XML(File.open(f)))
-      )
+      html = xslt.transform(Nokogiri::XML(File.open(f)))
+      html.remove_namespaces!
+      raise if html.xpath('/html/body/section').empty?
+      File.write('target/views/' + label, html)
       open('target/views/index.html', 'a') do |f|
         f.puts "<p><a href='#{label}'>#{label}</a></p>"
       end

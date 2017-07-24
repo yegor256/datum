@@ -20,21 +20,23 @@
   <xsl:template match="/roles">
     <html lang="en">
       <body>
-        <table>
-          <thead>
-            <tr>
-              <th>
-                <xsl:text>Login</xsl:text>
-              </th>
-              <th>
-                <xsl:text>Roles</xsl:text>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <xsl:apply-templates select="person"/>
-          </tbody>
-        </table>
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <xsl:text>Login</xsl:text>
+                </th>
+                <th>
+                  <xsl:text>Roles</xsl:text>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <xsl:apply-templates select="person"/>
+            </tbody>
+          </table>
+        </section>
       </body>
     </html>
   </xsl:template>

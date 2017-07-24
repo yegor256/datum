@@ -20,27 +20,29 @@
   <xsl:template match="/orders">
     <html lang="en">
       <body>
-        <table>
-          <thead>
-            <tr>
-              <th>
-                <xsl:text>Job</xsl:text>
-              </th>
-              <th>
-                <xsl:text>Performer</xsl:text>
-              </th>
-              <th>
-                <xsl:text>Reason</xsl:text>
-              </th>
-              <th>
-                <xsl:text>Created</xsl:text>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <xsl:apply-templates select="order"/>
-          </tbody>
-        </table>
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <xsl:text>Job</xsl:text>
+                </th>
+                <th>
+                  <xsl:text>Performer</xsl:text>
+                </th>
+                <th>
+                  <xsl:text>Reason</xsl:text>
+                </th>
+                <th>
+                  <xsl:text>Created</xsl:text>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <xsl:apply-templates select="order"/>
+            </tbody>
+          </table>
+        </section>
       </body>
     </html>
   </xsl:template>
