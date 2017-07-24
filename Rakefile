@@ -21,8 +21,11 @@ require 'rake/clean'
 require 'date'
 require 'tmpdir'
 require 'fileutils'
+require 'rake/clean'
 
-task default: [:clean, :xsd, :copyright]
+CLEAN.include 'target'
+
+task default: [:clean, :xsd, :xsl, :copyright]
 
 desc 'Enlist all upgrades and generate _list files'
 task :enlist_upgrades do
@@ -83,6 +86,31 @@ task :xsd do
   end
   raise "#{total} errors" unless total == 0
   puts 'All XML/XSD files are clean'
+end
+
+desc 'Validate all XML/XSL files'
+task :xsl do
+  dir = FileUtils.mkdir_p('target/views')
+  FileUtils.rm_rf('target/views/index.html')
+  total = 0
+  Dir['xsl/**/*.xsl'].each do |p|
+    print "Rendering #{p}... "
+    f = p.sub(/xsl\//, 'xml/').sub(/\/([^\/]+)\.xsl$/, '/\1/simple.xml')
+    begin
+      xslt = Nokogiri::XSLT(File.open(p))
+      label = p.sub(/.+\/([^\/]+)\.xsl$/, '\1.html')
+      File.write(
+        'target/views/' + label,
+        xslt.transform(Nokogiri::XML(File.open(f)))
+      )
+      open('target/views/index.html', 'a') do |f|
+        f.puts "<p><a href='#{label}'>#{label}</a></p>"
+      end
+      print "OK\n"
+    end
+  end
+  raise "#{total} errors" unless total == 0
+  puts 'All XML/XSL files are clean'
 end
 
 task :copyright do
