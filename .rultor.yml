@@ -7,9 +7,9 @@ release:
     pdd -f /dev/null
     bundle install
     rake
-    find . -name '*.xsd' -exec sed -i "s/SNAPSHOT/${tag}/g" \{} \;
-    find . -name '*.xsd' -exec git add \{} \;
+    find . -name '*.xsl' -o -name '*.xsd' -exec sed -i "s/SNAPSHOT/${tag}/g" \{} \; git add \{} \;
     git commit -m "version set to ${tag}"
+    cp -r xsl /tmp
     cp -r xsd /tmp
     rake enlist_upgrades
     cp -r upgrades /tmp
@@ -20,6 +20,8 @@ release:
     rm -rf latest && mkdir latest
     cp -r /tmp/xsd latest
     git add latest && git commit -m "latest XSD at ${tag}"
+    cp -r /tmp/xsl latest
+    git add latest && git commit -m "latest XSL at ${tag}"
     rm -rf latest/upgrades && cp -r /tmp/upgrades latest
     git add latest/upgrades && git commit -m "XSL upgrades at ${tag}"
   commanders:
