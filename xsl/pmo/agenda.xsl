@@ -17,7 +17,7 @@
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml" version="1.0">
-  <xsl:template match="/awards">
+  <xsl:template match="/agenda">
     <html lang="en">
       <body>
         <section>
@@ -25,37 +25,30 @@
             <thead>
               <tr>
                 <th>
-                  <xsl:text>Points</xsl:text>
+                  <xsl:text>Job</xsl:text>
                 </th>
                 <th>
                   <xsl:text>Project</xsl:text>
                 </th>
                 <th>
-                  <xsl:text>Job</xsl:text>
-                </th>
-                <th>
                   <xsl:text>Added</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Reason</xsl:text>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <xsl:apply-templates select="award"/>
+              <xsl:apply-templates select="order"/>
             </tbody>
           </table>
         </section>
       </body>
     </html>
   </xsl:template>
-  <xsl:template match="award">
+  <xsl:template match="order">
     <tr>
       <td>
-        <xsl:if test="points &gt; 0">
-          <xsl:text>+</xsl:text>
-        </xsl:if>
-        <xsl:value-of select="points"/>
+        <code>
+          <xsl:value-of select="@job"/>
+        </code>
       </td>
       <td>
         <code>
@@ -63,15 +56,7 @@
         </code>
       </td>
       <td>
-        <code>
-          <xsl:value-of select="job"/>
-        </code>
-      </td>
-      <td>
         <xsl:value-of select="added"/>
-      </td>
-      <td>
-        <xsl:value-of select="reason"/>
       </td>
     </tr>
   </xsl:template>
