@@ -15,10 +15,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema version="0.29.1" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema version="0.29.2" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:include schemaLocation="http://datum.zerocracy.com/0.29.1/xsd/basics.xsd"/>
-    <xs:include schemaLocation="http://datum.zerocracy.com/0.29.1/xsd/pmo/types.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.29.2/xsd/basics.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.29.2/xsd/pmo/types.xsd"/>
     <xs:complexType name="param">
         <xs:simpleContent>
             <xs:extension base="xs:string">
