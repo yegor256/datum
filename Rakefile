@@ -104,7 +104,7 @@ task :xsl do
       raise if html.xpath('/html/body/section').empty?
       File.write('target/views/' + label, html)
       open('target/views/index.html', 'a') do |f|
-        f.puts "<p><a href='#{label}'>#{label}</a></p>"
+        f.puts "<p><a href='#{label}'>#{p}</a></p>"
       end
       print "OK\n"
     end
