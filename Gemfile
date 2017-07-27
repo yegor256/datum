@@ -1,5 +1,5 @@
 # encoding: utf-8
-#
+
 # Copyright (c) 2016-2017 Zerocracy
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -16,6 +16,9 @@
 # SOFTWARE.
 
 source 'https://rubygems.org'
+ruby '2.3.3'
 
-gem 'rake', '12.0.0'
 gem 'nokogiri', '1.7.0'
+gem 'rake', '12.0.0'
+gem 'rubocop', '0.48.1', require: false
+gem 'rubocop-rspec', '1.15.1', require: false

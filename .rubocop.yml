@@ -1,0 +1,5 @@
+AllCops:
+  DisplayCopNames: true
+
+Metrics/BlockLength:
+  Max: 100
