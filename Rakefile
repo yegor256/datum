@@ -90,6 +90,12 @@ end
 
 desc 'Validate all XML/XSL files'
 task :xsl do
+  Dir['xml/**/*.xml'].each do |p|
+    print "XML #{p}... "
+    f = p.sub(/xml\//, 'xsl/').sub(/\/([^\/]+)\.xml$/, '.xsl')
+    raise "XSL #{f} is absent" unless File.exists?(f)
+    print "has XSL: #{f}\n"
+  end
   dir = FileUtils.mkdir_p('target/views')
   FileUtils.rm_rf('target/views/index.html')
   total = 0
@@ -101,7 +107,7 @@ task :xsl do
       label = p.sub(/.+\/([^\/]+)\.xsl$/, '\1.html')
       html = xslt.transform(Nokogiri::XML(File.open(f)))
       html.remove_namespaces!
-      raise if html.xpath('/html/body/section').empty?
+      raise "HTML <section> absent" if html.xpath('/html/body/section').empty?
       File.write('target/views/' + label, html)
       open('target/views/index.html', 'a') do |f|
         f.puts "<p><a href='#{label}'>#{p}</a></p>"
