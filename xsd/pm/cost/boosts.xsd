@@ -18,10 +18,11 @@
 <xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
     <xs:complexType name="boost">
         <xs:simpleContent>
             <xs:extension base="xs:integer">
-                <xs:attribute name="id" type="xs:string" use="required" />
+                <xs:attribute name="id" type="jobID" use="required" />
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>

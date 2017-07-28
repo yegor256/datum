@@ -16,5 +16,7 @@
  * SOFTWARE.
  -->
 <boosts updated="2017-07-27T04:06:33Z" version="0.1">
-  <boost id="2x">foo</boost>
+  <boost id="gh:test/test#1">2</boost>
+  <boost id="gh:test/test#2">3</boost>
+  <boost id="gh:test/test#3">5</boost>
 </boosts>
