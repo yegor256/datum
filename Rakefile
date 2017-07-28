@@ -1,5 +1,5 @@
 # encoding: utf-8
-#
+
 # Copyright (c) 2016-2017 Zerocracy
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,7 +25,14 @@ require 'rake/clean'
 
 CLEAN.include 'target'
 
-task default: [:clean, :xsd, :xsl, :copyright]
+task default: %i[clean xsd xsl rubocop copyright]
+
+require 'rubocop/rake_task'
+desc 'Run RuboCop on all directories'
+RuboCop::RakeTask.new(:rubocop) do |task|
+  task.fail_on_error = true
+  task.requires << 'rubocop-rspec'
+end
 
 desc 'Enlist all upgrades and generate _list files'
 task :enlist_upgrades do
@@ -55,7 +62,7 @@ task :xsd do
     end
     Dir['xml/**/*.xml'].each do |p|
       print "Checking #{p}... "
-      f = p.sub(/xml\//, temp + '/xsd/').sub(/\/[^\/]+\.xml$/, '.xsd')
+      f = p.sub(%r{xml/}, temp + '/xsd/').sub(%r{/[^/]+\.xml$}, '.xsd')
       begin
         xsd = Nokogiri::XML::Schema(File.open(f))
       rescue Nokogiri::XML::SyntaxError => e
@@ -64,9 +71,9 @@ task :xsd do
       end
       ok = true
       xml = Nokogiri::XML(File.read(p))
-      Dir[p.gsub(/^xml\//, 'upgrades/').gsub(/\/[^\/]+$/, '/*.xsl')].each do |xsl|
-        xslt = Nokogiri::XSLT(File.read(xsl))
-        xml = xslt.transform(xml)
+      path = p.gsub(%r{^xml/}, 'upgrades/').gsub(%r{/[^/]+$}, '/*.xsl')
+      Dir[path].each do |x|
+        xml = Nokogiri::XSLT(File.read(x)).transform(xml)
       end
       if File.basename(p).start_with?('-')
         if xsd.validate(xml).empty?
@@ -84,32 +91,38 @@ task :xsd do
       print "OK\n" if ok
     end
   end
-  raise "#{total} errors" unless total == 0
+  raise "#{total} errors" unless total.zero?
   puts 'All XML/XSD files are clean'
 end
 
 desc 'Validate all XML/XSL files'
 task :xsl do
+  Dir['xml/**/*.xml'].each do |p|
+    print "XML #{p}... "
+    f = p.sub(%r{xml/}, 'xsl/').sub(%r{/([^/]+)\.xml$}, '.xsl')
+    raise "XSL #{f} is absent" unless File.exist?(f)
+    print "has XSL: #{f}\n"
+  end
   dir = FileUtils.mkdir_p('target/views')
-  FileUtils.rm_rf('target/views/index.html')
+  FileUtils.rm_rf(File.join(dir, 'index.html'))
   total = 0
   Dir['xsl/**/*.xsl'].each do |p|
     print "Rendering #{p}... "
-    f = p.sub(/xsl\//, 'xml/').sub(/\/([^\/]+)\.xsl$/, '/\1/simple.xml')
+    f = p.sub(%r{xsl/}, 'xml/').sub(%r{/([^/]+)\.xsl$}, '/\1/simple.xml')
     begin
       xslt = Nokogiri::XSLT(File.open(p))
-      label = p.sub(/.+\/([^\/]+)\.xsl$/, '\1.html')
+      label = p.sub(%r{.+/([^/]+)\.xsl$}, '\1.html')
       html = xslt.transform(Nokogiri::XML(File.open(f)))
       html.remove_namespaces!
-      raise if html.xpath('/html/body/section').empty?
-      File.write('target/views/' + label, html)
-      open('target/views/index.html', 'a') do |f|
-        f.puts "<p><a href='#{label}'>#{p}</a></p>"
+      raise 'HTML <section> absent' if html.xpath('/html/body/section').empty?
+      File.write(File.join(dir, label), html)
+      open(File.join(dir, 'index.html'), 'a') do |i|
+        i.puts "<p><a href='#{label}'>#{p}</a></p>"
       end
       print "OK\n"
     end
   end
-  raise "#{total} errors" unless total == 0
+  raise "#{total} errors" unless total.zero?
   puts 'All XML/XSL files are clean'
 end
 
