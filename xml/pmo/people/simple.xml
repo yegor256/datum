@@ -51,5 +51,6 @@
     <skills>
       <skill>java8</skill>
     </skills>
+    <vacation>true</vacation>
   </person>
 </people>

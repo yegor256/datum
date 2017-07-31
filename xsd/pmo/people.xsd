@@ -85,6 +85,11 @@
                     <xs:field xpath="." />
                 </xs:unique>
             </xs:element>
+            <xs:element name="vacation" minOccurs="0" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:boolean" />
+                </xs:simpleType>
+            </xs:element>
         </xs:all>
         <xs:attribute name="id" use="required" type="login"/>
     </xs:complexType>
