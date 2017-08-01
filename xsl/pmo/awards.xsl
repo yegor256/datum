@@ -42,7 +42,10 @@
               </tr>
             </thead>
             <tbody>
-              <xsl:apply-templates select="award"/>
+              <xsl:for-each select="award">
+                <xsl:sort select="added" order="descending" />
+                <xsl:apply-templates select="."/>
+              </xsl:for-each>
             </tbody>
           </table>
         </section>
