@@ -1,29 +1,55 @@
 install: |
   sudo apt-get update
   sudo gem install pdd
+  sudo apt-get install -y pandoc
 release:
   script: |-
+    #
+    # Sanity checks
+    #
     [[ "${tag}" =~ ^[0-9]+(\.[0-9]+)*$ ]] || exit -1
     pdd -f /dev/null
     bundle install
     rake
+    #
+    # Inject version into files
+    #
     find . -name '*.xsl' -o -name '*.xsd' -exec sed -i "s/SNAPSHOT/${tag}/g" \{} \; -exec git add \{} \;
-    git commit -m "version set to ${tag}"
+    git commit -m "Version set to ${tag}"
+    #
+    # Create public version in /tmp
+    #
     cp -r xsl /tmp
     cp -r xsd /tmp
-    rake enlist_upgrades
-    cp -r upgrades /tmp
+    rake enlist_upgrades && \
+        cp -r upgrades /tmp
+    rake pages &&
+        cp -r target/pages /tmp
+    #
+    # Copy content to gh-pages branch
+    #
     git checkout gh-pages
     mkdir "${tag}"
-    cp -r /tmp/xsd "${tag}"
-    git add "${tag}" && git commit -m "XSD ${tag}"
-    rm -rf latest && mkdir latest
-    cp -r /tmp/xsd latest
-    git add latest && git commit -m "latest XSD at ${tag}"
-    cp -r /tmp/xsl latest
-    git add latest && git commit -m "latest XSL at ${tag}"
-    rm -rf latest/upgrades && cp -r /tmp/upgrades latest
-    git add latest/upgrades && git commit -m "XSL upgrades at ${tag}"
+    cp -r /tmp/xsd "${tag}" && \
+        git add "${tag}" && \
+        git commit --allow-empty -m "XSD ${tag}"
+    rm -rf latest && \
+        mkdir latest && \
+        cp -r /tmp/xsd latest && \
+        git add latest && \
+        git commit --allow-empty -m "Latest XSD at ${tag}"
+    cp -r /tmp/xsl latest && \
+        git add latest/xsl && \
+        git commit --allow-empty -m "Latest XSL at ${tag}"
+    rm -rf latest/upgrades && \
+        cp -r /tmp/upgrades latest && \
+        git add latest/upgrades && \
+        git commit --allow-empty -m "XSL upgrades at ${tag}"
+    rm -rf pages && \
+        mkdir pages && \
+        cp /tmp/pages/*.html pages && \
+        git add pages && \
+        git commit --allow-empty -m "Pages updated"
   commanders:
     - yegor256
 architect:

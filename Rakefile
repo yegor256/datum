@@ -22,10 +22,12 @@ require 'date'
 require 'tmpdir'
 require 'fileutils'
 require 'rake/clean'
+require 'redcarpet'
+require 'mustache'
 
 CLEAN.include 'target'
 
-task default: %i[clean xsd xsl rubocop copyright]
+task default: %i[clean xsd xsl pages rubocop copyright]
 
 require 'rubocop/rake_task'
 desc 'Run RuboCop on all directories'
@@ -43,6 +45,27 @@ task :enlist_upgrades do
         File.basename(f).gsub(/-.*$/, '') + ' ' + f + "\n"
       end.join('')
     )
+  end
+end
+
+desc 'Generate HTML pages from Markdown'
+task :pages do
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  dir = FileUtils.mkdir_p('target/pages')
+  template = File.read('md/_template.html')
+  Dir['md/*.md'].each do |md|
+    file = File.join(dir, File.basename(md).gsub(/\.md$/, '.html'))
+    File.write(
+      file,
+      Mustache.render(
+        template,
+        body: markdown.render(File.read(md)),
+        name: File.basename(md).gsub(/\.md$/, '').capitalize,
+        version: ENV['tag'],
+        date: Time.new.iso8601
+      )
+    )
+    puts "HTML page created: #{file}"
   end
 end
 

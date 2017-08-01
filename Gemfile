@@ -18,7 +18,9 @@
 source 'https://rubygems.org'
 ruby '2.3.3'
 
+gem 'mustache', '1.0.5'
 gem 'nokogiri', '1.7.0'
 gem 'rake', '12.0.0'
+gem 'redcarpet', '3.4.0'
 gem 'rubocop', '0.48.1', require: false
 gem 'rubocop-rspec', '1.15.1', require: false
