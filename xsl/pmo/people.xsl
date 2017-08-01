@@ -42,6 +42,9 @@
                 <th>
                   <xsl:text>Links</xsl:text>
                 </th>
+                <th>
+                  <xsl:text>Vacation</xsl:text>
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -73,6 +76,11 @@
       </td>
       <td>
         <xsl:apply-templates select="links"/>
+      </td>
+      <td>
+        <xsl:if test="vacation/text() = 'true'">
+          <xsl:text>On vacation</xsl:text>
+        </xsl:if>
       </td>
     </tr>
   </xsl:template>
