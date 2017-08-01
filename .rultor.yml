@@ -28,25 +28,25 @@ release:
     #
     git checkout gh-pages
     mkdir "${tag}"
-    cp -r /tmp/xsd "${tag}" && \
-        git add "${tag}" && \
+    cp -r /tmp/xsd "${tag}"
+        git add "${tag}"
         git commit --allow-empty -m "XSD ${tag}"
-    rm -rf latest && \
-        mkdir latest && \
-        cp -r /tmp/xsd latest && \
-        git add latest && \
+    rm -rf latest
+        mkdir latest
+        cp -r /tmp/xsd latest
+        git add latest
         git commit --allow-empty -m "Latest XSD at ${tag}"
-    cp -r /tmp/xsl latest && \
-        git add latest/xsl && \
+    cp -r /tmp/xsl latest
+        git add latest/xsl
         git commit --allow-empty -m "Latest XSL at ${tag}"
-    rm -rf latest/upgrades && \
-        cp -r /tmp/upgrades latest && \
-        git add latest/upgrades && \
+    rm -rf latest/upgrades
+        cp -r /tmp/upgrades latest
+        git add latest/upgrades
         git commit --allow-empty -m "XSL upgrades at ${tag}"
-    rm -rf pages && \
-        mkdir pages && \
-        cp /tmp/pages/*.html pages && \
-        git add pages && \
+    rm -rf pages
+        mkdir pages
+        cp /tmp/pages/*.html pages
+        git add pages
         git commit --allow-empty -m "Pages updated"
   commanders:
     - yegor256
