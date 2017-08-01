@@ -5,21 +5,31 @@
       <meta name="description" content="{{ name }}"></meta>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       <link rel="shortcut icon" href="http://www.zerocracy.com/logo.png"></link>
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nunito"/>
+      <link rel="stylesheet" href="http://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-css.min.css"/>
       <link rel="stylesheet" href="http://www.0crat.com/css/main.css"></link>
       <title>{{ name }}</title>
    </head>
    <body>
       <section>
-         <p><a href="/"><img src="http://www.zerocracy.com/logo.svg" class="inner-logo"></img></a></p>
+         <header>
+            <p>
+               <a href="/">
+                  <img src="http://www.zerocracy.com/logo.svg" class="inner-logo"/>
+               </a>
+            </p>
+         </header>
          <h1>{{ name }}</h1>
          {{{ body }}}
-         <p>
-            &mdash;
-            <br/>
-            v{{ version }}
-            ·
-            {{ date }}
-         </p>
+         <footer style="font-size: 0.8em">
+            <p>
+               &mdash;
+               <br/>
+               v{{ version }}
+               ·
+               {{ date }}
+            </p>
+         </footer>
       </section>
    </body>
 </html>

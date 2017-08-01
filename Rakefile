@@ -62,7 +62,7 @@ task :pages do
         body: markdown.render(File.read(md)),
         name: File.basename(md).gsub(/\.md$/, '').capitalize,
         version: ENV['tag'],
-        date: Time.new.iso8601
+        date: Time.new.strftime('%-d-%b-%Y')
       )
     )
     puts "HTML page created: #{file}"

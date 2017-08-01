@@ -17,40 +17,46 @@
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml" version="1.0">
-  <xsl:template match="/claims">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <xsl:text>ID</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Type</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Author</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Created</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Token</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Params</xsl:text>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <xsl:apply-templates select="claim"/>
-            </tbody>
-          </table>
+          <xsl:apply-templates select="claims"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="claims[not(claim)]">
+    <p>There are no claims yet.</p>
+  </xsl:template>
+  <xsl:template match="claims[claim]">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>ID</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Type</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Author</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Created</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Token</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Params</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="claim"/>
+      </tbody>
+    </table>
   </xsl:template>
   <xsl:template match="claim">
     <tr>
