@@ -21,10 +21,8 @@ release:
     #
     cp -r xsl /tmp
     cp -r xsd /tmp
-    rake enlist_upgrades && \
-        cp -r upgrades /tmp
-    rake pages &&
-        cp -r target/pages /tmp
+    rake enlist_upgrades && cp -r upgrades /tmp
+    rake pages && cp -r target/pages /tmp
     #
     # Copy content to gh-pages branch
     #
