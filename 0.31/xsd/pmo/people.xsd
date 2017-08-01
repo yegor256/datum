@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Copyright (c) 2016-2017 Zerocracy
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to read
+ * the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
+ * merge, publish, distribute, sublicense, and/or sell copies of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ -->
+<xs:schema version="0.31" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.31/xsd/basics.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.31/xsd/pmo/types.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.31/xsd/pm/cost/types.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.31/xsd/pm/staff/types.xsd"/>
+    <xs:complexType name="wallet">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="bank" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="paypal" />
+                            <xs:enumeration value="btc" />
+                            <xs:enumeration value="upwork" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="link">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="rel" use="required" type="xs:string"/>
+                <xs:attribute name="href" use="required" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:simpleType name="skill">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z0-9]+(.[a-z0-9]+)*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="person">
+        <xs:all>
+            <xs:element name="mentor" type="login" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="name" minOccurs="0" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value=".{3,120}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="rate" type="cash" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="wallet" type="wallet" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="email" minOccurs="0" maxOccurs="1" type="email"/>
+            <xs:element name="links" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="link" type="link" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:unique name="personLink">
+                    <xs:selector xpath="link" />
+                    <xs:field xpath="@rel" />
+                    <xs:field xpath="@href" />
+                </xs:unique>
+            </xs:element>
+            <xs:element name="skills" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="skill" type="skill" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:unique name="personSkill">
+                    <xs:selector xpath="skill" />
+                    <xs:field xpath="." />
+                </xs:unique>
+            </xs:element>
+            <xs:element name="vacation" minOccurs="0" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:boolean" />
+                </xs:simpleType>
+            </xs:element>
+        </xs:all>
+        <xs:attribute name="id" use="required" type="login"/>
+    </xs:complexType>
+    <xs:element name="people">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="person" type="person" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="updated" use="required" type="xs:dateTime"/>
+            <xs:attribute name="version" use="required" type="version"/>
+        </xs:complexType>
+        <xs:unique name="uniqueID">
+            <xs:selector xpath="person" />
+            <xs:field xpath="@id" />
+        </xs:unique>
+    </xs:element>
+</xs:schema>
