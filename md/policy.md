@@ -24,21 +24,21 @@ You can talk to `@crat` in:
 <a name="1" href="#1">§1</a>.
 "Election."
 Zerocrat may assign a job to you according to its own election rules.
-You will be notified in its ticket.
+You will be notified in job's ticket.
 
 <a name="2" href="#2">§2</a>.
 "Fixed Budget."
 Each job has a fixed budget in minutes,
-which will be multiplied by your hourly rate and paid to you
-when the job is completed. The actual amount of time you spent
-on the job doesn't affect the amount of money you receive. You will
-also get as many positive points as many minutes you are paid for.
+which will be multiplied by your hourly rate and paid to you when the job is completed.
+The actual amount of time you spent on the job doesn't affect the amount of money you receive.
+You will also get as many positive points as many minutes you are paid for.
 
 <a name="3" href="#3">§3</a>.
 "Boost Factor."
-A job may receive a boost factor, which will increase or decrease
-its budget. Default boost factor is `2x`, which means 30 minutes.
-You should ask project architect to boost a job.
+A job may receive a boost factor, which will increase or decrease its budget.
+Default boost factor is `2x`, which means 30 minutes.
+Default boost factor for a code review is `1x`.
+You should ask project architect to boost your job.
 
 <a name="4" href="#4">§4</a>.
 "Refusal."
@@ -58,4 +58,10 @@ You will get no money and 30 negative points if this happens.
 "Impediments."
 You may declare impediments for a job by saing `waiting` to Zerocrat.
 Until the job has impediments "Ten Days" rule is not applicable to it.
+
+<a name="8" href="#8">§8</a>.
+"Code Review Bonus."
+For each code review you get a bonus as big in minutes as to the amount of
+comments posted to the ticket during the review.
+
 
