@@ -34,7 +34,7 @@
     <ul>
       <xsl:apply-templates select="election"/>
     </ul>
-  </xsl:stylesheet>
+  </xsl:template>
   <xsl:template match="election">
     <li>
       <xsl:text>Election of </xsl:text>
