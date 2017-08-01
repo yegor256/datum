@@ -54,7 +54,7 @@ A job is completed when its ticket is closed.
 If you don't complete a job in 10 days Zerocrat _may_ take it away from you.
 You will get no money and 30 negative points if this happens.
 
-§6.
+§7.
 "Impediments."
 You may declare impediments for a job by saing `waiting` to Zerocrat.
 Until the job has impediments "Ten Days" rule is not applicable to it.
