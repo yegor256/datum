@@ -15,7 +15,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<bans>
+<bans updated="2017-07-17T22:52:16Z" version="0.1">
     <ban job="gh:test/test#1">
         <created>2017-07-19T12:00:00</created>
         <login>yegor256</login>
