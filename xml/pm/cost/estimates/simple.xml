@@ -15,7 +15,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<estimates>
+<estimates version="1" updated="2016-12-29T09:03:21.684Z">
   <order id="gh:yegor256/pdd#3">
     <cash>$15</cash>
     <created>2016-12-29T09:03:21.684Z</created>

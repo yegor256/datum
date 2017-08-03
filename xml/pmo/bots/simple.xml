@@ -15,12 +15,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<bots>
+<bots version="1" updated="2016-12-29T09:03:21.684Z">
   <bot id="UYY78T99S">
     <created>2016-12-29T09:03:21.684Z</created>
     <bot_access_token>xoxb-XXXXXXXXXXXX-TTTTTTTTTTTTTT</bot_access_token>
     <access_token>xoxb-XXXXXXXXXXXX-TTTTTTTTTTTTTT</access_token>
     <team_name>Zerocracy</team_name>
     <team_id>T787894327</team_id>
-  </project>
-</cataog>
+  </bot>
+</bots>
