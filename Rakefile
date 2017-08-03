@@ -137,7 +137,8 @@ task :xsl do
       label = p.sub(%r{.+/([^/]+)\.xsl$}, '\1.html')
       xml = Nokogiri::XML(File.open(f))
       root = xml.xpath('/*').first
-      raise "version and updated attributes are required <#{f}>" if root.attr('version').nil? or root.attr('updated').nil?
+      raise "version and updated attributes are required <#{f}>" if
+        root.attr('version').nil? || root.attr('updated').nil?
       html = xslt.transform(Nokogiri::XML(File.open(f)))
       html.remove_namespaces!
       raise 'HTML <section> absent' if html.xpath('/html/body/section').empty?
