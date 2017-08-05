@@ -23,7 +23,7 @@
     <xs:complexType name="job">
         <xs:all>
             <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-            <xs:element name="performer" type="login" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="performer" type="login" minOccurs="0" maxOccurs="1"/>
             <xs:element name="removed" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
             <xs:element name="reason" minOccurs="1" maxOccurs="1" type="xs:string" />
             <xs:element name="boost" minOccurs="1" maxOccurs="1" type="xs:integer" />

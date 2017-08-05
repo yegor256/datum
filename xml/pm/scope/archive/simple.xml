@@ -25,7 +25,6 @@
     </job>
     <job id="gh:zerocracy/test#22">
         <created>2017-08-05T17:11:42.123Z</created>
-        <performer>0crat</performer>
         <removed>2017-08-05T17:20:42.123Z</removed>
         <reason>terminated</reason>
         <boost>1</boost>
