@@ -15,21 +15,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<catalog version="1" updated="2016-12-29T09:03:21.684Z">
-  <project id="7YY78T99S">
-    <parent>7YY78E99S</parent>
-    <created>2016-12-29T09:03:21.684Z</created>
-    <prefix>2016/12/7YY78T99S/</prefix>
-    <links>
-      <link rel="github" href="yegor256/pdd"/>
-      <link rel="github" href="yegor256/est"/>
-      <link rel="github" href="yegor256/hoc"/>
-      <link rel="jira" href="https://jira.example.com"/>
-    </links>
-  </project>
-  <project id="PMO">
-    <created>2016-12-29T09:03:21.684Z</created>
-    <prefix>PMO/</prefix>
-    <publish>false</publish>
-  </project>
-</catalog>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="xml"/>
+    <xsl:strip-space elements="*" />
+    <xsl:template match="project[not(publish)]">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()" />
+            <publish>false</publish>
+        </xsl:copy>
+    </xsl:template>
+    <xsl:template match="@*|node()">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+</xsl:stylesheet>

@@ -45,6 +45,7 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
+            <xs:element name="publish" minOccurs="1" maxOccurs="1" type="xs:boolean"/>
         </xs:all>
         <xs:attribute name="id" type="projectID" use="required"/>
     </xs:complexType>

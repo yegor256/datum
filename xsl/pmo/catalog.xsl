@@ -36,6 +36,9 @@
                 <th>
                   <xsl:text>Links</xsl:text>
                 </th>
+                <th>
+                  <xsl:text>Publish</xsl:text>
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -61,6 +64,9 @@
       </td>
       <td>
         <xsl:apply-templates select="links"/>
+      </td>
+      <td>
+        <xsl:value-of select="publish"/>
       </td>
     </tr>
   </xsl:template>
