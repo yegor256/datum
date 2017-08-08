@@ -3,6 +3,10 @@ This policy explains basic work principles of
 a project management AI bot developed
 and hosted by [Zerocracy](http://www.zerocracy.com).
 
+If you want to change something in this policy of simply
+suggest something, please submit a ticket
+[here](https://github.com/zerocracy/datum/issues).
+
 We recommend you to read these articles first:
 [Stop Chatting, Start Coding](http://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html);
 [How XDSD Is Different](http://www.yegor256.com/2014/04/17/how-xdsd-is-different.html);
