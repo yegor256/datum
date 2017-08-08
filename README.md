@@ -1,5 +1,8 @@
 <img src="http://www.zerocracy.com/logo.svg" width="64px" height="64px"/>
 
+[![Managed by Zerocracy](http://www.zerocracy.com/badge.svg)](http://www.zerocracy.com)
+[![DevOps By Rultor.com](http://www.rultor.com/b/zerocracy/datum)](http://www.rultor.com/p/zerocracy/datum)
+
 [![Availability at SixNines](http://www.sixnines.io/b/2b3a)](http://www.sixnines.io/h/2b3a)
 [![Build Status](https://travis-ci.org/zerocracy/datum.svg?branch=master)](https://travis-ci.org/zerocracy/datum)
 
@@ -8,6 +11,9 @@ Zerocracy is management without managers.
 Information about current project status is kept in XML and text
 files. This repository contains full list of XSD Schemas for them
 and rules of usage.
+
+Read [our policy](http://datum.zerocracy.com/pages/policy.html),
+it covers all processes in these XML files.
 
 Any problems you have with [Zerocracy](http://www.zerocracy.com)
 please report [here](https://github.com/zerocracy/datum/issues).
