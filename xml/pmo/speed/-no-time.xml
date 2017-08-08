@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speed>
+    <order job="gh:test/test#1">
+        <project>ABCDEF123</project>
+    </order>
+</speed>

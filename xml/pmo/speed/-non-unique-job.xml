@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speed>
+    <order job="gh:test/test#1">
+        <project>ABCDEF123</project>
+        <minutes>2405</minutes>
+    </order>
+    <order job="gh:test/test#1">
+        <project>ABCDEF123</project>
+        <minutes>1024</minutes>
+    </order>
+</speed>
