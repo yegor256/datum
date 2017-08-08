@@ -15,17 +15,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:simpleType name="milestoneID">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[a-z]{2}:[A-Z0-9a-z.\-#/]+"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="precedenceType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="job" />
-      <xs:enumeration value="milestone" />
-    </xs:restriction>
-  </xs:simpleType>
-</xs:schema>
+<precedences updated="2017-08-08T14:04:00Z" version="0.1">
+  <precedence>
+    <type>finish-to-start</type>
+    <predecessor>gh:test/test#1</predecessor>
+    <successor type="milestone">gh:M1</successor>
+  </precedence>
+</precedences>

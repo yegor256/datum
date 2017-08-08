@@ -19,16 +19,43 @@
            elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/time/types.xsd"/>
-  <xs:complexType name="milestone">
+  <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
+  <xs:complexType name="precedence">
     <xs:sequence>
-      <xs:element name="date" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+      <xs:element name="type" minOccurs="0" maxOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="finish-to-start"/>
+            <xs:enumeration value="start-to-start"/>
+            <xs:enumeration value="finish-to-finish"/>
+            <xs:enumeration value="start-to-finish"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="predecessor" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="milestoneID">
+              <xs:attribute name="type" type="precedenceType"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="successor" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="milestoneID">
+              <xs:attribute name="type" type="precedenceType"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
-    <xs:attribute name="id" type="milestoneID" use="required"/>
   </xs:complexType>
-  <xs:element name="milestones">
+  <xs:element name="precedences">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="milestone" type="milestone" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="precedence" type="precedence" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="updated" use="required" type="xs:dateTime"/>
       <xs:attribute name="version" use="required" type="version"/>
