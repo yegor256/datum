@@ -16,19 +16,18 @@
  * SOFTWARE.
  -->
 <xs:schema version="0.35" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified" attributeFormDefault="unqualified">
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:include schemaLocation="http://datum.zerocracy.com/0.35/xsd/basics.xsd"/>
     <xs:include schemaLocation="http://datum.zerocracy.com/0.35/xsd/pmo/types.xsd"/>
     <xs:include schemaLocation="http://datum.zerocracy.com/0.35/xsd/pm/scope/types.xsd"/>
     <xs:complexType name="order">
         <xs:all>
-            <xs:element name="added" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-            <xs:element name="project" minOccurs="1" maxOccurs="1" type="projectID"/>
-            <xs:element name="href" minOccurs="1" maxOccurs="1" type="xs:anyURI"/>
+            <xs:element name="project" type="projectID" minOccurs="1" maxOccurs="1" />
+            <xs:element name="minutes" type="xs:integer" minOccurs="1" maxOccurs="1" />
         </xs:all>
         <xs:attribute name="job" use="required" type="jobID"/>
     </xs:complexType>
-    <xs:element name="agenda">
+    <xs:element name="speed">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="order" type="order" minOccurs="0" maxOccurs="unbounded"/>
