@@ -81,9 +81,11 @@
         <xsl:value-of select="created"/>
       </td>
       <td>
-        <code>
-          <xsl:value-of select="token"/>
-        </code>
+        <xsl:if test="token">
+          <code>
+            <xsl:value-of select="token"/>
+          </code>
+        </xsl:if>
       </td>
       <td>
         <xsl:apply-templates select="params"/>
@@ -93,12 +95,12 @@
   <xsl:template match="params">
     <xsl:for-each select="param">
       <xsl:if test="position() &gt; 1">
-        <xsl:text>, </xsl:text>
+        <br/>
       </xsl:if>
       <code>
         <xsl:value-of select="@name"/>
       </code>
-      <xsl:text>=</xsl:text>
+      <xsl:text>:</xsl:text>
       <code>
         <xsl:value-of select="text()"/>
       </code>
