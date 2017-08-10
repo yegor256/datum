@@ -15,11 +15,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema version="0.35.5" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
-    <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
-    <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.5/xsd/basics.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.5/xsd/pmo/types.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.5/xsd/pm/scope/types.xsd"/>
     <xs:complexType name="order">
         <xs:all>
             <xs:element name="performer" type="login" minOccurs="1" maxOccurs="1"/>
