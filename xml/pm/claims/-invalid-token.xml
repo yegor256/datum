@@ -15,30 +15,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<claims  version="1" updated="2016-12-29T09:03:21.684Z">
+<claims>
   <claim id="5">
-    <type>assign new role</type>
-    <created>2016-12-29T09:03:21.684Z</created>
-    <author>yegor256</author>
-    <token>slack;C43789437;yegor256</token>
-    <params>
-      <param name="role">ARC</param>
-      <param name="person">yegor256</param>
-    </params>
-  </claim>
-  <claim id="6">
-    <type>show all roles</type>
-    <created>2016-12-29T09:03:21.684Z</created>
-    <token>telegram;89304832948032;jeff</token>
-  </claim>
-  <claim id="7">
     <type>bootstrap the project</type>
     <created>2016-12-29T09:03:21.684Z</created>
-    <token>job;gh:test/test#1</token>
+    <token>just some text</token>
   </claim>
-  <claim id="8">
-    <type>bootstrap the project</type>
-    <created>2016-12-29T09:03:21.684Z</created>
-    <token>user;yegor256</token>
-  </claim>
-</claims>
+</roles>
