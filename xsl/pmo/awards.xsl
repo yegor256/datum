@@ -67,7 +67,20 @@
       </td>
       <td>
         <code>
-          <xsl:value-of select="job"/>
+          <xsl:choose>
+            <xsl:when test="starts-with(job, 'gh:')">
+              <a>
+                <xsl:attribute
+                  name='href'
+                  select="concat('https://github.com/', substring-before(substring-after(job, 'gh:'), '#'), '/issues/', substring-after(job, '#'))"
+                />
+                <xsl:value-of select="job"/>
+              </a>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="job"/>
+            </xsl:otherwise>
+          </xsl:choose>
         </code>
       </td>
       <td>
