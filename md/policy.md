@@ -97,9 +97,9 @@ To let Zerocrat manage your project you have to create a new Slack
 channel, add @0crat to it, and ask it to `bootstrap` the project.
 
 <a name="13" href="#13">§13</a>.
-"Assign Roles."
+"Assign/Resign."
 Everybody who will be managed by Zerocrat must have roles in the project.
-To assign a role you say `roles add`.
+To assign a role you say `assign`. To remove a role you say `resign`.
 
 <a name="16" href="#16">§16</a>.
 "Connect GitHub."
