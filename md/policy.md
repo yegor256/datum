@@ -84,6 +84,11 @@ Until the job has impediments "Ten Days" rule is not applicable to it.
 For each code review you get a bonus as big in minutes as to the amount of
 comments posted to the ticket during the review.
 
+<a name="16" href="#16">§16</a>.
+"Rate."
+To make money in any project you must define your hourly rate.
+To do that just say `rate` to Zerocrat in your Slack private chat.
+
 ## Product Owner
 
 <a name="11" href="#11">§11</a>.

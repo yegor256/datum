@@ -31,14 +31,6 @@
     <links>
       <link rel="slack" href="7YYZZT99F"/>
     </links>
-    <skills>
-      <skill>java8</skill>
-      <skill>java.spring</skill>
-      <skill>ruby.sinatra</skill>
-      <skill>jquery</skill>
-      <skill>cpp</skill>
-      <skill>csharp</skill>
-    </skills>
   </person>
   <person id="alex-palevsky">
     <mentor>yegor256</mentor>
@@ -48,9 +40,6 @@
       <link rel="slack" href="U66KYT9RR"/>
     </links>
     <rate>¥25</rate>
-    <skills>
-      <skill>java8</skill>
-    </skills>
     <vacation>true</vacation>
   </person>
 </people>

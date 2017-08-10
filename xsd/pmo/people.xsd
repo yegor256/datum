@@ -44,11 +44,6 @@
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
-    <xs:simpleType name="skill">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[a-z0-9]+(.[a-z0-9]+)*"/>
-        </xs:restriction>
-    </xs:simpleType>
     <xs:complexType name="person">
         <xs:all>
             <xs:element name="mentor" type="login" minOccurs="0" maxOccurs="1"/>
@@ -72,17 +67,6 @@
                     <xs:selector xpath="link" />
                     <xs:field xpath="@rel" />
                     <xs:field xpath="@href" />
-                </xs:unique>
-            </xs:element>
-            <xs:element name="skills" minOccurs="0" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="skill" type="skill" minOccurs="0" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                </xs:complexType>
-                <xs:unique name="personSkill">
-                    <xs:selector xpath="skill" />
-                    <xs:field xpath="." />
                 </xs:unique>
             </xs:element>
             <xs:element name="vacation" minOccurs="0" maxOccurs="1">

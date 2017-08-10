@@ -55,7 +55,6 @@ As a Developer (`DEV`) you can:
   - [x] Start talking to the bot in a private channel: `hello`
   - [x] Modify your hourly rate: `rate`
   - [x] Modify your payment details: `wallet`
-  - [x] Modify your set of skills: `skills`
   - [ ] Quit a project: `quit`
   - [ ] Set/reset "away" mode: `away`
   - [x] Reject a job: `resign`
