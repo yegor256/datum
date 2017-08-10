@@ -101,6 +101,15 @@ channel, add @0crat to it, and ask it to `bootstrap` the project.
 Everybody who will be managed by Zerocrat must have roles in the project.
 To assign a role you say `roles add`.
 
+<a name="16" href="#16">§16</a>.
+"Connect GitHub."
+To connect your GitHub repository to the project you should
+1) add a new Webhook: `http://www.0crat.com/ghook`
+(content-type: `application/x-www-form-urlencoded`, "send me everything"),
+and
+2) link the project in Slack: `links add github yegor256/cactoos`, where
+instead of `yegor256/cactoos` you should put the coordinates of your GitHub repository.
+
 ## Architect
 
 <a name="14" href="#14">§14</a>.
