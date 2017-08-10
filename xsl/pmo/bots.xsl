@@ -21,6 +21,10 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Bots</h1>
+          <p>
+            Full list of Slack bots registered.
+          </p>
           <table>
             <thead>
               <tr>

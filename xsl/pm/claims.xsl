@@ -21,6 +21,14 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Claims</h1>
+          <p>
+            Claims are instructions and messages our internal software
+            "stakeholders" send to each other in order to manage
+            the artifacts. They are created in this artifact and processed
+            almost immediately. Refresh this page and you will see
+            a new version of the claims, they change every second.
+          </p>
           <xsl:apply-templates select="claims"/>
         </section>
       </body>

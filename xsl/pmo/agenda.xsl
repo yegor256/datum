@@ -21,6 +21,13 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Your Agenda</h1>
+          <p>
+            This is the full list of jobs currently assigned to you
+            in all projects we are managing. Zerocrat adds jobs here
+            automatically. This list is presented for the sake of
+            your convenience.
+          </p>
           <table>
             <thead>
               <tr>

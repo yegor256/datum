@@ -21,6 +21,12 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Orders</h1>
+          <p>
+            An order is a job that is assigned to a performer.
+            This is the full list of currently active orders
+            in the project.
+          </p>
           <table>
             <thead>
               <tr>

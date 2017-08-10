@@ -16,11 +16,16 @@
  * SOFTWARE.
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:template match="/milestones">
     <html lang="en">
       <body>
         <section>
+          <h1>Milestones</h1>
+          <p>
+            This is the full list of milestones identified in the project.
+            Jobs may use them for prioritization and scheduling.
+          </p>
           <table>
             <thead>
               <tr>

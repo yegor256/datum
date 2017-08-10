@@ -21,6 +21,13 @@
     <html lang="en">
       <body>
         <section>
+          <h1>List of Bans</h1>
+          <p>
+            This is the list of people who are banned from certain
+            jobs for different reasons. Our automated election process
+            takes this list into account when making a decision who
+            should be the performer of a new job.
+          </p>
           <table>
             <thead>
               <tr>

@@ -16,11 +16,18 @@
  * SOFTWARE.
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+    xmlns="http://www.w3.org/1999/xhtml" version="1.0">
     <xsl:template match="/speed">
         <html lang="en">
             <body>
                 <section>
+                    <h1>Speed of Delivery</h1>
+                    <p>
+                        Per each job completed we collect "speed of delivery"
+                        statistical information. The time interval between
+                        the moment of job order creation and the moment of
+                        the order successful closing goes into this document.
+                    </p>
                     <table>
                         <thead>
                             <tr>

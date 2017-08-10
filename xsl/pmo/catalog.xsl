@@ -21,6 +21,10 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Catalog of Projects</h1>
+          <p>
+            This is the full list of projects we work with.
+          </p>
           <table>
             <thead>
               <tr>

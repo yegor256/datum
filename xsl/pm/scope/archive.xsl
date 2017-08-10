@@ -22,6 +22,11 @@
         <html lang="en">
             <body>
                 <section>
+                    <h1>Archive of Jobs</h1>
+                    <p>
+                        This is the full list of jobs removed from the WBS
+                        because of completion.
+                    </p>
                     <table>
                         <thead>
                             <tr>

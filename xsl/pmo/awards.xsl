@@ -21,6 +21,12 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Your Awards</h1>
+          <p>
+            This is the full list of points recently awarded to you
+            by Zerocrat. The list is updated automatically every time
+            you get a new award.
+          </p>
           <table>
             <thead>
               <tr>

@@ -21,6 +21,13 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Elections</h1>
+          <p>
+            Zerocrat automatically elects performers and assigns jobs
+            to them. This is the full list of jobs where elections
+            already happened. The results of them are here, with full details.
+            See <a href="http://datum.zerocracy.com/pages/policy.html#3">par.3</a>.
+          </p>
           <xsl:apply-templates select="job"/>
         </section>
       </body>

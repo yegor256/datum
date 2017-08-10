@@ -21,6 +21,10 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Your Projects</h1>
+          <p>
+            This is the full list of projects you're a member of.
+          </p>
           <table>
             <thead>
               <tr>

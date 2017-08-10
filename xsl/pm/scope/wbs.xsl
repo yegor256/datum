@@ -21,6 +21,16 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Work Breakdown Structure (WBS)</h1>
+          <p>
+            The WBS is a hierarchical decomposition of the total scope
+            of work to be carried out by the project team to accomplish
+            the project objectives and create the required deliverables.
+            The WBS organizes and defines the total scope of the project,
+            and represents the work specified in the current approved
+            project scope statement.
+            See <a href="http://datum.zerocracy.com/pages/policy.html#14">par.14</a>.
+          </p>
           <table>
             <thead>
               <tr>

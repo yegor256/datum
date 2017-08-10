@@ -21,6 +21,11 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Precedences</h1>
+          <p>
+            This is the full list of dependencies between jobs,
+            in form of "precedences."
+          </p>
           <table>
             <thead>
               <tr>

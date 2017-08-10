@@ -21,6 +21,10 @@
     <html lang="en">
       <body>
         <section>
+          <h1>People</h1>
+          <p>
+            This is the full list of people we know.
+          </p>
           <table>
             <thead>
               <tr>

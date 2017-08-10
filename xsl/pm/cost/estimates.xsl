@@ -21,6 +21,11 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Estimates</h1>
+          <p>
+            Full list of estimates given to jobs. They are
+            absolute cash values, not minutes of work.
+          </p>
           <table>
             <thead>
               <tr>

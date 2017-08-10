@@ -21,6 +21,14 @@
     <html lang="en">
       <body>
         <section>
+          <h1>Boost Factors</h1>
+          <p>
+            Any job may have a boost factor, which will increase
+            its budget. The default boost factor of a job is 2x, which
+            means 30 minutes.
+            See <a href="http://datum.zerocracy.com/pages/policy.html#5">par.5</a>
+            and <a href="http://datum.zerocracy.com/pages/policy.html#15">par.15</a>.
+          </p>
           <table>
             <thead>
               <tr>
