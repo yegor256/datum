@@ -15,12 +15,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema version="0.35.4" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema version="0.35.5" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.4/xsd/basics.xsd"/>
-    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.4/xsd/pmo/types.xsd"/>
-    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.4/xsd/pm/cost/types.xsd"/>
-    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.4/xsd/pm/staff/types.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.5/xsd/basics.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.5/xsd/pmo/types.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.5/xsd/pm/cost/types.xsd"/>
+    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.5/xsd/pm/staff/types.xsd"/>
     <xs:complexType name="wallet">
         <xs:simpleContent>
             <xs:extension base="xs:string">
@@ -44,11 +44,6 @@
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
-    <xs:simpleType name="skill">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[a-z0-9]+(.[a-z0-9]+)*"/>
-        </xs:restriction>
-    </xs:simpleType>
     <xs:complexType name="person">
         <xs:all>
             <xs:element name="mentor" type="login" minOccurs="0" maxOccurs="1"/>
@@ -72,17 +67,6 @@
                     <xs:selector xpath="link" />
                     <xs:field xpath="@rel" />
                     <xs:field xpath="@href" />
-                </xs:unique>
-            </xs:element>
-            <xs:element name="skills" minOccurs="0" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="skill" type="skill" minOccurs="0" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                </xs:complexType>
-                <xs:unique name="personSkill">
-                    <xs:selector xpath="skill" />
-                    <xs:field xpath="." />
                 </xs:unique>
             </xs:element>
             <xs:element name="vacation" minOccurs="0" maxOccurs="1">
