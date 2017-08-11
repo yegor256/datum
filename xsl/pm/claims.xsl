@@ -62,7 +62,9 @@
         </tr>
       </thead>
       <tbody>
-        <xsl:apply-templates select="claim"/>
+        <xsl:apply-templates select="claim">
+          <xsl:sort select="@id" />
+        </xsl:apply-templates>
       </tbody>
     </table>
   </xsl:template>

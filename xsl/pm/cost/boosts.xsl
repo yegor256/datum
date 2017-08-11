@@ -41,7 +41,9 @@
               </tr>
             </thead>
             <tbody>
-              <xsl:apply-templates select="boosts"/>
+              <xsl:apply-templates select="boosts">
+                <xsl:sort select="@jobID" />
+              </xsl:apply-templates>
             </tbody>
           </table>
         </section>

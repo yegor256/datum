@@ -43,7 +43,9 @@
               </tr>
             </thead>
             <tbody>
-              <xsl:apply-templates select="job"/>
+              <xsl:apply-templates select="job">
+                <xsl:sort select="@id" />
+              </xsl:apply-templates>
             </tbody>
           </table>
         </section>

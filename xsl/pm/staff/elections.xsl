@@ -17,7 +17,7 @@
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml" version="1.0">
-  <xsl:template match="/elections">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
@@ -28,10 +28,20 @@
             already happened. The results of them are here, with full details.
             See <a href="http://datum.zerocracy.com/pages/policy.html#3">par.3</a>.
           </p>
-          <xsl:apply-templates select="job"/>
+          <xsl:apply-templates select="elections"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="elections[not(job)]">
+    <p>
+      <xsl:text>There are no elections at the moment in the project.</xsl:text>
+    </p>
+  </xsl:template>
+  <xsl:template match="elections[job]">
+    <xsl:apply-templates select="job">
+      <xsl:sort select="@id" />
+    </xsl:apply-templates>
   </xsl:template>
   <xsl:template match="job">
     <p>

@@ -42,7 +42,9 @@
               </tr>
             </thead>
             <tbody>
-              <xsl:apply-templates select="person"/>
+              <xsl:apply-templates select="person">
+                <xsl:sort select="@id" />
+              </xsl:apply-templates>
             </tbody>
           </table>
         </section>
