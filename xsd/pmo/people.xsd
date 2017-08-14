@@ -27,9 +27,9 @@
                 <xs:attribute name="bank" use="required">
                     <xs:simpleType>
                         <xs:restriction base="xs:string">
-                            <xs:enumeration value="paypal" />
-                            <xs:enumeration value="btc" />
-                            <xs:enumeration value="upwork" />
+                            <xs:enumeration value="paypal"/>
+                            <xs:enumeration value="btc"/>
+                            <xs:enumeration value="upwork"/>
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:attribute>
@@ -64,14 +64,14 @@
                     </xs:sequence>
                 </xs:complexType>
                 <xs:unique name="personLink">
-                    <xs:selector xpath="link" />
-                    <xs:field xpath="@rel" />
-                    <xs:field xpath="@href" />
+                    <xs:selector xpath="link"/>
+                    <xs:field xpath="@rel"/>
+                    <xs:field xpath="@href"/>
                 </xs:unique>
             </xs:element>
             <xs:element name="vacation" minOccurs="0" maxOccurs="1">
                 <xs:simpleType>
-                    <xs:restriction base="xs:boolean" />
+                    <xs:restriction base="xs:boolean"/>
                 </xs:simpleType>
             </xs:element>
         </xs:all>
@@ -86,8 +86,8 @@
             <xs:attribute name="version" use="required" type="version"/>
         </xs:complexType>
         <xs:unique name="uniqueID">
-            <xs:selector xpath="person" />
-            <xs:field xpath="@id" />
+            <xs:selector xpath="person"/>
+            <xs:field xpath="@id"/>
         </xs:unique>
     </xs:element>
 </xs:schema>

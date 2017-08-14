@@ -43,7 +43,7 @@
             </thead>
             <tbody>
               <xsl:apply-templates select="boost">
-                <xsl:sort select="@id" />
+                <xsl:sort select="@id"/>
               </xsl:apply-templates>
             </tbody>
           </table>

@@ -28,8 +28,8 @@
             <xs:attribute name="version" use="required" type="version"/>
         </xs:complexType>
         <xs:unique name="uniqueProjectID">
-            <xs:selector xpath="project" />
-            <xs:field xpath="." />
+            <xs:selector xpath="project"/>
+            <xs:field xpath="."/>
         </xs:unique>
     </xs:element>
 </xs:schema>

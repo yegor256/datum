@@ -22,8 +22,8 @@
     <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
     <xs:complexType name="order">
         <xs:all>
-            <xs:element name="project" type="projectID" minOccurs="1" maxOccurs="1" />
-            <xs:element name="minutes" type="xs:integer" minOccurs="1" maxOccurs="1" />
+            <xs:element name="project" type="projectID" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="minutes" type="xs:integer" minOccurs="1" maxOccurs="1"/>
         </xs:all>
         <xs:attribute name="job" use="required" type="jobID"/>
     </xs:complexType>
@@ -36,8 +36,8 @@
             <xs:attribute name="version" use="required" type="version"/>
         </xs:complexType>
         <xs:unique name="uniqueID">
-            <xs:selector xpath="order" />
-            <xs:field xpath="@job" />
+            <xs:selector xpath="order"/>
+            <xs:field xpath="@job"/>
         </xs:unique>
     </xs:element>
 </xs:schema>
