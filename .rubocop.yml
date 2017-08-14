@@ -3,3 +3,5 @@ AllCops:
 
 Metrics/BlockLength:
   Max: 100
+Style/MultilineMethodCallIndentation:
+  Enabled: false
