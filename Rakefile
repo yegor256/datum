@@ -160,9 +160,11 @@ task :style do
   Dir['**/*.xml', '**/*.xsl', '**/*.xsd'].each do |f|
     print "XML #{f}... "
     xml = Nokogiri::XML(File.open(f), &:noblanks)
-    if File.read(f) != xml.to_xml(indent:2)
+    ideal = xml.to_xml(indent: 2)
+    now = File.read(f)
+    if now != ideal
       Differ.format = :color
-      puts Differ.diff_by_line(File.read(f), xml.to_xml(indent:2)).to_s
+      puts Differ.diff_by_line(now, ideal).to_s
       raise "XML formatting is broken in #{f}"
     end
     print "OK\n"
