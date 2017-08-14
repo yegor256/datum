@@ -57,8 +57,10 @@
   </xsl:template>
   <xsl:template match="election">
     <li>
-      <xsl:text>Election of </xsl:text>
-      <xsl:value-of select="@date"/>
+      <xsl:text>Elected </xsl:text>
+      <xsl:call-template name="date">
+        <xsl:with-param name="iso" select="@date"/>
+      </xsl:call-template>
       <ul>
         <xsl:apply-templates select="vote"/>
       </ul>

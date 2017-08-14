@@ -66,7 +66,9 @@
         </code>
       </td>
       <td>
-        <xsl:value-of select="added"/>
+        <xsl:call-template name="date">
+          <xsl:with-param name="iso" select="added"/>
+        </xsl:call-template>
       </td>
     </tr>
   </xsl:template>

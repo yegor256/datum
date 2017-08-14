@@ -67,7 +67,9 @@
         </xsl:call-template>
       </td>
       <td>
-        <xsl:value-of select="created"/>
+        <xsl:call-template name="date">
+          <xsl:with-param name="iso" select="created"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:value-of select="removed"/>

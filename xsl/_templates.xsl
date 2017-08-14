@@ -36,6 +36,10 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  <xsl:template name="date">
+    <xsl:param name="iso"/>
+    <xsl:value-of select="$iso"/>
+  </xsl:template>
   <xsl:template name="user">
     <xsl:param name="id"/>
     <xsl:choose>

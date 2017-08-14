@@ -17,6 +17,7 @@
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:include href="../../_templates.xsl"/>
   <xsl:template match="/milestones">
     <html lang="en">
       <body>
@@ -51,7 +52,9 @@
         <xsl:value-of select="@id"/>
       </td>
       <td>
-        <xsl:value-of select="date"/>
+        <xsl:call-template name="date">
+          <xsl:with-param name="iso" select="date"/>
+        </xsl:call-template>
       </td>
     </tr>
   </xsl:template>

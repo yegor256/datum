@@ -17,6 +17,7 @@
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:include href="../_templates.xsl"/>
   <xsl:template match="/catalog">
     <html lang="en">
       <body>
@@ -61,7 +62,9 @@
         </code>
       </td>
       <td>
-        <xsl:value-of select="created"/>
+        <xsl:call-template name="date">
+          <xsl:with-param name="iso" select="created"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:value-of select="prefix"/>
