@@ -15,8 +15,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../../_templates.xsl"/>
   <xsl:template match="/bans">
     <html lang="en">
@@ -59,9 +58,9 @@
   <xsl:template match="ban">
     <tr>
       <td>
-      <xsl:call-template name="job">
-        <xsl:with-param name="id" select="@job"/>
-      </xsl:call-template>
+        <xsl:call-template name="job">
+          <xsl:with-param name="id" select="@job"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:call-template name="user">
