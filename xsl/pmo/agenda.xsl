@@ -17,6 +17,7 @@
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:include href="../_templates.xsl"/>
   <xsl:template match="/agenda">
     <html lang="en">
       <body>
@@ -55,22 +56,9 @@
   <xsl:template match="order">
     <tr>
       <td>
-        <code>
-          <xsl:choose>
-            <xsl:when test="starts-with(@job, 'gh:')">
-              <a>
-                <xsl:attribute
-                  name='href'
-                  select="concat('https://github.com/', substring-before(substring-after(@job, 'gh:'), '#'), '/issues/', substring-after(@job, '#'))"
-                />
-                <xsl:value-of select="@job"/>
-              </a>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="@job"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </code>
+        <xsl:call-template name="job">
+          <xsl:with-param name="id" select="@job"/>
+        </xsl:call-template>
       </td>
       <td>
         <code>

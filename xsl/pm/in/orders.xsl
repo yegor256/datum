@@ -17,6 +17,7 @@
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:include href="../../_templates.xsl"/>
   <xsl:template match="/orders">
     <html lang="en">
       <body>
@@ -57,7 +58,9 @@
   <xsl:template match="order">
     <tr>
       <td>
-        <xsl:value-of select="@job"/>
+        <xsl:call-template name="job">
+          <xsl:with-param name="id" select="@job"/>
+        </xsl:call-template>
       </td>
       <td>
         <a href="https://github.com/{@performer}">

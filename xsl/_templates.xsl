@@ -15,11 +15,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:simpleType name="jobID">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="gh:[A-Z0-9a-z.\-#/]{3,}"/>
-        </xs:restriction>
-    </xs:simpleType>
-</xs:schema>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:template name="job">
+    <xsl:param name="id"/>
+    <xsl:choose>
+      <xsl:when test="starts-with($id, 'gh:')">
+        <a>
+          <xsl:attribute
+            name='href'
+            select="concat('https://github.com/', substring-before(substring-after($id, 'gh:'), '#'), '/issues/', substring-after($id, '#'))"
+          />
+          <xsl:value-of select="substring-after($id, 'gh:')"/>
+        </a>
+      </xsl:when>
+      <xsl:otherwise>
+        <code>
+          <xsl:value-of select="$id"/>
+        </code>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+</xsl:stylesheet>

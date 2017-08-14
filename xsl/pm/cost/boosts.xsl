@@ -17,6 +17,7 @@
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:include href="../../_templates.xsl"/>
   <xsl:template match="/boosts">
     <html lang="en">
       <body>
@@ -33,16 +34,16 @@
             <thead>
               <tr>
                 <th>
-                  <xsl:text>Job ID</xsl:text>
+                  <xsl:text>Job</xsl:text>
                 </th>
                 <th>
-                  <xsl:text>Boost Factor</xsl:text>
+                  <xsl:text>Factor</xsl:text>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <xsl:apply-templates select="boosts">
-                <xsl:sort select="@jobID" />
+              <xsl:apply-templates select="boost">
+                <xsl:sort select="@id" />
               </xsl:apply-templates>
             </tbody>
           </table>
@@ -50,10 +51,12 @@
       </body>
     </html>
   </xsl:template>
-  <xsl:template match="boosts">
+  <xsl:template match="boost">
     <tr>
       <td>
-        <xsl:value-of select="@jobID"/>
+        <xsl:call-template name="job">
+          <xsl:with-param name="id" select="@id"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:value-of select="text()"/>
