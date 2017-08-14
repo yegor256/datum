@@ -16,18 +16,18 @@
  * SOFTWARE.
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-    <xsl:output method="xml"/>
-    <xsl:strip-space elements="*" />
-    <xsl:template match="/*[not(@version) and not(@updated)]">
-        <xsl:copy>
-            <xsl:attribute name="version">0.24</xsl:attribute>
-            <xsl:attribute name="updated">2017-06-26T09:03:21.684Z</xsl:attribute>
-            <xsl:apply-templates select="@*|node()" />
-        </xsl:copy>
-    </xsl:template>
-    <xsl:template match="@*|node()">
-        <xsl:copy>
-            <xsl:apply-templates select="@*|node()"/>
-        </xsl:copy>
-    </xsl:template>
+  <xsl:output method="xml"/>
+  <xsl:strip-space elements="*"/>
+  <xsl:template match="/*[not(@version) and not(@updated)]">
+    <xsl:copy>
+      <xsl:attribute name="version">0.24</xsl:attribute>
+      <xsl:attribute name="updated">2017-06-26T09:03:21.684Z</xsl:attribute>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="@*|node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
 </xsl:stylesheet>

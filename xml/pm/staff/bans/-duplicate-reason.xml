@@ -16,10 +16,10 @@
  * SOFTWARE.
  -->
 <bans>
-    <ban job="gh:test/test#1">
-        <created>2018-01-02T12:10:44</created>
-        <login>yegor256</login>
-        <reason>Because this user reported the ticket</reason>
-        <reason>Because this user fixed this ticked</reason>
-    </ban>
+  <ban job="gh:test/test#1">
+    <created>2018-01-02T12:10:44</created>
+    <login>yegor256</login>
+    <reason>Because this user reported the ticket</reason>
+    <reason>Because this user fixed this ticked</reason>
+  </ban>
 </bans>

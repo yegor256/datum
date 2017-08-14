@@ -16,7 +16,7 @@
  * SOFTWARE.
  -->
 <people>
-    <person id="invalid-vacation">
-        <vacation>2016-12-29T09:03:21.684Z</vacation>
-    </person>
+  <person id="invalid-vacation">
+    <vacation>2016-12-29T09:03:21.684Z</vacation>
+  </person>
 </people>

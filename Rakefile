@@ -19,6 +19,7 @@ require 'nokogiri'
 require 'rake'
 require 'rake/clean'
 require 'date'
+require 'differ'
 require 'tmpdir'
 require 'fileutils'
 require 'rake/clean'
@@ -27,7 +28,7 @@ require 'mustache'
 
 CLEAN.include 'target'
 
-task default: %i[clean xsd xsl pages rubocop copyright]
+task default: %i[clean xsd xsl pages style rubocop copyright]
 
 require 'rubocop/rake_task'
 desc 'Run RuboCop on all directories'
@@ -152,6 +153,21 @@ task :xsl do
   end
   raise "#{total} errors" unless total.zero?
   puts 'All XML/XSL files are clean'
+end
+
+desc 'Validate all XML/XSL/XSD files for formatting'
+task :style do
+  Dir['**/*.xml', '**/*.xsl', '**/*.xsd'].each do |f|
+    print "XML #{f}... "
+    xml = Nokogiri::XML(File.open(f), &:noblanks)
+    if File.read(f) != xml.to_xml(indent:2)
+      Differ.format = :color
+      puts Differ.diff_by_line(File.read(f), xml.to_xml(indent:2)).to_s
+      raise "XML formatting is broken in #{f}"
+    end
+    print "OK\n"
+  end
+  puts 'All XML/XSL/XSD files are formatted correctly'
 end
 
 task :copyright do

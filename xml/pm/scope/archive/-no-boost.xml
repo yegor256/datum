@@ -16,10 +16,10 @@
  * SOFTWARE.
  -->
 <archive version="1" updated="2017-08-05T17:11:42.123Z">
-    <job id="gh:zerocracy/farm#165">
-        <created>2017-08-05T17:11:42.123Z</created>
-        <performer>g4s8</performer>
-        <removed>2017-08-05T17:20:42.123Z</removed>
-        <reason>completed</reason>
-    </job>
+  <job id="gh:zerocracy/farm#165">
+    <created>2017-08-05T17:11:42.123Z</created>
+    <performer>g4s8</performer>
+    <removed>2017-08-05T17:20:42.123Z</removed>
+    <reason>completed</reason>
+  </job>
 </archive>
