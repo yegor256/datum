@@ -24,8 +24,8 @@
   </xs:simpleType>
   <xs:simpleType name="precedenceType">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="job" />
-      <xs:enumeration value="milestone" />
+      <xs:enumeration value="job"/>
+      <xs:enumeration value="milestone"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

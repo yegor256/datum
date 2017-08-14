@@ -41,7 +41,7 @@
   </xsl:template>
   <xsl:template match="elections[job]">
     <xsl:apply-templates select="job">
-      <xsl:sort select="@id" />
+      <xsl:sort select="@id"/>
     </xsl:apply-templates>
   </xsl:template>
   <xsl:template match="job">

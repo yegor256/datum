@@ -48,7 +48,7 @@
             </thead>
             <tbody>
               <xsl:apply-templates select="ban">
-                <xsl:sort select="@job" />
+                <xsl:sort select="@job"/>
               </xsl:apply-templates>
             </tbody>
           </table>

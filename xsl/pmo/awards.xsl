@@ -50,7 +50,7 @@
             </thead>
             <tbody>
               <xsl:for-each select="award">
-                <xsl:sort select="added" order="descending" />
+                <xsl:sort select="added" order="descending"/>
                 <xsl:apply-templates select="."/>
               </xsl:for-each>
             </tbody>

@@ -37,8 +37,8 @@
             <xs:attribute name="version" use="required" type="version"/>
         </xs:complexType>
         <xs:unique name="uniqueID">
-            <xs:selector xpath="order" />
-            <xs:field xpath="@job" />
+            <xs:selector xpath="order"/>
+            <xs:field xpath="@job"/>
         </xs:unique>
     </xs:element>
 </xs:schema>

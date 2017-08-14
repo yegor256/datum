@@ -24,15 +24,15 @@
         <xs:sequence>
             <xs:element name="role" type="role" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
-        <xs:attribute name="id" type="login" use="required" />
+        <xs:attribute name="id" type="login" use="required"/>
     </xs:complexType>
     <xs:element name="roles">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="person" type="person" minOccurs="0" maxOccurs="unbounded">
                     <xs:unique name="roleUnique">
-                        <xs:selector xpath="role" />
-                        <xs:field xpath="." />
+                        <xs:selector xpath="role"/>
+                        <xs:field xpath="."/>
                     </xs:unique>
                 </xs:element>
             </xs:sequence>
@@ -40,8 +40,8 @@
             <xs:attribute name="version" use="required" type="version"/>
         </xs:complexType>
         <xs:unique name="idUnique">
-            <xs:selector xpath="person" />
-            <xs:field xpath="@id" />
+            <xs:selector xpath="person"/>
+            <xs:field xpath="@id"/>
         </xs:unique>
     </xs:element>
 </xs:schema>
