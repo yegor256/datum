@@ -79,10 +79,9 @@
   </xsl:template>
   <xsl:template match="person">
     <li>
-      <a href="https://github.com/{@login}">
-        <xsl:text>@</xsl:text>
-        <xsl:value-of select="@login"/>
-      </a>
+      <xsl:call-template name="user">
+        <xsl:with-param name="id" select="@login"/>
+      </xsl:call-template>
       <xsl:text>; </xsl:text>
       <xsl:value-of select="@points"/>
       <xsl:text>; </xsl:text>

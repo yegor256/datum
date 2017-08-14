@@ -73,9 +73,9 @@
         <xsl:value-of select="removed"/>
       </td>
       <td>
-        <xsl:if test="performer">
-          <xsl:value-of select="performer"/>
-        </xsl:if>
+        <xsl:call-template name="user">
+          <xsl:with-param name="id" select="performer"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:value-of select="reason"/>

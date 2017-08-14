@@ -17,6 +17,7 @@
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:include href="../../_templates.xsl"/>
   <xsl:template match="/roles">
     <html lang="en">
       <body>
@@ -54,10 +55,9 @@
   <xsl:template match="person">
     <tr>
       <td>
-        <a href="https://github.com/{@id}">
-          <xsl:text>@</xsl:text>
-          <xsl:value-of select="@id"/>
-        </a>
+        <xsl:call-template name="user">
+          <xsl:with-param name="id" select="@id"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:for-each select="role">

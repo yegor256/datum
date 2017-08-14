@@ -64,10 +64,9 @@
       </xsl:call-template>
       </td>
       <td>
-        <a href="https://github.com/{@login}">
-          <xsl:text>@</xsl:text>
-          <xsl:value-of select="login"/>
-        </a>
+        <xsl:call-template name="user">
+          <xsl:with-param name="id" select="login"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:value-of select="reason"/>

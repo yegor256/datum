@@ -36,4 +36,18 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  <xsl:template name="user">
+    <xsl:param name="id"/>
+    <xsl:choose>
+      <xsl:when test="$id">
+        <a href="https://github.com/{$id}">
+          <xsl:text>@</xsl:text>
+          <xsl:value-of select="$id"/>
+        </a>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>-</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
 </xsl:stylesheet>

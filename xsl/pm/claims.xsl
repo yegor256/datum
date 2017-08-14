@@ -17,6 +17,7 @@
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:include href="../_templates.xsl"/>
   <xsl:template match="/">
     <html lang="en">
       <body>
@@ -77,15 +78,9 @@
         <xsl:value-of select="type"/>
       </td>
       <td>
-        <xsl:if test="author">
-          <a href="https://github.com/{author}">
-            <xsl:text>@</xsl:text>
-            <xsl:value-of select="author"/>
-          </a>
-        </xsl:if>
-        <xsl:if test="not(author)">
-          <xsl:text>-</xsl:text>
-        </xsl:if>
+        <xsl:call-template name="user">
+          <xsl:with-param name="id" select="author"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:value-of select="created"/>

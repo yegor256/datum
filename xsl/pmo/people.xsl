@@ -17,6 +17,7 @@
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:include href="../_templates.xsl"/>
   <xsl:template match="/people">
     <html lang="en">
       <body>
@@ -62,9 +63,9 @@
   <xsl:template match="person">
     <tr>
       <td>
-        <code>
-          <xsl:value-of select="@id"/>
-        </code>
+        <xsl:call-template name="user">
+          <xsl:with-param name="id" select="@id"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:value-of select="name"/>
