@@ -15,10 +15,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:simpleType name="jobID">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="gh:[A-Z0-9a-z.\-#/]{3,}"/>
-        </xs:restriction>
-    </xs:simpleType>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="SNAPSHOT" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:simpleType name="jobID">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="gh:[A-Z0-9a-z.\-#/]{3,}"/>
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>

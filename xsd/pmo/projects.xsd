@@ -15,20 +15,20 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema version="SNAPSHOT" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
-    <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
-    <xs:element name="projects">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="project" type="projectID" minOccurs="0" maxOccurs="unbounded"/>
-            </xs:sequence>
-            <xs:attribute name="updated" use="required" type="xs:dateTime"/>
-            <xs:attribute name="version" use="required" type="version"/>
-        </xs:complexType>
-        <xs:unique name="uniqueProjectID">
-            <xs:selector xpath="project"/>
-            <xs:field xpath="."/>
-        </xs:unique>
-    </xs:element>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="SNAPSHOT" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
+  <xs:element name="projects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="project" type="projectID" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="updated" use="required" type="xs:dateTime"/>
+      <xs:attribute name="version" use="required" type="version"/>
+    </xs:complexType>
+    <xs:unique name="uniqueProjectID">
+      <xs:selector xpath="project"/>
+      <xs:field xpath="."/>
+    </xs:unique>
+  </xs:element>
 </xs:schema>
