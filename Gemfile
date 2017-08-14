@@ -18,7 +18,7 @@
 source 'https://rubygems.org'
 ruby '2.3.3'
 
-gem 'differ'
+gem 'differ', '0.1.2'
 gem 'mustache', '1.0.5'
 gem 'nokogiri', '1.7.0'
 gem 'rake', '12.0.0'
