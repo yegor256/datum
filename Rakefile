@@ -157,16 +157,18 @@ end
 
 desc 'Validate all XML/XSL/XSD files for formatting'
 task :style do
-  Dir['**/*.xml', '**/*.xsl', '**/*.xsd'].each do |f|
+  Dir['**/*.xml', '**/*.xsl', '**/*.xsd', '**/*.html'].each do |f|
+    next if f.start_with?('target/')
     print "XML #{f}... "
     xml = Nokogiri::XML(File.open(f), &:noblanks)
     ideal = xml.to_xml(indent: 2)
     now = File.read(f)
     if now != ideal
       Differ.format = :color
-      puts Differ.diff_by_line(now, ideal).to_s
+      puts Differ.diff_by_line(ideal, now).to_s
       raise "XML formatting is broken in #{f}"
     end
+    # if (now.start_with?())
     print "OK\n"
   end
   puts 'All XML/XSL/XSD files are formatted correctly'
