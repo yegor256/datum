@@ -21,12 +21,13 @@
     <xsl:param name="id"/>
     <xsl:choose>
       <xsl:when test="starts-with($id, 'gh:')">
-        <a>
-          <xsl:attribute
-            name='href'
-            select="concat('https://github.com/', substring-before(substring-after($id, 'gh:'), '#'), '/issues/', substring-after($id, '#'))"
-          />
-          <xsl:value-of select="substring-after($id, 'gh:')"/>
+        <xsl:variable name="issue" select="substring-after($id, '#')"/>
+        <xsl:variable name="repo" select="substring-before(substring-after($id, 'gh:'), '#')"/>
+        <a title="Issue #{$issue} in {$repo} GitHub repository"
+          href="https://github.com/{$repo}/issues/{$issue}">
+          <xsl:value-of select="$repo"/>
+          <xsl:text>#</xsl:text>
+          <xsl:value-of select="$issue"/>
         </a>
       </xsl:when>
       <xsl:otherwise>
@@ -44,7 +45,7 @@
     <xsl:param name="id"/>
     <xsl:choose>
       <xsl:when test="$id">
-        <a href="https://github.com/{$id}">
+        <a href="https://github.com/{$id}" title="GitHub user @{$id}">
           <xsl:text>@</xsl:text>
           <xsl:value-of select="$id"/>
         </a>
