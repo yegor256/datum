@@ -15,7 +15,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.36.3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.36.4" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:simpleType name="milestoneID">
     <xs:restriction base="xs:string">
       <xs:pattern value="[a-z]{2}:[A-Z0-9a-z.\-#/]+"/>
