@@ -21,12 +21,16 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Elections</h1>
+          <h1>
+            <xsl:text>Elections</xsl:text>
+          </h1>
           <p>
-            Zerocrat automatically elects performers and assigns jobs
+            <xsl:text>Zerocrat automatically elects performers and assigns jobs
             to them. This is the full list of jobs where elections
-            already happened. The results of them are here, with full details.
-            See <a href="http://datum.zerocracy.com/pages/policy.html#3">par.3</a>.
+            already happened. The results of them are here, with full details.</xsl:text>
+            <xsl:text>See </xsl:text>
+            <a href="http://datum.zerocracy.com/pages/policy.html#3">par.3</a>
+            <xsl:text>.</xsl:text>
           </p>
           <xsl:apply-templates select="elections"/>
         </section>
@@ -40,7 +44,7 @@
   </xsl:template>
   <xsl:template match="elections[job]">
     <xsl:apply-templates select="job">
-      <xsl:sort select="@id"/>
+      <xsl:sort select="@id" order="descending" data-type="text"/>
     </xsl:apply-templates>
   </xsl:template>
   <xsl:template match="job">

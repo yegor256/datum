@@ -21,14 +21,18 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Roles and Members</h1>
+          <h1>
+            <xsl:text>Roles and Members</xsl:text>
+          </h1>
           <p>
-            This is a full list of people and their roles in the
+            <xsl:text>This is a full list of people and their roles in the
             project. The Architect (ARC) or the Product Owner (PO) are
             allowed to assign roles and resign them. By convention
             we use these role names: ARC (architect), PO (product owner), DEV (developer),
-            TST (tester), QA (quality assurance).
-            See <a href="http://datum.zerocracy.com/pages/policy.html#13">par.13</a>.
+            TST (tester), QA (quality assurance).</xsl:text>
+            <xsl:text>See </xsl:text>
+            <a href="http://datum.zerocracy.com/pages/policy.html#13">par.13</a>
+            <xsl:text>.</xsl:text>
           </p>
           <table>
             <thead>

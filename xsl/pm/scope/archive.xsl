@@ -21,10 +21,12 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Archive of Jobs</h1>
+          <h1>
+            <xsl:text>Archive of Jobs</xsl:text>
+          </h1>
           <p>
-            This is the full list of jobs removed from the WBS
-            because of completion.
+            <xsl:text>This is the full list of jobs removed from the WBS
+            because of completion.</xsl:text>
           </p>
           <table>
             <thead>

@@ -21,9 +21,11 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Your Projects</h1>
+          <h1>
+            <xsl:text>Your Projects</xsl:text>
+          </h1>
           <p>
-            This is the full list of projects you're a member of.
+            <xsl:text>This is the full list of projects you're a member of.</xsl:text>
           </p>
           <table>
             <thead>

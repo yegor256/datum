@@ -21,12 +21,14 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Speed of Delivery</h1>
+          <h1>
+            <xsl:text>Speed of Delivery</xsl:text>
+          </h1>
           <p>
-            Per each job completed we collect "speed of delivery"
+            <xsl:text>Per each job completed we collect "speed of delivery"
             statistical information. The time interval between
             the moment of job order creation and the moment of
-            the order successful closing goes into this document.
+            the order successful closing goes into this document.</xsl:text>
           </p>
           <table>
             <thead>

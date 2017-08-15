@@ -20,9 +20,13 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Bots</h1>
+          <h1>
+            <xsl:text>Bots</xsl:text>
+          </h1>
           <p>
-            Full list of Slack bots registered.
+            <xsl:text>Full list of </xsl:text>
+            <xsl:value-of select="count(bot)"/>
+            <xsl:text> Slack bots registered.</xsl:text>
           </p>
           <table>
             <thead>

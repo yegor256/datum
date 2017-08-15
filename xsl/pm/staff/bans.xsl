@@ -21,12 +21,14 @@
     <html lang="en">
       <body>
         <section>
-          <h1>List of Bans</h1>
+          <h1>
+            <xsl:text>List of Bans</xsl:text>
+          </h1>
           <p>
-            This is the list of people who are banned from certain
+            <xsl:text>This is the list of people who are banned from certain
             jobs for different reasons. Our automated election process
             takes this list into account when making a decision who
-            should be the performer of a new job.
+            should be the performer of a new job.</xsl:text>
           </p>
           <table>
             <thead>
@@ -47,7 +49,7 @@
             </thead>
             <tbody>
               <xsl:apply-templates select="ban">
-                <xsl:sort select="@job"/>
+                <xsl:sort select="created" order="descending" data-type="text"/>
               </xsl:apply-templates>
             </tbody>
           </table>

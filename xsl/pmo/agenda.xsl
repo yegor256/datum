@@ -21,12 +21,16 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Your Agenda</h1>
+          <h1>
+            <xsl:text>Your Agenda</xsl:text>
+          </h1>
           <p>
-            This is the full list of jobs currently assigned to you
+            <xsl:text>This is the full list of </xsl:text>
+            <xsl:value-of select="count(order)"/>
+            <xsl:text> jobs currently assigned to you
             in all projects we are managing. Zerocrat adds jobs here
             automatically. This list is presented for the sake of
-            your convenience.
+            your convenience.</xsl:text>
           </p>
           <table>
             <thead>
@@ -44,7 +48,7 @@
             </thead>
             <tbody>
               <xsl:apply-templates select="order">
-                <xsl:sort select="@job"/>
+                <xsl:sort select="added" order="descending" data-type="text"/>
               </xsl:apply-templates>
             </tbody>
           </table>

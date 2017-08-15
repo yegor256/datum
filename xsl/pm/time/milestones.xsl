@@ -38,7 +38,9 @@
               </tr>
             </thead>
             <tbody>
-              <xsl:apply-templates select="milestone"/>
+              <xsl:apply-templates select="milestone">
+                <xsl:sort select="date" order="descending" data-type="text"/>
+              </xsl:apply-templates>
             </tbody>
           </table>
         </section>

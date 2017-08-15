@@ -16,7 +16,7 @@
  * SOFTWARE.
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
-  <xsl:param name="today" select="'2017-08-15T12:00:00Z'"/>
+  <xsl:param name="today" select="'2000-01-01T12:00:00Z'"/>
   <xsl:template name="job">
     <xsl:param name="id"/>
     <xsl:choose>

@@ -21,11 +21,13 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Orders</h1>
+          <h1>
+            <xsl:text>Orders</xsl:text>
+          </h1>
           <p>
-            An order is a job that is assigned to a performer.
+            <xsl:text>An order is a job that is assigned to a performer.
             This is the full list of currently active orders
-            in the project.
+            in the project.</xsl:text>
           </p>
           <table>
             <thead>
@@ -46,7 +48,7 @@
             </thead>
             <tbody>
               <xsl:apply-templates select="order">
-                <xsl:sort select="@job"/>
+                <xsl:sort select="created" order="descending" data-type="text"/>
               </xsl:apply-templates>
             </tbody>
           </table>

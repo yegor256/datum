@@ -21,11 +21,16 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Your Awards</h1>
+          <h1>
+            <xsl:text>Your Awards</xsl:text>
+          </h1>
           <p>
-            This is the full list of points recently awarded to you
-            by Zerocrat. The list is updated automatically every time
-            you get a new award.
+            <xsl:text>This is the full list of points recently awarded to you by Zerocrat in </xsl:text>
+            <xsl:value-of select="count(award)"/>
+            <xsl:text> awards. The list is updated automatically every time you get a new award.</xsl:text>
+            <xsl:text> Total score is </xsl:text>
+            <xsl:value-of select="sum(award/points)"/>
+            <xsl:text>.</xsl:text>
           </p>
           <table>
             <thead>
@@ -49,7 +54,7 @@
             </thead>
             <tbody>
               <xsl:for-each select="award">
-                <xsl:sort select="added" order="descending"/>
+                <xsl:sort select="added" order="descending" data-type="text"/>
                 <xsl:apply-templates select="."/>
               </xsl:for-each>
             </tbody>

@@ -141,7 +141,10 @@ task :xsl do
       root = xml.xpath('/*').first
       raise "version and updated attributes are required <#{f}>" if
         root.attr('version').nil? || root.attr('updated').nil?
-      html = xslt.transform(Nokogiri::XML(File.open(f)))
+      html = xslt.transform(
+        Nokogiri::XML(File.open(f)),
+        ['today', "'#{Time.now.iso8601}'"]
+      )
       html.remove_namespaces!
       raise 'HTML <section> absent' if html.xpath('/html/body/section').empty?
       File.write(File.join(dir, label), html)

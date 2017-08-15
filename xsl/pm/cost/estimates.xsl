@@ -21,10 +21,12 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Estimates</h1>
+          <h1>
+            <xsl:text>Estimates</xsl:text>
+          </h1>
           <p>
-            Full list of estimates given to jobs. They are
-            absolute cash values, not minutes of work.
+            <xsl:text>Full list of estimates given to jobs. They are
+            absolute cash values, not minutes of work.</xsl:text>
           </p>
           <table>
             <thead>

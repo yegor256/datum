@@ -21,13 +21,15 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Claims</h1>
+          <h1>
+            <xsl:text>Claims</xsl:text>
+          </h1>
           <p>
-            Claims are instructions and messages our internal software
+            <xsl:text>Claims are instructions and messages our internal software
             "stakeholders" send to each other in order to manage
             the artifacts. They are created in this artifact and processed
             almost immediately. Refresh this page and you will see
-            a new version of the claims, they change every second.
+            a new version of the claims, they change every second.</xsl:text>
           </p>
           <xsl:apply-templates select="claims"/>
         </section>
@@ -63,7 +65,7 @@
       </thead>
       <tbody>
         <xsl:apply-templates select="claim">
-          <xsl:sort select="@id"/>
+          <xsl:sort select="@id" order="descending" data-type="number"/>
         </xsl:apply-templates>
       </tbody>
     </table>

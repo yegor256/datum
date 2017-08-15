@@ -21,13 +21,18 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Boost Factors</h1>
+          <h1>
+            <xsl:text>Boost Factors</xsl:text>
+          </h1>
           <p>
-            Any job may have a boost factor, which will increase
+            <xsl:text>Any job may have a boost factor, which will increase
             its budget. The default boost factor of a job is 2x, which
-            means 30 minutes.
-            See <a href="http://datum.zerocracy.com/pages/policy.html#5">par.5</a>
-            and <a href="http://datum.zerocracy.com/pages/policy.html#15">par.15</a>.
+            means 30 minutes.</xsl:text>
+            <xsl:text>See </xsl:text>
+            <a href="http://datum.zerocracy.com/pages/policy.html#5">par.5</a>
+            <xsl:text> and </xsl:text>
+            <a href="http://datum.zerocracy.com/pages/policy.html#15">par.15</a>
+            <xsl:text>.</xsl:text>
           </p>
           <table>
             <thead>
@@ -42,7 +47,7 @@
             </thead>
             <tbody>
               <xsl:apply-templates select="boost">
-                <xsl:sort select="@id"/>
+                <xsl:sort select="@id" order="descending" data-type="text"/>
               </xsl:apply-templates>
             </tbody>
           </table>

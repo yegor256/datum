@@ -21,9 +21,11 @@
     <html lang="en">
       <body>
         <section>
-          <h1>Catalog of Projects</h1>
+          <h1>
+            <xsl:text>Catalog of Projects</xsl:text>
+          </h1>
           <p>
-            This is the full list of projects we work with.
+            <xsl:text>This is the full list of projects we work with.</xsl:text>
           </p>
           <table>
             <thead>
