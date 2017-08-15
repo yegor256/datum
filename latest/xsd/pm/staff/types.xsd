@@ -15,16 +15,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema version="0.35.5" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:simpleType name="role">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[A-Z]{2,4}"/>
-        </xs:restriction>
-    </xs:simpleType>
-    <xs:simpleType name="email">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
-        </xs:restriction>
-    </xs:simpleType>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.36" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:simpleType name="role">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{2,4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="email">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>

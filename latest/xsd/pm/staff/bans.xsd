@@ -15,32 +15,31 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema version="0.35.5" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.5/xsd/basics.xsd"/>
-    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.5/xsd/pmo/types.xsd"/>
-    <xs:include schemaLocation="http://datum.zerocracy.com/0.35.5/xsd/pm/scope/types.xsd"/>
-    <xs:complexType name="ban">
-        <xs:all>
-            <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-            <xs:element name="login" minOccurs="1" maxOccurs="1" type="login"/>
-            <xs:element name="reason" minOccurs="1" maxOccurs="1">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="[A-Za-z ]+"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-        </xs:all>
-        <xs:attribute name="job" type="jobID" use="required"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.36" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.36/xsd/basics.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.36/xsd/pmo/types.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.36/xsd/pm/scope/types.xsd"/>
+  <xs:complexType name="ban">
+    <xs:all>
+      <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+      <xs:element name="login" minOccurs="1" maxOccurs="1" type="login"/>
+      <xs:element name="reason" minOccurs="1" maxOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z ]+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+    <xs:attribute name="job" type="jobID" use="required"/>
+  </xs:complexType>
+  <xs:element name="bans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ban" type="ban" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="updated" use="required" type="xs:dateTime"/>
+      <xs:attribute name="version" use="required" type="version"/>
     </xs:complexType>
-    <xs:element name="bans">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="ban" type="ban" minOccurs="0" maxOccurs="unbounded"/>
-            </xs:sequence>
-            <xs:attribute name="updated" use="required" type="xs:dateTime"/>
-            <xs:attribute name="version" use="required" type="version"/>
-        </xs:complexType>
-    </xs:element>
+  </xs:element>
 </xs:schema>
