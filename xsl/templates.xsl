@@ -16,6 +16,7 @@
  * SOFTWARE.
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:param name="today" select="'2017-08-15T12:00:00Z'"/>
   <xsl:template name="job">
     <xsl:param name="id"/>
     <xsl:choose>
@@ -35,9 +36,53 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  <xsl:template name="minutes">
+    <xsl:param name="iso"/>
+    <xsl:variable name="year" as="xs:int" select="number(substring($iso, 0, 5))"/>
+    <xsl:variable name="month" as="xs:int" select="number(substring($iso, 6, 2))"/>
+    <xsl:variable name="day" as="xs:int" select="number(substring($iso, 9, 2))"/>
+    <xsl:variable name="hour" as="xs:int" select="number(substring($iso, 12, 2))"/>
+    <xsl:variable name="minute" as="xs:int" select="number(substring($iso, 15, 2))"/>
+    <xsl:value-of select="$minute + $hour * 60 + $day * 60 * 24 + $month * 60 * 24 * 30 + $year * 60 * 24 * 365"/>
+  </xsl:template>
   <xsl:template name="date">
     <xsl:param name="iso"/>
-    <xsl:value-of select="$iso"/>
+    <xsl:variable name="then">
+      <xsl:call-template name="minutes">
+        <xsl:with-param name="iso" select="$iso"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:variable name="now">
+      <xsl:call-template name="minutes">
+        <xsl:with-param name="iso" select="$today"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:variable name="diff" select="$now - $then"/>
+    <span title="{$iso}">
+      <xsl:choose>
+        <xsl:when test="$diff &lt; 60">
+          <xsl:value-of select="$diff"/>
+          <xsl:text> mins</xsl:text>
+        </xsl:when>
+        <xsl:when test="$diff &lt; 60 * 24">
+          <xsl:value-of select="format-number($diff div 60, '0')"/>
+          <xsl:text> hours</xsl:text>
+        </xsl:when>
+        <xsl:when test="$diff &lt; 60 * 24 * 30">
+          <xsl:value-of select="format-number($diff div (60 * 24), '0')"/>
+          <xsl:text> days</xsl:text>
+        </xsl:when>
+        <xsl:when test="$diff &lt; 60 * 24 * 365">
+          <xsl:value-of select="format-number($diff div (60 * 24 * 30), '0.#')"/>
+          <xsl:text> months</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="format-number($diff div (60 * 24 * 365), '0.#')"/>
+          <xsl:text> years</xsl:text>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:text> ago</xsl:text>
+    </span>
   </xsl:template>
   <xsl:template name="user">
     <xsl:param name="id"/>
