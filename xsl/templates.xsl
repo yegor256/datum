@@ -101,7 +101,7 @@
   <xsl:template name="project">
     <xsl:param name="id"/>
     <code>
-      <a href="/p/{$id}" title="Project {$id}">
+      <a href="http://www.0crat.com/p/{$id}" title="Project {$id}">
         <xsl:value-of select="$id"/>
       </a>
     </code>
