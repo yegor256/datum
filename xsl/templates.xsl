@@ -38,11 +38,11 @@
   </xsl:template>
   <xsl:template name="minutes">
     <xsl:param name="iso"/>
-    <xsl:variable name="year" as="xs:int" select="number(substring($iso, 0, 5))"/>
-    <xsl:variable name="month" as="xs:int" select="number(substring($iso, 6, 2))"/>
-    <xsl:variable name="day" as="xs:int" select="number(substring($iso, 9, 2))"/>
-    <xsl:variable name="hour" as="xs:int" select="number(substring($iso, 12, 2))"/>
-    <xsl:variable name="minute" as="xs:int" select="number(substring($iso, 15, 2))"/>
+    <xsl:variable name="year" select="number(substring($iso, 0, 5))"/>
+    <xsl:variable name="month" select="number(substring($iso, 6, 2))"/>
+    <xsl:variable name="day" select="number(substring($iso, 9, 2))"/>
+    <xsl:variable name="hour" select="number(substring($iso, 12, 2))"/>
+    <xsl:variable name="minute" select="number(substring($iso, 15, 2))"/>
     <xsl:value-of select="$minute + $hour * 60 + $day * 60 * 24 + $month * 60 * 24 * 30 + $year * 60 * 24 * 365"/>
   </xsl:template>
   <xsl:template name="date">
