@@ -131,7 +131,7 @@ task :xsl do
   FileUtils.rm_rf(File.join(dir, 'index.html'))
   total = 0
   Dir['xsl/**/*.xsl'].each do |p|
-    next if File.basename(p).start_with?('_')
+    next if File.basename(p) == 'templates.xsl'
     print "Rendering #{p}... "
     f = p.sub(%r{xsl/}, 'xml/').sub(%r{/([^/]+)\.xsl$}, '/\1/simple.xml')
     begin

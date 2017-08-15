@@ -16,7 +16,7 @@
  * SOFTWARE.
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
-  <xsl:include href="../_templates.xsl"/>
+  <xsl:include href="../templates.xsl"/>
   <xsl:template match="/people">
     <html lang="en">
       <body>
