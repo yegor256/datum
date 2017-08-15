@@ -28,7 +28,7 @@ require 'mustache'
 
 CLEAN.include 'target'
 
-task default: %i[clean xsd xsl pages style rubocop copyright]
+task default: %i[clean xsd xsl pages style underscores rubocop copyright]
 
 require 'rubocop/rake_task'
 desc 'Run RuboCop on all directories'
@@ -155,7 +155,7 @@ task :xsl do
   puts 'All XML/XSL files are clean'
 end
 
-desc 'Validate all XML/XSL/XSD files for formatting'
+desc 'Validate all XML/XSL/XSD/HTML files for formatting'
 task :style do
   Differ.format = :color
   license = [
@@ -184,7 +184,16 @@ task :style do
     end
     print "OK\n"
   end
-  puts 'All XML/XSL/XSD files are formatted correctly'
+  puts 'All XML/XSL/XSD/HTML files are formatted correctly'
+end
+
+desc 'Make sure no files start with an underscore'
+task :underscores do
+  Dir['**/*.xml', '**/*.xsl', '**/*.xsd'].each do |f|
+    next if f.start_with?('target/')
+    raise "#{f} won't be rendered by GitHub Pages" \
+      if File.basename(f).start_with?('_')
+  end
 end
 
 task :copyright do
