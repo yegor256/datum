@@ -15,9 +15,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.36.2" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.36.2/xsd/basics.xsd"/>
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.36.2/xsd/pm/scope/types.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.36.3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.36.3/xsd/basics.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.36.3/xsd/pm/scope/types.xsd"/>
   <xs:complexType name="boost">
     <xs:simpleContent>
       <xs:extension base="xs:integer">
