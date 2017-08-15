@@ -98,4 +98,12 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  <xsl:template name="project">
+    <xsl:param name="id"/>
+    <code>
+      <a href="/p/{$id}" title="Project {$id}">
+        <xsl:value-of select="$id"/>
+      </a>
+    </code>
+  </xsl:template>
 </xsl:stylesheet>

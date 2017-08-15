@@ -67,9 +67,9 @@
         <xsl:value-of select="points"/>
       </td>
       <td>
-        <code>
-          <xsl:value-of select="project"/>
-        </code>
+        <xsl:call-template name="project">
+          <xsl:with-param name="id" select="project"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:call-template name="job">

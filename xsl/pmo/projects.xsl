@@ -16,6 +16,7 @@
  * SOFTWARE.
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:include href="../templates.xsl"/>
   <xsl:template match="/projects">
     <html lang="en">
       <body>
@@ -43,9 +44,9 @@
   <xsl:template match="project">
     <tr>
       <td>
-        <code>
-          <xsl:value-of select="."/>
-        </code>
+        <xsl:call-template name="project">
+          <xsl:with-param name="id" select="."/>
+        </xsl:call-template>
       </td>
     </tr>
   </xsl:template>

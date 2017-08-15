@@ -56,9 +56,9 @@
   <xsl:template match="project">
     <tr>
       <td>
-        <code>
-          <xsl:value-of select="@id"/>
-        </code>
+        <xsl:call-template name="project">
+          <xsl:with-param name="id" select="@id"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:call-template name="date">
