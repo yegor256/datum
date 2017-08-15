@@ -15,9 +15,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="SNAPSHOT" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
-  <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/time/types.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.36" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.36/xsd/basics.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.36/xsd/pm/time/types.xsd"/>
   <xs:complexType name="milestone">
     <xs:sequence>
       <xs:element name="date" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
