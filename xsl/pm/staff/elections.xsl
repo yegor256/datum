@@ -49,7 +49,6 @@
   </xsl:template>
   <xsl:template match="job">
     <p>
-      <xsl:text>Job: </xsl:text>
       <xsl:call-template name="job">
         <xsl:with-param name="id" select="@id"/>
       </xsl:call-template>
