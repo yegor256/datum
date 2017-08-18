@@ -134,4 +134,6 @@ You can remove a job from the scope by saying `out`.
 "Boosting."
 You can increase a budget of the job by setting its boost factor.
 Just say `boost 2x` (or `3x`, `5x`, etc.) to Zerocrat.
+This operation is against our principles of micro-tasking, that's
+why you get -10 points every time you do this.
 
