@@ -4,9 +4,9 @@ a project management AI bot developed
 and hosted by [Zerocracy](http://www.zerocracy.com).
 
 If you want to change something in this policy of simply
-suggest something, please submit a ticket
+suggest an improvement, please submit a ticket
 [here](https://github.com/zerocracy/datum/issues).
-If you want to discuss the policy, or have any issues with the bot,
+If you want to discuss the policy or your troubles with the bot,
 please join our [Gitter chat](https://gitter.im/zerocracy/Lobby).
 
 We recommend you to read these articles first:
@@ -18,6 +18,7 @@ We recommend you to read these articles first:
 [Bugs Are Welcome](http://www.yegor256.com/2014/04/13/bugs-are-welcome.html);
 [How to Cut Corners and Stay Cool](http://www.yegor256.com/2015/01/15/how-to-cut-corners.html);
 [It's Not a School!](http://www.yegor256.com/2015/02/16/it-is-not-a-school.html).
+They explain our management phylosophy and its basic principles.
 
 ## Developer
 
@@ -52,6 +53,13 @@ Each job has a fixed budget in minutes,
 which will be multiplied by your hourly rate and paid to you when the job is completed.
 The actual amount of time you spent on the job doesn't affect the amount of money you receive.
 You will also get as many positive points as many minutes you are paid for.
+
+<a name="18" href="#18">§18</a>.
+"Points."
+You may earn positive and negative points for doing good and bad things in
+the projects. They do not affect your cash income, but do affect the impression Zerocrat
+has about you&mdash;the more points you have the more disciplined developer you are.
+Zerocrat takes into account only the points you earned over the last 90 days.
 
 <a name="5" href="#5">§5</a>.
 "Boost Factor."
@@ -106,7 +114,7 @@ channel, add @0crat to it, and ask it to `bootstrap` the project.
 Everybody who will be managed by Zerocrat must have roles in the project.
 To assign a role you say `assign`. To remove a role you say `resign`.
 
-<a name="16" href="#16">§16</a>.
+<a name="17" href="#17">§17</a>.
 "Connect GitHub."
 To connect your GitHub repository to the project you should
 1) add a new Webhook: `http://www.0crat.com/ghook`
