@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Copyright (c) 2016-2017 Zerocracy
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to read
+ * the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
+ * merge, publish, distribute, sublicense, and/or sell copies of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.37" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.37/xsd/basics.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.37/xsd/pmo/types.xsd"/>
+  <xs:complexType name="param">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="claim">
+    <xs:all>
+      <xs:element name="type" minOccurs="1" maxOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z ]+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+      <xs:element name="author" minOccurs="0" maxOccurs="1" type="login"/>
+      <xs:element name="token" minOccurs="0" maxOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="(telegram|github|slack|user|job|test);.+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="params" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="param" type="param" minOccurs="1" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+    <xs:attribute name="id" type="xs:int" use="required"/>
+  </xs:complexType>
+  <xs:element name="claims">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="claim" type="claim" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="updated" use="required" type="xs:dateTime"/>
+      <xs:attribute name="version" use="required" type="version"/>
+    </xs:complexType>
+    <xs:unique name="uniqueID">
+      <xs:selector xpath="claim"/>
+      <xs:field xpath="@id"/>
+    </xs:unique>
+  </xs:element>
+</xs:schema>
