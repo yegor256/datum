@@ -27,7 +27,7 @@
   <xs:complexType name="impediment">
     <xs:simpleContent>
       <xs:extension base="xs:string">
-        <xs:attribute ref="type"/>
+        <xs:attribute ref="type" use="required"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>

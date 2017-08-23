@@ -25,6 +25,7 @@ require 'fileutils'
 require 'rake/clean'
 require 'redcarpet'
 require 'mustache'
+require 'time'
 
 CLEAN.include 'target'
 
