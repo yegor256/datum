@@ -19,7 +19,6 @@ require 'nokogiri'
 require 'rake'
 require 'rake/clean'
 require 'date'
-require 'differ'
 require 'tmpdir'
 require 'fileutils'
 require 'rake/clean'
@@ -29,7 +28,7 @@ require 'time'
 
 CLEAN.include 'target'
 
-task default: %i[clean xsd xsl pages style underscores rubocop copyright]
+task default: %i[clean xsd xsl pages xcop underscores rubocop copyright]
 
 require 'rubocop/rake_task'
 desc 'Run RuboCop on all directories'
@@ -159,36 +158,12 @@ task :xsl do
   puts 'All XML/XSL files are clean'
 end
 
+require 'xcop/rake_task'
 desc 'Validate all XML/XSL/XSD/HTML files for formatting'
-task :style do
-  Differ.format = :color
-  license = [
-    '<?xml version="1.0" encoding="UTF-8"?>',
-    '<!--',
-    *File.read('LICENSE').strip
-      .split(/\n/)
-      .map { |t| " #{t}" }
-      .map(&:rstrip)
-      .map { |t| " *#{t}" },
-    ' -->'
-  ].join("\n")
-  Dir['**/*.xml', '**/*.xsl', '**/*.xsd', '**/*.html'].each do |f|
-    next if f.start_with?('target/')
-    print "XML #{f}... "
-    xml = Nokogiri::XML(File.open(f), &:noblanks)
-    ideal = xml.to_xml(indent: 2)
-    now = File.read(f)
-    if now != ideal
-      puts Differ.diff_by_line(ideal, now).to_s
-      raise "XML formatting is broken in #{f}"
-    end
-    unless now.start_with?(license)
-      puts Differ.diff_by_line(license, now).to_s
-      raise "License in the header is broken in #{f}"
-    end
-    print "OK\n"
-  end
-  puts 'All XML/XSL/XSD/HTML files are formatted correctly'
+Xcop::RakeTask.new :xcop do |task|
+  task.license = 'LICENSE'
+  task.includes = ['**/*.xml', '**/*.xsl', '**/*.xsd', '**/*.html']
+  task.excludes = ['target/**/*']
 end
 
 desc 'Make sure no files start with an underscore'
