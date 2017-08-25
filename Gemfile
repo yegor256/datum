@@ -27,4 +27,4 @@ gem 'rake', '12.0.0'
 gem 'redcarpet', '3.4.0'
 gem 'rubocop', '0.48.1', require: false
 gem 'rubocop-rspec', '1.15.1', require: false
-gem 'xcop', '0.5.2'
+gem 'xcop', '0.5.3'
