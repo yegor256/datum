@@ -21,10 +21,10 @@ ruby '2.3.3'
 Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8
 
-gem 'xcop'
 gem 'mustache', '1.0.5'
-gem 'nokogiri', '1.7.0'
+gem 'nokogiri', '~>1.8'
 gem 'rake', '12.0.0'
 gem 'redcarpet', '3.4.0'
 gem 'rubocop', '0.48.1', require: false
 gem 'rubocop-rspec', '1.15.1', require: false
+gem 'xcop', '0.5.2'
