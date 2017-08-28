@@ -15,15 +15,25 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<asserts>
-  <xpath item="elections">/elections[count(job)=1]</xpath>
-  <xpath item="elections">/elections/job[@id='gh:yegor256/pdd#1']</xpath>
-  <xpath item="elections">/elections[not(job[@id='gh:yegor256/pdd#3'])]</xpath>
-  <xpath item="boosts">/boosts/boost[@id='gh:yegor256/pdd#1']</xpath>
-  <xpath item="boosts">/boosts[not(boost[@id='gh:yegor256/pdd#2'])]</xpath>
-  <xpath item="boosts">/boosts[not(boost[@id='gh:yegor256/pdd#3'])]</xpath>
-  <xpath item="estimates">/estimates/order[@id='gh:yegor256/pdd#4']</xpath>
-  <xpath item="estimates">/estimates[not(order[@id='gh:yegor256/pdd#3'])]</xpath>
-  <xpath item="bans">/bans/ban[@job='gh:yegor256/pdd#1']</xpath>
-  <xpath item="bans">/bans[not(ban[@job='gh:yegor256/pdd#3'])]</xpath>
-</asserts>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:output method="xml"/>
+  <xsl:strip-space elements="*"/>
+  <xsl:template match="/bans">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="ban">
+    <xsl:variable name="job" select="@job"/>
+    <xsl:if test="document('wbs.xml')/wbs/job[@id=$job]">
+      <xsl:copy>
+        <xsl:apply-templates select="@*|node()"/>
+      </xsl:copy>
+    </xsl:if>
+  </xsl:template>
+  <xsl:template match="@*|node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>
