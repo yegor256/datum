@@ -35,19 +35,45 @@ SOFTWARE.
       <body>
         <section>
           <header>
-            <p>
+            <p style="text-align:center;">
               <xsl:value-of select="@path"/>
             </p>
           </header>
           <article>
             <p>
+              <xsl:text>Path: </xsl:text>
+              <code>
+                <xsl:value-of select="@path"/>
+              </code>
+            </p>
+            <p>
               <xsl:value-of select="count(entry)"/>
-              <xsl:text> entries here:</xsl:text>
+              <xsl:text> </xsl:text>
+              <xsl:choose>
+                <xsl:when test="count(entry) = 1">
+                  <xsl:text>entry</xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:text>entries</xsl:text>
+                </xsl:otherwise>
+              </xsl:choose>
+              <xsl:text> here:</xsl:text>
             </p>
             <ul>
-              <xsl:apply-templates select="entry"/>
+              <xsl:apply-templates select="entry[@dir='true']">
+                <xsl:sort select="text()" data-type="text"/>
+              </xsl:apply-templates>
+              <xsl:apply-templates select="entry[@dir='false']">
+                <xsl:sort select="text()" data-type="text"/>
+              </xsl:apply-templates>
             </ul>
           </article>
+          <footer>
+            <p style="text-align:center;"><a href="index.xml"><xsl:text>XML</xsl:text></a>
+              ·
+              <xsl:text>SNAPSHOT</xsl:text>
+            </p>
+          </footer>
         </section>
       </body>
     </html>
@@ -55,6 +81,9 @@ SOFTWARE.
   <xsl:template match="entry">
     <li>
       <a href="{text()}">
+        <xsl:if test="@dir='true'">
+          <xsl:text>/</xsl:text>
+        </xsl:if>
         <xsl:value-of select="text()"/>
       </a>
     </li>
