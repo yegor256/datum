@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<index path="latest/xsd">
+  <entry dir="false">basics.xsd</entry>
+  <entry dir="true">pmo</entry>
+  <entry dir="true">pm</entry>
+</index>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<index path="latest/upgrades/pm">
+  <entry dir="true">cost</entry>
+  <entry dir="true">in</entry>
+  <entry dir="true">scope</entry>
+  <entry dir="true">claims</entry>
+  <entry dir="true">staff</entry>
+  <entry dir="true">hr</entry>
+</index>

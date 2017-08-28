@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<index path="latest/xsl">
+  <entry dir="true">pmo</entry>
+  <entry dir="false">templates.xsl</entry>
+  <entry dir="true">pm</entry>
+</index>

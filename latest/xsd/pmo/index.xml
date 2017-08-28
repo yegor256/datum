@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<index path="latest/xsd/pmo">
+  <entry dir="false">people.xsd</entry>
+  <entry dir="false">agenda.xsd</entry>
+  <entry dir="false">speed.xsd</entry>
+  <entry dir="false">types.xsd</entry>
+  <entry dir="false">awards.xsd</entry>
+  <entry dir="false">projects.xsd</entry>
+  <entry dir="false">bots.xsd</entry>
+  <entry dir="false">catalog.xsd</entry>
+</index>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<index path="latest/upgrades/pmo/catalog">
+  <entry dir="false">0.34-publish.xsl</entry>
+  <entry dir="false">0.24-version-and-date.xsl</entry>
+  <entry dir="false">list</entry>
+</index>

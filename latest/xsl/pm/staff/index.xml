@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<index path="latest/xsl/pm/staff">
+  <entry dir="false">bans.xsl</entry>
+  <entry dir="false">roles.xsl</entry>
+  <entry dir="false">elections.xsl</entry>
+</index>

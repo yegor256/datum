@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<index path="latest/xsl/pm/cost">
+  <entry dir="false">boosts.xsl</entry>
+  <entry dir="false">estimates.xsl</entry>
+</index>

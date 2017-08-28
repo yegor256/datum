@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<index path="latest/xsd/pm/cost">
+  <entry dir="false">boosts.xsd</entry>
+  <entry dir="false">estimates.xsd</entry>
+  <entry dir="false">types.xsd</entry>
+</index>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<index path="latest/rules/pm">
+  <entry dir="false">no-lost-impediments.xsl</entry>
+  <entry dir="false">no-lost-boosts.xsl</entry>
+  <entry dir="false">no-lost-orders.xsl</entry>
+  <entry dir="false">no-lost-estimates.xsl</entry>
+</index>

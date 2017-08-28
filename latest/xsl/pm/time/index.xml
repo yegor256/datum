@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<index path="latest/xsl/pm/time">
+  <entry dir="false">milestones.xsl</entry>
+  <entry dir="false">precedences.xsl</entry>
+</index>

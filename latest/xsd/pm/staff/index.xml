@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<index path="latest/xsd/pm/staff">
+  <entry dir="false">roles.xsd</entry>
+  <entry dir="false">elections.xsd</entry>
+  <entry dir="false">bans.xsd</entry>
+  <entry dir="false">types.xsd</entry>
+</index>
