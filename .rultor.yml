@@ -4,40 +4,19 @@ install: |
   sudo apt-get install -y pandoc
 release:
   script: |-
-    #
-    # Sanity checks
-    #
     [[ "${tag}" =~ ^[0-9]+(\.[0-9]+)*$ ]] || exit -1
     pdd -f /dev/null
     bundle install
     rake
-    #
-    # Create public version in /tmp
-    #
-    cp -r xsl /tmp
-    cp -r xsd /tmp
-    rake enlist_upgrades && cp -r upgrades /tmp
-    rake pages && cp -r target/pages /tmp
-    #
-    # Copy content to gh-pages branch
-    #
+    rake site[${tag}]
+    cp -r target/site /tmp
     git checkout gh-pages
-    mkdir "${tag}"
-    cp -r /tmp/xsd "${tag}"
-        git add "${tag}"
-        git commit --allow-empty -m "XSD ${tag}"
-    rm -rf latest
-        mkdir latest
-        cp -r /tmp/xsd latest
-        git add latest
-        git commit --allow-empty -m "Latest XSD at ${tag}"
-    cp -r /tmp/xsl latest
-        git add latest/xsl
-        git commit --allow-empty -m "Latest XSL at ${tag}"
-    rm -rf latest/upgrades
-        cp -r /tmp/upgrades latest
-        git add latest/upgrades
-        git commit --allow-empty -m "XSL upgrades at ${tag}"
+    for d in $(ls /tmp/site); do
+      rm -rf $d
+      cp -r /tmp/site/$d .
+      git add $d
+    done
+    git commit --allow-empty -m "${tag}"
   commanders:
     - yegor256
 architect:
