@@ -11,11 +11,7 @@ release:
     rake site[${tag}]
     cp -r target/site /tmp
     git checkout gh-pages
-    for d in $(ls /tmp/site); do
-      rm -rf $d
-      cp -r /tmp/site/$d .
-      git add $d
-    done
+    for d in $(ls /tmp/site); do rm -rf $d; cp -r /tmp/site/$d .; git add $d; done
     git commit --allow-empty -m "${tag}"
   commanders:
     - yegor256
