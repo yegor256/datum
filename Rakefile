@@ -29,43 +29,7 @@ require 'rainbow'
 
 CLEAN.include 'target'
 
-task default: %i[clean xsd xsl auto pages xcop underscores rubocop copyright]
-
-desc 'Enlist all upgrades and generate _list files'
-task :enlist_upgrades do
-  Dir['upgrades/**/*.xsl'].map { |f| File.dirname(f) }.uniq.each do |dir|
-    File.write(
-      dir + '/list',
-      Dir[dir + '/*.xsl'].sort.map do |f|
-        File.basename(f).gsub(/-.*$/, '') + ' ' + f + "\n"
-      end.join('')
-    )
-  end
-end
-
-desc 'Generate HTML pages from Markdown'
-task :pages do
-  puts 'Generating HTML pages for Markdown...'
-  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-  dir = FileUtils.mkdir_p('target/pages')[0]
-  template = File.read('md/_template.html')
-  mds = Dir['md/*.md']
-  mds.each do |md|
-    file = File.join(dir, File.basename(md).gsub(/\.md$/, '.html'))
-    File.write(
-      file,
-      Mustache.render(
-        template,
-        body: markdown.render(File.read(md)),
-        name: File.basename(md).gsub(/\.md$/, '').capitalize,
-        version: ENV['tag'],
-        date: Time.new.strftime('%-d-%b-%Y')
-      )
-    )
-    print Rainbow('.').green
-  end
-  puts "\n#{mds.length} HTML page(s) created in #{dir}\n\n"
-end
+task default: %i[clean xsd xsl auto xcop underscores rubocop copyright]
 
 desc 'Validate all XML/XSD files'
 task :xsd do
@@ -197,6 +161,72 @@ task :auto do
     print Rainbow('.').green
   end
   puts "\nAll auto-updates are clean\n\n"
+end
+
+desc 'Build a site for GitHub Pages'
+task :site, [:version] do |_, args|
+  raise 'You have to call "rake site[123]"' unless args[:version]
+  puts "Building a site for v.#{args[:version]}..."
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  dir = FileUtils.mkdir_p('target/site/pages')[0]
+  template = File.read('md/_template.html')
+  mds = Dir['md/*.md']
+  mds.each do |md|
+    file = File.join(dir, File.basename(md).gsub(/\.md$/, '.html'))
+    File.write(
+      file,
+      Mustache.render(
+        template,
+        body: markdown.render(File.read(md)),
+        name: File.basename(md).gsub(/\.md$/, '').capitalize,
+        version: args[:version],
+        date: Time.new.strftime('%-d-%b-%Y')
+      )
+    )
+    print Rainbow('.').green
+  end
+  puts "\n#{mds.length} HTML page(s) created in #{dir}\n\n"
+  FileUtils.mkdir_p("target/site/#{args[:version]}")
+  FileUtils.cp_r('xsd', "target/site/#{args[:version]}")
+  puts "XSDs copied to target/site/#{args[:version]}"
+  FileUtils.mkdir_p('target/site/latest')
+  %w[auto rules xsd xsl].each do |p|
+    FileUtils.cp_r(p, 'target/site/latest')
+    puts "#{p} copied to target/site/latest"
+  end
+  FileUtils.cp_r('upgrades', 'target/site/latest')
+  Dir['upgrades/**/*.xsl'].map { |f| File.dirname(f) }.uniq.each do |d|
+    tdir = File.join('target/site/latest', d)
+    FileUtils.mkdir_p(tdir)
+    File.write(
+      File.join(tdir + '/list'),
+      Dir[d + '/*.xsl'].sort.map do |f|
+        File.basename(f).gsub(/-.*$/, '') + ' ' + f + "\n"
+      end.join('')
+    )
+  end
+  puts 'Upgrades copied to target/site/latest/upgrades'
+  Dir['target/site/**/*'].select { |f| File.file?(f) }.each do |f|
+    File.write(f, File.read(f).gsub(/SNAPSHOT/, args[:version]))
+  end
+  puts "Version #{args[:version]} injected into all site files"
+  xslt = Nokogiri::XSLT(File.read('misc/index-html.xsl'))
+  Dir['target/site/**/*'].reject { |d| File.file?(d) }.each do |d|
+    xml = Nokogiri::XML::Builder.new do |x|
+      x.index(path: d.gsub('target/site/', '')) do
+        Dir.entries(d).reject { |f| f.start_with?('.') }.each do |f|
+          x.entry(dir: !File.file?(File.join(d, f))) do
+            x.text(f)
+          end
+        end
+      end
+    end.doc
+    File.write(File.join(d, 'index.xml'), xml.to_s)
+    File.write(File.join(d, 'index.html'), xslt.transform(xml))
+    # File.write(File.join(d, 'index'), xml.to_s)
+  end
+  puts 'Index files created'
+  puts "The site is ready in target/site\n\n"
 end
 
 require 'rubocop/rake_task'

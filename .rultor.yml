@@ -12,11 +12,6 @@ release:
     bundle install
     rake
     #
-    # Inject version into files
-    #
-    find . -name '*.xsl' -o -name '*.xsd' -exec sed -i "s/SNAPSHOT/${tag}/g" \{} \; -exec git add \{} \;
-    git commit -m "Version set to ${tag}"
-    #
     # Create public version in /tmp
     #
     cp -r xsl /tmp
@@ -43,11 +38,6 @@ release:
         cp -r /tmp/upgrades latest
         git add latest/upgrades
         git commit --allow-empty -m "XSL upgrades at ${tag}"
-    rm -rf pages
-        mkdir pages
-        cp /tmp/pages/*.html pages
-        git add pages
-        git commit --allow-empty -m "Pages updated"
   commanders:
     - yegor256
 architect:
