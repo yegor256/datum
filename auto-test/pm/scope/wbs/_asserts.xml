@@ -26,4 +26,7 @@ SOFTWARE.
   <xpath item="estimates">/estimates[not(order[@id='gh:yegor256/pdd#3'])]</xpath>
   <xpath item="bans">/bans/ban[@job='gh:yegor256/pdd#1']</xpath>
   <xpath item="bans">/bans[not(ban[@job='gh:yegor256/pdd#3'])]</xpath>
+  <xpath item="precedences">/precedences[count(precedence)=1]</xpath>
+  <xpath item="precedences">/precedences/precedence[successor='gh:yegor256/pdd#4']</xpath>
+  <xpath item="precedences">/precedences[not(precedence[successor='gh:yegor256/pdd#6'])]</xpath>
 </asserts>
