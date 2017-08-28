@@ -18,22 +18,21 @@ SOFTWARE.
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:output method="xml"/>
   <xsl:strip-space elements="*"/>
-  <xsl:template match="/elections">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
+  <xsl:template match="/">
+    <errors>
+      <xsl:apply-templates select="document('orders.xml')/orders/order"/>
+    </errors>
   </xsl:template>
-  <xsl:template match="job">
-    <xsl:variable name="id" select="@id"/>
-    <xsl:if test="document('wbs.xml')/wbs/job[@id=$id]">
-      <xsl:copy>
-        <xsl:apply-templates select="@*|node()"/>
-      </xsl:copy>
+  <xsl:template match="order">
+    <xsl:variable name="job" select="@job"/>
+    <xsl:if test="not(document('wbs.xml')/wbs/job[@id=$job])">
+      <error>
+        <xsl:text>The order for job "</xsl:text>
+        <xsl:value-of select="$job"/>
+        <xsl:text>" exists in orders.xml, but the job is absent in the WBS among </xsl:text>
+        <xsl:value-of select="count(document('wbs.xml')/wbs/job)"/>
+        <xsl:text> jobs.</xsl:text>
+      </error>
     </xsl:if>
-  </xsl:template>
-  <xsl:template match="@*|node()">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
   </xsl:template>
 </xsl:stylesheet>

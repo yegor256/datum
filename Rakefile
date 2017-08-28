@@ -30,13 +30,6 @@ CLEAN.include 'target'
 
 task default: %i[clean xsd xsl auto pages xcop underscores rubocop copyright]
 
-require 'rubocop/rake_task'
-desc 'Run RuboCop on all directories'
-RuboCop::RakeTask.new(:rubocop) do |task|
-  task.fail_on_error = true
-  task.requires << 'rubocop-rspec'
-end
-
 desc 'Enlist all upgrades and generate _list files'
 task :enlist_upgrades do
   Dir['upgrades/**/*.xsl'].map { |f| File.dirname(f) }.uniq.each do |dir|
@@ -164,6 +157,7 @@ task :auto do
     FileUtils.cp_r('auto-test/', temp)
     Dir[File.join(temp, 'auto-test/**/_asserts.xml')].each do |p|
       dir = p.gsub(%r{.*auto-test/(.+)/_asserts.xml$}, '\1')
+      print "Auto-testing #{dir}... "
       home = Dir.pwd
       Dir["auto/#{dir}/*.xsl"]
         .sort_by! { |x| x.gsub(/^([0-9]+)-.+$/, '\1').to_i }
@@ -186,9 +180,26 @@ task :auto do
             end
           end
         end
+      area = dir.gsub(%r{([a-z]+)/.+}, '\1')
+      Dir["rules/#{area}/**/*.xsl"].each do |xsl|
+        Dir.chdir(File.join(temp, "auto-test/#{dir}")) do
+          xslt = Nokogiri::XSLT(File.read(File.join(home, xsl)))
+          xslt.transform(Nokogiri::XML('<e/>')).xpath('//error').each do |e|
+            raise e
+          end
+        end
+      end
     end
+    puts 'OK'
   end
   puts 'All auto-updates are clean'
+end
+
+require 'rubocop/rake_task'
+desc 'Run RuboCop on all directories'
+RuboCop::RakeTask.new(:rubocop) do |task|
+  task.fail_on_error = true
+  task.requires << 'rubocop-rspec'
 end
 
 require 'xcop/rake_task'

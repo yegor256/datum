@@ -15,25 +15,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-  <xsl:output method="xml"/>
-  <xsl:strip-space elements="*"/>
-  <xsl:template match="/elections">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
-  </xsl:template>
-  <xsl:template match="job">
-    <xsl:variable name="id" select="@id"/>
-    <xsl:if test="document('wbs.xml')/wbs/job[@id=$id]">
-      <xsl:copy>
-        <xsl:apply-templates select="@*|node()"/>
-      </xsl:copy>
-    </xsl:if>
-  </xsl:template>
-  <xsl:template match="@*|node()">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
-  </xsl:template>
-</xsl:stylesheet>
+<orders version="1" updated="2016-12-29T09:03:21.684Z">
+  <order job="gh:yegor256/pdd#4">
+    <performer>yegor256</performer>
+    <reason>Just for fun</reason>
+    <created>2016-11-19T09:03:21.684Z</created>
+    <closed>2016-11-20T09:03:21.684Z</closed>
+  </order>
+</orders>
