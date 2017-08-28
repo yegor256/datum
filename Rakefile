@@ -28,7 +28,7 @@ require 'time'
 
 CLEAN.include 'target'
 
-task default: %i[clean xsd xsl pages xcop underscores rubocop copyright]
+task default: %i[clean xsd xsl auto pages xcop underscores rubocop copyright]
 
 require 'rubocop/rake_task'
 desc 'Run RuboCop on all directories'
@@ -158,6 +158,39 @@ task :xsl do
   puts 'All XML/XSL files are clean'
 end
 
+desc 'Run all auto-updates and check their results'
+task :auto do
+  Dir.mktmpdir do |temp|
+    FileUtils.cp_r('auto-test/', temp)
+    Dir[File.join(temp, 'auto-test/**/_asserts.xml')].each do |p|
+      dir = p.gsub(%r{.*auto-test/(.+)/_asserts.xml$}, '\1')
+      home = Dir.pwd
+      Dir["auto/#{dir}/*.xsl"]
+        .sort_by! { |x| x.gsub(/^([0-9]+)-.+$/, '\1').to_i }
+        .each do |xsl|
+          Dir.chdir(File.join(temp, "auto-test/#{dir}")) do
+            target = xsl.gsub(%r{^.+/[0-9]+-([a-z]+)-.+$}, '\1.xml')
+            xslt = Nokogiri::XSLT(File.read(File.join(home, xsl)))
+            xml = Nokogiri::XML(File.read(target))
+            File.write(target, xslt.transform(xml))
+          end
+        end
+      Nokogiri::XML(File.open("auto-test/#{dir}/_asserts.xml"))
+        .xpath('/asserts/xpath')
+        .each do |a|
+          Dir.chdir(File.join(temp, "auto-test/#{dir}")) do
+            xml = Nokogiri::XML(File.read("#{a['item']}.xml"))
+            if xml.xpath(a.text).empty?
+              puts xml.to_s
+              raise "Can't find #{a.text} in #{a['item']}.xml in #{dir}"
+            end
+          end
+        end
+    end
+  end
+  puts 'All auto-updates are clean'
+end
+
 require 'xcop/rake_task'
 desc 'Validate all XML/XSL/XSD/HTML files for formatting'
 Xcop::RakeTask.new :xcop do |task|
@@ -169,7 +202,7 @@ end
 desc 'Make sure no files start with an underscore'
 task :underscores do
   Dir['**/*.xml', '**/*.xsl', '**/*.xsd'].each do |f|
-    next if f.start_with?('target/')
+    next if f =~ %r{^(target|auto-test)/.+}
     raise "#{f} won't be rendered by GitHub Pages" \
       if File.basename(f).start_with?('_')
   end
