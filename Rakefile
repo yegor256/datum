@@ -223,7 +223,6 @@ task :site, [:version] do |_, args|
     end.doc
     File.write(File.join(d, 'index.xml'), xml.to_s)
     File.write(File.join(d, 'index.html'), xslt.transform(xml))
-    # File.write(File.join(d, 'index'), xml.to_s)
   end
   puts 'Index files created'
   puts "The site is ready in target/site\n\n"

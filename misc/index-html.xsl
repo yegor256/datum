@@ -40,6 +40,10 @@ SOFTWARE.
             </p>
           </header>
           <article>
+            <p>
+              <xsl:value-of select="count(entry)"/>
+              <xsl:text> entries here:</xsl:text>
+            </p>
             <ul>
               <xsl:apply-templates select="entry"/>
             </ul>
@@ -50,7 +54,9 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="entry">
     <li>
-      <xsl:value-of select="text()"/>
+      <a href="{text()}">
+        <xsl:value-of select="text()"/>
+      </a>
     </li>
   </xsl:template>
 </xsl:stylesheet>
