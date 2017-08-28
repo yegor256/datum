@@ -25,6 +25,7 @@ require 'rake/clean'
 require 'redcarpet'
 require 'mustache'
 require 'time'
+require 'rainbow'
 
 CLEAN.include 'target'
 
@@ -44,10 +45,12 @@ end
 
 desc 'Generate HTML pages from Markdown'
 task :pages do
+  puts 'Generating HTML pages for Markdown...'
   markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-  dir = FileUtils.mkdir_p('target/pages')
+  dir = FileUtils.mkdir_p('target/pages')[0]
   template = File.read('md/_template.html')
-  Dir['md/*.md'].each do |md|
+  mds = Dir['md/*.md']
+  mds.each do |md|
     file = File.join(dir, File.basename(md).gsub(/\.md$/, '.html'))
     File.write(
       file,
@@ -59,13 +62,15 @@ task :pages do
         date: Time.new.strftime('%-d-%b-%Y')
       )
     )
-    puts "HTML page created: #{file}"
+    print Rainbow('.').green
   end
+  puts "\n#{mds.length} HTML page(s) created in #{dir}\n\n"
 end
 
 desc 'Validate all XML/XSD files'
 task :xsd do
   total = 0
+  puts 'Checking XML files for XSD validity...'
   Dir.mktmpdir do |temp|
     FileUtils.cp_r('xsd/', temp)
     Dir[temp + '/**/*.xsd'].each do |f|
@@ -77,8 +82,8 @@ task :xsd do
         )
       )
     end
-    Dir['xml/**/*.xml'].each do |p|
-      print "Checking #{p}... "
+    xmls = Dir['xml/**/*.xml']
+    xmls.each do |p|
       f = p.sub(%r{xml/}, temp + '/xsd/').sub(%r{/[^/]+\.xml$}, '.xsd')
       begin
         xsd = Nokogiri::XML::Schema(File.open(f))
@@ -105,27 +110,26 @@ task :xsd do
           ok = false
         end
       end
-      print "OK\n" if ok
+      print Rainbow('.').green if ok
     end
+    raise "#{total} errors" unless total.zero?
+    puts "\nAll #{xmls.length} XML/XSD files are clean\n\n"
   end
-  raise "#{total} errors" unless total.zero?
-  puts 'All XML/XSD files are clean'
 end
 
 desc 'Validate all XML/XSL files'
 task :xsl do
+  puts 'Checking XML and XSL files...'
   Dir['xml/**/*.xml'].each do |p|
-    print "XML #{p}... "
     f = p.sub(%r{xml/}, 'xsl/').sub(%r{/([^/]+)\.xml$}, '.xsl')
     raise "XSL #{f} is absent" unless File.exist?(f)
-    print "has XSL: #{f}\n"
   end
   dir = FileUtils.mkdir_p('target/views')
   FileUtils.rm_rf(File.join(dir, 'index.html'))
   total = 0
-  Dir['xsl/**/*.xsl'].each do |p|
+  xsls = Dir['xsl/**/*.xsl']
+  xsls.each do |p|
     next if File.basename(p) == 'templates.xsl'
-    print "Rendering #{p}... "
     f = p.sub(%r{xsl/}, 'xml/').sub(%r{/([^/]+)\.xsl$}, '/\1/simple.xml')
     begin
       xslt = Nokogiri::XSLT(File.open(p))
@@ -144,20 +148,20 @@ task :xsl do
       open(File.join(dir, 'index.html'), 'a') do |i|
         i.puts "<p><a href='#{label}'>#{p}</a></p>"
       end
-      print "OK\n"
+      print Rainbow('.').green
     end
   end
   raise "#{total} errors" unless total.zero?
-  puts 'All XML/XSL files are clean'
+  puts "\nAll #{xsls.length} XML/XSL files are clean\n\n"
 end
 
 desc 'Run all auto-updates and check their results'
 task :auto do
+  puts 'Testing auto-updates...'
   Dir.mktmpdir do |temp|
     FileUtils.cp_r('auto-test/', temp)
     Dir[File.join(temp, 'auto-test/**/_asserts.xml')].each do |p|
       dir = p.gsub(%r{.*auto-test/(.+)/_asserts.xml$}, '\1')
-      print "Auto-testing #{dir}... "
       home = Dir.pwd
       Dir["auto/#{dir}/*.xsl"]
         .sort_by! { |x| x.gsub(/^([0-9]+)-.+$/, '\1').to_i }
@@ -190,9 +194,9 @@ task :auto do
         end
       end
     end
-    puts 'OK'
+    print Rainbow('.').green
   end
-  puts 'All auto-updates are clean'
+  puts "\nAll auto-updates are clean\n\n"
 end
 
 require 'rubocop/rake_task'

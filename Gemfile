@@ -23,6 +23,7 @@ Encoding.default_internal = Encoding::UTF_8
 
 gem 'mustache', '1.0.5'
 gem 'nokogiri', '~>1.8'
+gem 'rainbow', '~>2.2'
 gem 'rake', '12.0.0'
 gem 'redcarpet', '3.4.0'
 gem 'rubocop', '0.48.1', require: false
