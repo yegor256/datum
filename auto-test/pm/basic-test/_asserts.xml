@@ -29,4 +29,6 @@ SOFTWARE.
   <xpath item="precedences">/precedences[count(precedence)=1]</xpath>
   <xpath item="precedences">/precedences/precedence[successor='gh:yegor256/pdd#4']</xpath>
   <xpath item="precedences">/precedences[not(precedence[successor='gh:yegor256/pdd#6'])]</xpath>
+  <xpath item="impediments">/impediments[count(order)=1]</xpath>
+  <xpath item="impediments">/impediments/order[@id='gh:yegor256/pdd#4']</xpath>
 </asserts>

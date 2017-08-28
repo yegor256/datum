@@ -163,7 +163,8 @@ task :auto do
     Dir[File.join(temp, 'auto-test/**/_asserts.xml')].each do |p|
       dir = p.gsub(%r{.*auto-test/(.+)/_asserts.xml$}, '\1')
       home = Dir.pwd
-      Dir["auto/#{dir}/*.xsl"]
+      area = dir.gsub(%r{([a-z]+)/.+}, '\1')
+      Dir["auto/#{area}/**/*.xsl"]
         .sort_by! { |x| x.gsub(/^([0-9]+)-.+$/, '\1').to_i }
         .each do |xsl|
           Dir.chdir(File.join(temp, "auto-test/#{dir}")) do
@@ -184,7 +185,6 @@ task :auto do
             end
           end
         end
-      area = dir.gsub(%r{([a-z]+)/.+}, '\1')
       Dir["rules/#{area}/**/*.xsl"].each do |xsl|
         Dir.chdir(File.join(temp, "auto-test/#{dir}")) do
           xslt = Nokogiri::XSLT(File.read(File.join(home, xsl)))
