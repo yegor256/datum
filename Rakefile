@@ -213,9 +213,10 @@ task :site, [:version] do |_, args|
   xslt = Nokogiri::XSLT(File.read('misc/index-html.xsl'))
   Dir['target/site/**/*'].reject { |d| File.file?(d) }.each do |d|
     xml = Nokogiri::XML::Builder.new do |x|
-      x.index(path: d.gsub('target/site/', '')) do
+      path = d.gsub('target/site', '')
+      x.index(path: path) do
         Dir.entries(d).reject { |f| f.start_with?('.') }.each do |f|
-          x.entry(dir: !File.file?(File.join(d, f))) do
+          x.entry(dir: !File.file?(File.join(d, f)), path: "#{path}/#{f}") do
             x.text(f)
           end
         end
