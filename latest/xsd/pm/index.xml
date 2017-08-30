@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<index path="latest/xsd/pm">
-  <entry dir="true">cost</entry>
-  <entry dir="true">in</entry>
-  <entry dir="true">scope</entry>
-  <entry dir="false">claims.xsd</entry>
-  <entry dir="true">staff</entry>
-  <entry dir="true">time</entry>
+<index path="/latest/xsd/pm" version="0.38.1">
+  <entry dir="true" path="/latest/xsd/pm/cost">cost</entry>
+  <entry dir="true" path="/latest/xsd/pm/in">in</entry>
+  <entry dir="true" path="/latest/xsd/pm/scope">scope</entry>
+  <entry dir="false" path="/latest/xsd/pm/claims.xsd">claims.xsd</entry>
+  <entry dir="true" path="/latest/xsd/pm/staff">staff</entry>
+  <entry dir="true" path="/latest/xsd/pm/time">time</entry>
 </index>

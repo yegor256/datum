@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<index path="latest/xsd/pm/cost">
-  <entry dir="false">boosts.xsd</entry>
-  <entry dir="false">estimates.xsd</entry>
-  <entry dir="false">types.xsd</entry>
+<index path="/latest/xsd/pm/cost" version="0.38.1">
+  <entry dir="false" path="/latest/xsd/pm/cost/boosts.xsd">boosts.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pm/cost/estimates.xsd">estimates.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pm/cost/types.xsd">types.xsd</entry>
 </index>

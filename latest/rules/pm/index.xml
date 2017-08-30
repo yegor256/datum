@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<index path="latest/rules/pm">
-  <entry dir="false">no-lost-impediments.xsl</entry>
-  <entry dir="false">no-lost-boosts.xsl</entry>
-  <entry dir="false">no-lost-orders.xsl</entry>
-  <entry dir="false">no-lost-estimates.xsl</entry>
+<index path="/latest/rules/pm" version="0.38.1">
+  <entry dir="false" path="/latest/rules/pm/no-lost-impediments.xsl">no-lost-impediments.xsl</entry>
+  <entry dir="false" path="/latest/rules/pm/no-lost-boosts.xsl">no-lost-boosts.xsl</entry>
+  <entry dir="false" path="/latest/rules/pm/no-lost-orders.xsl">no-lost-orders.xsl</entry>
+  <entry dir="false" path="/latest/rules/pm/no-lost-estimates.xsl">no-lost-estimates.xsl</entry>
 </index>

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<index path="latest/xsl/pmo">
-  <entry dir="false">bots.xsl</entry>
-  <entry dir="false">people.xsl</entry>
-  <entry dir="false">agenda.xsl</entry>
-  <entry dir="false">projects.xsl</entry>
-  <entry dir="false">catalog.xsl</entry>
-  <entry dir="false">awards.xsl</entry>
-  <entry dir="false">speed.xsl</entry>
+<index path="/latest/xsl/pmo" version="0.38.1">
+  <entry dir="false" path="/latest/xsl/pmo/bots.xsl">bots.xsl</entry>
+  <entry dir="false" path="/latest/xsl/pmo/people.xsl">people.xsl</entry>
+  <entry dir="false" path="/latest/xsl/pmo/agenda.xsl">agenda.xsl</entry>
+  <entry dir="false" path="/latest/xsl/pmo/projects.xsl">projects.xsl</entry>
+  <entry dir="false" path="/latest/xsl/pmo/catalog.xsl">catalog.xsl</entry>
+  <entry dir="false" path="/latest/xsl/pmo/awards.xsl">awards.xsl</entry>
+  <entry dir="false" path="/latest/xsl/pmo/speed.xsl">speed.xsl</entry>
 </index>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<index path="latest/xsd/pm/staff">
-  <entry dir="false">roles.xsd</entry>
-  <entry dir="false">elections.xsd</entry>
-  <entry dir="false">bans.xsd</entry>
-  <entry dir="false">types.xsd</entry>
+<index path="/latest/xsd/pm/staff" version="0.38.1">
+  <entry dir="false" path="/latest/xsd/pm/staff/roles.xsd">roles.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pm/staff/elections.xsd">elections.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pm/staff/bans.xsd">bans.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pm/staff/types.xsd">types.xsd</entry>
 </index>

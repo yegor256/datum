@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<index path="latest/xsl">
-  <entry dir="true">pmo</entry>
-  <entry dir="false">templates.xsl</entry>
-  <entry dir="true">pm</entry>
+<index path="/latest/xsl" version="0.38.1">
+  <entry dir="true" path="/latest/xsl/pmo">pmo</entry>
+  <entry dir="false" path="/latest/xsl/templates.xsl">templates.xsl</entry>
+  <entry dir="true" path="/latest/xsl/pm">pm</entry>
 </index>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="latest/xsl/pm/in">
-  <entry dir="false">orders.xsl</entry>
-  <entry dir="false">impediments.xsl</entry>
+<index path="/latest/xsl/pm/in" version="0.38.1">
+  <entry dir="false" path="/latest/xsl/pm/in/orders.xsl">orders.xsl</entry>
+  <entry dir="false" path="/latest/xsl/pm/in/impediments.xsl">impediments.xsl</entry>
 </index>

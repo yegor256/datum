@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="latest/auto">
-  <entry dir="true">pm</entry>
+<index path="/latest/auto" version="0.38.1">
+  <entry dir="true" path="/latest/auto/pm">pm</entry>
 </index>

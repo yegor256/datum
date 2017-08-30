@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="latest/auto/pm/scope">
-  <entry dir="true">wbs</entry>
+<index path="/latest/auto/pm/scope" version="0.38.1">
+  <entry dir="true" path="/latest/auto/pm/scope/wbs">wbs</entry>
 </index>

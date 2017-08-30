@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="latest/rules">
-  <entry dir="true">pm</entry>
+<index path="/latest/rules" version="0.38.1">
+  <entry dir="true" path="/latest/rules/pm">pm</entry>
 </index>

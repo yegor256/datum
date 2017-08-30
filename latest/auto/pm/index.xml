@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="latest/auto/pm">
-  <entry dir="true">in</entry>
-  <entry dir="true">scope</entry>
+<index path="/latest/auto/pm" version="0.38.1">
+  <entry dir="true" path="/latest/auto/pm/in">in</entry>
+  <entry dir="true" path="/latest/auto/pm/scope">scope</entry>
 </index>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<index path="latest/xsd/pm/scope">
-  <entry dir="false">archive.xsd</entry>
-  <entry dir="false">wbs.xsd</entry>
-  <entry dir="false">types.xsd</entry>
+<index path="/latest/xsd/pm/scope" version="0.38.1">
+  <entry dir="false" path="/latest/xsd/pm/scope/archive.xsd">archive.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pm/scope/wbs.xsd">wbs.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pm/scope/types.xsd">types.xsd</entry>
 </index>

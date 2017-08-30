@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="pages">
-  <entry dir="false">policy.html</entry>
+<index path="/pages" version="0.38.1">
+  <entry dir="false" path="/pages/policy.html">policy.html</entry>
 </index>

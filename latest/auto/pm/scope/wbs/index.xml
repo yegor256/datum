@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<index path="latest/auto/pm/scope/wbs">
-  <entry dir="false">1-elections-remove.xsl</entry>
-  <entry dir="false">5-precedences-remove.xsl</entry>
-  <entry dir="false">2-boosts-remove.xsl</entry>
-  <entry dir="false">3-estimates-remove.xsl</entry>
-  <entry dir="false">4-bans-remove.xsl</entry>
+<index path="/latest/auto/pm/scope/wbs" version="0.38.1">
+  <entry dir="false" path="/latest/auto/pm/scope/wbs/1-elections-remove.xsl">1-elections-remove.xsl</entry>
+  <entry dir="false" path="/latest/auto/pm/scope/wbs/5-precedences-remove.xsl">5-precedences-remove.xsl</entry>
+  <entry dir="false" path="/latest/auto/pm/scope/wbs/2-boosts-remove.xsl">2-boosts-remove.xsl</entry>
+  <entry dir="false" path="/latest/auto/pm/scope/wbs/3-estimates-remove.xsl">3-estimates-remove.xsl</entry>
+  <entry dir="false" path="/latest/auto/pm/scope/wbs/4-bans-remove.xsl">4-bans-remove.xsl</entry>
 </index>
