@@ -214,7 +214,7 @@ task :site, [:version] do |_, args|
   Dir['target/site/**/*'].reject { |d| File.file?(d) }.each do |d|
     xml = Nokogiri::XML::Builder.new do |x|
       path = d.gsub('target/site', '')
-      x.index(path: path) do
+      x.index(path: path, version: args[:version]) do
         Dir.entries(d).reject { |f| f.start_with?('.') }.each do |f|
           x.entry(dir: !File.file?(File.join(d, f)), path: "#{path}/#{f}") do
             x.text(f)
