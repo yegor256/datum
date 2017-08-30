@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/xsl/pmo" version="0.39">
+<index path="/latest/xsl/pmo" version="0.39.1">
   <entry dir="false" path="/latest/xsl/pmo/agenda.xsl">agenda.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/awards.xsl">awards.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/bots.xsl">bots.xsl</entry>

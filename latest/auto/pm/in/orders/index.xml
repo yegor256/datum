@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="/latest/auto/pm/in/orders" version="0.39">
+<index path="/latest/auto/pm/in/orders" version="0.39.1">
   <entry dir="false" path="/latest/auto/pm/in/orders/01-impediments-remove.xsl" order="1">01-impediments-remove.xsl</entry>
 </index>

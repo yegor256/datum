@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest" version="0.39">
+<index path="/latest" version="0.39.1">
   <entry dir="true" path="/latest/auto">auto</entry>
   <entry dir="true" path="/latest/rules">rules</entry>
   <entry dir="true" path="/latest/upgrades">upgrades</entry>

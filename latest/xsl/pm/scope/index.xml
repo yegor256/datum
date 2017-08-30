@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/xsl/pm/scope" version="0.39">
+<index path="/latest/xsl/pm/scope" version="0.39.1">
   <entry dir="false" path="/latest/xsl/pm/scope/archive.xsl">archive.xsl</entry>
   <entry dir="false" path="/latest/xsl/pm/scope/wbs.xsl">wbs.xsl</entry>
 </index>
