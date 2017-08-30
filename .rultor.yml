@@ -8,7 +8,7 @@ release:
     pdd -f /dev/null
     bundle install
     rake
-    rake site[${tag}]
+    rake site[${tag}] validate_site[${tag}]
     cp -r target/site /tmp
     git checkout gh-pages
     for d in $(ls /tmp/site); do rm -rf $d; cp -r /tmp/site/$d .; git add $d; done

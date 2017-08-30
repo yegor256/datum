@@ -222,6 +222,29 @@ task :site, [:version] do |_, args|
   puts "The site is ready in target/site\n\n"
 end
 
+desc 'Validate that the site is correct'
+task :validate_site, [:version] do |_, args|
+  raise 'You have to call "rake validate_site[123]"' unless args[:version]
+  files = [
+    "#{args[:version]}/index.xml",
+    "#{args[:version]}/index.html",
+    "#{args[:version]}/xsd/basics.xsd",
+    "#{args[:version]}/xsd/pmo/agenda.xsd",
+    "#{args[:version]}/xsd/pm/scope/wbs.xsd",
+    'latest/auto/pm/scope/wbs/index.xml',
+    'latest/auto/pm/scope/wbs/01-elections-remove.xsl',
+    'latest/rules/pm/no-lost-boosts.xsl',
+    'latest/upgrades/pm/claims/0.24-version-and-date.xsl',
+    'latest/xsl/pm/cost/boosts.xsl',
+    'pages/policy.html'
+  ]
+  files.each do |f|
+    path = "target/site/#{f}"
+    raise "#{path} is absent" unless File.exist?(path)
+  end
+  puts "The site is valid, #{files.length} files checked\n\n"
+end
+
 require 'rubocop/rake_task'
 desc 'Run RuboCop on all directories'
 RuboCop::RakeTask.new(:rubocop) do |task|
