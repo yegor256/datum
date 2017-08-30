@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<index path="/latest/xsd/pmo" version="0.38.1">
-  <entry dir="false" path="/latest/xsd/pmo/people.xsd">people.xsd</entry>
+<index path="/latest/xsd/pmo" version="0.39">
   <entry dir="false" path="/latest/xsd/pmo/agenda.xsd">agenda.xsd</entry>
-  <entry dir="false" path="/latest/xsd/pmo/speed.xsd">speed.xsd</entry>
-  <entry dir="false" path="/latest/xsd/pmo/types.xsd">types.xsd</entry>
   <entry dir="false" path="/latest/xsd/pmo/awards.xsd">awards.xsd</entry>
-  <entry dir="false" path="/latest/xsd/pmo/projects.xsd">projects.xsd</entry>
   <entry dir="false" path="/latest/xsd/pmo/bots.xsd">bots.xsd</entry>
   <entry dir="false" path="/latest/xsd/pmo/catalog.xsd">catalog.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pmo/people.xsd">people.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pmo/projects.xsd">projects.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pmo/speed.xsd">speed.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pmo/types.xsd">types.xsd</entry>
 </index>

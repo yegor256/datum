@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<index path="/latest" version="0.38.1">
+<index path="/latest" version="0.39">
+  <entry dir="true" path="/latest/auto">auto</entry>
+  <entry dir="true" path="/latest/rules">rules</entry>
   <entry dir="true" path="/latest/upgrades">upgrades</entry>
   <entry dir="true" path="/latest/xsd">xsd</entry>
-  <entry dir="true" path="/latest/rules">rules</entry>
   <entry dir="true" path="/latest/xsl">xsl</entry>
-  <entry dir="true" path="/latest/auto">auto</entry>
 </index>

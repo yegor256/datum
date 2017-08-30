@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<index path="/latest/xsd/pm" version="0.38.1">
+<index path="/latest/xsd/pm" version="0.39">
+  <entry dir="false" path="/latest/xsd/pm/claims.xsd">claims.xsd</entry>
   <entry dir="true" path="/latest/xsd/pm/cost">cost</entry>
   <entry dir="true" path="/latest/xsd/pm/in">in</entry>
   <entry dir="true" path="/latest/xsd/pm/scope">scope</entry>
-  <entry dir="false" path="/latest/xsd/pm/claims.xsd">claims.xsd</entry>
   <entry dir="true" path="/latest/xsd/pm/staff">staff</entry>
   <entry dir="true" path="/latest/xsd/pm/time">time</entry>
 </index>

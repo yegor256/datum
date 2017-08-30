@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pm" version="0.38.1">
+<index path="/latest/upgrades/pm" version="0.39">
+  <entry dir="true" path="/latest/upgrades/pm/claims">claims</entry>
   <entry dir="true" path="/latest/upgrades/pm/cost">cost</entry>
+  <entry dir="true" path="/latest/upgrades/pm/hr">hr</entry>
   <entry dir="true" path="/latest/upgrades/pm/in">in</entry>
   <entry dir="true" path="/latest/upgrades/pm/scope">scope</entry>
-  <entry dir="true" path="/latest/upgrades/pm/claims">claims</entry>
   <entry dir="true" path="/latest/upgrades/pm/staff">staff</entry>
-  <entry dir="true" path="/latest/upgrades/pm/hr">hr</entry>
 </index>

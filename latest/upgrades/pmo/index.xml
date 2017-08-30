@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pmo" version="0.38.1">
+<index path="/latest/upgrades/pmo" version="0.39">
   <entry dir="true" path="/latest/upgrades/pmo/bots">bots</entry>
   <entry dir="true" path="/latest/upgrades/pmo/catalog">catalog</entry>
   <entry dir="true" path="/latest/upgrades/pmo/people">people</entry>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<index path="/0.39/xsd/pm/cost" version="0.39">
+  <entry dir="false" path="/0.39/xsd/pm/cost/boosts.xsd">boosts.xsd</entry>
+  <entry dir="false" path="/0.39/xsd/pm/cost/estimates.xsd">estimates.xsd</entry>
+  <entry dir="false" path="/0.39/xsd/pm/cost/types.xsd">types.xsd</entry>
+</index>

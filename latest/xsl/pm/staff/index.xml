@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<index path="/latest/xsl/pm/staff" version="0.38.1">
+<index path="/latest/xsl/pm/staff" version="0.39">
   <entry dir="false" path="/latest/xsl/pm/staff/bans.xsl">bans.xsl</entry>
-  <entry dir="false" path="/latest/xsl/pm/staff/roles.xsl">roles.xsl</entry>
   <entry dir="false" path="/latest/xsl/pm/staff/elections.xsl">elections.xsl</entry>
+  <entry dir="false" path="/latest/xsl/pm/staff/roles.xsl">roles.xsl</entry>
 </index>

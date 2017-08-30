@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<index path="/0.39/xsd/pm/scope" version="0.39">
+  <entry dir="false" path="/0.39/xsd/pm/scope/archive.xsd">archive.xsd</entry>
+  <entry dir="false" path="/0.39/xsd/pm/scope/types.xsd">types.xsd</entry>
+  <entry dir="false" path="/0.39/xsd/pm/scope/wbs.xsd">wbs.xsd</entry>
+</index>

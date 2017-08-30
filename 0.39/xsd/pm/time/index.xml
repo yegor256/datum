@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<index path="/0.39/xsd/pm/time" version="0.39">
+  <entry dir="false" path="/0.39/xsd/pm/time/milestones.xsd">milestones.xsd</entry>
+  <entry dir="false" path="/0.39/xsd/pm/time/precedences.xsd">precedences.xsd</entry>
+  <entry dir="false" path="/0.39/xsd/pm/time/types.xsd">types.xsd</entry>
+</index>

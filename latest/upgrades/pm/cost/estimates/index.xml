@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pm/cost/estimates" version="0.38.1">
-  <entry dir="false" path="/latest/upgrades/pm/cost/estimates/0.24-version-and-date.xsl">0.24-version-and-date.xsl</entry>
-  <entry dir="false" path="/latest/upgrades/pm/cost/estimates/list">list</entry>
+<index path="/latest/upgrades/pm/cost/estimates" version="0.39">
+  <entry dir="false" path="/latest/upgrades/pm/cost/estimates/0.24-version-and-date.xsl" order="0">0.24-version-and-date.xsl</entry>
 </index>
