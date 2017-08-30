@@ -190,22 +190,10 @@ task :site, [:version] do |_, args|
   FileUtils.cp_r('xsd', "target/site/#{args[:version]}")
   puts "XSDs copied to target/site/#{args[:version]}"
   FileUtils.mkdir_p('target/site/latest')
-  %w[auto rules xsd xsl].each do |p|
+  %w[auto rules xsd xsl upgrades].each do |p|
     FileUtils.cp_r(p, 'target/site/latest')
     puts "#{p} copied to target/site/latest"
   end
-  FileUtils.cp_r('upgrades', 'target/site/latest')
-  Dir['upgrades/**/*.xsl'].map { |f| File.dirname(f) }.uniq.each do |d|
-    tdir = File.join('target/site/latest', d)
-    FileUtils.mkdir_p(tdir)
-    File.write(
-      File.join(tdir + '/list'),
-      Dir[d + '/*.xsl'].sort.map do |f|
-        File.basename(f).gsub(/-.*$/, '') + ' ' + f + "\n"
-      end.join('')
-    )
-  end
-  puts 'Upgrades copied to target/site/latest/upgrades'
   Dir['target/site/**/*'].select { |f| File.file?(f) }.each do |f|
     File.write(f, File.read(f).gsub(/SNAPSHOT/, args[:version]))
   end
@@ -215,8 +203,13 @@ task :site, [:version] do |_, args|
     xml = Nokogiri::XML::Builder.new do |x|
       path = d.gsub('target/site', '')
       x.index(path: path, version: args[:version]) do
-        Dir.entries(d).reject { |f| f.start_with?('.') }.each do |f|
+        Dir.entries(d).reject { |f| f.start_with?('.') }.sort.each do |f|
           x.entry(dir: !File.file?(File.join(d, f)), path: "#{path}/#{f}") do
+            if f =~ /^[0-9\.]+-.+/
+              x.parent.set_attribute(
+                'order', f.gsub(/^([0-9\.]+).+$/, '\1').to_i
+              )
+            end
             x.text(f)
           end
         end
