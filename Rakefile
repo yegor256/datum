@@ -206,9 +206,9 @@ task :site, [:version] do |_, args|
         Dir.entries(d).reject { |f| f.start_with?('.') }.sort.each do |f|
           x.entry(dir: !File.file?(File.join(d, f)), path: "#{path}/#{f}") do
             if f =~ /^[0-9\.]+-.+/
-              x.parent.set_attribute(
-                'order', f.gsub(/^([0-9\.]+).+$/, '\1').to_i
-              )
+              order = f.gsub(/^([0-9\.]+).+$/, '\1')
+              order = order.to_i if order =~ /^[0-9]+$/
+              x.parent.set_attribute('order', order)
             end
             x.text(f)
           end
