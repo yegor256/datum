@@ -15,20 +15,20 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="SNAPSHOT" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:simpleType name="login">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[a-z0-9\-]{3,}"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="projectID">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[A-Z0-9]{9,}|PMO"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="projectTitle">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[\d\w._-]{3,}"/>
-    </xs:restriction>
-  </xs:simpleType>
-</xs:schema>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:output method="xml"/>
+  <xsl:strip-space elements="*"/>
+  <xsl:template match="project[not(title)]">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+      <xsl:element name="title">
+        <xsl:value-of select="project/@id"/>
+      </xsl:element>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="@*|node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>
