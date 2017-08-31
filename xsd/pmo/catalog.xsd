@@ -45,6 +45,7 @@ SOFTWARE.
         </xs:complexType>
       </xs:element>
       <xs:element name="publish" minOccurs="1" maxOccurs="1" type="xs:boolean"/>
+      <xs:element name="title" minOccurs="1" maxOccurs="1" type="projectTitle"/>
     </xs:all>
     <xs:attribute name="id" type="projectID" use="required"/>
   </xs:complexType>
@@ -68,6 +69,10 @@ SOFTWARE.
       <xs:selector xpath="project/links/link"/>
       <xs:field xpath="@rel"/>
       <xs:field xpath="@href"/>
+    </xs:unique>
+    <xs:unique name="uniqueTitle">
+      <xs:selector xpath="project"/>
+      <xs:field xpath="title"/>
     </xs:unique>
   </xs:element>
 </xs:schema>
