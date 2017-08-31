@@ -22,7 +22,7 @@ SOFTWARE.
     <xsl:copy>
       <xsl:apply-templates select="@*|node()"/>
       <xsl:element name="title">
-        <xsl:value-of select="project/@id"/>
+        <xsl:value-of select="@id"/>
       </xsl:element>
     </xsl:copy>
   </xsl:template>
