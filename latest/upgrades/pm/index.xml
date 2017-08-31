@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pm" version="0.39.1">
-  <entry dir="true" path="/latest/upgrades/pm/claims">claims</entry>
-  <entry dir="true" path="/latest/upgrades/pm/cost">cost</entry>
-  <entry dir="true" path="/latest/upgrades/pm/hr">hr</entry>
-  <entry dir="true" path="/latest/upgrades/pm/in">in</entry>
-  <entry dir="true" path="/latest/upgrades/pm/scope">scope</entry>
-  <entry dir="true" path="/latest/upgrades/pm/staff">staff</entry>
+<index path="/latest/upgrades/pm" version="0.40">
+  <entry dir="true" path="/latest/upgrades/pm/claims" uri="http://datum.zerocracy.com/latest/upgrades/pm/claims">claims</entry>
+  <entry dir="true" path="/latest/upgrades/pm/cost" uri="http://datum.zerocracy.com/latest/upgrades/pm/cost">cost</entry>
+  <entry dir="true" path="/latest/upgrades/pm/hr" uri="http://datum.zerocracy.com/latest/upgrades/pm/hr">hr</entry>
+  <entry dir="true" path="/latest/upgrades/pm/in" uri="http://datum.zerocracy.com/latest/upgrades/pm/in">in</entry>
+  <entry dir="true" path="/latest/upgrades/pm/scope" uri="http://datum.zerocracy.com/latest/upgrades/pm/scope">scope</entry>
+  <entry dir="true" path="/latest/upgrades/pm/staff" uri="http://datum.zerocracy.com/latest/upgrades/pm/staff">staff</entry>
 </index>

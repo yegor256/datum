@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<index path="/latest/auto/pm/scope/wbs" version="0.39.1">
-  <entry dir="false" path="/latest/auto/pm/scope/wbs/01-elections-remove.xsl" order="1">01-elections-remove.xsl</entry>
-  <entry dir="false" path="/latest/auto/pm/scope/wbs/02-boosts-remove.xsl" order="2">02-boosts-remove.xsl</entry>
-  <entry dir="false" path="/latest/auto/pm/scope/wbs/03-estimates-remove.xsl" order="3">03-estimates-remove.xsl</entry>
-  <entry dir="false" path="/latest/auto/pm/scope/wbs/04-bans-remove.xsl" order="4">04-bans-remove.xsl</entry>
-  <entry dir="false" path="/latest/auto/pm/scope/wbs/05-precedences-remove.xsl" order="5">05-precedences-remove.xsl</entry>
+<index path="/latest/auto/pm/scope/wbs" version="0.40">
+  <entry dir="false" path="/latest/auto/pm/scope/wbs/01-elections-remove.xsl" uri="http://datum.zerocracy.com/latest/auto/pm/scope/wbs/01-elections-remove.xsl" order="1">01-elections-remove.xsl</entry>
+  <entry dir="false" path="/latest/auto/pm/scope/wbs/02-boosts-remove.xsl" uri="http://datum.zerocracy.com/latest/auto/pm/scope/wbs/02-boosts-remove.xsl" order="2">02-boosts-remove.xsl</entry>
+  <entry dir="false" path="/latest/auto/pm/scope/wbs/03-estimates-remove.xsl" uri="http://datum.zerocracy.com/latest/auto/pm/scope/wbs/03-estimates-remove.xsl" order="3">03-estimates-remove.xsl</entry>
+  <entry dir="false" path="/latest/auto/pm/scope/wbs/04-bans-remove.xsl" uri="http://datum.zerocracy.com/latest/auto/pm/scope/wbs/04-bans-remove.xsl" order="4">04-bans-remove.xsl</entry>
+  <entry dir="false" path="/latest/auto/pm/scope/wbs/05-precedences-remove.xsl" uri="http://datum.zerocracy.com/latest/auto/pm/scope/wbs/05-precedences-remove.xsl" order="5">05-precedences-remove.xsl</entry>
 </index>

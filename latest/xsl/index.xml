@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<index path="/latest/xsl" version="0.39.1">
-  <entry dir="true" path="/latest/xsl/pm">pm</entry>
-  <entry dir="true" path="/latest/xsl/pmo">pmo</entry>
-  <entry dir="false" path="/latest/xsl/templates.xsl">templates.xsl</entry>
+<index path="/latest/xsl" version="0.40">
+  <entry dir="true" path="/latest/xsl/pm" uri="http://datum.zerocracy.com/latest/xsl/pm">pm</entry>
+  <entry dir="true" path="/latest/xsl/pmo" uri="http://datum.zerocracy.com/latest/xsl/pmo">pmo</entry>
+  <entry dir="false" path="/latest/xsl/templates.xsl" uri="http://datum.zerocracy.com/latest/xsl/templates.xsl">templates.xsl</entry>
 </index>

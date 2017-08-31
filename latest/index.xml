@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<index path="/latest" version="0.39.1">
-  <entry dir="true" path="/latest/auto">auto</entry>
-  <entry dir="true" path="/latest/rules">rules</entry>
-  <entry dir="true" path="/latest/upgrades">upgrades</entry>
-  <entry dir="true" path="/latest/xsd">xsd</entry>
-  <entry dir="true" path="/latest/xsl">xsl</entry>
+<index path="/latest" version="0.40">
+  <entry dir="true" path="/latest/auto" uri="http://datum.zerocracy.com/latest/auto">auto</entry>
+  <entry dir="true" path="/latest/rules" uri="http://datum.zerocracy.com/latest/rules">rules</entry>
+  <entry dir="true" path="/latest/upgrades" uri="http://datum.zerocracy.com/latest/upgrades">upgrades</entry>
+  <entry dir="true" path="/latest/xsd" uri="http://datum.zerocracy.com/latest/xsd">xsd</entry>
+  <entry dir="true" path="/latest/xsl" uri="http://datum.zerocracy.com/latest/xsl">xsl</entry>
 </index>
