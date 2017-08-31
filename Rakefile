@@ -204,7 +204,12 @@ task :site, [:version] do |_, args|
       path = d.gsub('target/site', '')
       x.index(path: path, version: args[:version]) do
         Dir.entries(d).reject { |f| f.start_with?('.') }.sort.each do |f|
-          x.entry(dir: !File.file?(File.join(d, f)), path: "#{path}/#{f}") do
+          x.entry do
+            x.parent.set_attribute('dir', !File.file?(File.join(d, f)))
+            x.parent.set_attribute('path', "#{path}/#{f}")
+            x.parent.set_attribute(
+              'uri', "http://datum.zerocracy.com#{path}/#{f}"
+            )
             if f =~ /^[0-9\.]+-.+/
               order = f.gsub(/^([0-9\.]+).+$/, '\1')
               order = order.to_i if order =~ /^[0-9]+$/
