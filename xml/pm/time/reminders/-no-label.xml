@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reminders updated="2017-08-08T14:04:00Z" version="0.1">
+  <order job="gh:test/test#1">
+    <reminder>
+      <created>2017-01-01T12:00:00</created>
+      <label>5 days</label>
+    </reminder>
+  </order>
+</reminders>
