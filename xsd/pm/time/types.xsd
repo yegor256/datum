@@ -29,7 +29,7 @@ SOFTWARE.
   </xs:simpleType>
   <xs:simpleType name="reminderLabel">
     <xs:restriction base="xs:string">
-      <xs:pattern value="\d+\s(days|hours)" />
+      <xs:pattern value="\d+\s(days|hours)"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>
