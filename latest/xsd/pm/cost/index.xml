@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/xsd/pm/cost" version="0.40.1">
+<index path="/latest/xsd/pm/cost" version="0.40.2">
   <entry dir="false" path="/latest/xsd/pm/cost/boosts.xsd" uri="http://datum.zerocracy.com/latest/xsd/pm/cost/boosts.xsd">boosts.xsd</entry>
   <entry dir="false" path="/latest/xsd/pm/cost/estimates.xsd" uri="http://datum.zerocracy.com/latest/xsd/pm/cost/estimates.xsd">estimates.xsd</entry>
   <entry dir="false" path="/latest/xsd/pm/cost/types.xsd" uri="http://datum.zerocracy.com/latest/xsd/pm/cost/types.xsd">types.xsd</entry>
