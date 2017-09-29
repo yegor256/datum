@@ -15,21 +15,29 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="SNAPSHOT" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:simpleType name="milestoneID">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[a-z]{2}:[A-Z0-9a-z.\-#/]+"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="precedenceType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="job"/>
-      <xs:enumeration value="milestone"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="reminderLabel">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="\d+\s(days|hours)"/>
-    </xs:restriction>
-  </xs:simpleType>
-</xs:schema>
+<reminders updated="2017-08-08T14:04:00Z" version="0.1">
+  <order job="gh:test/test#1">
+    <reminder>
+      <created>2017-01-01T12:00:00</created>
+      <label>5 days</label>
+      <login>yegor256</login>
+    </reminder>
+    <reminder>
+      <created>2017-01-01T12:00:00</created>
+      <label>8 days</label>
+      <login>yegor256</login>
+    </reminder>
+  </order>
+  <order job="gh:test/test#2">
+    <reminder>
+      <created>2017-01-01T12:00:00</created>
+      <label>5 days</label>
+      <login>yegor256</login>
+    </reminder>
+    <reminder>
+      <created>2017-01-01T12:00:00</created>
+      <label>8 days</label>
+      <login>yegor256</login>
+    </reminder>
+  </order>
+</reminders>
