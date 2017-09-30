@@ -35,6 +35,7 @@ SOFTWARE.
         </xs:simpleType>
       </xs:element>
       <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+      <xs:element name="until" minOccurs="0" maxOccurs="1" type="xs:dateTime"/>
       <xs:element name="author" minOccurs="0" maxOccurs="1" type="login"/>
       <xs:element name="token" minOccurs="0" maxOccurs="1">
         <xs:simpleType>
