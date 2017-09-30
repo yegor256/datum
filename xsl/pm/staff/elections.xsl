@@ -69,9 +69,11 @@ SOFTWARE.
         </xsl:call-template>
       </td>
       <td>
-        <ul style="max-height:4em;">
-          <xsl:apply-templates select="election"/>
-        </ul>
+        <div style="max-height:4em;">
+          <ul>
+            <xsl:apply-templates select="election"/>
+          </ul>
+        </div>
       </td>
     </tr>
   </xsl:template>
