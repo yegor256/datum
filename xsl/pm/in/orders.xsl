@@ -69,8 +69,8 @@ SOFTWARE.
         </xsl:call-template>
       </td>
       <td>
-        <pre>
-          <xsl:value-of select="reason"/>
+        <pre style="max-height:5em;">
+          <xsl:value-of select="reason" disable-output-escaping="no"/>
         </pre>
       </td>
       <td>

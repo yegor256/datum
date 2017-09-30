@@ -23,7 +23,11 @@ SOFTWARE.
   </order>
   <order job="gh:yegor256/pdd#4">
     <performer>yegor256</performer>
-    <reason>Just for fun</reason>
+    <reason>@yegor256 (1.00 of -2099):
+  0.00=0.00x-100 There are no jobs yet
+  0.00=0.00x-1000 There are no bans
+  0.00=0.00x-1000 Not on vacation
+  1.00=1.00x1</reason>
     <created>2016-11-19T09:03:21.684Z</created>
     <closed>2016-11-20T09:03:21.684Z</closed>
   </order>
