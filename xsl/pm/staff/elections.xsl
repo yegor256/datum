@@ -43,19 +43,37 @@ SOFTWARE.
     </p>
   </xsl:template>
   <xsl:template match="elections[job]">
-    <xsl:apply-templates select="job">
-      <xsl:sort select="@id" order="descending" data-type="text"/>
-    </xsl:apply-templates>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>Job</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Elections</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="job">
+          <xsl:sort select="@id" order="descending" data-type="text"/>
+        </xsl:apply-templates>
+      </tbody>
+    </table>
   </xsl:template>
   <xsl:template match="job">
-    <p>
-      <xsl:call-template name="job">
-        <xsl:with-param name="id" select="@id"/>
-      </xsl:call-template>
-    </p>
-    <ul>
-      <xsl:apply-templates select="election"/>
-    </ul>
+    <tr>
+      <td>
+        <xsl:call-template name="job">
+          <xsl:with-param name="id" select="@id"/>
+        </xsl:call-template>
+      </td>
+      <td>
+        <ul style="max-height:4em;">
+          <xsl:apply-templates select="election"/>
+        </ul>
+      </td>
+    </tr>
   </xsl:template>
   <xsl:template match="election">
     <li>
