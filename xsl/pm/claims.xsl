@@ -74,6 +74,11 @@ SOFTWARE.
     <tr>
       <td>
         <xsl:value-of select="@id"/>
+        <xsl:if test="until">
+          <span title="{until}" style="color:red">
+            <xsl:text>until</xsl:text>
+          </span>
+        </xsl:if>
       </td>
       <td>
         <xsl:value-of select="type"/>
