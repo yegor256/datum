@@ -137,3 +137,10 @@ Just say `boost 2x` (or `3x`, `5x`, etc.) to Zerocrat.
 This operation is against our principles of micro-tasking, that's
 why you get -10 points every time you do this.
 
+<a name="19" href="#19">§19</a>.
+"Assign."
+You can manually assign any job to a user, just say `assign <user>` or
+assign the ticket to that user in your ticket tracking system.
+This operation is against our principles of automated task management,
+that's why you will get -5 points every time you do this.
+
