@@ -117,7 +117,7 @@ To assign a role you say `assign`. To remove a role you say `resign`.
 <a name="17" href="#17">§17</a>.
 "Connect GitHub."
 To connect your GitHub repository to the project you should
-1) add a new Webhook: `http://www.0crat.com/ghook`
+1) add a new Webhook: `http://p.rehttp.net/http://www.0crat.com/ghook`
 (content-type: `application/x-www-form-urlencoded`, "send me everything"),
 and
 2) link the project in Slack: `links add github yegor256/cactoos`, where
