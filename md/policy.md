@@ -97,6 +97,11 @@ comments posted to the ticket during the review.
 To make money in any project you must define your hourly rate.
 To do that just say `rate` to Zerocrat in your Slack private chat.
 
+<a name="20" href="#20">§20</a>.
+"Wallet."
+We can send you money either via PayPal or Bitcon.
+To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
+
 ## Product Owner
 
 <a name="11" href="#11">§11</a>.
