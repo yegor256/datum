@@ -127,7 +127,7 @@ instead of `yegor256/cactoos` you should put the coordinates of your GitHub repo
 
 <a name="14" href="#14">§14</a>.
 "Scope In/Out."
-You should add jobs to the scope, by saying `in` to Zerocrat.
+You should add jobs to the scope, by saying `in` to Zerocrat (or assigning the ticket to him).
 You can remove a job from the scope by saying `out`.
 
 <a name="15" href="#15">§15</a>.
