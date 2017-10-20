@@ -52,7 +52,7 @@ You will be notified in job's ticket.
 Each job has a fixed budget in minutes,
 which will be multiplied by your hourly rate and paid to you when the job is completed.
 The actual amount of time you spent on the job doesn't affect the amount of money you receive.
-You will also get as many positive points as many minutes you are paid for.
+You will also get as many positive [points](#18) as many minutes you are paid for.
 
 <a name="18" href="#18">§18</a>.
 "Points."
@@ -71,7 +71,7 @@ You should ask project architect to boost your job.
 <a name="6" href="#6">§6</a>.
 "Refusal."
 You may refuse to complete any job by saying `refuse`.
-You will get 15 negative points for that.
+You will get 15 negative [points](#18) for that.
 
 <a name="7" href="#7">§7</a>.
 "Definition of Done."
@@ -80,7 +80,7 @@ A job is completed when its ticket is closed.
 <a name="8" href="#8">§8</a>.
 "Ten Days."
 If you don't complete a job in 10 days Zerocrat _may_ take it away from you.
-You will get no money and 30 negative points if this happens.
+You will get no money and 30 negative [points](#18) if this happens.
 
 <a name="9" href="#9">§9</a>.
 "Impediments."
@@ -123,7 +123,7 @@ To assign a role you say `assign`. To remove a role you say `resign`.
 "Connect GitHub."
 To connect your GitHub repository to the project you should
 1) add a new Webhook: `http://p.rehttp.net/http://www.0crat.com/ghook`
-(content-type: `application/x-www-form-urlencoded`, "send me everything"),
+(with "send me everything" option),
 and
 2) link the project in Slack: `links add github yegor256/cactoos`, where
 instead of `yegor256/cactoos` you should put the coordinates of your GitHub repository.
@@ -140,12 +140,12 @@ You can remove a job from the scope by saying `out`.
 You can increase a budget of the job by setting its boost factor.
 Just say `boost 2x` (or `3x`, `5x`, etc.) to Zerocrat.
 This operation is against our principles of micro-tasking, that's
-why you get -10 points every time you do this.
+why you get -10 [points](#18) every time you do this.
 
 <a name="19" href="#19">§19</a>.
 "Assign."
 You can manually assign any job to a user, just say `assign <user>` or
 assign the ticket to that user in your ticket tracking system.
 This operation is against our principles of automated task management,
-that's why you will get -5 points every time you do this.
+that's why you will get -5 [points](#18) every time you do this.
 
