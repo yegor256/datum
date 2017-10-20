@@ -24,11 +24,18 @@ SOFTWARE.
     <link rel="shortcut icon" href="http://www.zerocracy.com/logo.png"/>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nunito"/>
     <link rel="stylesheet" href="http://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-css.min.css"/>
-    <link rel="stylesheet" href="http://www.0crat.com/css/main.css"/>
     <title>Policy</title>
   </head>
   <body>
-    <section><header><p><a href="/"><img src="http://www.zerocracy.com/logo.svg" class="inner-logo"/></a></p></header><h1>Policy</h1>
+    <section>
+      <header>
+        <p style="text-align:center">
+          <a href="/">
+            <img src="http://www.zerocracy.com/logo.svg" style="width:75px"/>
+          </a>
+        </p>
+      </header>
+      <article><h1>Policy</h1>
       <p>This policy explains basic work principles of
 <a href="http://www.0crat.com">0crat</a> (&quot;Zerocrat&quot;):
 a project management AI bot developed
@@ -85,7 +92,7 @@ You will be notified in job&#39;s ticket.</p>
 Each job has a fixed budget in minutes,
 which will be multiplied by your hourly rate and paid to you when the job is completed.
 The actual amount of time you spent on the job doesn&#39;t affect the amount of money you receive.
-You will also get as many positive points as many minutes you are paid for.</p>
+You will also get as many positive <a href="#18">points</a> as many minutes you are paid for.</p>
 
 <p><a name="18" href="#18">§18</a>.
 &quot;Points.&quot;
@@ -104,7 +111,7 @@ You should ask project architect to boost your job.</p>
 <p><a name="6" href="#6">§6</a>.
 &quot;Refusal.&quot;
 You may refuse to complete any job by saying <code>refuse</code>.
-You will get 15 negative points for that.</p>
+You will get 15 negative <a href="#18">points</a> for that.</p>
 
 <p><a name="7" href="#7">§7</a>.
 &quot;Definition of Done.&quot;
@@ -113,7 +120,7 @@ A job is completed when its ticket is closed.</p>
 <p><a name="8" href="#8">§8</a>.
 &quot;Ten Days.&quot;
 If you don&#39;t complete a job in 10 days Zerocrat <em>may</em> take it away from you.
-You will get no money and 30 negative points if this happens.</p>
+You will get no money and 30 negative <a href="#18">points</a> if this happens.</p>
 
 <p><a name="9" href="#9">§9</a>.
 &quot;Impediments.&quot;
@@ -129,6 +136,11 @@ comments posted to the ticket during the review.</p>
 &quot;Rate.&quot;
 To make money in any project you must define your hourly rate.
 To do that just say <code>rate</code> to Zerocrat in your Slack private chat.</p>
+
+<p><a name="20" href="#20">§20</a>.
+&quot;Wallet.&quot;
+We can send you money either via PayPal or Bitcon.
+To tell us how exactly you want to receive them just say <code>wallet</code> to Zerocrat.</p>
 
 <h2>Product Owner</h2>
 
@@ -150,8 +162,8 @@ To assign a role you say <code>assign</code>. To remove a role you say <code>res
 <p><a name="17" href="#17">§17</a>.
 &quot;Connect GitHub.&quot;
 To connect your GitHub repository to the project you should
-1) add a new Webhook: <code>http://www.0crat.com/ghook</code>
-(content-type: <code>application/x-www-form-urlencoded</code>, &quot;send me everything&quot;),
+1) add a new Webhook: <code>http://p.rehttp.net/http://www.0crat.com/ghook</code>
+(with &quot;send me everything&quot; option),
 and
 2) link the project in Slack: <code>links add github yegor256/cactoos</code>, where
 instead of <code>yegor256/cactoos</code> you should put the coordinates of your GitHub repository.</p>
@@ -160,7 +172,7 @@ instead of <code>yegor256/cactoos</code> you should put the coordinates of your 
 
 <p><a name="14" href="#14">§14</a>.
 &quot;Scope In/Out.&quot;
-You should add jobs to the scope, by saying <code>in</code> to Zerocrat.
+You should add jobs to the scope, by saying <code>in</code> to Zerocrat (or assigning the ticket to him).
 You can remove a job from the scope by saying <code>out</code>.</p>
 
 <p><a name="15" href="#15">§15</a>.
@@ -168,22 +180,22 @@ You can remove a job from the scope by saying <code>out</code>.</p>
 You can increase a budget of the job by setting its boost factor.
 Just say <code>boost 2x</code> (or <code>3x</code>, <code>5x</code>, etc.) to Zerocrat.
 This operation is against our principles of micro-tasking, that&#39;s
-why you get -10 points every time you do this.</p>
+why you get -10 <a href="#18">points</a> every time you do this.</p>
 
 <p><a name="19" href="#19">§19</a>.
 &quot;Assign.&quot;
 You can manually assign any job to a user, just say <code>assign &lt;user&gt;</code> or
 assign the ticket to that user in your ticket tracking system.
 This operation is against our principles of automated task management,
-that&#39;s why you will get -5 points every time you do this.</p>
-
-      <footer style="font-size: 0.8em"><p>
-        &mdash;
-        <br/>
-        v0.42
+that&#39;s why you will get -5 <a href="#18">points</a> every time you do this.</p>
+</article>
+      <footer style="font-size:0.8em;">
+        <p style="text-align:center">
+        v0.43
         ·
-        12-Oct-2017
-      </p></footer>
+        20-Oct-2017
+      </p>
+      </footer>
     </section>
   </body>
 </html>
