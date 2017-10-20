@@ -5,3 +5,5 @@ Metrics/BlockLength:
   Max: 100
 Style/MultilineMethodCallIndentation:
   Enabled: false
+Style/MultilineBlockChain:
+  Enabled: false

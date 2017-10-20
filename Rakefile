@@ -133,6 +133,15 @@ task :auto do
       home = Dir.pwd
       area = dir.gsub(%r{([a-z]+)/.+}, '\1')
       Dir["auto/#{area}/**/*.xsl"]
+        .select do |xsl|
+          File.exist?(
+            File.join(
+              temp,
+              "auto-test/#{dir}",
+              "#{xsl.gsub(%r{^.+/([a-z]+)/[0-9]+-.+$}, '\1')}.xml"
+            )
+          )
+        end
         .sort_by! { |x| x.gsub(/^([0-9]+)-.+$/, '\1').to_i }
         .each do |xsl|
           Dir.chdir(File.join(temp, "auto-test/#{dir}")) do
