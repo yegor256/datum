@@ -118,6 +118,10 @@ channel, add @0crat to it, and ask it to `bootstrap` the project.
 "Assign/Resign."
 Everybody who will be managed by Zerocrat must have roles in the project.
 To assign a role you say `assign`. To remove a role you say `resign`.
+By default, all new people you assign are supposed to work for free. If you
+want to pay them for the tasks they complete, add hourly rate to the `assign`
+command, for example: `assign DEV yegor256 $50`. To change the hourly
+rate of a person just assign the same role with a different rate.
 
 <a name="17" href="#17">§17</a>.
 "Connect GitHub."

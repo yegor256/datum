@@ -111,7 +111,10 @@ task :xsl do
         ['today', "'#{Time.now.iso8601}'"]
       )
       html.remove_namespaces!
-      raise 'HTML <section> absent' if html.xpath('/html/body/section').empty?
+      if html.xpath('/html/body/section').empty?
+        puts html
+        raise "HTML <section> absent in HTML from #{f}"
+      end
       File.write(File.join(dir, label), html)
       open(File.join(dir, 'index.html'), 'a') do |i|
         i.puts "<p><a href='#{label}'>#{p}</a></p>"

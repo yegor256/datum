@@ -17,7 +17,7 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../../templates.xsl"/>
-  <xsl:template match="/orders">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
@@ -25,36 +25,47 @@ SOFTWARE.
             <xsl:text>Orders</xsl:text>
           </h1>
           <p>
-            <xsl:text>An order is a job that is assigned to a performer.
-            This is the full list of currently active orders
-            in the project.</xsl:text>
+            <xsl:text>An order is a job that is assigned to a performer.</xsl:text>
           </p>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <xsl:text>Job</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Performer</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Reason</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Created</xsl:text>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <xsl:apply-templates select="order">
-                <xsl:sort select="created" order="descending" data-type="text"/>
-              </xsl:apply-templates>
-            </tbody>
-          </table>
+          <xsl:apply-templates select="orders"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="orders[not(order)]">
+    <p>
+      <xsl:text>There are no open orders in the project at the moment.</xsl:text>
+    </p>
+  </xsl:template>
+  <xsl:template match="orders[order]">
+    <p>
+      <xsl:text>This is the full list of </xsl:text>
+      <xsl:value-of select="count(order)"/>
+      <xsl:text> currently active orders in the project.</xsl:text>
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>Job</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Performer</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Reason</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Created</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="order">
+          <xsl:sort select="created" order="descending" data-type="text"/>
+        </xsl:apply-templates>
+      </tbody>
+    </table>
   </xsl:template>
   <xsl:template match="order">
     <tr>
@@ -69,7 +80,7 @@ SOFTWARE.
         </xsl:call-template>
       </td>
       <td>
-        <pre style="max-height:5em;">
+        <pre style="max-height:5em;margin-bottom:0;">
           <xsl:value-of select="reason" disable-output-escaping="no"/>
         </pre>
       </td>
