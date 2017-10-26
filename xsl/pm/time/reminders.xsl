@@ -17,47 +17,69 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../../templates.xsl"/>
-  <xsl:template match="/reminders">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
           <h1>Reminders</h1>
           <p>
-            This is the full list of reminders in current project.
+            <xsl:text>This document is updated automatically, you don't have
+              to do anything with it. We remind users sometimes in their
+              jobs for different reasons and keep that reminders here,
+              in order to avoid duplication.</xsl:text>
           </p>
-          <xsl:for-each select="order">
-            <h3>
-              <xsl:value-of select="@job"/>
-            </h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>
-                    <xsl:text>Reminder</xsl:text>
-                  </th>
-                  <th>
-                    <xsl:text>for</xsl:text>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <xsl:apply-templates select="reminder">
-                  <xsl:sort select="created" order="descending" data-type="text"/>
-                </xsl:apply-templates>
-              </tbody>
-            </table>
-          </xsl:for-each>
+          <xsl:apply-templates select="reminders"/>
         </section>
       </body>
     </html>
   </xsl:template>
-  <xsl:template match="reminder">
+  <xsl:template match="reminders[not(order)]">
+    <p>
+      <xsl:text>This are not reminders here yet.</xsl:text>
+    </p>
+  </xsl:template>
+  <xsl:template match="reminders[order]">
+    <p>
+      <xsl:text>This is the full list of reminders in the current project.</xsl:text>
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>Order</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Reminders</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="order">
+          <xsl:sort select="@job" order="descending" data-type="text"/>
+        </xsl:apply-templates>
+      </tbody>
+    </table>
+  </xsl:template>
+  <xsl:template match="order">
     <tr>
       <td>
-        <xsl:value-of select="label"/>
+        <xsl:call-template name="job">
+          <xsl:with-param name="id" select="@job"/>
+        </xsl:call-template>
       </td>
       <td>
-        <xsl:value-of select="login"/>
+        <xsl:for-each select="reminder">
+          <xsl:if test="position() &gt; 1">
+            <xsl:text>; </xsl:text>
+          </xsl:if>
+          <code>
+            <xsl:value-of select="label"/>
+          </code>
+          <xsl:text>/</xsl:text>
+          <xsl:call-template name="user">
+            <xsl:with-param name="id" select="login"/>
+          </xsl:call-template>
+        </xsl:for-each>
       </td>
     </tr>
   </xsl:template>
