@@ -157,7 +157,11 @@ channel, add @0crat to it, and ask it to <code>bootstrap</code> the project.</p>
 <p><a name="13" href="#13">§13</a>.
 &quot;Assign/Resign.&quot;
 Everybody who will be managed by Zerocrat must have roles in the project.
-To assign a role you say <code>assign</code>. To remove a role you say <code>resign</code>.</p>
+To assign a role you say <code>assign</code>. To remove a role you say <code>resign</code>.
+By default, all new people you assign are supposed to work for free. If you
+want to pay them for the tasks they complete, add hourly rate to the <code>assign</code>
+command, for example: <code>assign DEV yegor256 $50</code>. To change the hourly
+rate of a person just assign the same role with a different rate.</p>
 
 <p><a name="17" href="#17">§17</a>.
 &quot;Connect GitHub.&quot;
@@ -191,9 +195,9 @@ that&#39;s why you will get -5 <a href="#18">points</a> every time you do this.<
 </article>
       <footer style="font-size:0.8em;">
         <p style="text-align:center">
-        v0.43
+        v0.43.1
         ·
-        20-Oct-2017
+        26-Oct-2017
       </p>
       </footer>
     </section>

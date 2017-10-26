@@ -17,37 +17,51 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../../templates.xsl"/>
-  <xsl:template match="/rates">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
           <h1>
             <xsl:text>Rates</xsl:text>
           </h1>
-          <p>
-            <xsl:text>Full list of rates of people in this project.</xsl:text>
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <xsl:text>User</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Rate</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Created</xsl:text>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <xsl:apply-templates select="person"/>
-            </tbody>
-          </table>
+          <xsl:apply-templates select="rates"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="rates[not(person)]">
+    <p>
+      <xsl:text>There are no rates set yet. Default rates users have in their
+        profiles will be used when it's time to pay them. If you want to
+        set user's rate, see </xsl:text>
+      <a href="http://datum.zerocracy.com/pages/policy.html#16">
+        <xsl:text>par.16</xsl:text>
+      </a>
+      <xsl:text>.</xsl:text>
+    </p>
+  </xsl:template>
+  <xsl:template match="rates[person]">
+    <p>
+      <xsl:text>Full list of rates of people in this project.</xsl:text>
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>User</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Rate</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Created</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="person"/>
+      </tbody>
+    </table>
   </xsl:template>
   <xsl:template match="person">
     <tr>
