@@ -40,7 +40,9 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="orders[order]">
     <p>
-      <xsl:text>The summary by performers:</xsl:text>
+      <xsl:text>There are </xsl:text>
+      <xsl:value-of select="count(order/performer/text()[generate-id()=generate-id(key('performer-key',.)[1])])"/>
+      <xsl:text> active performers:</xsl:text>
     </p>
     <table>
       <thead>
@@ -71,7 +73,9 @@ SOFTWARE.
     </table>
     <p>
       <xsl:text>This is the full list of </xsl:text>
-      <xsl:value-of select="count(order)"/>
+      <strong>
+        <xsl:value-of select="count(order)"/>
+      </strong>
       <xsl:text> currently active orders in the project.</xsl:text>
     </p>
     <table>
