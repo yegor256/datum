@@ -31,13 +31,25 @@ SOFTWARE.
             almost immediately. Refresh this page and you will see
             a new version of the claims, they change every second.</xsl:text>
           </p>
+          <xsl:apply-templates select="claims/@busy"/>
           <xsl:apply-templates select="claims"/>
         </section>
       </body>
     </html>
   </xsl:template>
+  <xsl:template match="claims/@busy">
+    <p>
+      <xsl:text>Busy: </xsl:text>
+      <span style="color:red;">
+        <xsl:value-of select="@busy"/>
+      </span>
+      <xsl:text>.</xsl:text>
+    </p>
+  </xsl:template>
   <xsl:template match="claims[not(claim)]">
-    <p>There are no claims yet.</p>
+    <p>
+      <xsl:text>There are no claims yet.</xsl:text>
+    </p>
   </xsl:template>
   <xsl:template match="claims[claim]">
     <table>
