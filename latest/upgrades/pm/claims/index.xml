@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pm/claims" version="0.43.1">
+<index path="/latest/upgrades/pm/claims" version="0.44">
   <entry dir="false" path="/latest/upgrades/pm/claims/0.24-version-and-date.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pm/claims/0.24-version-and-date.xsl" order="0.24">0.24-version-and-date.xsl</entry>
 </index>
