@@ -52,6 +52,11 @@ SOFTWARE.
     </p>
   </xsl:template>
   <xsl:template match="claims[claim]">
+    <p>
+      <xsl:text>There are </xsl:text>
+      <xsl:value-of select="count(claim)"/>
+      <xsl:text> claims.</xsl:text>
+    </p>
     <table>
       <thead>
         <tr>
