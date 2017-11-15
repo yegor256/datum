@@ -41,7 +41,7 @@ SOFTWARE.
     <p>
       <xsl:text>Busy: </xsl:text>
       <span style="color:red;">
-        <xsl:value-of select="@busy"/>
+        <xsl:value-of select="."/>
       </span>
       <xsl:text>.</xsl:text>
     </p>
@@ -82,7 +82,7 @@ SOFTWARE.
       </thead>
       <tbody>
         <xsl:apply-templates select="claim">
-          <xsl:sort select="@id" order="descending" data-type="number"/>
+          <xsl:sort select="@id" order="ascending" data-type="number"/>
         </xsl:apply-templates>
       </tbody>
     </table>
