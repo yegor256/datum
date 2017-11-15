@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest" version="0.44">
+<index path="/latest" version="0.44.1">
   <entry dir="true" path="/latest/auto" uri="http://datum.zerocracy.com/latest/auto">auto</entry>
   <entry dir="true" path="/latest/rules" uri="http://datum.zerocracy.com/latest/rules">rules</entry>
   <entry dir="true" path="/latest/upgrades" uri="http://datum.zerocracy.com/latest/upgrades">upgrades</entry>
