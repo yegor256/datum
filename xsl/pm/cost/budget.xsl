@@ -27,10 +27,7 @@ SOFTWARE.
           <p>
             Estimated:
             <xsl:value-of select="estimates/cash"/>
-            at
-            <xsl:call-template name="date">
-              <xsl:with-param name="iso" select="estimates/created"/>
-            </xsl:call-template>
+            at <xsl:call-template name="date"><xsl:with-param name="iso" select="estimates/created"/></xsl:call-template>
           </p>
         </section>
       </body>

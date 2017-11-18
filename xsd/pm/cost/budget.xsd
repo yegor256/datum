@@ -28,7 +28,7 @@ SOFTWARE.
   <xs:element name="budget">
     <xs:complexType>
       <xs:all>
-        <xs:element type="estimates" name="estimates" minOccurs="1" maxOccurs="1" />
+        <xs:element type="estimates" name="estimates" minOccurs="1" maxOccurs="1"/>
       </xs:all>
       <xs:attribute name="updated" use="required" type="xs:dateTime"/>
       <xs:attribute name="version" use="required" type="version"/>
