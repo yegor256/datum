@@ -69,8 +69,11 @@ SOFTWARE.
             </ul>
           </article>
           <footer>
-            <p style="text-align:center;"><a href="index.xml"><xsl:text>XML</xsl:text></a>
-              ·
+            <p style="text-align:center;">
+              <a href="index.xml">
+                <xsl:text>XML</xsl:text>
+              </a>
+              <xsl:text> · </xsl:text>
               <xsl:text>SNAPSHOT</xsl:text>
             </p>
           </footer>

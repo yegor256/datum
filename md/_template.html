@@ -35,14 +35,16 @@ SOFTWARE.
           </a>
         </p>
       </header>
-      <article><h1>{{ name }}</h1>
-      {{{ body }}}</article>
+      <article>
+        <h1>
+          <span>{{ name }}</span>
+        </h1>
+        <div>{{{ body }}}</div>
+      </article>
       <footer style="font-size:0.8em;">
         <p style="text-align:center">
-        v{{ version }}
-        ·
-        {{ date }}
-      </p>
+          <span>v{{ version }} · {{ date }}</span>
+        </p>
       </footer>
     </section>
   </body>
