@@ -16,8 +16,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <budget version="1" updated="2016-12-29T09:03:21.684Z">
-  <estimates>
+  <estimate job="gh:test/test#1">
     <cash>something</cash>
     <created>2016-12-29T09:03:21.684Z</created>
-  </estimates>
+  </estimate>
 </budget>

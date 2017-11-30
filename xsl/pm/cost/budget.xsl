@@ -22,15 +22,48 @@ SOFTWARE.
       <body>
         <section>
           <h1>
-            <xsl:text>Project budget</xsl:text>
+            <xsl:text>Budget</xsl:text>
           </h1>
           <p>
-            Estimated:
-            <xsl:value-of select="estimates/cash"/>
-            at <xsl:call-template name="date"><xsl:with-param name="iso" select="estimates/created"/></xsl:call-template>
+            <xsl:text>Full list of estimated jobs in WBS.</xsl:text>
           </p>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <xsl:text>ID</xsl:text>
+                </th>
+                <th>
+                  <xsl:text>Cash</xsl:text>
+                </th>
+                <th>
+                  <xsl:text>Created</xsl:text>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <xsl:apply-templates select="estimate"/>
+            </tbody>
+          </table>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="estimate">
+    <tr>
+      <td>
+        <xsl:call-template name="job">
+          <xsl:with-param name="id" select="@id"/>
+        </xsl:call-template>
+      </td>
+      <td>
+        <xsl:value-of select="cash"/>
+      </td>
+      <td>
+        <xsl:call-template name="date">
+          <xsl:with-param name="iso" select="created"/>
+        </xsl:call-template>
+      </td>
+    </tr>
   </xsl:template>
 </xsl:stylesheet>
