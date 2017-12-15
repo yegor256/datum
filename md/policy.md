@@ -9,24 +9,28 @@ suggest an improvement, please submit a ticket
 If you want to discuss the policy or your troubles with the bot,
 please join our [Gitter chat](https://gitter.im/zerocracy/Lobby).
 
-We recommend you to read these articles first:
-[Stop Chatting, Start Coding](http://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html);
-[How XDSD Is Different](http://www.yegor256.com/2014/04/17/how-xdsd-is-different.html);
-[Definition of Done](http://www.yegor256.com/2014/04/15/definition-of-done.html);
-[No Obligations](http://www.yegor256.com/2014/04/13/no-obligations-principle.html);
-[Five Principles of Bug Tracking](http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html);
-[Bugs Are Welcome](http://www.yegor256.com/2014/04/13/bugs-are-welcome.html);
-[How to Cut Corners and Stay Cool](http://www.yegor256.com/2015/01/15/how-to-cut-corners.html);
-[It's Not a School!](http://www.yegor256.com/2015/02/16/it-is-not-a-school.html).
-They explain our management phylosophy and its basic principles.
+We recommend you to read these articles first,
+they explain our management phylosophy
+(based on [XDSD](http://www.xdsd.org))
+and its basic principles:
+
+  * [Stop Chatting, Start Coding](http://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html)
+  * [How Micro Is Your Tasking?](http://www.yegor256.com/2017/11/28/microtasking.html)
+  * [How XDSD Is Different](http://www.yegor256.com/2014/04/17/how-xdsd-is-different.html)
+  * [Definition of Done](http://www.yegor256.com/2014/04/15/definition-of-done.html)
+  * [No Obligations](http://www.yegor256.com/2014/04/13/no-obligations-principle.html)
+  * [Five Principles of Bug Tracking](http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html)
+  * [Bugs Are Welcome](http://www.yegor256.com/2014/04/13/bugs-are-welcome.html)
+  * [How to Cut Corners and Stay Cool](http://www.yegor256.com/2015/01/15/how-to-cut-corners.html)
+  * [It's Not a School!](http://www.yegor256.com/2015/02/16/it-is-not-a-school.html)
 
 ## Developer
 
 You can talk to `@crat` in:
 
-  * Slack: start a private conversation with `@0crat`
-  * Telegram: start a chat with `@zerocrat_bot`
-  * GitHub: start your message in any ticket with `@0crat`
+  * Slack: [start](http://www.0crat.com/add_to_slack) a private conversation with `@0crat`
+  * Telegram: [start](https://telegram.me/zerocrat_bot) a chat with [`@zerocrat_bot`](https://telegram.me/zerocrat_bot)
+  * GitHub: prepend your message in any ticket with [`@0crat`](https://github.com/0crat)
 
 <a name="1" href="#1">§1</a>.
 "Invite."
@@ -51,7 +55,7 @@ You will be notified in job's ticket.
 "Fixed Budget."
 Each job has a fixed budget in minutes,
 which will be multiplied by your hourly rate and paid to you when the job is completed.
-The actual amount of time you spent on the job doesn't affect the amount of money you receive.
+The actual amount of time you spend on the job doesn't affect the amount of money you receive.
 You will also get as many positive [points](#18) as many minutes you are paid for.
 
 <a name="18" href="#18">§18</a>.
@@ -66,7 +70,7 @@ Zerocrat takes into account only the points you earned over the last 90 days.
 A job may receive a boost factor, which will increase or decrease its budget.
 Default boost factor is `2x`, which means 30 minutes.
 Default boost factor for a code review is `1x`.
-You should ask project architect to boost your job.
+In exceptional situations, you should ask project architect to boost your job.
 
 <a name="6" href="#6">§6</a>.
 "Refusal."
@@ -75,7 +79,7 @@ You will get 15 negative [points](#18) for that.
 
 <a name="7" href="#7">§7</a>.
 "Definition of Done."
-A job is completed when its ticket is closed.
+A job is completed when its ticket is [closed](http://www.yegor256.com/2014/04/15/definition-of-done.html).
 
 <a name="8" href="#8">§8</a>.
 "Ten Days."
@@ -85,17 +89,18 @@ You will get no money and 30 negative [points](#18) if this happens.
 <a name="9" href="#9">§9</a>.
 "Impediments."
 You may declare impediments for a job by saying `waiting` to Zerocrat.
-Until the job has impediments "Ten Days" rule is not applicable to it.
+Until the job has impediments [Ten Days rule](#8)
+is not applicable to it.
 
 <a name="10" href="#10">§10</a>.
 "Code Review Bonus."
-For each code review you get a bonus as big in minutes as to the amount of
-comments posted to the ticket during the review.
+For each code review you get a bonus as big in minutes as the amount of
+comments you posted to the ticket during the review.
 
 <a name="16" href="#16">§16</a>.
 "Rate."
 To make money in any project you must define your hourly rate.
-To do that just say `rate` to Zerocrat in your Slack private chat.
+To do that just say `rate` to Zerocrat.
 
 <a name="20" href="#20">§20</a>.
 "Wallet."
@@ -112,7 +117,7 @@ Zerocrat to your Slack.
 <a name="12" href="#12">§12</a>.
 "Bootstrap."
 To let Zerocrat manage your project you have to create a new Slack
-channel, add @0crat to it, and ask it to `bootstrap` the project.
+channel and add `@0crat` to it.
 
 <a name="13" href="#13">§13</a>.
 "Assign/Resign."
@@ -143,12 +148,13 @@ You can remove a job from the scope by saying `out`.
 "Boosting."
 You can increase a budget of the job by setting its boost factor.
 Just say `boost 2x` (or `3x`, `5x`, etc.) to Zerocrat.
-This operation is against our principles of micro-tasking, that's
-why you get -10 [points](#18) every time you do this.
+This operation is against our principles of [micro-tasking](http://www.yegor256.com/2017/11/28/microtasking.html),
+that's why you get -10 [points](#18) every time you do this.
 
 <a name="19" href="#19">§19</a>.
 "Assign."
-You can manually assign any job to a user, just say `assign <user>` or
+You can manually assign any job to a user, just say `assign @yegor256`
+(where instead of `@yegor256` you put the GitHub login of the user) or
 assign the ticket to that user in your ticket tracking system.
 This operation is against our principles of automated task management,
 that's why you will get -5 [points](#18) every time you do this.
