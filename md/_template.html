@@ -28,22 +28,29 @@ SOFTWARE.
   <body>
     <section>
       <header>
-        <p>
-          <a href="/">
-            <img src="http://www.zerocracy.com/logo.svg" class="logo"/>
-          </a>
-        </p>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">
+                <img src="http://www.zerocracy.com/logo.svg" class="logo"/>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
-      <article>
+      <article class="narrow">
         <h1>
           <span>{{ name }}</span>
         </h1>
         <div>{{{ body }}}</div>
       </article>
       <footer>
-        <p>
-          <span>v{{ version }} · {{ date }}</span>
-        </p>
+        <nav>
+          <ul>
+            <li>v{{ version }}</li>
+            <li>{{ date }}</li>
+          </ul>
+        </nav>
       </footer>
     </section>
   </body>
