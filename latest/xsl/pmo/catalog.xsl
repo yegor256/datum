@@ -17,43 +17,48 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../templates.xsl"/>
-  <xsl:template match="/catalog">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
           <h1>
             <xsl:text>Catalog of Projects</xsl:text>
           </h1>
-          <p>
-            <xsl:text>This is the full list of projects we work with.</xsl:text>
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <xsl:text>ID</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Created</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Prefix</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Links</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Publish</xsl:text>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <xsl:apply-templates select="project"/>
-            </tbody>
-          </table>
+          <xsl:apply-templates select="catalog"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="catalog">
+    <p>
+      <xsl:text>This is the full list of </xsl:text>
+      <xsl:value-of select="count(project)"/>
+      <xsl:text> we work with:</xsl:text>
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>ID</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Created</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Prefix</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Links</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Publish</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="project"/>
+      </tbody>
+    </table>
   </xsl:template>
   <xsl:template match="project">
     <tr>
@@ -68,7 +73,9 @@ SOFTWARE.
         </xsl:call-template>
       </td>
       <td>
-        <xsl:value-of select="prefix"/>
+        <code>
+          <xsl:value-of select="prefix"/>
+        </code>
       </td>
       <td>
         <xsl:apply-templates select="links"/>

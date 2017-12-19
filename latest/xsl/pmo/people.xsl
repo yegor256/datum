@@ -17,47 +17,46 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../templates.xsl"/>
-  <xsl:template match="/people">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
           <h1>People</h1>
-          <p>
-            This is the full list of people we know.
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <xsl:text>ID</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Name</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Rate</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Wallet</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Email</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Links</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Vacation</xsl:text>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <xsl:apply-templates select="person"/>
-            </tbody>
-          </table>
+          <xsl:apply-templates select="people"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="people">
+    <p>
+      <xsl:text>The full list of </xsl:text>
+      <xsl:value-of select="count(person)"/>
+      <xsl:text> people we know:</xsl:text>
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>ID</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Rate</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Wallet</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Links</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Vacation</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="person"/>
+      </tbody>
+    </table>
   </xsl:template>
   <xsl:template match="person">
     <tr>
@@ -67,23 +66,17 @@ SOFTWARE.
         </xsl:call-template>
       </td>
       <td>
-        <xsl:value-of select="name"/>
-      </td>
-      <td>
         <xsl:value-of select="rate"/>
       </td>
       <td>
         <xsl:value-of select="wallet"/>
       </td>
       <td>
-        <xsl:value-of select="email"/>
-      </td>
-      <td>
         <xsl:apply-templates select="links"/>
       </td>
       <td>
         <xsl:if test="vacation/text() = 'true'">
-          <xsl:text>On vacation</xsl:text>
+          <xsl:text>On</xsl:text>
         </xsl:if>
       </td>
     </tr>
