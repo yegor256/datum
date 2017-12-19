@@ -29,7 +29,9 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="people">
     <p>
-      This is the full list of people we know.
+      <xsl:text>The full list of </xsl:text>
+      <xsl:value-of select="count(person)"/>
+      <xsl:text> people we know:</xsl:text>
     </p>
     <table>
       <thead>
