@@ -16,12 +16,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <budget version="1" updated="2016-12-29T09:03:21.684Z">
-  <estimates id="gh:test/test#1">
+  <estimate id="gh:test/test#1">
     <cash>$15</cash>
     <created>2016-12-29T09:03:21.684Z</created>
-  </estimates>
-  <estimates id="gh:test/test#2">
+  </estimate>
+  <estimate id="gh:test/test#2">
     <cash>$30</cash>
     <created>2016-12-29T09:03:22.684Z</created>
-  </estimates>
+  </estimate>
 </budget>
