@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/rules/pm" version="0.45">
+<index path="/latest/rules/pm" version="0.46">
   <entry dir="false" path="/latest/rules/pm/no-lost-boosts.xsl" uri="http://datum.zerocracy.com/latest/rules/pm/no-lost-boosts.xsl">no-lost-boosts.xsl</entry>
   <entry dir="false" path="/latest/rules/pm/no-lost-estimates.xsl" uri="http://datum.zerocracy.com/latest/rules/pm/no-lost-estimates.xsl">no-lost-estimates.xsl</entry>
   <entry dir="false" path="/latest/rules/pm/no-lost-impediments.xsl" uri="http://datum.zerocracy.com/latest/rules/pm/no-lost-impediments.xsl">no-lost-impediments.xsl</entry>
