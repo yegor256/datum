@@ -43,9 +43,9 @@ SOFTWARE.
         </xs:simpleType>
       </xs:element>
       <xs:element name="dt" minOccurs="1" maxOccurs="1" type="account"/>
-      <xs:element name="dtx" minOccurs="1" maxOccurs="1" type="xs:string"/>
+      <xs:element name="dtx" minOccurs="1" maxOccurs="1" type="accountx"/>
       <xs:element name="ct" minOccurs="1" maxOccurs="1" type="account"/>
-      <xs:element name="ctx" minOccurs="1" maxOccurs="1" type="xs:string"/>
+      <xs:element name="ctx" minOccurs="1" maxOccurs="1" type="accountx"/>
     </xs:all>
     <xs:attribute name="id" use="required" type="xs:integer"/>
     <xs:attribute name="parent" use="optional" type="xs:integer"/>
