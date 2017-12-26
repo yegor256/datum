@@ -16,6 +16,20 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <ledger version="1" updated="2016-12-29T09:03:21.684Z">
+  <balance total="$345">
+    <account>
+      <name>assets</name>
+      <namex>cash</namex>
+      <dt>$345</dt>
+      <ct>$0</ct>
+    </account>
+    <account>
+      <name>assets</name>
+      <namex>cash</namex>
+      <dt>$345</dt>
+      <ct>$0</ct>
+    </account>
+  </balance>
   <transactions>
     <transaction id="646">
       <created>2016-12-29T09:03:21.684Z</created>
@@ -24,16 +38,7 @@ SOFTWARE.
       <dtx>cash</dtx>
       <ct>income</ct>
       <ctx>sponsor</ctx>
-      <details>Funded by VISA card</details>
-    </transaction>
-    <transaction id="646">
-      <created>2016-12-30T09:03:21.684Z</created>
-      <amount>EUR 33</amount>
-      <dt>liabilities</dt>
-      <dtx>paypal</dtx>
-      <ct>assets</ct>
-      <ctx>cash</ctx>
-      <details>Paid via PayPal</details>
+      <details>This is the payment by PayPal, ID: 78978978</details>
     </transaction>
   </transactions>
 </ledger>

@@ -16,49 +16,64 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <ledger version="1" updated="2016-12-29T09:03:21.684Z">
-  <transaction id="646">
-    <created>2016-12-29T09:03:21.684Z</created>
-    <amount>$1500</amount>
-    <dt>assets</dt>
-    <dtx>cash</dtx>
-    <ct>income</ct>
-    <ctx>sponsor</ctx>
-    <details>Funded by VISA card</details>
-  </transaction>
-  <transaction id="647">
-    <created>2016-12-30T09:03:21.684Z</created>
-    <amount>EUR 33</amount>
-    <dt>liabilities</dt>
-    <dtx>paypal</dtx>
-    <ct>assets</ct>
-    <ctx>cash</ctx>
-    <details>Paid via PayPal, transaction ID is 324732894732987</details>
-  </transaction>
-  <transaction id="648" parent="647">
-    <created>2016-12-30T09:03:21.684Z</created>
-    <amount>EUR 31.5</amount>
-    <dt>expenses</dt>
-    <dtx>code-review</dtx>
-    <ct>liabilities</ct>
-    <ctx>yegor256</ctx>
-    <details>For code review of ticket gh:test/test#1</details>
-  </transaction>
-  <transaction id="649" parent="647">
-    <created>2016-12-30T09:03:21.684Z</created>
-    <amount>EUR 1.5</amount>
-    <dt>expenses</dt>
-    <dtx>commission</dtx>
-    <ct>liabilities</ct>
-    <ctx>paypal</ctx>
-    <details>PayPal payment commission</details>
-  </transaction>
-  <transaction id="650">
-    <created>2016-12-30T09:03:21.684Z</created>
-    <amount>EUR 10</amount>
-    <dt>expenses</dt>
-    <dtx>code-review</dtx>
-    <ct>liabilities</ct>
-    <ctx>zerocracy</ctx>
-    <details>Zerocracy commission for task management</details>
-  </transaction>
+  <balance total="$345">
+    <account>
+      <name>assets</name>
+      <namex>cash</namex>
+      <dt>$345</dt>
+      <ct>$0</ct>
+    </account>
+    <account>
+      <name>liabilities</name>
+      <dt>$0</dt>
+      <ct>$345</ct>
+    </account>
+  </balance>
+  <transactions>
+    <transaction id="646">
+      <created>2016-12-29T09:03:21.684Z</created>
+      <amount>$1500</amount>
+      <dt>assets</dt>
+      <dtx>cash</dtx>
+      <ct>income</ct>
+      <ctx>sponsor</ctx>
+      <details>Funded by VISA card</details>
+    </transaction>
+    <transaction id="647">
+      <created>2016-12-30T09:03:21.684Z</created>
+      <amount>EUR 33</amount>
+      <dt>liabilities</dt>
+      <dtx>paypal</dtx>
+      <ct>assets</ct>
+      <ctx>cash</ctx>
+      <details>Paid via PayPal, transaction ID is 324732894732987</details>
+    </transaction>
+    <transaction id="648" parent="647">
+      <created>2016-12-30T09:03:21.684Z</created>
+      <amount>EUR 31.5</amount>
+      <dt>expenses</dt>
+      <dtx>code-review</dtx>
+      <ct>liabilities</ct>
+      <ctx>yegor256</ctx>
+      <details>For code review of ticket gh:test/test#1</details>
+    </transaction>
+    <transaction id="649" parent="647">
+      <created>2016-12-30T09:03:21.684Z</created>
+      <amount>EUR 1.5</amount>
+      <dt>expenses</dt>
+      <dtx>commission</dtx>
+      <ct>liabilities</ct>
+      <ctx>paypal</ctx>
+      <details>PayPal payment commission</details>
+    </transaction>
+    <transaction id="650">
+      <created>2016-12-30T09:03:21.684Z</created>
+      <amount>EUR 10</amount>
+      <dt>expenses</dt>
+      <dtx>code-review</dtx>
+      <ct>liabilities</ct>
+      <ctx>zerocracy</ctx>
+      <details>Zerocracy commission for task management</details>
+    </transaction>
+  </transactions>
 </ledger>

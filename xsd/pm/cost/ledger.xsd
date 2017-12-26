@@ -52,15 +52,43 @@ SOFTWARE.
   </xs:complexType>
   <xs:element name="ledger">
     <xs:complexType>
-      <xs:sequence>
-        <xs:element name="transaction" type="transaction" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
+      <xs:all>
+        <xs:element name="balance" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="account" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="name" type="account" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="namex" type="accountx" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="dt" type="cash" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="ct" type="cash" minOccurs="1" maxOccurs="1"/>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="total" use="required" type="cash"/>
+          </xs:complexType>
+          <xs:unique name="accUnique">
+            <xs:selector xpath="account"/>
+            <xs:field xpath="name"/>
+            <xs:field xpath="namex"/>
+          </xs:unique>
+        </xs:element>
+        <xs:element name="transactions" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="transaction" type="transaction" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+          <xs:unique name="idUnique">
+            <xs:selector xpath="transaction"/>
+            <xs:field xpath="@id"/>
+          </xs:unique>
+        </xs:element>
+      </xs:all>
       <xs:attribute name="updated" use="required" type="xs:dateTime"/>
       <xs:attribute name="version" use="required" type="version"/>
     </xs:complexType>
-    <xs:unique name="idUnique">
-      <xs:selector xpath="transaction"/>
-      <xs:field xpath="@id"/>
-    </xs:unique>
   </xs:element>
 </xs:schema>

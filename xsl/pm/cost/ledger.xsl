@@ -17,7 +17,7 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../../templates.xsl"/>
-  <xsl:template match="/">
+  <xsl:template match="/ledger">
     <html lang="en">
       <body>
         <section>
@@ -28,12 +28,57 @@ SOFTWARE.
             <xsl:text>The Ledger is a full list of transactions that
               happened in the project since we started to manage it.</xsl:text>
           </p>
-          <xsl:apply-templates select="ledger"/>
+          <xsl:apply-templates select="balance"/>
+          <xsl:apply-templates select="transactions"/>
         </section>
       </body>
     </html>
   </xsl:template>
-  <xsl:template match="ledger">
+  <xsl:template match="balance">
+    <p>
+      <xsl:text>Here is the balance (</xsl:text>
+      <xsl:value-of select="@total"/>
+      <xsl:text>):</xsl:text>
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>Account</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Dt</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Ct</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="account">
+          <xsl:sort select="name" data-type="text"/>
+        </xsl:apply-templates>
+      </tbody>
+    </table>
+  </xsl:template>
+  <xsl:template match="account">
+    <tr>
+      <td>
+        <xsl:value-of select="name"/>
+        <xsl:if test="namex">
+          <xsl:text>:</xsl:text>
+          <xsl:value-of select="namex"/>
+        </xsl:if>
+      </td>
+      <td style="text-align:right">
+        <xsl:value-of select="dt"/>
+      </td>
+      <td style="text-align:right">
+        <xsl:value-of select="ct"/>
+      </td>
+    </tr>
+  </xsl:template>
+  <xsl:template match="transactions">
     <p>
       <xsl:text>There are </xsl:text>
       <xsl:value-of select="count(transaction)"/>

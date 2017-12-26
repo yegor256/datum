@@ -16,13 +16,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <ledger version="1" updated="2016-12-29T09:03:21.684Z">
-  <transaction id="646">
-    <created>2016-12-29T09:03:21.684Z</created>
-    <amount>$1500</amount>
-    <dt>assets</dt>
-    <dtx/>
-    <ct>income</ct>
-    <ctx>sponsor</ctx>
-    <details>This is the payment by PayPal, ID: 78978978</details>
-  </transaction>
+  <transactions>
+    <transaction id="646">
+      <created>2016-12-29T09:03:21.684Z</created>
+      <amount>$1500</amount>
+      <dt>assets</dt>
+      <dtx/>
+      <ct>income</ct>
+      <ctx>sponsor</ctx>
+      <details>This is the payment by PayPal, ID: 78978978</details>
+    </transaction>
+  </transactions>
 </ledger>
