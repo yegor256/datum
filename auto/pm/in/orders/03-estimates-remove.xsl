@@ -25,7 +25,7 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="order">
     <xsl:variable name="id" select="@id"/>
-    <xsl:if test="document('wbs.xml')/wbs/job[@id=$id]">
+    <xsl:if test="document('orders.xml')/orders/order[@job=$id]">
       <xsl:copy>
         <xsl:apply-templates select="@*|node()"/>
       </xsl:copy>
