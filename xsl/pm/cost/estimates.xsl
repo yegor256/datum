@@ -17,38 +17,46 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../../templates.xsl"/>
-  <xsl:template match="/estimates">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
           <h1>
             <xsl:text>Estimates</xsl:text>
           </h1>
-          <p>
-            <xsl:text>Full list of estimates given to jobs. They are
-            absolute cash values, not minutes of work.</xsl:text>
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <xsl:text>ID</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Cash</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Created</xsl:text>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <xsl:apply-templates select="order"/>
-            </tbody>
-          </table>
+          <xsl:apply-templates select="estimates"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="estimates">
+    <p>
+      <xsl:text>Total: </xsl:text>
+      <xsl:value-of select="@total"/>
+      <xsl:text>.</xsl:text>
+    </p>
+    <p>
+      <xsl:text>Full list of estimates given to jobs. They are
+      absolute cash values, not minutes of work.</xsl:text>
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>ID</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Cash</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Created</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="order"/>
+      </tbody>
+    </table>
   </xsl:template>
   <xsl:template match="order">
     <tr>
