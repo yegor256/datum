@@ -21,11 +21,11 @@ SOFTWARE.
       <name>assets</name>
       <namex>cash</namex>
       <dt>$345</dt>
-      <ct>$0</ct>
+      <ct>0</ct>
     </account>
     <account>
       <name>liabilities</name>
-      <dt>$0</dt>
+      <dt>0</dt>
       <ct>$345</ct>
     </account>
   </balance>

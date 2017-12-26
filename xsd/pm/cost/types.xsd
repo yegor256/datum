@@ -18,7 +18,7 @@ SOFTWARE.
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="SNAPSHOT" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:simpleType name="cash">
     <xs:restriction base="xs:string">
-      <xs:pattern value="([A-Z]{3} \-?|\-?($|€|£|¥))\d+(\.\d{1,2})?"/>
+      <xs:pattern value="0|([A-Z]{3} \-?|\-?($|€|£|¥))\d+(\.\d{1,2})?"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>
