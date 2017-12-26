@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<index path="/0.46.2/xsd/pm/scope" version="0.46.2">
+  <entry dir="false" path="/0.46.2/xsd/pm/scope/archive.xsd" uri="http://datum.zerocracy.com/0.46.2/xsd/pm/scope/archive.xsd">archive.xsd</entry>
+  <entry dir="false" path="/0.46.2/xsd/pm/scope/types.xsd" uri="http://datum.zerocracy.com/0.46.2/xsd/pm/scope/types.xsd">types.xsd</entry>
+  <entry dir="false" path="/0.46.2/xsd/pm/scope/wbs.xsd" uri="http://datum.zerocracy.com/0.46.2/xsd/pm/scope/wbs.xsd">wbs.xsd</entry>
+</index>
