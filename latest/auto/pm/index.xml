@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/auto/pm" version="0.46">
+<index path="/latest/auto/pm" version="0.46.1">
   <entry dir="true" path="/latest/auto/pm/in" uri="http://datum.zerocracy.com/latest/auto/pm/in">in</entry>
   <entry dir="true" path="/latest/auto/pm/scope" uri="http://datum.zerocracy.com/latest/auto/pm/scope">scope</entry>
   <entry dir="true" path="/latest/auto/pm/staff" uri="http://datum.zerocracy.com/latest/auto/pm/staff">staff</entry>
