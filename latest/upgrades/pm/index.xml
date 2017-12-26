@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pm" version="0.46.2">
+<index path="/latest/upgrades/pm" version="0.47">
   <entry dir="true" path="/latest/upgrades/pm/claims" uri="http://datum.zerocracy.com/latest/upgrades/pm/claims">claims</entry>
   <entry dir="true" path="/latest/upgrades/pm/cost" uri="http://datum.zerocracy.com/latest/upgrades/pm/cost">cost</entry>
   <entry dir="true" path="/latest/upgrades/pm/hr" uri="http://datum.zerocracy.com/latest/upgrades/pm/hr">hr</entry>

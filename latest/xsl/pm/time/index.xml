@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/xsl/pm/time" version="0.46.2">
+<index path="/latest/xsl/pm/time" version="0.47">
   <entry dir="false" path="/latest/xsl/pm/time/milestones.xsl" uri="http://datum.zerocracy.com/latest/xsl/pm/time/milestones.xsl">milestones.xsl</entry>
   <entry dir="false" path="/latest/xsl/pm/time/precedences.xsl" uri="http://datum.zerocracy.com/latest/xsl/pm/time/precedences.xsl">precedences.xsl</entry>
   <entry dir="false" path="/latest/xsl/pm/time/reminders.xsl" uri="http://datum.zerocracy.com/latest/xsl/pm/time/reminders.xsl">reminders.xsl</entry>
