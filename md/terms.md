@@ -2,20 +2,20 @@
 registered at 555 Bryant Str., Ste. 470, Palo Alto, 94301, USA.
 
 **Service**.
-Zerocracy provides [0crat](http://www.0crat.com) as a service.
-This means, that 0crat may be used via the Internet only.
+Zerocracy provides [Zerocrat](http://www.0crat.com) as a service.
+This means, that Zerocrat may be used via the Internet only.
 No consultancy, training, trouble shooting or support is within
 the scope of the services offered by Zerocracy under this Agreement.
 
 **Representation**.
-The invitation of 0crat to Slack is deemed an offer to conclude this Agreement.
-The person inviting 0crat to Slack represents that he/she has
+The invitation of Zerocrat to Slack is deemed an offer to conclude this Agreement.
+The person inviting Zerocrat to Slack represents that he/she has
 got the legal authority to bind the legal entity he/she acts
 for to this Agreement.
 
 **Conduct**.
 The Customer must not interfere or intent to interfere in any manner
-with the functionality or proper working of 0crat.
+with the functionality or proper working of Zerocrat.
 
 **Backup**.
 The Customer must take care for regular backups of his Project data.

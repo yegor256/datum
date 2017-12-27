@@ -155,6 +155,18 @@ Zerocracy charges a fixed management fee of USD 4.00 per each successfully
 completed job. If your project is not linked to any private GitHub repositories
 this fee is waived.
 
+<a name="24" href="#24">§24</a>.
+"Pause/Activate."
+To put Zerocrat on hold and make it completely inactive, say `pause`. To return
+it back to life say `pause off`.
+
+<a name="25" href="#25">§25</a>.
+"Destroy."
+To completely delete all project files from our servers and terminate the
+project say `destroy` and then [kick off](https://get.slack.help/hc/en-us/articles/201898668-Remove-someone-from-a-channel)
+`@0crat` from Slack channel. There is no way back. We highly recommend to use
+[pause/activate option](#24).
+
 ## Architect
 
 <a name="14" href="#14">§14</a>.
