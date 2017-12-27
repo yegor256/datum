@@ -32,14 +32,6 @@ its employees' or personnel's negligence or willful misconduct.
 The Customer is aware that the service relies on a working Internet
 infrastructure. Additional downtime of the service can occur.
 
-**Payments**.
-The Customer has to fund each Project by VISA or MasterCard
-via [Stripe](https://www.stripe.com).
-
-**Refunds**.
-The Customer is allowed to get a full refund of all funds not yet used
-in a Project.
-
 **Termination**.
 The Agreement runs for an indefinite time and will remain in effect
 until terminated by one of Parties.

@@ -31,6 +31,7 @@ SOFTWARE.
     <xs:all>
       <xs:element name="parent" minOccurs="0" maxOccurs="1" type="projectID"/>
       <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+      <xs:element name="alive" minOccurs="1" maxOccurs="1" type="xs:boolean"/>
       <xs:element name="fee" minOccurs="1" maxOccurs="1" type="cash"/>
       <xs:element name="prefix" minOccurs="0" maxOccurs="1">
         <xs:simpleType>

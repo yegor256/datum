@@ -138,6 +138,23 @@ and
 2) link the project in Slack: `links add github yegor256/cactoos`, where
 instead of `yegor256/cactoos` you should put the coordinates of your GitHub repository.
 
+<a name="21" href="#21">§21</a>.
+"Project funds."
+You can add funds to the project by VISA or MasterCard via [Stripe](https://www.stripe.com)
+at the project web page. Fund will be used to pay programmers for task
+completion and to pay Zerocracy management fee.
+
+<a name="22" href="#22">§22</a>.
+"Refunds."
+All unused funds will be returned to you immediately per your request by
+[email](mailto:refund@zerocracy.com).
+
+<a name="23" href="#23">§23</a>.
+"Management fee."
+Zerocracy charges a fixed management fee of USD 4.00 per each successfully
+completed job. If your project is not linked to any private GitHub repositories
+this fee is waived.
+
 ## Architect
 
 <a name="14" href="#14">§14</a>.
