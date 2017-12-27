@@ -18,7 +18,7 @@ The Customer must not interfere or intent to interfere in any manner
 with the functionality or proper working of Zerocrat.
 
 **Backup**.
-The Customer must take care for regular backups of his Project data.
+The Customer must take care for regular backups of the Project data.
 
 **Harm**.
 The Customer will indemnify and hold harmless Zerocracy, its officers
