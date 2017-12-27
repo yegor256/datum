@@ -126,7 +126,8 @@ To assign a role you say `assign`. To remove a role you say `resign`.
 By default, all new people you assign are supposed to work for free. If you
 want to pay them for the tasks they complete, add hourly rate to the `assign`
 command, for example: `assign DEV yegor256 $50`. To change the hourly
-rate of a person just assign the same role with a different rate.
+rate of a person just assign the same role with a different rate, or without
+a rate in order to make them work for free.
 
 <a name="17" href="#17">§17</a>.
 "Connect GitHub."
