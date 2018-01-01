@@ -133,14 +133,14 @@ SOFTWARE.
         <xsl:value-of select="amount"/>
       </td>
       <td>
-        <xsl:value-of select="ct"/>
-        <xsl:text>:</xsl:text>
-        <xsl:value-of select="ctx"/>
-      </td>
-      <td>
         <xsl:value-of select="dt"/>
         <xsl:text>:</xsl:text>
         <xsl:value-of select="dtx"/>
+      </td>
+      <td>
+        <xsl:value-of select="ct"/>
+        <xsl:text>:</xsl:text>
+        <xsl:value-of select="ctx"/>
       </td>
       <td>
         <xsl:value-of select="details"/>
