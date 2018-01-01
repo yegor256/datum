@@ -67,7 +67,6 @@ SOFTWARE.
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <xs:attribute name="total" use="required" type="cash"/>
           </xs:complexType>
           <xs:unique name="accUnique">
             <xs:selector xpath="account"/>

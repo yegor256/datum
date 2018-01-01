@@ -16,7 +16,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <ledger version="1" updated="2016-12-29T09:03:21.684Z">
-  <balance total="$345">
+  <balance>
     <account>
       <name>assets</name>
       <namex>cash</namex>
