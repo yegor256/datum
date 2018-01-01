@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Copyright (c) 2016-2017 Zerocracy
+Copyright (c) 2016-2018 Zerocracy
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to read
@@ -133,14 +133,14 @@ SOFTWARE.
         <xsl:value-of select="amount"/>
       </td>
       <td>
-        <xsl:value-of select="ct"/>
-        <xsl:text>:</xsl:text>
-        <xsl:value-of select="ctx"/>
-      </td>
-      <td>
         <xsl:value-of select="dt"/>
         <xsl:text>:</xsl:text>
         <xsl:value-of select="dtx"/>
+      </td>
+      <td>
+        <xsl:value-of select="ct"/>
+        <xsl:text>:</xsl:text>
+        <xsl:value-of select="ctx"/>
       </td>
       <td>
         <xsl:value-of select="details"/>
