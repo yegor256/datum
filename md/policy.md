@@ -104,7 +104,7 @@ To do that just say `rate` to Zerocrat.
 
 <a name="20" href="#20">§20</a>.
 "Wallet."
-We can send you money either via PayPal <del>or Bitcon</del>.
+We can send you money either via PayPal <del>or Bitcoin</del>.
 To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
 
 ## Product Owner
