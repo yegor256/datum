@@ -167,6 +167,11 @@ project say `destroy` and then [kick off](https://get.slack.help/hc/en-us/articl
 `@0crat` from Slack channel. There is no way back. We highly recommend to use
 [pause/activate option](#24).
 
+<a name="26" href="#26">§26</a>.
+"Publish."
+To attract programmers to your project, you can publish it on the
+[board](http://www.0crat.com/board). Say `publish` to Zerocrat in order to do it.
+
 ## Architect
 
 <a name="14" href="#14">§14</a>.
