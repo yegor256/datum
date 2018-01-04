@@ -35,11 +35,6 @@ SOFTWARE.
     </html>
   </xsl:template>
   <xsl:template match="balance">
-    <p>
-      <xsl:text>Here is the balance (</xsl:text>
-      <xsl:value-of select="@total"/>
-      <xsl:text>):</xsl:text>
-    </p>
     <table>
       <thead>
         <tr>

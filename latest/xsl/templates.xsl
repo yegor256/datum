@@ -88,7 +88,7 @@ SOFTWARE.
     <xsl:param name="id"/>
     <xsl:choose>
       <xsl:when test="$id">
-        <a href="https://github.com/{$id}" title="GitHub user @{$id}">
+        <a href="http://www.0crat.com/u/{$id}" title="@{$id}">
           <xsl:text>@</xsl:text>
           <xsl:value-of select="$id"/>
         </a>
