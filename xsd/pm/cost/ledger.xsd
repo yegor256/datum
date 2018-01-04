@@ -53,6 +53,7 @@ SOFTWARE.
   <xs:element name="ledger">
     <xs:complexType>
       <xs:all>
+        <xs:element name="deficit" minOccurs="0" maxOccurs="1" type="xs:dateTime"/>
         <xs:element name="balance" minOccurs="0" maxOccurs="1">
           <xs:complexType>
             <xs:sequence>
