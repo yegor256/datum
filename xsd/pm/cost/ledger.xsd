@@ -28,7 +28,7 @@ SOFTWARE.
   </xs:simpleType>
   <xs:simpleType name="accountx">
     <xs:restriction base="xs:string">
-      <xs:pattern value="[@\-\.a-z0-9]{3,32}"/>
+      <xs:pattern value=".+"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="transaction">
