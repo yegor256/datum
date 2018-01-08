@@ -32,7 +32,8 @@ CLEAN.include 'target'
 task default: %i[clean xsd xsl auto xcop underscores rubocop copyright]
 
 desc 'Validate all XML/XSD files'
-task :xsd do
+task :xsd, [:version] do |_, args|
+  args.with_defaults(version: '999')
   total = 0
   puts 'Checking XML files for XSD validity...'
   Dir.mktmpdir do |temp|
@@ -59,8 +60,11 @@ task :xsd do
       xml = Nokogiri::XML(File.read(p))
       if xml.xpath('/*/@version')[0].to_s != '999'
         path = p.gsub(%r{^xml/}, 'upgrades/').gsub(%r{/[^/]+$}, '/*.xsl')
+        current = Gem::Version.new(args[:version])
         Dir[path].each do |x|
-          xml = Nokogiri::XSLT(File.read(x)).transform(xml)
+          if Gem::Version.new(File.basename(x).gsub(/-.+$/, '')) <= current
+            xml = Nokogiri::XSLT(File.read(x)).transform(xml)
+          end
         end
       end
       if File.basename(p).start_with?('-')
@@ -181,6 +185,7 @@ end
 
 desc 'Build a site for GitHub Pages'
 task :site, [:version] do |_, args|
+  args.with_defaults(version: '999')
   raise 'You have to call "rake site[123]"' unless args[:version]
   puts "Building a site for v.#{args[:version]}..."
   markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
@@ -245,6 +250,7 @@ end
 
 desc 'Validate that the site is correct'
 task :validate_site, [:version] do |_, args|
+  args.with_defaults(version: '999')
   raise 'You have to call "rake validate_site[123]"' unless args[:version]
   files = [
     "#{args[:version]}/index.xml",
