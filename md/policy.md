@@ -24,6 +24,7 @@ and its basic principles:
   * [How to Cut Corners and Stay Cool](http://www.yegor256.com/2015/01/15/how-to-cut-corners.html)
   * [It's Not a School!](http://www.yegor256.com/2015/02/16/it-is-not-a-school.html)
 
+<a name="DEV"/>
 ## Developer (DEV)
 
 You can talk to `@crat` in:
@@ -107,6 +108,7 @@ To do that just say `rate` to Zerocrat.
 We can send you money either via PayPal <del>or Bitcoin</del>.
 To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
 
+<a name="REV"/>
 ## Code Reviewer (REV)
 
 <a name="27" href="#27">§27</a>.
@@ -122,6 +124,7 @@ In either case you will be paid 15 minutes plus [the bonus](#10).
 For each code review you get a bonus as big in minutes as the amount of
 comments you posted to the ticket during the review.
 
+<a name="PO"/>
 ## Product Owner (PO)
 
 <a name="11" href="#11">§11</a>.
@@ -187,6 +190,7 @@ project say `destroy` and then [kick off](https://get.slack.help/hc/en-us/articl
 To attract programmers to your project, you can publish it on the
 [board](http://www.0crat.com/board). Say `publish` to Zerocrat in order to do it.
 
+<a name="ARC"/>
 ## Architect (ARC)
 
 <a name="14" href="#14">§14</a>.
@@ -215,6 +219,7 @@ You will earn 10 minutes for each pull request successfully merged.
 It is recommended to use [Rultor](http://www.rultor.com) or a similar
 solution, which will allow only the architect to merge.
 
+<a name="QA"/>
 ## Quality Assurance (QA)
 
 <a name="30" href="#30">§30</a>.
