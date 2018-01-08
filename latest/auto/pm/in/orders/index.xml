@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/auto/pm/in/orders" version="0.51">
+<index path="/latest/auto/pm/in/orders" version="0.51.1">
   <entry dir="false" path="/latest/auto/pm/in/orders/01-impediments-remove.xsl" uri="http://datum.zerocracy.com/latest/auto/pm/in/orders/01-impediments-remove.xsl" order="1">01-impediments-remove.xsl</entry>
   <entry dir="false" path="/latest/auto/pm/in/orders/02-elections-remove.xsl" uri="http://datum.zerocracy.com/latest/auto/pm/in/orders/02-elections-remove.xsl" order="2">02-elections-remove.xsl</entry>
   <entry dir="false" path="/latest/auto/pm/in/orders/03-estimates-remove.xsl" uri="http://datum.zerocracy.com/latest/auto/pm/in/orders/03-estimates-remove.xsl" order="3">03-estimates-remove.xsl</entry>
