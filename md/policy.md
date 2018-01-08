@@ -87,6 +87,10 @@ If you don't complete a job in 10 days Zerocrat _may_ take it away from you.
 You will get no money and 30 negative [points](#18) if this happens.
 This rule is not applicable to code reviewing jobs.
 
+<a name="29" href="#29">§29</a>.
+"Pay per Bug."
+Each time you report a new bug that becomes a job, you earn 15 minutes.
+
 <a name="9" href="#9">§9</a>.
 "Impediments."
 You may declare impediments for a job by saying `waiting` to Zerocrat.
