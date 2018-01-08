@@ -32,22 +32,18 @@ As a PO you can:
   - [x] [Invite](#invite-only) a friend: `invite`
   - [x] Start talking to the bot: `hello`
   - [x] Bootstrap a project: `bootstrap`
-  - [ ] Fund the project using a credit card: `fund`
-  - [ ] Transfer funds from project to project: `transfer`
+  - [x] Fund the project using a credit card: `fund`
   - [x] Link the project with GitHub repositor(ies): `links`
   - [x] Register `ARC` and `DEV` roles: `roles`
   - [x] Add tickets to the scope in GitHub: `in`
   - [x] Remote tickets from the scope: `out`
-  - [x] See the WBS: `wbs`
-  - [ ] See the budget: `budget`
-  - [ ] See the schedule: `schedule`
 
 An Architect (`ARC`) is the key technical decision maker
 in the project. As an ARC or a PO you can:
 
   - [x] Assign a performer to a job: `assign`
   - [x] Resign a performer: `resign`
-  - [ ] Increase/decrease job budget: `boost`
+  - [x] Increase/decrease job budget: `boost`
   - [ ] Attach a job to a milestone: `milestone`
 
 As a Developer (`DEV`) you can:
@@ -56,12 +52,11 @@ As a Developer (`DEV`) you can:
   - [x] Start talking to the bot in a private channel: `hello`
   - [x] Modify your hourly rate: `rate`
   - [x] Modify your payment details: `wallet`
-  - [ ] Quit a project: `quit`
-  - [ ] Set/reset "away" mode: `away`
+  - [x] Quit a project: `quit`
+  - [x] Set/reset "vacation" mode: `vacation`
   - [x] Reject a job: `resign`
-  - [ ] Announce an impediment: `hold`
+  - [x] Announce an impediment: `waiting`
   - [ ] Check the status of a job: `status`
-  - [ ] Request your profile metrics: `metrics`
 
 As a Quality Assurance (`QA`) you can:
 
@@ -70,13 +65,13 @@ As a Quality Assurance (`QA`) you can:
 The bot can:
 
   - [x] Assign a job to a performer
-  - [ ] Announce job budget
+  - [x] Announce job budget
   - [ ] Announce job deadline
-  - [ ] Resign a performer
+  - [x] Resign a performer
   - [ ] Request quality control
-  - [ ] Update performer's metrics
-  - [ ] Pay for bugs reported
-  - [ ] Pay performer for task completion
+  - [x] Update performer's metrics
+  - [x] Pay for bugs reported
+  - [x] Pay performer for task completion
 
 ## Invite Only
 
