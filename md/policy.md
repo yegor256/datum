@@ -24,7 +24,7 @@ and its basic principles:
   * [How to Cut Corners and Stay Cool](http://www.yegor256.com/2015/01/15/how-to-cut-corners.html)
   * [It's Not a School!](http://www.yegor256.com/2015/02/16/it-is-not-a-school.html)
 
-## Developer
+## Developer (DEV)
 
 You can talk to `@crat` in:
 
@@ -48,7 +48,7 @@ either invite you or ignore your request. You can apply multiple times.
 
 <a name="3" href="#3">§3</a>.
 "Election."
-Zerocrat may assign a job to you according to its own election rules.
+Zerocrat may assign a job to you according to its own election rules, if you have `DEV` role.
 You will be notified in job's ticket.
 
 <a name="4" href="#4">§4</a>.
@@ -92,11 +92,6 @@ You may declare impediments for a job by saying `waiting` to Zerocrat.
 Until the job has impediments [Ten Days rule](#8)
 is not applicable to it.
 
-<a name="10" href="#10">§10</a>.
-"Code Review Bonus."
-For each code review you get a bonus as big in minutes as the amount of
-comments you posted to the ticket during the review.
-
 <a name="16" href="#16">§16</a>.
 "Rate."
 To make money in any project you must define your hourly rate.
@@ -107,7 +102,22 @@ To do that just say `rate` to Zerocrat.
 We can send you money either via PayPal <del>or Bitcoin</del>.
 To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
 
-## Product Owner
+## Code Reviewer (REV)
+
+<a name="27" href="#27">§27</a>.
+"Code Reviews."
+You will be asked to review pull requests if you have `REV` role assigned.
+Be as critical as you can, as [this article](http://www.yegor256.com/2015/02/09/serious-code-reviewer.html) explains.
+If you accept the changes, inform the architect, right in the ticket.
+If you don't accept, inform the author of the pull request.
+In either case you will be paid 15 minutes plus [the bonus](#10).
+
+<a name="10" href="#10">§10</a>.
+"Code Review Bonus."
+For each code review you get a bonus as big in minutes as the amount of
+comments you posted to the ticket during the review.
+
+## Product Owner (PO)
 
 <a name="11" href="#11">§11</a>.
 "Add to Slack."
@@ -172,7 +182,7 @@ project say `destroy` and then [kick off](https://get.slack.help/hc/en-us/articl
 To attract programmers to your project, you can publish it on the
 [board](http://www.0crat.com/board). Say `publish` to Zerocrat in order to do it.
 
-## Architect
+## Architect (ARC)
 
 <a name="14" href="#14">§14</a>.
 "Scope In/Out."
@@ -193,4 +203,10 @@ You can manually assign any job to a user, just say `assign @yegor256`
 assign the ticket to that user in your ticket tracking system.
 This operation is against our principles of automated task management,
 that's why you will get -5 [points](#18) every time you do this.
+
+<a name="28" href="#28">§28</a>.
+"Architect Review Bonus."
+You will earn 10 minutes for each pull request successfully merged.
+It is recommended to use [Rultor](http://www.rultor.com) or a similar
+solution, which will allow only the architect to merge.
 
