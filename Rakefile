@@ -18,6 +18,7 @@
 require 'nokogiri'
 require 'rake'
 require 'rake/clean'
+require 'net/http'
 require 'date'
 require 'tmpdir'
 require 'fileutils'
@@ -29,7 +30,7 @@ require 'rainbow'
 
 CLEAN.include 'target'
 
-task default: %i[clean xsd xsl auto xcop underscores rubocop copyright]
+task default: %i[clean xsd upgrades xsl auto xcop underscores rubocop copyright]
 
 desc 'Validate all XML/XSD files'
 task :xsd, [:version] do |_, args|
@@ -87,6 +88,21 @@ task :xsd, [:version] do |_, args|
     raise "#{total} errors" unless total.zero?
     puts "\nAll #{xmls.length} XML/XSD files are clean\n\n"
   end
+end
+
+desc 'Validate all upgrades'
+task :upgrades, [:version] do |_, args|
+  args.with_defaults(version: '999')
+  Dir['upgrades/**/*.xsl'].each do |xsl|
+    uri = URI.parse("http://datum.zerocracy.com/latest/#{xsl}")
+    res = Net::HTTP.new(uri.host, uri.port).request_head(uri.path)
+    if res.code == '200' || File.basename(xsl).start_with?("#{args[:version]}-")
+      print Rainbow('.').green
+      next
+    end
+    raise "#{xsl} is not in the repo and doesn't start with #{args[:version]}"
+  end
+  puts "\nAll XSL upgrades are clean\n\n"
 end
 
 desc 'Validate all XML/XSL files'
