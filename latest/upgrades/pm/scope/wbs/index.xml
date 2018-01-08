@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pm/scope/wbs" version="0.51.1">
+<index path="/latest/upgrades/pm/scope/wbs" version="0.51.2">
   <entry dir="false" path="/latest/upgrades/pm/scope/wbs/0.24-version-and-date.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pm/scope/wbs/0.24-version-and-date.xsl" order="0.24">0.24-version-and-date.xsl</entry>
   <entry dir="false" path="/latest/upgrades/pm/scope/wbs/0.51.1-roles.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pm/scope/wbs/0.51.1-roles.xsl" order="0.51.1">0.51.1-roles.xsl</entry>
 </index>

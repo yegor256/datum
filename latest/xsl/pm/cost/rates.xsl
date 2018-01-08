@@ -35,7 +35,7 @@ SOFTWARE.
         profiles will be used when it's time to pay them. If you want to
         set user's rate, see </xsl:text>
       <a href="http://datum.zerocracy.com/pages/policy.html#16">
-        <xsl:text>par.16</xsl:text>
+        <xsl:text>§16</xsl:text>
       </a>
       <xsl:text>.</xsl:text>
     </p>

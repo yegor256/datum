@@ -17,7 +17,7 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../../templates.xsl"/>
-  <xsl:template match="/roles">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
@@ -28,32 +28,58 @@ SOFTWARE.
             <xsl:text>This is a full list of people and their roles in the
             project. The Architect (ARC) or the Product Owner (PO) are
             allowed to assign roles and resign them. By convention
-            we use these role names: ARC (architect), PO (product owner), DEV (developer),
-            TST (tester), QA (quality assurance).</xsl:text>
-            <xsl:text>See </xsl:text>
-            <a href="http://datum.zerocracy.com/pages/policy.html#13">par.13</a>
+            we use these role names: </xsl:text>
+            <a href="http://datum.zerocracy.com/pages/policy.html#ARC">
+              <xsl:text>ARC</xsl:text>
+            </a>
+            <xsl:text> (architect)</xsl:text>
+            <a href="http://datum.zerocracy.com/pages/policy.html#PO">
+              <xsl:text>PO</xsl:text>
+            </a>
+            <xsl:text> (product owner)</xsl:text>
+            <a href="http://datum.zerocracy.com/pages/policy.html#DEV">
+              <xsl:text>DEV</xsl:text>
+            </a>
+            <xsl:text> (developer)</xsl:text>
+            <a href="http://datum.zerocracy.com/pages/policy.html#REV">
+              <xsl:text>REV</xsl:text>
+            </a>
+            <xsl:text> (code reviewer)</xsl:text>
+            <a href="http://datum.zerocracy.com/pages/policy.html#TST">
+              <xsl:text>TST</xsl:text>
+            </a>
+            <xsl:text> (tester)</xsl:text>
+            <a href="http://datum.zerocracy.com/pages/policy.html#QA">
+              <xsl:text>QA</xsl:text>
+            </a>
+            <xsl:text> (quality assurance)</xsl:text>
+            <xsl:text>, see </xsl:text>
+            <a href="http://datum.zerocracy.com/pages/policy.html#13">§13</a>
             <xsl:text>.</xsl:text>
           </p>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <xsl:text>Login</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Roles</xsl:text>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <xsl:apply-templates select="person">
-                <xsl:sort select="@id"/>
-              </xsl:apply-templates>
-            </tbody>
-          </table>
+          <xsl:apply-templates select="roles"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="roles">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>Login</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Roles</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="person">
+          <xsl:sort select="@id"/>
+        </xsl:apply-templates>
+      </tbody>
+    </table>
   </xsl:template>
   <xsl:template match="person">
     <tr>

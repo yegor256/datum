@@ -17,7 +17,7 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../../templates.xsl"/>
-  <xsl:template match="/ledger">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
@@ -28,12 +28,15 @@ SOFTWARE.
             <xsl:text>The Ledger is a full list of transactions that
               happened in the project since we started to manage it.</xsl:text>
           </p>
-          <xsl:apply-templates select="deficit"/>
-          <xsl:apply-templates select="balance"/>
-          <xsl:apply-templates select="transactions"/>
+          <xsl:apply-templates select="ledger"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="ledger">
+    <xsl:apply-templates select="deficit"/>
+    <xsl:apply-templates select="balance"/>
+    <xsl:apply-templates select="transactions"/>
   </xsl:template>
   <xsl:template match="deficit">
     <p>
@@ -122,7 +125,7 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="transaction">
     <tr>
-      <td>
+      <td style="text-align:right">
         <xsl:value-of select="@id"/>
         <xsl:if test="@parent">
           <sub>
@@ -135,7 +138,7 @@ SOFTWARE.
           <xsl:with-param name="iso" select="created"/>
         </xsl:call-template>
       </td>
-      <td>
+      <td style="text-align:right">
         <xsl:value-of select="amount"/>
       </td>
       <td>

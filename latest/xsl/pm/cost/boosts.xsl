@@ -29,9 +29,9 @@ SOFTWARE.
             its budget. The default boost factor of a job is 2x, which
             means 30 minutes.</xsl:text>
             <xsl:text>See </xsl:text>
-            <a href="http://datum.zerocracy.com/pages/policy.html#5">par.5</a>
+            <a href="http://datum.zerocracy.com/pages/policy.html#5">§5</a>
             <xsl:text> and </xsl:text>
-            <a href="http://datum.zerocracy.com/pages/policy.html#15">par.15</a>
+            <a href="http://datum.zerocracy.com/pages/policy.html#15">§15</a>
             <xsl:text>.</xsl:text>
           </p>
           <table>
