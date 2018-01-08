@@ -215,3 +215,16 @@ You will earn 10 minutes for each pull request successfully merged.
 It is recommended to use [Rultor](http://www.rultor.com) or a similar
 solution, which will allow only the architect to merge.
 
+## Quality Assurance (QA)
+
+<a name="30" href="#30">§30</a>.
+"Quality Review."
+If you have `QA` role in the project, you will be asked to review jobs after their completion.
+You have to review the job for its quality and report to Zerocrat: `quality is good`
+(or `bad`, or `acceptable`).
+You will be paid 15 minutes for the review, no matter what is your verdict.
+
+<a name="31" href="#31">§31</a>.
+"QA Bonus."
+Job performer will get an extra 5 minutes if QA reports `good` quality.
+If the quality is `bad`, there will be no payment to the job performer.
