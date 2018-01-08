@@ -40,6 +40,7 @@ Ask that person to say `invite` with your GitHub login to Zerocrat.
 The person will be your mentor and will be responsible for helping you
 out in the system. Also, the mentor will receive financial bonuses from
 us for the money you earn.
+Join this [Telegram chat](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A) if you don't know anyone yet.
 
 <a name="2" href="#2">§2</a>.
 "Apply."
