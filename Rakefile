@@ -30,7 +30,11 @@ require 'rainbow'
 
 CLEAN.include 'target'
 
-task default: %i[clean xsd upgrades xsl auto xcop underscores rubocop copyright]
+task :default, [:version] => %i[
+  clean xsd upgrades
+  xsl auto xcop underscores
+  rubocop copyright
+]
 
 desc 'Validate all XML/XSD files'
 task :xsd, [:version] do |_, args|
