@@ -31,10 +31,9 @@ As a PO you can:
   - [x] [Create](https://get.slack.help/hc/en-us/articles/201402297-Create-a-channel) a new Slack channel for a project
   - [x] [Invite](#invite-only) a friend: `invite`
   - [x] Start talking to the bot: `hello`
-  - [x] Bootstrap a project: `bootstrap`
-  - [x] Fund the project using a credit card: `fund`
+  - [x] Fund the project using a credit card
   - [x] Link the project with GitHub repositor(ies): `links`
-  - [x] Register `ARC` and `DEV` roles: `roles`
+  - [x] Register `ARC`, `DEV`, and `REV` roles: `assign`
   - [x] Add tickets to the scope in GitHub: `in`
   - [x] Remote tickets from the scope: `out`
 
