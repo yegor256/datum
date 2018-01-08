@@ -28,11 +28,22 @@ SOFTWARE.
             <xsl:text>The Ledger is a full list of transactions that
               happened in the project since we started to manage it.</xsl:text>
           </p>
+          <xsl:apply-templates select="deficit"/>
           <xsl:apply-templates select="balance"/>
           <xsl:apply-templates select="transactions"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="deficit">
+    <p>
+      <xsl:text>The project is in </xsl:text>
+      <strong>
+        <xsl:text>deficit</xsl:text>
+      </strong>
+      <xsl:text>. This means that all funds are currently allocated to active orders.</xsl:text>
+      <xsl:text> You need to fund it if you want to continue assigning jobs to performers and pay them.</xsl:text>
+    </p>
   </xsl:template>
   <xsl:template match="balance">
     <table>

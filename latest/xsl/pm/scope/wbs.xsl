@@ -17,7 +17,7 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../../templates.xsl"/>
-  <xsl:template match="/wbs">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
@@ -35,31 +35,37 @@ SOFTWARE.
             <a href="http://datum.zerocracy.com/pages/policy.html#14">par.14</a>
             <xsl:text>.</xsl:text>
           </p>
-          <p>
-            <xsl:text>There are </xsl:text>
-            <xsl:value-of select="count(job)"/>
-            <xsl:text> jobs in the WBS:</xsl:text>
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <xsl:text>ID</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Created</xsl:text>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <xsl:apply-templates select="job">
-                <xsl:sort select="created" order="descending" data-type="text"/>
-              </xsl:apply-templates>
-            </tbody>
-          </table>
+          <xsl:apply-templates select="wbs"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="wbs">
+    <p>
+      <xsl:text>There are </xsl:text>
+      <xsl:value-of select="count(job)"/>
+      <xsl:text> jobs in the WBS:</xsl:text>
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>ID</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Role</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Created</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="job">
+          <xsl:sort select="created" order="descending" data-type="text"/>
+        </xsl:apply-templates>
+      </tbody>
+    </table>
   </xsl:template>
   <xsl:template match="job">
     <tr>
@@ -67,6 +73,11 @@ SOFTWARE.
         <xsl:call-template name="job">
           <xsl:with-param name="id" select="@id"/>
         </xsl:call-template>
+      </td>
+      <td>
+        <code>
+          <xsl:value-of select="role"/>
+        </code>
       </td>
       <td>
         <xsl:call-template name="date">

@@ -70,7 +70,7 @@ and its basic principles:</p>
 <li><a href="http://www.yegor256.com/2015/02/16/it-is-not-a-school.html">It&#39;s Not a School!</a></li>
 </ul>
 
-<h2>Developer</h2>
+<h2>Developer (DEV)</h2>
 
 <p>You can talk to <code>@crat</code> in:</p>
 
@@ -96,7 +96,7 @@ either invite you or ignore your request. You can apply multiple times.</p>
 
 <p><a name="3" href="#3">§3</a>.
 &quot;Election.&quot;
-Zerocrat may assign a job to you according to its own election rules.
+Zerocrat may assign a job to you according to its own election rules, if you have <code>DEV</code> role.
 You will be notified in job&#39;s ticket.</p>
 
 <p><a name="4" href="#4">§4</a>.
@@ -140,11 +140,6 @@ You may declare impediments for a job by saying <code>waiting</code> to Zerocrat
 Until the job has impediments <a href="#8">Ten Days rule</a>
 is not applicable to it.</p>
 
-<p><a name="10" href="#10">§10</a>.
-&quot;Code Review Bonus.&quot;
-For each code review you get a bonus as big in minutes as the amount of
-comments you posted to the ticket during the review.</p>
-
 <p><a name="16" href="#16">§16</a>.
 &quot;Rate.&quot;
 To make money in any project you must define your hourly rate.
@@ -155,7 +150,22 @@ To do that just say <code>rate</code> to Zerocrat.</p>
 We can send you money either via PayPal <del>or Bitcoin</del>.
 To tell us how exactly you want to receive them just say <code>wallet</code> to Zerocrat.</p>
 
-<h2>Product Owner</h2>
+<h2>Code Reviewer (REV)</h2>
+
+<p><a name="27" href="#27">§27</a>.
+&quot;Code Reviews.&quot;
+You will be asked to review pull requests if you have <code>REV</code> role assigned.
+Be as critical as you can, as <a href="http://www.yegor256.com/2015/02/09/serious-code-reviewer.html">this article</a> explains.
+If you accept the changes, inform the architect, right in the ticket.
+If you don&#39;t accept, inform the author of the pull request.
+In either case you will be paid 15 minutes plus <a href="#10">the bonus</a>.</p>
+
+<p><a name="10" href="#10">§10</a>.
+&quot;Code Review Bonus.&quot;
+For each code review you get a bonus as big in minutes as the amount of
+comments you posted to the ticket during the review.</p>
+
+<h2>Product Owner (PO)</h2>
 
 <p><a name="11" href="#11">§11</a>.
 &quot;Add to Slack.&quot;
@@ -220,7 +230,7 @@ project say <code>destroy</code> and then <a href="https://get.slack.help/hc/en-
 To attract programmers to your project, you can publish it on the
 <a href="http://www.0crat.com/board">board</a>. Say <code>publish</code> to Zerocrat in order to do it.</p>
 
-<h2>Architect</h2>
+<h2>Architect (ARC)</h2>
 
 <p><a name="14" href="#14">§14</a>.
 &quot;Scope In/Out.&quot;
@@ -241,13 +251,19 @@ You can manually assign any job to a user, just say <code>assign @yegor256</code
 assign the ticket to that user in your ticket tracking system.
 This operation is against our principles of automated task management,
 that&#39;s why you will get -5 <a href="#18">points</a> every time you do this.</p>
+
+<p><a name="28" href="#28">§28</a>.
+&quot;Architect Review Bonus.&quot;
+You will earn 10 minutes for each pull request successfully merged.
+It is recommended to use <a href="http://www.rultor.com">Rultor</a> or a similar
+solution, which will allow only the architect to merge.</p>
 </div>
       </article>
       <footer>
         <nav>
           <ul>
-            <li>v0.50</li>
-            <li>4-Jan-2018</li>
+            <li>v0.51</li>
+            <li>8-Jan-2018</li>
           </ul>
         </nav>
       </footer>
