@@ -118,12 +118,7 @@ You will be asked to review pull requests if you have `REV` role assigned.
 Be as critical as you can, as [this article](http://www.yegor256.com/2015/02/09/serious-code-reviewer.html) explains.
 If you accept the changes, inform the architect, right in the ticket.
 If you don't accept, inform the author of the pull request.
-In either case you will be paid 15 minutes plus [the bonus](#10).
-
-<a name="10" href="#10">§10</a>.
-"Code Review Bonus."
-For each code review you get a bonus as big in minutes as the amount of
-comments you posted to the ticket during the review.
+In either case you will be paid 15 minutes.
 
 <a name="PO"/>
 ## Product Owner (PO)
