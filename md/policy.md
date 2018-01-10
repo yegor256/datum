@@ -109,6 +109,10 @@ To do that just say `rate` to Zerocrat.
 We can send you money either via PayPal <del>or Bitcoin</del>.
 To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
 
+<a name="32" href="#32">§32</a>.
+"Job Status."
+You can always check status of any job, just say `status` to Zerocrat.
+
 <a name="REV"/>
 ## Code Reviewer (REV)
 
