@@ -138,7 +138,7 @@ channel and add `@0crat` to it.
 Everybody who will be managed by Zerocrat must have roles in the project.
 To assign a role you say `assign`. To remove a role you say `resign`.
 By default, all new people you assign are supposed to work for free. If you
-want to pay them for the tasks they complete, add hourly rate to the `assign`
+want to pay them for the jobs they complete, add hourly rate to the `assign`
 command, for example: `assign DEV yegor256 $50`. To change the hourly
 rate of a person just assign the same role with a different rate, or `0`
 in order to make them work for free.
@@ -155,7 +155,7 @@ instead of `yegor256/cactoos` you should put the coordinates of your GitHub repo
 <a name="21" href="#21">§21</a>.
 "Project funds."
 You can add funds to the project by VISA or MasterCard via [Stripe](https://www.stripe.com)
-at the project web page. Fund will be used to pay programmers for task
+at the project web page. Fund will be used to pay programmers for job
 completion and to pay Zerocracy management fee.
 
 <a name="22" href="#22">§22</a>.
@@ -208,6 +208,7 @@ You can manually assign any job to a user, just say `assign @yegor256`
 assign the ticket to that user in your ticket tracking system.
 This operation is against our principles of automated task management,
 that's why you will get -5 [points](#18) every time you do this.
+If you assign a job to its reporter/creator, you will get an additional penalty of -15 [points](#18).
 
 <a name="28" href="#28">§28</a>.
 "Architect Review Bonus."
