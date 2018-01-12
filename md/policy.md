@@ -135,7 +135,7 @@ Zerocrat to your Slack.
 <a name="12" href="#12">§12</a>.
 "Bootstrap."
 To let Zerocrat manage your project you have to create a new Slack
-channel and add `@0crat` to it.
+channel and add `@0crat` to it. Then, you should say `bootstrap` to Zerocrat.
 
 <a name="13" href="#13">§13</a>.
 "Assign/Resign."
