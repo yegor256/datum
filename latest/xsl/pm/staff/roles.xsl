@@ -26,7 +26,7 @@ SOFTWARE.
           </h1>
           <p>
             <xsl:text>This is a full list of people and their roles in the
-            project. The Architect (ARC) or the Product Owner (PO) are
+            project. The ARC and the PO are
             allowed to assign roles and resign them. By convention
             we use these role names: </xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#ARC">
@@ -36,24 +36,23 @@ SOFTWARE.
             <a href="http://datum.zerocracy.com/pages/policy.html#PO">
               <xsl:text>PO</xsl:text>
             </a>
-            <xsl:text> (product owner)</xsl:text>
+            <xsl:text>, (product owner)</xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#DEV">
               <xsl:text>DEV</xsl:text>
             </a>
-            <xsl:text> (developer)</xsl:text>
+            <xsl:text>, (developer)</xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#REV">
               <xsl:text>REV</xsl:text>
             </a>
-            <xsl:text> (code reviewer)</xsl:text>
+            <xsl:text>, (code reviewer)</xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#TST">
               <xsl:text>TST</xsl:text>
             </a>
-            <xsl:text> (tester)</xsl:text>
+            <xsl:text>, (tester)</xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#QA">
               <xsl:text>QA</xsl:text>
             </a>
-            <xsl:text> (quality assurance)</xsl:text>
-            <xsl:text>, see </xsl:text>
+            <xsl:text> (quality assurance), see </xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#13">§13</a>
             <xsl:text>.</xsl:text>
           </p>

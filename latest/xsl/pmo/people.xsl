@@ -69,6 +69,8 @@ SOFTWARE.
         <xsl:value-of select="rate"/>
       </td>
       <td>
+        <xsl:value-of select="wallet/@bank"/>
+        <xsl:text>:</xsl:text>
         <xsl:value-of select="wallet"/>
       </td>
       <td>

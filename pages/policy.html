@@ -70,6 +70,8 @@ and its basic principles:</p>
 <li><a href="http://www.yegor256.com/2015/02/16/it-is-not-a-school.html">It&#39;s Not a School!</a></li>
 </ul>
 
+<p><a name="DEV"/></p>
+
 <h2>Developer (DEV)</h2>
 
 <p>You can talk to <code>@crat</code> in:</p>
@@ -86,7 +88,8 @@ To start working with us you have to be invited by someone we already know.
 Ask that person to say <code>invite</code> with your GitHub login to Zerocrat.
 The person will be your mentor and will be responsible for helping you
 out in the system. Also, the mentor will receive financial bonuses from
-us for the money you earn.</p>
+us for the money you earn.
+Join this <a href="https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A">Telegram chat</a> if you don&#39;t know anyone yet.</p>
 
 <p><a name="2" href="#2">§2</a>.
 &quot;Apply.&quot;
@@ -155,6 +158,12 @@ To do that just say <code>rate</code> to Zerocrat.</p>
 We can send you money either via PayPal <del>or Bitcoin</del>.
 To tell us how exactly you want to receive them just say <code>wallet</code> to Zerocrat.</p>
 
+<p><a name="32" href="#32">§32</a>.
+&quot;Job Status.&quot;
+You can always check status of any job, just say <code>status</code> to Zerocrat.</p>
+
+<p><a name="REV"/></p>
+
 <h2>Code Reviewer (REV)</h2>
 
 <p><a name="27" href="#27">§27</a>.
@@ -163,12 +172,9 @@ You will be asked to review pull requests if you have <code>REV</code> role assi
 Be as critical as you can, as <a href="http://www.yegor256.com/2015/02/09/serious-code-reviewer.html">this article</a> explains.
 If you accept the changes, inform the architect, right in the ticket.
 If you don&#39;t accept, inform the author of the pull request.
-In either case you will be paid 15 minutes plus <a href="#10">the bonus</a>.</p>
+In either case you will be paid 15 minutes.</p>
 
-<p><a name="10" href="#10">§10</a>.
-&quot;Code Review Bonus.&quot;
-For each code review you get a bonus as big in minutes as the amount of
-comments you posted to the ticket during the review.</p>
+<p><a name="PO"/></p>
 
 <h2>Product Owner (PO)</h2>
 
@@ -180,14 +186,14 @@ Zerocrat to your Slack.</p>
 <p><a name="12" href="#12">§12</a>.
 &quot;Bootstrap.&quot;
 To let Zerocrat manage your project you have to create a new Slack
-channel and add <code>@0crat</code> to it.</p>
+channel and add <code>@0crat</code> to it. Then, you should say <code>bootstrap</code> to Zerocrat.</p>
 
 <p><a name="13" href="#13">§13</a>.
 &quot;Assign/Resign.&quot;
 Everybody who will be managed by Zerocrat must have roles in the project.
 To assign a role you say <code>assign</code>. To remove a role you say <code>resign</code>.
 By default, all new people you assign are supposed to work for free. If you
-want to pay them for the tasks they complete, add hourly rate to the <code>assign</code>
+want to pay them for the jobs they complete, add hourly rate to the <code>assign</code>
 command, for example: <code>assign DEV yegor256 $50</code>. To change the hourly
 rate of a person just assign the same role with a different rate, or <code>0</code>
 in order to make them work for free.</p>
@@ -204,7 +210,7 @@ instead of <code>yegor256/cactoos</code> you should put the coordinates of your 
 <p><a name="21" href="#21">§21</a>.
 &quot;Project funds.&quot;
 You can add funds to the project by VISA or MasterCard via <a href="https://www.stripe.com">Stripe</a>
-at the project web page. Fund will be used to pay programmers for task
+at the project web page. Fund will be used to pay programmers for job
 completion and to pay Zerocracy management fee.</p>
 
 <p><a name="22" href="#22">§22</a>.
@@ -235,6 +241,8 @@ project say <code>destroy</code> and then <a href="https://get.slack.help/hc/en-
 To attract programmers to your project, you can publish it on the
 <a href="http://www.0crat.com/board">board</a>. Say <code>publish</code> to Zerocrat in order to do it.</p>
 
+<p><a name="ARC"/></p>
+
 <h2>Architect (ARC)</h2>
 
 <p><a name="14" href="#14">§14</a>.
@@ -255,13 +263,16 @@ You can manually assign any job to a user, just say <code>assign @yegor256</code
 (where instead of <code>@yegor256</code> you put the GitHub login of the user) or
 assign the ticket to that user in your ticket tracking system.
 This operation is against our principles of automated task management,
-that&#39;s why you will get -5 <a href="#18">points</a> every time you do this.</p>
+that&#39;s why you will get -5 <a href="#18">points</a> every time you do this.
+If you assign a job to its reporter/creator, you will get an additional penalty of -15 <a href="#18">points</a>.</p>
 
 <p><a name="28" href="#28">§28</a>.
 &quot;Architect Review Bonus.&quot;
 You will earn 10 minutes for each pull request successfully merged.
 It is recommended to use <a href="http://www.rultor.com">Rultor</a> or a similar
 solution, which will allow only the architect to merge.</p>
+
+<p><a name="QA"/></p>
 
 <h2>Quality Assurance (QA)</h2>
 
@@ -281,8 +292,8 @@ If the quality is <code>bad</code>, there will be no payment to the job performe
       <footer>
         <nav>
           <ul>
-            <li>v0.51.2</li>
-            <li>8-Jan-2018</li>
+            <li>v0.51.3</li>
+            <li>12-Jan-2018</li>
           </ul>
         </nav>
       </footer>
