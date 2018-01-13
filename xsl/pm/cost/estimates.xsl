@@ -73,6 +73,11 @@ SOFTWARE.
           <xsl:with-param name="iso" select="created"/>
         </xsl:call-template>
       </td>
+      <td>
+        <xsl:call-template name="role">
+          <xsl:with-param name="role" select="role"/>
+        </xsl:call-template>
+      </td>
     </tr>
   </xsl:template>
 </xsl:stylesheet>

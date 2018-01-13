@@ -15,9 +15,20 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<estimates total="$50.00">
-  <order id="gh:yegor256/pdd#3">
-    <cash>EUR -25.7</cash>
-    <role>DEV</role>
-  </order>
-</estimates>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:output method="xml"/>
+  <xsl:strip-space elements="*"/>
+  <xsl:template match="order[not(role)]">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+      <xsl:element name="role">
+        <xsl:text>DEV</xsl:text>
+      </xsl:element>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="@*|node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>

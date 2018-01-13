@@ -21,9 +21,10 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
   <xs:complexType name="order">
     <xs:all>
-      <xs:element name="added" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-      <xs:element name="project" minOccurs="1" maxOccurs="1" type="projectID"/>
-      <xs:element name="href" minOccurs="1" maxOccurs="1" type="xs:anyURI"/>
+      <xs:element name="added" type="xs:dateTime"/>
+      <xs:element name="project" type="projectID"/>
+      <xs:element name="href" type="xs:anyURI"/>
+      <xs:element name="role" type="role"/>
     </xs:all>
     <xs:attribute name="job" use="required" type="jobID"/>
   </xs:complexType>

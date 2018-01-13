@@ -106,4 +106,10 @@ SOFTWARE.
       </a>
     </code>
   </xsl:template>
+  <xsl:template name="role">
+    <xsl:param name="role"/>
+    <code>
+      <xsl:value-of select="$role"/>
+    </code>
+  </xsl:template>
 </xsl:stylesheet>
