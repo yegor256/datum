@@ -23,7 +23,19 @@ SOFTWARE.
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="http://www.zerocracy.com/logo.png"/>
     <link rel="stylesheet" href="http://www.0crat.com/css/main.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <title>{{ name }}</title>
+    <style>
+      a:target {
+        font-size: 2em;
+        font-weight: bold;
+        float: left;
+        line-height: 1em;
+        margin-left: -5.3em;
+        width: 5em;
+        text-align: right;
+      }
+    </style>
   </head>
   <body>
     <section>
@@ -47,8 +59,12 @@ SOFTWARE.
       <footer>
         <nav>
           <ul>
-            <li>v{{ version }}</li>
-            <li>{{ date }}</li>
+            <li>
+              <span>v{{ version }}</span>
+            </li>
+            <li>
+              <span>{{ date }}</span>
+            </li>
           </ul>
         </nav>
       </footer>
