@@ -56,6 +56,7 @@ If it is lower, you can only apply to sandbox projects
 [http://www.0crat.com/p/C7JGJ00DP](jPeek),
 and [http://www.0crat.com/p/C3T46CUJJ](PDD))
 and your highest allowed rate is $16.
+You can't apply to a sandbox project if your reputation is over 1024.
 
 <a name="3" href="#3">§3</a>.
 "Election."
