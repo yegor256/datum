@@ -36,7 +36,7 @@ You can talk to `@crat` in:
 "Invite."
 To start working with us you have to be invited by someone we already know.
 Ask that person to say `invite` with your GitHub login to Zerocrat.
-You must have at least 1000 reputation to invite someone.
+This person must have at least 1000 reputation to invite someone.
 The person will be your mentor and will be responsible for helping you
 out in the system. Also, the mentor will receive financial bonuses from
 us for the money you earn.
