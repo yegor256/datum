@@ -18,8 +18,10 @@ SOFTWARE.
 <estimates total="$50.00">
   <order id="gh:yegor256/pdd#3">
     <cash>EUR 25.7</cash>
+    <role>DEV</role>
   </order>
   <order id="gh:yegor256/pdd#3">
     <cash>USD 25.7</cash>
+    <role>DEV</role>
   </order>
 </estimates>
