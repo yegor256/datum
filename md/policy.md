@@ -48,6 +48,12 @@ To join a project you have to find it on the [board](http://www.0crat.com/board)
 and send `apply` request to Zerocrat. The architect of the project will
 either invite you or ignore your request. You can apply multiple times.
 
+<a name="33" href="#33">§33</a>.
+"Sandbox."
+You can [apply](#2) to a project only if your [reputation](#18) is over 200.
+If it is lower, you can only apply to sandbox projects and your highest allowed
+rate is $16.
+
 <a name="3" href="#3">§3</a>.
 "Election."
 Zerocrat may assign a job to you according to its own election rules, if you have `DEV` role.
@@ -61,7 +67,7 @@ The actual amount of time you spend on the job doesn't affect the amount of mone
 You will also get as many positive [points](#18) as many minutes you are paid for.
 
 <a name="18" href="#18">§18</a>.
-"Points."
+"Points of Reputation."
 You may earn positive and negative points for doing good and bad things in
 the projects. They do not affect your cash income, but do affect the impression Zerocrat
 has about you&mdash;the more points you have the more disciplined developer you are.
