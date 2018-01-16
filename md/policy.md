@@ -203,7 +203,9 @@ project say `destroy` and then [kick off](https://get.slack.help/hc/en-us/articl
 <a name="26" href="#26">§26</a>.
 "Publish."
 To attract programmers to your project, you can publish it on the
-[board](http://www.0crat.com/board). Say `publish` to Zerocrat in order to do it.
+[board](http://www.0crat.com/board), just say `publish on` to Zerocrat in order to do it.
+When your project is published, its statistical information will be visible in web.
+You can unpublish it any time, just say `publish off`.
 
 <a name="ARC"/>
 ## Architect (ARC)
