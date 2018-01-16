@@ -53,9 +53,9 @@ either invite you or ignore your request. You can apply multiple times.
 "Sandbox."
 You can [apply](#2) to a project only if your [reputation](#18) is over 256.
 If it is lower, you can only apply to sandbox projects
-([http://www.0crat.com/p/C63314D6Z](Cactoos),
-[http://www.0crat.com/p/C7JGJ00DP](jPeek),
-and [http://www.0crat.com/p/C3T46CUJJ](PDD))
+([Cactoos](http://www.0crat.com/p/C63314D6Z),
+[jPeek](http://www.0crat.com/p/C7JGJ00DP),
+and [PDD](http://www.0crat.com/p/C3T46CUJJ))
 and your highest allowed rate is $16.
 You can't apply to a sandbox project if your reputation is over 1024.
 
