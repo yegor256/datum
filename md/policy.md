@@ -24,8 +24,7 @@ and its basic principles:
   * [How to Cut Corners and Stay Cool](http://www.yegor256.com/2015/01/15/how-to-cut-corners.html)
   * [It's Not a School!](http://www.yegor256.com/2015/02/16/it-is-not-a-school.html)
 
-<a name="DEV"/>
-## Developer (DEV)
+## Developer (<a name="DEV">DEV</a>)
 
 You can talk to `@crat` in:
 
@@ -135,8 +134,7 @@ If you accept the changes, inform the architect, right in the ticket.
 If you don't accept, inform the author of the pull request.
 In either case you will be paid 15 minutes.
 
-<a name="PO"/>
-## Product Owner (PO)
+## Product Owner (<a name="PO"/>PO</a>)
 
 <a name="11" href="#11">§11</a>
 "Add to Slack."
@@ -208,8 +206,7 @@ To attract programmers to your project, you can publish it on the
 When your project is published, its statistical information will be visible in web.
 You can unpublish it any time, just say `publish off`.
 
-<a name="ARC"/>
-## Architect (ARC)
+## Architect (<a name="ARC">ARC</a>)
 
 <a name="14" href="#14">§14</a>
 "Scope In/Out."
@@ -238,8 +235,7 @@ You will earn 10 minutes for each pull request successfully merged.
 It is recommended to use [Rultor](http://www.rultor.com) or a similar
 solution, which will allow only the architect to merge.
 
-<a name="QA"/>
-## Quality Assurance (QA)
+## Quality Assurance (<a name="QA">QA</a>)
 
 <a name="30" href="#30">§30</a>
 "Quality Review."
