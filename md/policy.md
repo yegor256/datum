@@ -41,12 +41,23 @@ The person will be your mentor and will be responsible for helping you
 out in the system. Also, the mentor will receive financial bonuses from
 us for the money you earn.
 Join this [Telegram chat](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A) if you don't know anyone yet.
+Once you are invited, your name and your performance metrics will be visible in the [Gang page](http://www.0crat.com/gang).
 
 <a name="2" href="#2">§2</a>.
 "Apply."
-To join a project you have to find it on the [board](http://www.0crat.com/board)
+To join a project you have to find it on the [Board](http://www.0crat.com/board)
 and send `apply` request to Zerocrat. The architect of the project will
 either invite you or ignore your request. You can apply multiple times.
+
+<a name="33" href="#33">§33</a>.
+"Sandbox."
+You can [apply](#2) to a project only if your [reputation](#18) is over 256.
+If it is lower, you can only apply to sandbox projects
+([http://www.0crat.com/p/C63314D6Z](Cactoos),
+[http://www.0crat.com/p/C7JGJ00DP](jPeek),
+and [http://www.0crat.com/p/C3T46CUJJ](PDD))
+and your highest allowed rate is $16.
+You can't apply to a sandbox project if your reputation is over 1024.
 
 <a name="3" href="#3">§3</a>.
 "Election."
@@ -61,7 +72,7 @@ The actual amount of time you spend on the job doesn't affect the amount of mone
 You will also get as many positive [points](#18) as many minutes you are paid for.
 
 <a name="18" href="#18">§18</a>.
-"Points."
+"Points of Reputation."
 You may earn positive and negative points for doing good and bad things in
 the projects. They do not affect your cash income, but do affect the impression Zerocrat
 has about you&mdash;the more points you have the more disciplined developer you are.
@@ -147,6 +158,11 @@ command, for example: `assign DEV yegor256 $50`. To change the hourly
 rate of a person just assign the same role with a different rate, or `0`
 in order to make them work for free.
 
+<a name="34" href="#34">§34</a>.
+"Mandatory Roles."
+A project must always have one PO and one ARC.
+A project may not have more than two ARCs or POs.
+
 <a name="17" href="#17">§17</a>.
 "Connect GitHub."
 To connect your GitHub repository to the project you should
@@ -188,7 +204,9 @@ project say `destroy` and then [kick off](https://get.slack.help/hc/en-us/articl
 <a name="26" href="#26">§26</a>.
 "Publish."
 To attract programmers to your project, you can publish it on the
-[board](http://www.0crat.com/board). Say `publish` to Zerocrat in order to do it.
+[Board](http://www.0crat.com/board), just say `publish on` to Zerocrat in order to do it.
+When your project is published, its statistical information will be visible in web.
+You can unpublish it any time, just say `publish off`.
 
 <a name="ARC"/>
 ## Architect (ARC)
