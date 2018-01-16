@@ -158,7 +158,7 @@ in order to make them work for free.
 <a name="34" href="#34">§34</a>
 "Mandatory Roles."
 A project must always have one PO and one ARC.
-A project may not have more than two ARCs or POs.
+A project may not have more than two ARCs or more than two POs.
 
 <a name="17" href="#17">§17</a>
 "Connect GitHub."
@@ -173,7 +173,7 @@ instead of `yegor256/cactoos` you should put the coordinates of your GitHub repo
 "Project funds."
 You can add funds to the project by VISA or MasterCard via [Stripe](https://www.stripe.com)
 at the project web page. Fund will be used to pay programmers for job
-completion and to pay Zerocracy management fee.
+completion and to pay Zerocracy management [fee](#23).
 
 <a name="22" href="#22">§22</a>
 "Refunds."
@@ -183,7 +183,7 @@ All unused funds will be returned to you immediately per your request by
 <a name="23" href="#23">§23</a>
 "Management fee."
 Zerocracy charges a fixed management fee of USD 4.00 per each successfully
-completed job. If your project is not linked to any private GitHub repositories
+completed job. If your project is not [linked](#17) to any private GitHub repositories
 this fee is waived.
 
 <a name="24" href="#24">§24</a>
@@ -201,8 +201,8 @@ project say `destroy` and then [kick off](https://get.slack.help/hc/en-us/articl
 <a name="26" href="#26">§26</a>
 "Publish."
 To attract programmers to your project, you can publish it on the
-[Board](http://www.0crat.com/board), just say `publish on` to Zerocrat in order to do it.
-When your project is published, its statistical information will be visible in web.
+[Board](http://www.0crat.com/board); just say `publish on` to Zerocrat in order to do it.
+When your project is published, its statistical information will be visible in the Web.
 You can unpublish it any time, just say `publish off`.
 
 ## Architect (<a name="ARC">ARC</a>)
@@ -216,7 +216,7 @@ You can remove a job from the scope by saying `out`.
 "Boosting."
 You can increase a budget of the job by setting its boost factor.
 Just say `boost 2x` (or `3x`, `5x`, etc.) to Zerocrat.
-This operation is against our principles of [micro-tasking](http://www.yegor256.com/2017/11/28/microtasking.html),
+This operation is against our principles of [micro-budgeting](http://www.yegor256.com/2018/01/09/micro-budgeting.html),
 that's why you get -10 [points](#18) every time you do this.
 
 <a name="19" href="#19">§19</a>
@@ -246,4 +246,4 @@ You will be paid 15 minutes for the review, no matter what is your verdict.
 <a name="31" href="#31">§31</a>
 "QA Bonus."
 Job performer will get an extra 5 minutes if QA reports `good` quality.
-If the quality is `bad`, there will be no payment to the job performer.
+If the quality is `bad`, there will be no payment to the job performer at all.
