@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pmo/catalog" version="0.51.3">
+<index path="/latest/upgrades/pmo/catalog" version="0.51.4">
   <entry dir="false" path="/latest/upgrades/pmo/catalog/0.24-version-and-date.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pmo/catalog/0.24-version-and-date.xsl" order="0.24">0.24-version-and-date.xsl</entry>
   <entry dir="false" path="/latest/upgrades/pmo/catalog/0.34-publish.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pmo/catalog/0.34-publish.xsl" order="0.34">0.34-publish.xsl</entry>
   <entry dir="false" path="/latest/upgrades/pmo/catalog/0.39-title.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pmo/catalog/0.39-title.xsl" order="0.39">0.39-title.xsl</entry>

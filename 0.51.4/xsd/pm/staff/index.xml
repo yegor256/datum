@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<index path="/0.51.4/xsd/pm/staff" version="0.51.4">
+  <entry dir="false" path="/0.51.4/xsd/pm/staff/bans.xsd" uri="http://datum.zerocracy.com/0.51.4/xsd/pm/staff/bans.xsd">bans.xsd</entry>
+  <entry dir="false" path="/0.51.4/xsd/pm/staff/elections.xsd" uri="http://datum.zerocracy.com/0.51.4/xsd/pm/staff/elections.xsd">elections.xsd</entry>
+  <entry dir="false" path="/0.51.4/xsd/pm/staff/roles.xsd" uri="http://datum.zerocracy.com/0.51.4/xsd/pm/staff/roles.xsd">roles.xsd</entry>
+  <entry dir="false" path="/0.51.4/xsd/pm/staff/types.xsd" uri="http://datum.zerocracy.com/0.51.4/xsd/pm/staff/types.xsd">types.xsd</entry>
+</index>
