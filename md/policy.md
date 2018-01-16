@@ -41,10 +41,11 @@ The person will be your mentor and will be responsible for helping you
 out in the system. Also, the mentor will receive financial bonuses from
 us for the money you earn.
 Join this [Telegram chat](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A) if you don't know anyone yet.
+Once you are invited, your name and your performance metrics will be visible in the [Gang page](http://www.0crat.com/gang).
 
 <a name="2" href="#2">§2</a>.
 "Apply."
-To join a project you have to find it on the [board](http://www.0crat.com/board)
+To join a project you have to find it on the [Board](http://www.0crat.com/board)
 and send `apply` request to Zerocrat. The architect of the project will
 either invite you or ignore your request. You can apply multiple times.
 
@@ -203,7 +204,7 @@ project say `destroy` and then [kick off](https://get.slack.help/hc/en-us/articl
 <a name="26" href="#26">§26</a>.
 "Publish."
 To attract programmers to your project, you can publish it on the
-[board](http://www.0crat.com/board), just say `publish on` to Zerocrat in order to do it.
+[Board](http://www.0crat.com/board), just say `publish on` to Zerocrat in order to do it.
 When your project is published, its statistical information will be visible in web.
 You can unpublish it any time, just say `publish off`.
 
