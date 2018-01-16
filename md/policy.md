@@ -51,8 +51,8 @@ either invite you or ignore your request. You can apply multiple times.
 <a name="33" href="#33">§33</a>.
 "Sandbox."
 You can [apply](#2) to a project only if your [reputation](#18) is over 200.
-If it is lower, you can only apply to sandbox projects and your highest allowed
-rate is $16.
+If it is lower, you can only apply to sandbox projects (Cactoos, Takes, jPeek,
+PDD) and your highest allowed rate is $16.
 
 <a name="3" href="#3">§3</a>.
 "Election."
