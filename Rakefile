@@ -304,7 +304,7 @@ desc 'Validate all XML/XSL/XSD/HTML files for formatting'
 Xcop::RakeTask.new :xcop do |task|
   task.license = 'LICENSE'
   task.includes = ['**/*.xml', '**/*.xsl', '**/*.xsd', '**/*.html']
-  task.excludes = ['target/**/*', 'md/_template.html']
+  task.excludes = ['target/**/*']
 end
 
 desc 'Make sure no files start with an underscore'
