@@ -31,7 +31,7 @@ require 'rainbow'
 CLEAN.include 'target'
 
 task :default, [:version] => %i[
-  clean xsd upgrades
+  clean xsd
   xsl auto xcop underscores
   rubocop copyright
 ]

@@ -7,7 +7,7 @@ release:
     [[ "${tag}" =~ ^[0-9]+(\.[0-9]+)*$ ]] || exit -1
     pdd -f /dev/null
     bundle install
-    rake default[${tag}]
+    rake default[${tag}] upgrades[${tag}]
     rake site[${tag}] validate_site[${tag}]
     cp -r target/site /tmp
     git checkout gh-pages
