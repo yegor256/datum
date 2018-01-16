@@ -33,7 +33,7 @@ You can talk to `@crat` in:
   * Telegram: [start](https://telegram.me/zerocrat_bot) a chat with [`@zerocrat_bot`](https://telegram.me/zerocrat_bot)
   * GitHub: prepend your message in any ticket with [`@0crat`](https://github.com/0crat)
 
-<a name="1" href="#1">§1</a>.
+<a name="1" href="#1">§1</a>
 "Invite."
 To start working with us you have to be invited by someone we already know.
 Ask that person to say `invite` with your GitHub login to Zerocrat.
@@ -43,13 +43,13 @@ us for the money you earn.
 Join this [Telegram chat](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A) if you don't know anyone yet.
 Once you are invited, your name and your performance metrics will be visible in the [Gang page](http://www.0crat.com/gang).
 
-<a name="2" href="#2">§2</a>.
+<a name="2" href="#2">§2</a>
 "Apply."
 To join a project you have to find it on the [Board](http://www.0crat.com/board)
 and send `apply` request to Zerocrat. The architect of the project will
 either invite you or ignore your request. You can apply multiple times.
 
-<a name="33" href="#33">§33</a>.
+<a name="33" href="#33">§33</a>
 "Sandbox."
 You can [apply](#2) to a project only if your [reputation](#18) is over 256.
 If it is lower, you can only apply to sandbox projects
@@ -59,75 +59,75 @@ and [http://www.0crat.com/p/C3T46CUJJ](PDD))
 and your highest allowed rate is $16.
 You can't apply to a sandbox project if your reputation is over 1024.
 
-<a name="3" href="#3">§3</a>.
+<a name="3" href="#3">§3</a>
 "Election."
 Zerocrat may assign a job to you according to its own election rules, if you have `DEV` role.
 You will be notified in job's ticket.
 
-<a name="4" href="#4">§4</a>.
+<a name="4" href="#4">§4</a>
 "Fixed Budget."
 Each job has a fixed budget in minutes,
 which will be multiplied by your hourly rate and paid to you when the job is completed.
 The actual amount of time you spend on the job doesn't affect the amount of money you receive.
 You will also get as many positive [points](#18) as many minutes you are paid for.
 
-<a name="18" href="#18">§18</a>.
+<a name="18" href="#18">§18</a>
 "Points of Reputation."
 You may earn positive and negative points for doing good and bad things in
 the projects. They do not affect your cash income, but do affect the impression Zerocrat
 has about you&mdash;the more points you have the more disciplined developer you are.
 Zerocrat takes into account only the points you earned over the last 90 days.
 
-<a name="5" href="#5">§5</a>.
+<a name="5" href="#5">§5</a>
 "Boost Factor."
 A job may receive a boost factor, which will increase or decrease its budget.
 Default boost factor is `2x`, which means 30 minutes.
 Default boost factor for a code review is `1x`.
 In exceptional situations, you should ask project architect to boost your job.
 
-<a name="6" href="#6">§6</a>.
+<a name="6" href="#6">§6</a>
 "Refusal."
 You may refuse to complete any job by saying `refuse`.
 You will get 15 negative [points](#18) for that.
 
-<a name="7" href="#7">§7</a>.
+<a name="7" href="#7">§7</a>
 "Definition of Done."
 A job is completed when its ticket is [closed](http://www.yegor256.com/2014/04/15/definition-of-done.html).
 
-<a name="8" href="#8">§8</a>.
+<a name="8" href="#8">§8</a>
 "Ten Days."
 If you don't complete a job in 10 days Zerocrat _may_ take it away from you.
 You will get no money and 30 negative [points](#18) if this happens.
 This rule is not applicable to code reviewing jobs.
 
-<a name="29" href="#29">§29</a>.
+<a name="29" href="#29">§29</a>
 "Pay per Bug."
 Each time you report a new bug that becomes a job, you earn 15 minutes.
 
-<a name="9" href="#9">§9</a>.
+<a name="9" href="#9">§9</a>
 "Impediments."
 You may declare impediments for a job by saying `waiting` to Zerocrat.
 Until the job has impediments [Ten Days rule](#8)
 is not applicable to it.
 
-<a name="16" href="#16">§16</a>.
+<a name="16" href="#16">§16</a>
 "Rate."
 To make money in any project you must define your hourly rate.
 To do that just say `rate` to Zerocrat.
 
-<a name="20" href="#20">§20</a>.
+<a name="20" href="#20">§20</a>
 "Wallet."
 We can send you money either via PayPal <del>or Bitcoin</del>.
 To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
 
-<a name="32" href="#32">§32</a>.
+<a name="32" href="#32">§32</a>
 "Job Status."
 You can always check status of any job, just say `status` to Zerocrat.
 
 <a name="REV"/>
 ## Code Reviewer (REV)
 
-<a name="27" href="#27">§27</a>.
+<a name="27" href="#27">§27</a>
 "Code Reviews."
 You will be asked to review pull requests if you have `REV` role assigned.
 Be as critical as you can, as [this article](http://www.yegor256.com/2015/02/09/serious-code-reviewer.html) explains.
@@ -138,17 +138,17 @@ In either case you will be paid 15 minutes.
 <a name="PO"/>
 ## Product Owner (PO)
 
-<a name="11" href="#11">§11</a>.
+<a name="11" href="#11">§11</a>
 "Add to Slack."
 To start working with us, you have to [invite](http://www.0crat.com/add_to_slack)
 Zerocrat to your Slack.
 
-<a name="12" href="#12">§12</a>.
+<a name="12" href="#12">§12</a>
 "Bootstrap."
 To let Zerocrat manage your project you have to create a new Slack
 channel and add `@0crat` to it. Then, you should say `bootstrap` to Zerocrat.
 
-<a name="13" href="#13">§13</a>.
+<a name="13" href="#13">§13</a>
 "Assign/Resign."
 Everybody who will be managed by Zerocrat must have roles in the project.
 To assign a role you say `assign`. To remove a role you say `resign`.
@@ -158,12 +158,12 @@ command, for example: `assign DEV yegor256 $50`. To change the hourly
 rate of a person just assign the same role with a different rate, or `0`
 in order to make them work for free.
 
-<a name="34" href="#34">§34</a>.
+<a name="34" href="#34">§34</a>
 "Mandatory Roles."
 A project must always have one PO and one ARC.
 A project may not have more than two ARCs or POs.
 
-<a name="17" href="#17">§17</a>.
+<a name="17" href="#17">§17</a>
 "Connect GitHub."
 To connect your GitHub repository to the project you should
 1) add a new Webhook: `http://p.rehttp.net/http://www.0crat.com/ghook`
@@ -172,36 +172,36 @@ and
 2) link the project in Slack: `links add github yegor256/cactoos`, where
 instead of `yegor256/cactoos` you should put the coordinates of your GitHub repository.
 
-<a name="21" href="#21">§21</a>.
+<a name="21" href="#21">§21</a>
 "Project funds."
 You can add funds to the project by VISA or MasterCard via [Stripe](https://www.stripe.com)
 at the project web page. Fund will be used to pay programmers for job
 completion and to pay Zerocracy management fee.
 
-<a name="22" href="#22">§22</a>.
+<a name="22" href="#22">§22</a>
 "Refunds."
 All unused funds will be returned to you immediately per your request by
 [email](mailto:refund@zerocracy.com).
 
-<a name="23" href="#23">§23</a>.
+<a name="23" href="#23">§23</a>
 "Management fee."
 Zerocracy charges a fixed management fee of USD 4.00 per each successfully
 completed job. If your project is not linked to any private GitHub repositories
 this fee is waived.
 
-<a name="24" href="#24">§24</a>.
+<a name="24" href="#24">§24</a>
 "Pause/Activate."
 To put Zerocrat on hold and make it completely inactive, say `pause`. To return
 it back to life say `pause off`.
 
-<a name="25" href="#25">§25</a>.
+<a name="25" href="#25">§25</a>
 "Destroy."
 To completely delete all project files from our servers and terminate the
 project say `destroy` and then [kick off](https://get.slack.help/hc/en-us/articles/201898668-Remove-someone-from-a-channel)
 `@0crat` from Slack channel. There is no way back. We highly recommend to use
 [pause/activate option](#24).
 
-<a name="26" href="#26">§26</a>.
+<a name="26" href="#26">§26</a>
 "Publish."
 To attract programmers to your project, you can publish it on the
 [Board](http://www.0crat.com/board), just say `publish on` to Zerocrat in order to do it.
@@ -211,19 +211,19 @@ You can unpublish it any time, just say `publish off`.
 <a name="ARC"/>
 ## Architect (ARC)
 
-<a name="14" href="#14">§14</a>.
+<a name="14" href="#14">§14</a>
 "Scope In/Out."
 You should add jobs to the scope, by saying `in` to Zerocrat (or assigning the ticket to him).
 You can remove a job from the scope by saying `out`.
 
-<a name="15" href="#15">§15</a>.
+<a name="15" href="#15">§15</a>
 "Boosting."
 You can increase a budget of the job by setting its boost factor.
 Just say `boost 2x` (or `3x`, `5x`, etc.) to Zerocrat.
 This operation is against our principles of [micro-tasking](http://www.yegor256.com/2017/11/28/microtasking.html),
 that's why you get -10 [points](#18) every time you do this.
 
-<a name="19" href="#19">§19</a>.
+<a name="19" href="#19">§19</a>
 "Assign."
 You can manually assign any job to a user, just say `assign @yegor256`
 (where instead of `@yegor256` you put the GitHub login of the user) or
@@ -232,7 +232,7 @@ This operation is against our principles of automated task management,
 that's why you will get -5 [points](#18) every time you do this.
 If you assign a job to its reporter/creator, you will get an additional penalty of -15 [points](#18).
 
-<a name="28" href="#28">§28</a>.
+<a name="28" href="#28">§28</a>
 "Architect Review Bonus."
 You will earn 10 minutes for each pull request successfully merged.
 It is recommended to use [Rultor](http://www.rultor.com) or a similar
@@ -241,14 +241,14 @@ solution, which will allow only the architect to merge.
 <a name="QA"/>
 ## Quality Assurance (QA)
 
-<a name="30" href="#30">§30</a>.
+<a name="30" href="#30">§30</a>
 "Quality Review."
 If you have `QA` role in the project, you will be asked to review jobs after their completion.
 You have to review the job for its quality and report to Zerocrat: `quality is good`
 (or `bad`, or `acceptable`).
 You will be paid 15 minutes for the review, no matter what is your verdict.
 
-<a name="31" href="#31">§31</a>.
+<a name="31" href="#31">§31</a>
 "QA Bonus."
 Job performer will get an extra 5 minutes if QA reports `good` quality.
 If the quality is `bad`, there will be no payment to the job performer.
