@@ -124,6 +124,10 @@ To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
 "Job Status."
 You can always check status of any job, just say `status` to Zerocrat.
 
+<a name="35" href="#35">§35</a>
+"Quit."
+You can always quit a project, just say `quit` to Zerocrat.
+
 ## Code Reviewer (<a name="REV">REV</a>)
 
 <a name="27" href="#27">§27</a>
