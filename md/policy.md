@@ -1,15 +1,15 @@
-This policy explains basic work principles of
+The Policy explains basic work principles of
 [0crat](http://www.0crat.com) ("Zerocrat"):
 a project management AI bot developed
 and hosted by [Zerocracy](http://www.zerocracy.com).
 
-If you want to change something in this policy of simply
+If you want to change something in the Policy or simply
 suggest an improvement, please submit a ticket
 [here](https://github.com/zerocracy/datum/issues).
-If you want to discuss the policy or your troubles with the bot,
-please join our [Gitter chat](https://gitter.im/zerocracy/Lobby).
+If you want to discuss the Policy or your troubles with the bot,
+please join this [Telegram chat](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
 
-We recommend you to read these articles first,
+We recommend you to read these articles first;
 they explain our management phylosophy
 (based on [XDSD](http://www.xdsd.org))
 and its basic principles:
@@ -26,7 +26,7 @@ and its basic principles:
 
 ## Developer (<a name="DEV">DEV</a>)
 
-You can talk to `@crat` in:
+You can talk to Zerocrat in:
 
   * Slack: [start](http://www.0crat.com/add_to_slack) a private conversation with `@0crat`
   * Telegram: [start](https://telegram.me/zerocrat_bot) a chat with [`@zerocrat_bot`](https://telegram.me/zerocrat_bot)
