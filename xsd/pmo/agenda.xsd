@@ -19,6 +19,12 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
+  <!--
+    @todo #179:30min Agenda schema changed. In 0.51.6 version
+     role is required element in agenda.xml and estimates.xml. We should add
+     it in `add()` methods in Agenda.java and Estimates.java.
+     See zerocracy/datum#214 PR for details.
+  -->
   <xs:complexType name="order">
     <xs:all>
       <xs:element name="added" type="xs:dateTime"/>
