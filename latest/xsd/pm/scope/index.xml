@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/xsd/pm/scope" version="0.51.5">
+<index path="/latest/xsd/pm/scope" version="0.51.6">
   <entry dir="false" path="/latest/xsd/pm/scope/archive.xsd" uri="http://datum.zerocracy.com/latest/xsd/pm/scope/archive.xsd">archive.xsd</entry>
   <entry dir="false" path="/latest/xsd/pm/scope/types.xsd" uri="http://datum.zerocracy.com/latest/xsd/pm/scope/types.xsd">types.xsd</entry>
   <entry dir="false" path="/latest/xsd/pm/scope/wbs.xsd" uri="http://datum.zerocracy.com/latest/xsd/pm/scope/wbs.xsd">wbs.xsd</entry>
