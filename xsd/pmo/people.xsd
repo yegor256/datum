@@ -55,7 +55,7 @@ SOFTWARE.
       </xs:element>
       <xs:element name="rate" type="cash" minOccurs="0" maxOccurs="1"/>
       <xs:element name="wallet" type="wallet" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="email" minOccurs="0" maxOccurs="1" type="email"/>
+      <xs:element name="details" minOccurs="0" maxOccurs="1" type="xs:string"/>
       <xs:element name="links" minOccurs="0" maxOccurs="1">
         <xs:complexType>
           <xs:sequence>

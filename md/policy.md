@@ -69,7 +69,7 @@ You will be notified in job's ticket. The rules include, in order of importance:
   * Shortest average [job completion time](#26) wins
   * The emptiest agenda wins, but the maximum allowed size of agenda
     depends on your [reputation](#18):
-    3 jobs is less than 512 points,
+    3 jobs if less than 512 points,
     8 if less than 2048,
     16 if less than 4096, 24 otherwise.
 

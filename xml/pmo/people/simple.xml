@@ -20,7 +20,7 @@ SOFTWARE.
     <name>Yegor Bugayenko</name>
     <rate>£30.50</rate>
     <wallet bank="paypal">yegor256@gmail.com</wallet>
-    <email>yegor256@gmail.com</email>
+    <details>YEGOR BUGAYENKO yegor256@gmail.com</details>
     <links>
       <link rel="slack" href="7YYZZT99S"/>
     </links>

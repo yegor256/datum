@@ -46,6 +46,9 @@ SOFTWARE.
             <xsl:text>Wallet</xsl:text>
           </th>
           <th>
+            <xsl:text>Details</xsl:text>
+          </th>
+          <th>
             <xsl:text>Links</xsl:text>
           </th>
           <th>
@@ -72,6 +75,9 @@ SOFTWARE.
         <xsl:value-of select="wallet/@bank"/>
         <xsl:text>:</xsl:text>
         <xsl:value-of select="wallet"/>
+      </td>
+      <td>
+        <xsl:apply-templates select="details"/>
       </td>
       <td>
         <xsl:apply-templates select="links"/>
