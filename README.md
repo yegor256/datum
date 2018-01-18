@@ -1,6 +1,6 @@
-<img src="http://www.zerocracy.com/logo.svg" width="64px" height="64px"/>
+<img src="https://www.0crat.com/svg/logo.svg" width="64px" height="64px"/>
 
-[![Managed by Zerocracy](http://www.0crat.com/badge/C3NDPUA8L.svg)](http://www.0crat.com/p/C3NDPUA8L)
+[![Managed by Zerocracy](https://www.0crat.com/badge/C3NDPUA8L.svg)](https://www.0crat.com/p/C3NDPUA8L)
 [![DevOps By Rultor.com](http://www.rultor.com/b/zerocracy/datum)](http://www.rultor.com/p/zerocracy/datum)
 
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.svg)](https://gitter.im/zerocracy/Lobby)
@@ -27,7 +27,7 @@ We promise to do our best to resolve them as soon as possible.
 Product Owner (`PO`) is a representative of a project sponsor.
 As a PO you can:
 
-  - [x] [Invite](http://www.0crat.com/invite) `@0crat` to your Slack
+  - [x] [Invite](https://www.0crat.com/invite) `@0crat` to your Slack
   - [x] [Create](https://get.slack.help/hc/en-us/articles/201402297-Create-a-channel) a new Slack channel for a project
   - [x] [Invite](#invite-only) a friend: `invite`
   - [x] Start talking to the bot: `hello`

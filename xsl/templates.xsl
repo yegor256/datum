@@ -88,7 +88,7 @@ SOFTWARE.
     <xsl:param name="id"/>
     <xsl:choose>
       <xsl:when test="$id">
-        <a href="http://www.0crat.com/u/{$id}" title="@{$id}">
+        <a href="https://www.0crat.com/u/{$id}" title="@{$id}">
           <xsl:text>@</xsl:text>
           <xsl:value-of select="$id"/>
         </a>
@@ -101,7 +101,7 @@ SOFTWARE.
   <xsl:template name="project">
     <xsl:param name="id"/>
     <code>
-      <a href="http://www.0crat.com/p/{$id}" title="Project {$id}">
+      <a href="https://www.0crat.com/p/{$id}" title="Project {$id}">
         <xsl:value-of select="$id"/>
       </a>
     </code>

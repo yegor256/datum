@@ -1,5 +1,5 @@
 The Policy explains basic work principles of
-[0crat](http://www.0crat.com) ("Zerocrat"):
+[0crat](https://www.0crat.com) ("Zerocrat"):
 a project management AI bot developed
 and hosted by [Zerocracy](http://www.zerocracy.com).
 
@@ -28,7 +28,7 @@ and its basic principles:
 
 You can talk to Zerocrat in:
 
-  * Slack: [start](http://www.0crat.com/add_to_slack) a private conversation with `@0crat`
+  * Slack: [start](https://www.0crat.com/add_to_slack) a private conversation with `@0crat`
   * Telegram: [start](https://telegram.me/zerocrat_bot) a chat with [`@zerocrat_bot`](https://telegram.me/zerocrat_bot)
   * GitHub: prepend your message in any ticket with [`@0crat`](https://github.com/0crat)
 
@@ -41,11 +41,11 @@ The person will be your mentor and will be responsible for helping you
 out in the system. Also, the mentor will receive financial bonuses from
 us for the money you earn.
 Join this [Telegram chat](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A) if you don't know anyone yet.
-Once you are invited, your name and your performance metrics will be visible in the [Gang page](http://www.0crat.com/gang).
+Once you are invited, your name and your performance metrics will be visible in the [Gang page](https://www.0crat.com/gang).
 
 <a name="2" href="#2">§2</a>
 "Apply."
-To join a project you have to find it on the [Board](http://www.0crat.com/board)
+To join a project you have to find it on the [Board](https://www.0crat.com/board)
 and send `apply` request to Zerocrat. The architect of the project will
 either invite you or ignore your request. You can apply multiple times.
 
@@ -53,9 +53,9 @@ either invite you or ignore your request. You can apply multiple times.
 "Sandbox."
 You can [apply](#2) to a project only if your [reputation](#18) is over 256.
 If it is lower, you can only apply to sandbox projects
-([Cactoos](http://www.0crat.com/p/C63314D6Z),
-[jPeek](http://www.0crat.com/p/C7JGJ00DP),
-and [PDD](http://www.0crat.com/p/C3T46CUJJ))
+([Cactoos](https://www.0crat.com/p/C63314D6Z),
+[jPeek](https://www.0crat.com/p/C7JGJ00DP),
+and [PDD](https://www.0crat.com/p/C3T46CUJJ))
 and your highest allowed rate is $16.
 You can't apply to a sandbox project if your reputation is over 1024.
 
@@ -158,7 +158,7 @@ In either case you will be paid 15 minutes.
 
 <a name="11" href="#11">§11</a>
 "Add to Slack."
-To start working with us, you have to [invite](http://www.0crat.com/add_to_slack)
+To start working with us, you have to [invite](https://www.0crat.com/add_to_slack)
 Zerocrat to your Slack.
 
 <a name="12" href="#12">§12</a>
@@ -184,7 +184,7 @@ A project may not have more than two ARCs or more than two POs.
 <a name="17" href="#17">§17</a>
 "Connect GitHub."
 To connect your GitHub repository to the project you should
-1) add a new Webhook: `http://p.rehttp.net/http://www.0crat.com/ghook`
+1) add a new Webhook: `http://p.rehttp.net/https://www.0crat.com/ghook`
 (with "send me everything" option),
 and
 2) link the project in Slack: `links add github yegor256/cactoos`, where
@@ -222,7 +222,7 @@ project say `destroy` and then [kick off](https://get.slack.help/hc/en-us/articl
 <a name="26" href="#26">§26</a>
 "Publish."
 To attract programmers to your project, you can publish it on the
-[Board](http://www.0crat.com/board); just say `publish on` to Zerocrat in order to do it.
+[Board](https://www.0crat.com/board); just say `publish on` to Zerocrat in order to do it.
 When your project is published, its statistical information will be visible in the Web.
 You can unpublish it any time, just say `publish off`.
 
