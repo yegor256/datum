@@ -62,7 +62,16 @@ You can't apply to a sandbox project if your reputation is over 1024.
 <a name="3" href="#3">§3</a>
 "Election."
 Zerocrat may assign a job to you according to its own election rules, if you have `DEV` role.
-You will be notified in job's ticket.
+You will be notified in job's ticket. The rules include, in order of importance:
+
+  * The highest [reputation](#18) wins
+  * Lowest [project rate](#16) wins
+  * Shortest average [job completion time](#26) wins
+  * The emptiest agenda wins, but the maximum allowed size of agenda
+    depends on your [reputation](#18):
+    3 jobs is less than 512 points,
+    8 if less than 2048,
+    16 if less than 4096, 24 otherwise.
 
 <a name="4" href="#4">§4</a>
 "Fixed Budget."
@@ -110,10 +119,17 @@ You may declare impediments for a job by saying `waiting` to Zerocrat.
 Until the job has impediments [Ten Days rule](#8)
 is not applicable to it.
 
+<a name="36" href="#36">§36</a>
+"Speed Bonus."
+Zerocray measures the time interval between the moment
+a job is assigned to you and the moment it goes out of scope.
+If this interval is shorter than 4 hours, you get extra 10 minutes.
+
 <a name="16" href="#16">§16</a>
 "Rate."
 To make money in any project you must define your hourly rate.
-To do that just say `rate` to Zerocrat.
+To do that just say `rate` to Zerocrat. This rate is for marketing purpose
+only, since each project will [set](#13) their own rates for you.
 
 <a name="20" href="#20">§20</a>
 "Wallet."
