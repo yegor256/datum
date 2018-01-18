@@ -21,8 +21,8 @@ SOFTWARE.
     <meta charset="utf-8"/>
     <meta name="description" content="Policy"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" href="http://www.zerocracy.com/logo.png"/>
-    <link rel="stylesheet" href="http://www.0crat.com/css/main.css"/>
+    <link rel="shortcut icon" href="//www.0crat.com/png/logo.png"/>
+    <link rel="stylesheet" href="//www.0crat.com/css/main.css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js">
       <!-- intentionally empty -->
     </script>
@@ -41,7 +41,7 @@ SOFTWARE.
           <ul>
             <li>
               <a href="/">
-                <img src="http://www.zerocracy.com/logo.svg" class="logo"/>
+                <img src="//www.0crat.com/svg/logo.svg" class="logo"/>
               </a>
             </li>
           </ul>
@@ -49,13 +49,13 @@ SOFTWARE.
         <nav>
           <ul>
             <li>
-              <a href="http://www.0crat.com/">@0crat</a>
+              <a href="https://www.0crat.com/">@0crat</a>
             </li>
             <li>
-              <a href="http://www.0crat.com/board">Board</a>
+              <a href="https://www.0crat.com/board">Board</a>
             </li>
             <li>
-              <a href="http://www.0crat.com/gang">Gang</a>
+              <a href="https://www.0crat.com/gang">Gang</a>
             </li>
             <li>
               <a href="http://datum.zerocracy.com/pages/policy.html">Policy</a>
@@ -71,7 +71,7 @@ SOFTWARE.
           <span>Policy</span>
         </h1>
         <div><p>The Policy explains basic work principles of
-<a href="http://www.0crat.com">0crat</a> (&quot;Zerocrat&quot;):
+<a href="https://www.0crat.com">0crat</a> (&quot;Zerocrat&quot;):
 a project management AI bot developed
 and hosted by <a href="http://www.zerocracy.com">Zerocracy</a>.</p>
 
@@ -103,7 +103,7 @@ and its basic principles:</p>
 <p>You can talk to Zerocrat in:</p>
 
 <ul>
-<li>Slack: <a href="http://www.0crat.com/add_to_slack">start</a> a private conversation with <code>@0crat</code></li>
+<li>Slack: <a href="https://www.0crat.com/add_to_slack">start</a> a private conversation with <code>@0crat</code></li>
 <li>Telegram: <a href="https://telegram.me/zerocrat_bot">start</a> a chat with <a href="https://telegram.me/zerocrat_bot"><code>@zerocrat_bot</code></a></li>
 <li>GitHub: prepend your message in any ticket with <a href="https://github.com/0crat"><code>@0crat</code></a></li>
 </ul>
@@ -117,11 +117,11 @@ The person will be your mentor and will be responsible for helping you
 out in the system. Also, the mentor will receive financial bonuses from
 us for the money you earn.
 Join this <a href="https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A">Telegram chat</a> if you don&#39;t know anyone yet.
-Once you are invited, your name and your performance metrics will be visible in the <a href="http://www.0crat.com/gang">Gang page</a>.</p>
+Once you are invited, your name and your performance metrics will be visible in the <a href="https://www.0crat.com/gang">Gang page</a>.</p>
 
 <p><a name="2" href="#2">§2</a>
 &quot;Apply.&quot;
-To join a project you have to find it on the <a href="http://www.0crat.com/board">Board</a>
+To join a project you have to find it on the <a href="https://www.0crat.com/board">Board</a>
 and send <code>apply</code> request to Zerocrat. The architect of the project will
 either invite you or ignore your request. You can apply multiple times.</p>
 
@@ -129,16 +129,27 @@ either invite you or ignore your request. You can apply multiple times.</p>
 &quot;Sandbox.&quot;
 You can <a href="#2">apply</a> to a project only if your <a href="#18">reputation</a> is over 256.
 If it is lower, you can only apply to sandbox projects
-(<a href="http://www.0crat.com/p/C63314D6Z">Cactoos</a>,
-<a href="http://www.0crat.com/p/C7JGJ00DP">jPeek</a>,
-and <a href="http://www.0crat.com/p/C3T46CUJJ">PDD</a>)
+(<a href="https://www.0crat.com/p/C63314D6Z">Cactoos</a>,
+<a href="https://www.0crat.com/p/C7JGJ00DP">jPeek</a>,
+and <a href="https://www.0crat.com/p/C3T46CUJJ">PDD</a>)
 and your highest allowed rate is $16.
 You can&#39;t apply to a sandbox project if your reputation is over 1024.</p>
 
 <p><a name="3" href="#3">§3</a>
 &quot;Election.&quot;
 Zerocrat may assign a job to you according to its own election rules, if you have <code>DEV</code> role.
-You will be notified in job&#39;s ticket.</p>
+You will be notified in job&#39;s ticket. The rules include, in order of importance:</p>
+
+<ul>
+<li>The highest <a href="#18">reputation</a> wins</li>
+<li>Lowest <a href="#16">project rate</a> wins</li>
+<li>Shortest average <a href="#26">job completion time</a> wins</li>
+<li>The emptiest agenda wins, but the maximum allowed size of agenda
+depends on your <a href="#18">reputation</a>:
+3 jobs is less than 512 points,
+8 if less than 2048,
+16 if less than 4096, 24 otherwise.</li>
+</ul>
 
 <p><a name="4" href="#4">§4</a>
 &quot;Fixed Budget.&quot;
@@ -186,10 +197,17 @@ You may declare impediments for a job by saying <code>waiting</code> to Zerocrat
 Until the job has impediments <a href="#8">Ten Days rule</a>
 is not applicable to it.</p>
 
+<p><a name="36" href="#36">§36</a>
+&quot;Speed Bonus.&quot;
+Zerocray measures the time interval between the moment
+a job is assigned to you and the moment it goes out of scope.
+If this interval is shorter than 4 hours, you get extra 10 minutes.</p>
+
 <p><a name="16" href="#16">§16</a>
 &quot;Rate.&quot;
 To make money in any project you must define your hourly rate.
-To do that just say <code>rate</code> to Zerocrat.</p>
+To do that just say <code>rate</code> to Zerocrat. This rate is for marketing purpose
+only, since each project will <a href="#13">set</a> their own rates for you.</p>
 
 <p><a name="20" href="#20">§20</a>
 &quot;Wallet.&quot;
@@ -218,7 +236,7 @@ In either case you will be paid 15 minutes.</p>
 
 <p><a name="11" href="#11">§11</a>
 &quot;Add to Slack.&quot;
-To start working with us, you have to <a href="http://www.0crat.com/add_to_slack">invite</a>
+To start working with us, you have to <a href="https://www.0crat.com/add_to_slack">invite</a>
 Zerocrat to your Slack.</p>
 
 <p><a name="12" href="#12">§12</a>
@@ -244,7 +262,7 @@ A project may not have more than two ARCs or more than two POs.</p>
 <p><a name="17" href="#17">§17</a>
 &quot;Connect GitHub.&quot;
 To connect your GitHub repository to the project you should
-1) add a new Webhook: <code>http://p.rehttp.net/http://www.0crat.com/ghook</code>
+1) add a new Webhook: <code>http://p.rehttp.net/https://www.0crat.com/ghook</code>
 (with &quot;send me everything&quot; option),
 and
 2) link the project in Slack: <code>links add github yegor256/cactoos</code>, where
@@ -282,7 +300,7 @@ project say <code>destroy</code> and then <a href="https://get.slack.help/hc/en-
 <p><a name="26" href="#26">§26</a>
 &quot;Publish.&quot;
 To attract programmers to your project, you can publish it on the
-<a href="http://www.0crat.com/board">Board</a>; just say <code>publish on</code> to Zerocrat in order to do it.
+<a href="https://www.0crat.com/board">Board</a>; just say <code>publish on</code> to Zerocrat in order to do it.
 When your project is published, its statistical information will be visible in the Web.
 You can unpublish it any time, just say <code>publish off</code>.</p>
 
@@ -334,10 +352,10 @@ If the quality is <code>bad</code>, there will be no payment to the job performe
         <nav>
           <ul>
             <li>
-              <span>v0.51.7</span>
+              <span>v0.51.8</span>
             </li>
             <li>
-              <span>17-Jan-2018</span>
+              <span>18-Jan-2018</span>
             </li>
           </ul>
         </nav>

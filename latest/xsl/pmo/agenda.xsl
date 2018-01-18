@@ -44,6 +44,9 @@ SOFTWARE.
                 <th>
                   <xsl:text>Added</xsl:text>
                 </th>
+                <th>
+                  <xsl:text>Role</xsl:text>
+                </th>
               </tr>
             </thead>
             <tbody>
