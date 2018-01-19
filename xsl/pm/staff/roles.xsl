@@ -32,23 +32,23 @@ SOFTWARE.
             <a href="http://datum.zerocracy.com/pages/policy.html#ARC">
               <xsl:text>ARC</xsl:text>
             </a>
-            <xsl:text> (architect)</xsl:text>
+            <xsl:text> (architect), </xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#PO">
               <xsl:text>PO</xsl:text>
             </a>
-            <xsl:text>, (product owner)</xsl:text>
+            <xsl:text> (product owner), </xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#DEV">
               <xsl:text>DEV</xsl:text>
             </a>
-            <xsl:text>, (developer)</xsl:text>
+            <xsl:text> (developer), </xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#REV">
               <xsl:text>REV</xsl:text>
             </a>
-            <xsl:text>, (code reviewer)</xsl:text>
+            <xsl:text> (code reviewer), </xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#TST">
               <xsl:text>TST</xsl:text>
             </a>
-            <xsl:text>, (tester)</xsl:text>
+            <xsl:text> (tester), </xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#QA">
               <xsl:text>QA</xsl:text>
             </a>
