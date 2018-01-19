@@ -22,25 +22,25 @@ SOFTWARE.
       <body>
         <section>
           <h1>
-            <xsl:text>Rates</xsl:text>
+            <xsl:text>Vesting rates</xsl:text>
           </h1>
-          <xsl:apply-templates select="rates"/>
+          <xsl:apply-templates select="vesting"/>
         </section>
       </body>
     </html>
   </xsl:template>
-  <xsl:template match="rates[not(person)]">
+  <xsl:template match="vesting[not(person)]">
     <p>
-      <xsl:text>There are no rates set yet. If you want to set user's rate, see </xsl:text>
-      <a href="http://datum.zerocracy.com/pages/policy.html#16">
-        <xsl:text>§16</xsl:text>
+      <xsl:text>There are no rates set yet, see </xsl:text>
+      <a href="http://datum.zerocracy.com/pages/policy.html#37">
+        <xsl:text>§37</xsl:text>
       </a>
       <xsl:text>.</xsl:text>
     </p>
   </xsl:template>
-  <xsl:template match="rates[person]">
+  <xsl:template match="vesting[person]">
     <p>
-      <xsl:text>Full list of rates of people in this project:</xsl:text>
+      <xsl:text>Full list of vesting rates of people in this project.</xsl:text>
     </p>
     <table>
       <thead>

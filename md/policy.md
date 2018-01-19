@@ -226,6 +226,12 @@ To attract programmers to your project, you can publish it on the
 When your project is published, its statistical information will be visible in the Web.
 You can unpublish it any time, just say `publish off`.
 
+<a name="37" href="#37">§37</a>
+"Vesting."
+On top of [cash](#13) you can give equity to project contributors.
+Just modify the rates in `vesting.xml` and they will automatically start
+earning project equity after each job [completion](#7).
+
 ## Architect (<a name="ARC">ARC</a>)
 
 <a name="14" href="#14">§14</a>
