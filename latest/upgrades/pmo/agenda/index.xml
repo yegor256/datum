@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pmo/agenda" version="0.52.1">
+<index path="/latest/upgrades/pmo/agenda" version="0.52.2">
   <entry dir="false" path="/latest/upgrades/pmo/agenda/0.51.6-role.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pmo/agenda/0.51.6-role.xsl" order="0.51.6">0.51.6-role.xsl</entry>
 </index>
