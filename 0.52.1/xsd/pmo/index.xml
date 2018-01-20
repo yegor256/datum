@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<index path="/0.52.1/xsd/pmo" version="0.52.1">
+  <entry dir="false" path="/0.52.1/xsd/pmo/agenda.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pmo/agenda.xsd">agenda.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pmo/awards.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pmo/awards.xsd">awards.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pmo/bots.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pmo/bots.xsd">bots.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pmo/catalog.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pmo/catalog.xsd">catalog.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pmo/people.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pmo/people.xsd">people.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pmo/projects.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pmo/projects.xsd">projects.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pmo/speed.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pmo/speed.xsd">speed.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pmo/types.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pmo/types.xsd">types.xsd</entry>
+</index>

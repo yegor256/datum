@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<index path="/0.52.1/xsd/pm/cost" version="0.52.1">
+  <entry dir="false" path="/0.52.1/xsd/pm/cost/boosts.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pm/cost/boosts.xsd">boosts.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pm/cost/budget.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pm/cost/budget.xsd">budget.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pm/cost/equity.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pm/cost/equity.xsd">equity.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pm/cost/estimates.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pm/cost/estimates.xsd">estimates.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pm/cost/ledger.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pm/cost/ledger.xsd">ledger.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pm/cost/rates.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pm/cost/rates.xsd">rates.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pm/cost/types.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pm/cost/types.xsd">types.xsd</entry>
+  <entry dir="false" path="/0.52.1/xsd/pm/cost/vesting.xsd" uri="http://datum.zerocracy.com/0.52.1/xsd/pm/cost/vesting.xsd">vesting.xsd</entry>
+</index>
