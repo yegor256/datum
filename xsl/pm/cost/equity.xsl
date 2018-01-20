@@ -80,6 +80,11 @@ SOFTWARE.
           <th style="text-align:right">
             <xsl:text>Share</xsl:text>
           </th>
+          <xsl:if test="starts-with(/equity/cap,'$')">
+            <th style="text-align:right">
+              <xsl:text>Value</xsl:text>
+            </th>
+          </xsl:if>
         </tr>
       </thead>
       <tbody>
@@ -101,6 +106,13 @@ SOFTWARE.
         <xsl:value-of select="format-number(100 * text() div /equity/shares,'0.0000')"/>
         <xsl:text>%</xsl:text>
       </td>
+      <xsl:if test="starts-with(/equity/cap,'$')">
+        <xsl:variable name="cap" select="substring(/equity/cap,2)" as="number"/>
+        <td style="text-align:right">
+          <xsl:text>$</xsl:text>
+          <xsl:value-of select="format-number(text() div /equity/shares * $cap,'0.00')"/>
+        </td>
+      </xsl:if>
     </tr>
   </xsl:template>
 </xsl:stylesheet>
