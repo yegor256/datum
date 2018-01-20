@@ -52,6 +52,7 @@ SOFTWARE.
       </xsl:choose>
       <xsl:text>.</xsl:text>
     </p>
+    <xsl:apply-templates select="owners"/>
   </xsl:template>
   <xsl:template match="owners[not(owner)]">
     <p>
@@ -72,10 +73,10 @@ SOFTWARE.
           <th>
             <xsl:text>User</xsl:text>
           </th>
-          <th>
+          <th style="text-align:right">
             <xsl:text>Stocks</xsl:text>
           </th>
-          <th>
+          <th style="text-align:right">
             <xsl:text>Share</xsl:text>
           </th>
         </tr>

@@ -19,7 +19,7 @@ SOFTWARE.
   <cap>$4000000</cap>
   <shares>1000000</shares>
   <owners>
-    <owner id="yegor256">450.4</owner>
+    <owner id="yegor256">500000</owner>
     <owner id="dmarkov">100</owner>
   </owners>
 </equity>
