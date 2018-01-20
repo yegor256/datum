@@ -26,9 +26,24 @@ SOFTWARE.
           </h1>
           <p>
             <xsl:text>Capitalization: </xsl:text>
+            <xsl:choose>
+              <xsl:when test="cap">
+                <xsl:value-of select="cap"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:text>—</xsl:text>
+              </xsl:otherwise>
+            </xsl:choose>
             <xsl:value-of select="cap"/>
             <xsl:text>, total shares: </xsl:text>
-            <xsl:value-of select="shares"/>
+            <xsl:choose>
+              <xsl:when test="shares">
+                <xsl:value-of select="shares"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:text>—</xsl:text>
+              </xsl:otherwise>
+            </xsl:choose>
             <xsl:text>.</xsl:text>
           </p>
           <xsl:apply-templates select="owners"/>
@@ -56,7 +71,10 @@ SOFTWARE.
             <xsl:text>User</xsl:text>
           </th>
           <th>
-            <xsl:text>Shares</xsl:text>
+            <xsl:text>Stocks</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Share</xsl:text>
           </th>
         </tr>
       </thead>
@@ -73,7 +91,11 @@ SOFTWARE.
         </xsl:call-template>
       </td>
       <td style="text-align:right">
-        <xsl:value-of select="format-number(.,'0.00')"/>
+        <xsl:value-of select="format-number(text(),'0.00')"/>
+      </td>
+      <td style="text-align:right">
+        <xsl:value-of select="format-number(100 * text() div /equity/shares,'0.0000')"/>
+        <xsl:text>%</xsl:text>
       </td>
     </tr>
   </xsl:template>

@@ -22,8 +22,8 @@ SOFTWARE.
   <xs:element name="equity">
     <xs:complexType>
       <xs:all>
-        <xs:element name="cap" type="cash" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="shares" type="xs:int" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="cap" type="cash" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="shares" type="xs:int" minOccurs="0" maxOccurs="1"/>
         <xs:element name="owners" minOccurs="0" maxOccurs="1">
           <xs:complexType>
             <xs:sequence>
