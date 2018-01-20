@@ -40,7 +40,6 @@ SOFTWARE.
           <xsl:text>—</xsl:text>
         </xsl:otherwise>
       </xsl:choose>
-      <xsl:value-of select="cap"/>
       <xsl:text>, total shares: </xsl:text>
       <xsl:choose>
         <xsl:when test="shares">
@@ -52,7 +51,9 @@ SOFTWARE.
       </xsl:choose>
       <xsl:text>.</xsl:text>
     </p>
-    <xsl:apply-templates select="owners"/>
+    <xsl:apply-templates select="owners">
+      <xsl:sort select="." order="descending" data-type="number"/>
+    </xsl:apply-templates>
   </xsl:template>
   <xsl:template match="owners[not(owner)]">
     <p>
