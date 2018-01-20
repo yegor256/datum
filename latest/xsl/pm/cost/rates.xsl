@@ -31,9 +31,7 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="rates[not(person)]">
     <p>
-      <xsl:text>There are no rates set yet. Default rates users have in their
-        profiles will be used when it's time to pay them. If you want to
-        set user's rate, see </xsl:text>
+      <xsl:text>There are no rates set yet. If you want to set user's rate, see </xsl:text>
       <a href="http://datum.zerocracy.com/pages/policy.html#16">
         <xsl:text>§16</xsl:text>
       </a>
@@ -42,7 +40,7 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="rates[person]">
     <p>
-      <xsl:text>Full list of rates of people in this project.</xsl:text>
+      <xsl:text>Full list of rates of people in this project:</xsl:text>
     </p>
     <table>
       <thead>
