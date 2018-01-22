@@ -61,7 +61,8 @@ You can't apply to a sandbox project if your reputation is over 1024.
 
 <a name="3" href="#3">§3</a>
 "Election."
-Zerocrat may assign a job to you according to its own election rules, if you have `DEV` role.
+Zerocrat may assign a job to you according to its own election rules, if you have `DEV` role
+and are not on [vacation](#38).
 You will be notified in job's ticket. The rules include, in order of importance:
 
   * The highest [reputation](#18) wins
@@ -139,6 +140,11 @@ To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
 <a name="32" href="#32">§32</a>
 "Job Status."
 You can always check status of any job, just say `status` to Zerocrat.
+
+<a name="38" href="#38">§38</a>
+"Vacation."
+You can always "go on vacation" if you want Zerocrat to temporarily stop
+assigning you new jobs; just say `vacation`.
 
 <a name="35" href="#35">§35</a>
 "Quit."
