@@ -23,6 +23,10 @@ may occur because of Zerocrat's mistakes.
 
 <hr style="width:500px;margin-left:auto;margin-right:auto"/>
 
+<a name="kyc" href="#kyc">Identification</a>.
+Before making any monetary transactions with Contributor, we verify
+their identity via one of our partners, like [Yoti](http://www.yoti.com).
+
 <a name="non-solicitation" href="#non-solicitation">Non-Solicitation</a>.
 During one calendar year following the moment of quitting the project,
 as in [§35](http://datum.zerocracy.com/pages/policy.html#35),
