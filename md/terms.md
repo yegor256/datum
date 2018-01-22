@@ -64,7 +64,7 @@ have been in the Discloser’s possession prior to disclosure by the Holder;
 or (d) is proven by written evidence to have been independently developed by the
 The Contributor shall keep Confidential Information in strict confidence and shall not
 disclose it to any third party or to the public.
-A minimum penalty for a proven breah of confidentiality is
+A minimum penalty for a proven breach of confidentiality is
 **<span style="color:darkred">$25,000</span>**.
 
 <a name="copyright" href="#copyright">Copyright</a>.
@@ -99,7 +99,7 @@ located in California shall have exclusive jurisdiction of all
 suits and proceedings arising out of or in connection with this agreement.
 
 <a name="conduct" href="#conduct">Conduct</a>.
-The Contributor must not interfere or intent to interfere in any manner
+The Contributor must not interfere or intend to interfere in any manner
 with the functionality or proper working of Zerocracy software.
 
 <a name="harm" href="#harm">Harm</a>.
