@@ -11,8 +11,8 @@ and
 projects are referred to as "Product Owners."
 
 The following red paragraphs are here only for the period of beta testing,
-which we started on January 5, 2017. We are planning to launch the
-first stable version in March 2017.
+which we started on January 5, 2018. We are planning to launch the
+first stable version in March 2018.
 
 **<span style="color:red">Mistakes</span>**.
 Zerocrat may sometimes make mistakes, which may lead to missed payments,
