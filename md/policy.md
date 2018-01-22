@@ -131,6 +131,7 @@ If this interval is shorter than 4 hours, you get extra 10 minutes.
 To make money in any project you must define your hourly rate.
 To do that just say `rate` to Zerocrat. This rate is for marketing purpose
 only, since each project will [set](#13) their own rates for you.
+Your rate can only be between $16 and $256.
 
 <a name="20" href="#20">§20</a>
 "Wallet."
