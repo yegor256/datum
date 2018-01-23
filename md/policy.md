@@ -5,7 +5,7 @@ and hosted by [Zerocracy](http://www.zerocracy.com).
 
 If you want to change something in the Policy or simply
 suggest an improvement, please submit a ticket
-[here](https://github.com/zerocracy/datum/issues).
+[here](https://github.com/zerocracy/farm/issues).
 If you want to discuss the Policy or your troubles with the bot,
 please join this [Telegram chat](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
 
@@ -216,8 +216,8 @@ this fee is waived.
 
 <a name="24" href="#24">§24</a>
 "Pause/Activate."
-To put Zerocrat on hold and make it completely inactive, say `pause`. To return
-it back to life say `pause off`.
+To put Zerocrat on hold and make a project completely inactive, say `pause`. To return
+the project back to life say `pause off`.
 
 <a name="25" href="#25">§25</a>
 "Destroy."
