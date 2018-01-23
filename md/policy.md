@@ -140,7 +140,7 @@ To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
 
 <a name="32" href="#32">§32</a>
 "Job Status."
-You can always check status of any job, just say `status` to Zerocrat.
+You can always check status of any job, just say `status` to Zerocrat in the job ticket.
 
 <a name="38" href="#38">§38</a>
 "Vacation."
