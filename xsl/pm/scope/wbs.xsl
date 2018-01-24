@@ -31,7 +31,7 @@ SOFTWARE.
             The WBS organizes and defines the total scope of the project,
             and represents the work specified in the current approved
             project scope statement.</xsl:text>
-            <xsl:text> See </xsl:text>
+            <xsl:text> You can add and remove jobs to/from this list, see </xsl:text>
             <a href="http://datum.zerocracy.com/pages/policy.html#14">§14</a>
             <xsl:text>.</xsl:text>
           </p>
