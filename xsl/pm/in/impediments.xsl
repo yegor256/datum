@@ -33,7 +33,7 @@ SOFTWARE.
     <p>
       <xsl:text>This is the full list of impediments in the project:</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

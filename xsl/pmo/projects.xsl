@@ -27,7 +27,7 @@ SOFTWARE.
           <p>
             <xsl:text>This is the full list of projects you're a member of.</xsl:text>
           </p>
-          <table>
+          <table data-sortable="true">
             <thead>
               <tr>
                 <th>

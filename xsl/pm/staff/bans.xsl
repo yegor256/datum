@@ -30,7 +30,7 @@ SOFTWARE.
             takes this list into account when making a decision who
             should be the performer of a new job.</xsl:text>
           </p>
-          <table>
+          <table data-sortable="true">
             <thead>
               <tr>
                 <th>

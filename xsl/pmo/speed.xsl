@@ -30,7 +30,7 @@ SOFTWARE.
             the moment of job order creation and the moment of
             the order successful closing goes into this document.</xsl:text>
           </p>
-          <table>
+          <table data-sortable="true">
             <thead>
               <tr>
                 <th>

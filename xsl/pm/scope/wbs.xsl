@@ -46,7 +46,7 @@ SOFTWARE.
       <xsl:value-of select="count(job)"/>
       <xsl:text> jobs in the WBS:</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

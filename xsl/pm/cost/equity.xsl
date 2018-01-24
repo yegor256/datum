@@ -68,7 +68,7 @@ SOFTWARE.
     <p>
       <xsl:text>Full list of owners:</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

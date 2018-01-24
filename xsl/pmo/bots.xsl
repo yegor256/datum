@@ -40,7 +40,7 @@ SOFTWARE.
       <xsl:value-of select="count(bot)"/>
       <xsl:text> Slack bots registered:</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>
