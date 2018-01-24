@@ -28,7 +28,7 @@ SOFTWARE.
             <xsl:text>This is the full list of jobs removed from the WBS
             because of completion.</xsl:text>
           </p>
-          <table>
+          <table data-sortable="true">
             <thead>
               <tr>
                 <th>

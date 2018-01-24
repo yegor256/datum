@@ -62,7 +62,7 @@ SOFTWARE.
     </html>
   </xsl:template>
   <xsl:template match="roles">
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

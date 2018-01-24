@@ -40,7 +40,6 @@ SOFTWARE.
           <xsl:text>—</xsl:text>
         </xsl:otherwise>
       </xsl:choose>
-      <xsl:value-of select="cap"/>
       <xsl:text>, total shares: </xsl:text>
       <xsl:choose>
         <xsl:when test="shares">
@@ -52,7 +51,9 @@ SOFTWARE.
       </xsl:choose>
       <xsl:text>.</xsl:text>
     </p>
-    <xsl:apply-templates select="owners"/>
+    <xsl:apply-templates select="owners">
+      <xsl:sort select="." order="descending" data-type="number"/>
+    </xsl:apply-templates>
   </xsl:template>
   <xsl:template match="owners[not(owner)]">
     <p>
@@ -67,7 +68,7 @@ SOFTWARE.
     <p>
       <xsl:text>Full list of owners:</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>
@@ -79,6 +80,11 @@ SOFTWARE.
           <th style="text-align:right">
             <xsl:text>Share</xsl:text>
           </th>
+          <xsl:if test="starts-with(/equity/cap,'$')">
+            <th style="text-align:right">
+              <xsl:text>Value</xsl:text>
+            </th>
+          </xsl:if>
         </tr>
       </thead>
       <tbody>
@@ -100,6 +106,13 @@ SOFTWARE.
         <xsl:value-of select="format-number(100 * text() div /equity/shares,'0.0000')"/>
         <xsl:text>%</xsl:text>
       </td>
+      <xsl:if test="starts-with(/equity/cap,'$')">
+        <xsl:variable name="cap" select="substring(/equity/cap,2)" as="number"/>
+        <td style="text-align:right">
+          <xsl:text>$</xsl:text>
+          <xsl:value-of select="format-number(text() div /equity/shares * $cap,'0.00')"/>
+        </td>
+      </xsl:if>
     </tr>
   </xsl:template>
 </xsl:stylesheet>

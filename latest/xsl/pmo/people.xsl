@@ -33,7 +33,7 @@ SOFTWARE.
       <xsl:value-of select="count(person)"/>
       <xsl:text> people we know:</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

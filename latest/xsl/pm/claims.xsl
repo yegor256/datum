@@ -57,7 +57,7 @@ SOFTWARE.
       <xsl:value-of select="count(claim)"/>
       <xsl:text> claims.</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

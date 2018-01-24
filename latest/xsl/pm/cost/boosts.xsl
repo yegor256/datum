@@ -34,7 +34,7 @@ SOFTWARE.
             <a href="http://datum.zerocracy.com/pages/policy.html#15">§15</a>
             <xsl:text>.</xsl:text>
           </p>
-          <table>
+          <table data-sortable="true">
             <thead>
               <tr>
                 <th>

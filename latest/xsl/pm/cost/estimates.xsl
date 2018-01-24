@@ -39,7 +39,7 @@ SOFTWARE.
       <xsl:text>Full list of estimates given to jobs. They are
       absolute cash values, not minutes of work.</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

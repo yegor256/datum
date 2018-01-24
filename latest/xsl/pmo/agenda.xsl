@@ -32,7 +32,7 @@ SOFTWARE.
             automatically. This list is presented for the sake of
             your convenience.</xsl:text>
           </p>
-          <table>
+          <table data-sortable="true">
             <thead>
               <tr>
                 <th>

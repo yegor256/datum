@@ -27,7 +27,7 @@ SOFTWARE.
           <p>
             <xsl:text>Full list of estimated jobs in WBS.</xsl:text>
           </p>
-          <table>
+          <table data-sortable="true">
             <thead>
               <tr>
                 <th>

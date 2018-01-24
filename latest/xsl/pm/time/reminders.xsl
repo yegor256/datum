@@ -42,7 +42,7 @@ SOFTWARE.
     <p>
       <xsl:text>This is the full list of reminders in the current project.</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

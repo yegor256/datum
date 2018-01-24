@@ -35,7 +35,7 @@ SOFTWARE.
       <xsl:value-of select="count(project)"/>
       <xsl:text> we work with:</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

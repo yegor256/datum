@@ -32,7 +32,7 @@ SOFTWARE.
             <xsl:value-of select="sum(award/points)"/>
             <xsl:text>.</xsl:text>
           </p>
-          <table>
+          <table data-sortable="true">
             <thead>
               <tr>
                 <th>

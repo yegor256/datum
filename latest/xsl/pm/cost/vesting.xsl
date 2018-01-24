@@ -42,7 +42,7 @@ SOFTWARE.
     <p>
       <xsl:text>Full list of vesting rates of people in this project.</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

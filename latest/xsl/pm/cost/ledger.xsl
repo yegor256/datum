@@ -49,7 +49,7 @@ SOFTWARE.
     </p>
   </xsl:template>
   <xsl:template match="balance">
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>
@@ -93,7 +93,7 @@ SOFTWARE.
       <xsl:value-of select="count(transaction)"/>
       <xsl:text> transactions in the Ledger:</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

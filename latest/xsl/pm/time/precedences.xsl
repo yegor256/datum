@@ -25,7 +25,7 @@ SOFTWARE.
             This is the full list of dependencies between jobs,
             in form of "precedences."
           </p>
-          <table>
+          <table data-sortable="true">
             <thead>
               <tr>
                 <th>

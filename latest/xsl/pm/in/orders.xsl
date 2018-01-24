@@ -44,7 +44,7 @@ SOFTWARE.
       <xsl:value-of select="count(order/performer/text()[generate-id()=generate-id(key('performer-key',.)[1])])"/>
       <xsl:text> active performers:</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>
@@ -78,7 +78,7 @@ SOFTWARE.
       </strong>
       <xsl:text> currently active orders in the project.</xsl:text>
     </p>
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

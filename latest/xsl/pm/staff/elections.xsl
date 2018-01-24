@@ -43,7 +43,7 @@ SOFTWARE.
     </p>
   </xsl:template>
   <xsl:template match="elections[job]">
-    <table>
+    <table data-sortable="true">
       <thead>
         <tr>
           <th>

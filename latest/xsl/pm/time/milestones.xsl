@@ -26,7 +26,7 @@ SOFTWARE.
             This is the full list of milestones identified in the project.
             Jobs may use them for prioritization and scheduling.
           </p>
-          <table>
+          <table data-sortable="true">
             <thead>
               <tr>
                 <th>

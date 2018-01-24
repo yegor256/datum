@@ -17,45 +17,48 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../../templates.xsl"/>
-  <xsl:template match="/bans">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
           <h1>
             <xsl:text>List of Bans</xsl:text>
           </h1>
-          <p>
-            <xsl:text>This is the list of people who are banned from certain
-            jobs for different reasons. Our automated election process
-            takes this list into account when making a decision who
-            should be the performer of a new job.</xsl:text>
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <xsl:text>Job</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Login</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Reason</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Created</xsl:text>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <xsl:apply-templates select="ban">
-                <xsl:sort select="created" order="descending" data-type="text"/>
-              </xsl:apply-templates>
-            </tbody>
-          </table>
+          <xsl:apply-templates select="bans"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="bans">
+    <p>
+      <xsl:text>This is the list of people who are banned from certain
+      jobs for different reasons. Our automated election process
+      takes this list into account when making a decision who
+      should be the performer of a new job.</xsl:text>
+    </p>
+    <table data-sortable="true">
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>Job</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Login</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Reason</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Created</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="ban">
+          <xsl:sort select="created" order="descending" data-type="text"/>
+        </xsl:apply-templates>
+      </tbody>
+    </table>
   </xsl:template>
   <xsl:template match="ban">
     <tr>

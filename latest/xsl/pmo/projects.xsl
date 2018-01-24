@@ -17,31 +17,34 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
   <xsl:include href="../templates.xsl"/>
-  <xsl:template match="/projects">
+  <xsl:template match="/">
     <html lang="en">
       <body>
         <section>
           <h1>
             <xsl:text>Your Projects</xsl:text>
           </h1>
-          <p>
-            <xsl:text>This is the full list of projects you're a member of.</xsl:text>
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <xsl:text>ID</xsl:text>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <xsl:apply-templates select="project"/>
-            </tbody>
-          </table>
+          <xsl:apply-templates select="projects"/>
         </section>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="projects">
+    <p>
+      <xsl:text>This is the full list of projects you're a member of:</xsl:text>
+    </p>
+    <table data-sortable="true">
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>ID</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:apply-templates select="project"/>
+      </tbody>
+    </table>
   </xsl:template>
   <xsl:template match="project">
     <tr>
