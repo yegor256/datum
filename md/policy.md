@@ -157,8 +157,8 @@ You can always quit a project, just say `quit` to Zerocrat.
 "Code Reviews."
 You will be asked to review pull requests if you have `REV` role assigned.
 Be as critical as you can, as [this article](http://www.yegor256.com/2015/02/09/serious-code-reviewer.html) explains.
-If you accept the changes, inform the architect, right in the ticket.
-If you don't accept, inform the author of the pull request.
+Either you accept or reject the changes, inform the architect, right in the ticket&mdash;the
+architect will either merge the pull request or close it.
 In either case you will be paid 15 minutes.
 
 ## Product Owner (<a name="PO"/>PO</a>)
