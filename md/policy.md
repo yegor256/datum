@@ -47,7 +47,9 @@ Once you are invited, your name and your performance metrics will be visible in 
 "Apply."
 To join a project you have to find it on the [Board](https://www.0crat.com/board)
 and send `apply` request to Zerocrat. The architect of the project will
-either invite you or ignore your request. You can apply multiple times.
+either invite you or ignore your request. You can apply multiple times,
+even to the project you already are a member of, for example, to request
+a raise of your [project rate](#13).
 
 <a name="33" href="#33">§33</a>
 "Sandbox."
