@@ -73,7 +73,7 @@ SOFTWARE.
             <sub>
               <xsl:text>/</xsl:text>
               <a href="http://datum.zerocracy.com/pages/policy.html#4">
-                <xsl:text>&#xA7;4</xsl:text>
+                <xsl:text>§4</xsl:text>
               </a>
             </sub>
           </th>
@@ -82,7 +82,7 @@ SOFTWARE.
             <sub>
               <xsl:text>/</xsl:text>
               <a href="http://datum.zerocracy.com/pages/policy.html#9">
-                <xsl:text>&#xA7;9</xsl:text>
+                <xsl:text>§9</xsl:text>
               </a>
             </sub>
           </th>
