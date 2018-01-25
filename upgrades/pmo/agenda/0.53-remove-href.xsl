@@ -15,18 +15,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<agenda version="0.25" updated="2016-12-29T09:03:21.684Z">
-  <order job="gh:test/test#1">
-    <project>A65TGR50F</project>
-    <href>https://github.com/test/test</href>
-    <added>2016-12-29T09:03:21.684Z</added>
-    <role>DEV</role>
-  </order>
-  <order job="gh:test/test#2">
-    <project>A65TGR50F</project>
-    <added>2016-12-29T09:03:21.684Z</added>
-    <role>DEV</role>
-    <impediment>yes</impediment>
-    <estimate>$30</estimate>
-  </order>
-</agenda>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:output method="xml"/>
+  <xsl:strip-space elements="*"/>
+  <xsl:template match="order/href">
+  </xsl:template>
+  <xsl:template match="@*|node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>
