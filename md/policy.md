@@ -75,6 +75,7 @@ You will be notified in job's ticket. The rules include, in order of importance:
     3 jobs if less than 512 points,
     8 if less than 2048,
     16 if less than 4096, 24 otherwise.
+  * The size of agenda doesn't matter if the job is a code review.
 
 <a name="4" href="#4">§4</a>
 "Fixed Budget."
