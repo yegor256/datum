@@ -153,6 +153,7 @@ assigning you new jobs; just say `vacation`.
 <a name="35" href="#35">§35</a>
 "Quit."
 You can always quit a project, just say `quit` to Zerocrat.
+You will still have to finish the jobs assigned to you in the project.
 
 ## Code Reviewer (<a name="REV">REV</a>)
 
