@@ -118,7 +118,14 @@ SOFTWARE.
         </xsl:call-template>
       </td>
       <td style="text-align:right">
-        <xsl:value-of select="estimate"/>
+        <xsl:choose>
+          <xsl:when test="estimate">
+            <xsl:value-of select="estimate"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>—</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
       </td>
       <td>
         <xsl:value-of select="impediment"/>

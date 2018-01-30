@@ -51,6 +51,9 @@ SOFTWARE.
           <th>
             <xsl:text>Created</xsl:text>
           </th>
+          <th>
+            <xsl:text>Role</xsl:text>
+          </th>
         </tr>
       </thead>
       <tbody>

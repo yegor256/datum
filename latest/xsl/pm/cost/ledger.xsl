@@ -40,7 +40,10 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="deficit">
     <p>
-      <xsl:text>The project is in </xsl:text>
+      <span style="color:darkred">
+        <xsl:text>IMPORTANT</xsl:text>
+      </span>
+      <xsl:text>: The project is in </xsl:text>
       <strong>
         <xsl:text>deficit</xsl:text>
       </strong>
