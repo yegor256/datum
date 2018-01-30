@@ -24,6 +24,13 @@ and its basic principles:
   * [How to Cut Corners and Stay Cool](http://www.yegor256.com/2015/01/15/how-to-cut-corners.html)
   * [It's Not a School!](http://www.yegor256.com/2015/02/16/it-is-not-a-school.html)
 
+**<span style="color:red">Mistakes</span>**.
+Zerocrat may sometimes make mistakes, which may lead to missed payments,
+incorrect calculations of your reputation, broken communications,
+corrupted data and so on. We may not guarantee its stability during the
+beta-testing period. We will **NOT** be able to cover any losses that
+may occur because of Zerocrat's mistakes.
+
 ## Developer (<a name="DEV">DEV</a>)
 
 You can talk to Zerocrat in:
