@@ -60,6 +60,7 @@ If it is lower, you can only apply to sandbox projects
 and [PDD](https://www.0crat.com/p/C3T46CUJJ))
 and your highest allowed rate is $16.
 You can't apply to a sandbox project if your reputation is over 1024.
+You will be automatically removed from a sandbox project once your reputation is over 1024.
 
 <a name="3" href="#3">§3</a>
 "Election."
