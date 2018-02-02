@@ -73,6 +73,18 @@ SOFTWARE.
           <xs:restriction base="xs:boolean"/>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="skills">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="skill" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+          </xs:sequence>
+          <xs:attribute name="updated" type="xs:dateTime" use="required"/>
+        </xs:complexType>
+        <xs:unique name="personSkill">
+          <xs:selector xpath="skill"/>
+          <xs:field xpath="."/>
+        </xs:unique>
+      </xs:element>
     </xs:all>
     <xs:attribute name="id" use="required" type="login"/>
   </xs:complexType>
