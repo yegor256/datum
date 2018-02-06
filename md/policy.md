@@ -123,7 +123,8 @@ This rule is not applicable to code reviewing jobs.
 
 <a name="29" href="#29">§29</a>
 "Pay per Bug."
-Each time you report a new bug that becomes a job, you earn 15 minutes.
+Each time you report a new [bug](http://www.yegor256.com/2018/02/06/where-to-find-more-bugs.html)
+that becomes a job, you earn 15 minutes.
 
 <a name="9" href="#9">§9</a>
 "Impediments."
