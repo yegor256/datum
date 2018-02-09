@@ -119,7 +119,6 @@ A job is completed when its ticket is [closed](http://www.yegor256.com/2014/04/1
 "Ten Days."
 If you don't complete a job in 10 days Zerocrat _may_ take it away from you.
 You will get no money and 30 negative [points](#18) if this happens.
-This rule is not applicable to code reviewing jobs.
 
 <a name="29" href="#29">§29</a>
 "Pay per Bug."
