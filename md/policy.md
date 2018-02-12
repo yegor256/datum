@@ -164,6 +164,12 @@ assigning you new jobs; just say `vacation`.
 You can always quit a project, just say `quit` to Zerocrat.
 You will still have to finish the jobs assigned to you in the project.
 
+<a name="39" href="#39">§39</a>
+"GitHub name change."
+If you [change](https://help.github.com/articles/changing-your-github-username/)
+your GitHub name, your Zerocrat account will be lost.
+You will have to create a new one from scratch.
+
 ## Code Reviewer (<a name="REV">REV</a>)
 
 <a name="27" href="#27">§27</a>
