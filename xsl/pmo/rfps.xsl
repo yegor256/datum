@@ -39,6 +39,12 @@ SOFTWARE.
       <thead>
         <tr>
           <th>
+            <xsl:text>User</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Paid</xsl:text>
+          </th>
+          <th>
             <xsl:text>Created</xsl:text>
           </th>
           <th>
@@ -62,6 +68,14 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="rfp">
     <tr>
+      <td>
+        <xsl:call-template name="user">
+          <xsl:with-param name="login" select="login"/>
+        </xsl:call-template>
+      </td>
+      <td>
+        <xsl:value-of select="paid"/>
+      </td>
       <td>
         <xsl:call-template name="date">
           <xsl:with-param name="iso" select="created"/>
