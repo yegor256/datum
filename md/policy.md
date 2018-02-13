@@ -155,7 +155,7 @@ To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
 You can always check status of any job, just say `status` to Zerocrat in the job ticket.
 
 <a name="40" href="#40">§40</a>
-"RFP."
+"Reply to RFP."
 If your [reputation](#18) is over 2048, you will see new [requests for proposal](https://www.0crat.com/rfps).
 You can can "pay" 256 points for an email address of any RFP, contact them directly,
 and bring them to Zerocrat; to do that just say `rfp` to Zerocrat.
@@ -189,6 +189,14 @@ architect will either merge the pull request or close it.
 In either case you will be paid 15 minutes.
 
 ## Product Owner (<a name="PO"/>PO</a>)
+
+<a name="41" href="#41">§41</a>
+"Submit RFP."
+The best way to recruit Zerocrat and develop your project with us is to
+find and hire an architect&mdash;one of our [best developers](https://www.0crat.com/gang).
+You have to fill out [the form](https://www.0crat.com/rfp),
+pay non-refundable $64, and wait until one of them [replies](#40).
+The RFP will expire and automatically disappear in 32 days.
 
 <a name="11" href="#11">§11</a>
 "Add to Slack."
