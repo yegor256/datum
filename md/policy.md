@@ -197,6 +197,7 @@ find and hire an architect&mdash;one of our [best developers](https://www.0crat.
 You have to fill out [the form](https://www.0crat.com/rfp),
 pay non-refundable $64, and wait until one of them [replies](#40).
 The RFP will expire and automatically disappear in 32 days.
+You can submit a new RFP only when the first one expires or is purchased.
 
 <a name="11" href="#11">§11</a>
 "Add to Slack."
