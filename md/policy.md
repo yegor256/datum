@@ -156,11 +156,10 @@ You can always check status of any job, just say `status` to Zerocrat in the job
 
 <a name="40" href="#40">§40</a>
 "RFP."
-If your [reputation](#18) is over 2048, you will receive
-requests for proposal from new projects, inviting you to become their architect.
-You can can "pay" 256 points for their email address, contact them directly,
-and bring them to Zerocrat.
-You are [not allowed](http://datum.zerocracy.com/pages/terms.html#non-solicitation)
+If your [reputation](#18) is over 2048, you will see new [requests for proposal](https://www.0crat.com/rfps).
+You can can "pay" 256 points for an email address of any RFP, contact them directly,
+and bring them to Zerocrat; to do that just say `rfp` to Zerocrat.
+Remember, you are [not allowed](http://datum.zerocracy.com/pages/terms.html#non-solicitation)
 to work with them without Zerocrat.
 
 <a name="38" href="#38">§38</a>
