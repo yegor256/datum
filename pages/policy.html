@@ -196,12 +196,12 @@ A job is completed when its ticket is <a href="http://www.yegor256.com/2014/04/1
 <p><a name="8" href="#8">§8</a>
 &quot;Ten Days.&quot;
 If you don&#39;t complete a job in 10 days Zerocrat <em>may</em> take it away from you.
-You will get no money and 30 negative <a href="#18">points</a> if this happens.
-This rule is not applicable to code reviewing jobs.</p>
+You will get no money and 30 negative <a href="#18">points</a> if this happens.</p>
 
 <p><a name="29" href="#29">§29</a>
 &quot;Pay per Bug.&quot;
-Each time you report a new bug that becomes a job, you earn 15 minutes.</p>
+Each time you report a new <a href="http://www.yegor256.com/2018/02/06/where-to-find-more-bugs.html">bug</a>
+that becomes a job, you earn 15 minutes.</p>
 
 <p><a name="9" href="#9">§9</a>
 &quot;Impediments.&quot;
@@ -232,6 +232,15 @@ To tell us how exactly you want to receive them just say <code>wallet</code> to 
 &quot;Job Status.&quot;
 You can always check status of any job, just say <code>status</code> to Zerocrat in the job ticket.</p>
 
+<p><a name="40" href="#40">§40</a>
+&quot;RFP.&quot;
+If your <a href="#18">reputation</a> is over 2048, you will receive
+requests for proposal from new projects, inviting you to become their architect.
+You can can &quot;pay&quot; 256 points for their email address, contact them directly,
+and bring them to Zerocrat.
+You are <a href="http://datum.zerocracy.com/pages/terms.html#non-solicitation">not allowed</a>
+to work with them without Zerocrat.</p>
+
 <p><a name="38" href="#38">§38</a>
 &quot;Vacation.&quot;
 You can always &quot;go on vacation&quot; if you want Zerocrat to temporarily stop
@@ -241,6 +250,12 @@ assigning you new jobs; just say <code>vacation</code>.</p>
 &quot;Quit.&quot;
 You can always quit a project, just say <code>quit</code> to Zerocrat.
 You will still have to finish the jobs assigned to you in the project.</p>
+
+<p><a name="39" href="#39">§39</a>
+&quot;GitHub name change.&quot;
+If you <a href="https://help.github.com/articles/changing-your-github-username/">change</a>
+your GitHub name, your Zerocrat account will be lost.
+You will have to create a new one from scratch.</p>
 
 <h2>Code Reviewer (<a name="REV">REV</a>)</h2>
 
@@ -328,7 +343,8 @@ You can unpublish it any time, just say <code>publish off</code>.</p>
 <p><a name="37" href="#37">§37</a>
 &quot;Vesting.&quot;
 On top of <a href="#13">cash</a> you can give equity to project contributors.
-Just modify the rates in <code>vesting.xml</code> and they will automatically start
+Just modify the rates in <code>vesting.xml</code> and they will
+<a href="http://www.yegor256.com/2018/02/13/micro-vesting.html">automatically</a> start
 earning project equity after each job <a href="#7">completion</a>.</p>
 
 <h2>Architect (<a name="ARC">ARC</a>)</h2>
@@ -379,10 +395,10 @@ If the quality is <code>bad</code>, there will be no payment to the job performe
         <nav>
           <ul>
             <li>
-              <span>v0.53.2</span>
+              <span>v0.54</span>
             </li>
             <li>
-              <span>30-Jan-2018</span>
+              <span>13-Feb-2018</span>
             </li>
           </ul>
           <ul>
