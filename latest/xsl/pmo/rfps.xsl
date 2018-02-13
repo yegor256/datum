@@ -39,16 +39,19 @@ SOFTWARE.
       <thead>
         <tr>
           <th>
+            <xsl:text>ID</xsl:text>
+          </th>
+          <th>
+            <xsl:text>User</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Paid</xsl:text>
+          </th>
+          <th>
             <xsl:text>Created</xsl:text>
           </th>
           <th>
             <xsl:text>Email</xsl:text>
-          </th>
-          <th>
-            <xsl:text>Budget</xsl:text>
-          </th>
-          <th>
-            <xsl:text>Time</xsl:text>
           </th>
           <th>
             <xsl:text>SoW</xsl:text>
@@ -63,6 +66,17 @@ SOFTWARE.
   <xsl:template match="rfp">
     <tr>
       <td>
+        <xsl:value-of select="@id"/>
+      </td>
+      <td>
+        <xsl:call-template name="user">
+          <xsl:with-param name="id" select="login"/>
+        </xsl:call-template>
+      </td>
+      <td>
+        <xsl:value-of select="paid"/>
+      </td>
+      <td>
         <xsl:call-template name="date">
           <xsl:with-param name="iso" select="created"/>
         </xsl:call-template>
@@ -71,12 +85,6 @@ SOFTWARE.
         <a href="mailto:{email}">
           <xsl:value-of select="email"/>
         </a>
-      </td>
-      <td style="text-align:right">
-        <xsl:apply-templates select="budget"/>
-      </td>
-      <td style="text-align:right">
-        <xsl:value-of select="time"/>
       </td>
       <td>
         <xsl:value-of select="sow"/>
