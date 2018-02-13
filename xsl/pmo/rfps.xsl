@@ -54,12 +54,6 @@ SOFTWARE.
             <xsl:text>Email</xsl:text>
           </th>
           <th>
-            <xsl:text>Budget</xsl:text>
-          </th>
-          <th>
-            <xsl:text>Time</xsl:text>
-          </th>
-          <th>
             <xsl:text>SoW</xsl:text>
           </th>
         </tr>
@@ -91,12 +85,6 @@ SOFTWARE.
         <a href="mailto:{email}">
           <xsl:value-of select="email"/>
         </a>
-      </td>
-      <td style="text-align:right">
-        <xsl:apply-templates select="budget"/>
-      </td>
-      <td style="text-align:right">
-        <xsl:value-of select="time"/>
       </td>
       <td>
         <xsl:value-of select="sow"/>

@@ -18,7 +18,6 @@ SOFTWARE.
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="SNAPSHOT" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
-  <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/cost/types.xsd"/>
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/staff/types.xsd"/>
   <xs:complexType name="rfp">
     <xs:all>
@@ -26,8 +25,6 @@ SOFTWARE.
       <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
       <xs:element name="paid" minOccurs="1" maxOccurs="1" type="xs:string"/>
       <xs:element name="email" minOccurs="1" maxOccurs="1" type="email"/>
-      <xs:element name="budget" minOccurs="1" maxOccurs="1" type="cash"/>
-      <xs:element name="time" minOccurs="1" maxOccurs="1" type="xs:integer"/>
       <xs:element name="sow" minOccurs="1" maxOccurs="1" type="xs:string"/>
     </xs:all>
     <xs:attribute name="id" use="required" type="xs:int"/>
