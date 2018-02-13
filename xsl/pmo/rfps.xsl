@@ -39,6 +39,9 @@ SOFTWARE.
       <thead>
         <tr>
           <th>
+            <xsl:text>ID</xsl:text>
+          </th>
+          <th>
             <xsl:text>User</xsl:text>
           </th>
           <th>
@@ -69,8 +72,11 @@ SOFTWARE.
   <xsl:template match="rfp">
     <tr>
       <td>
+        <xsl:value-of select="@id"/>
+      </td>
+      <td>
         <xsl:call-template name="user">
-          <xsl:with-param name="login" select="login"/>
+          <xsl:with-param name="id" select="login"/>
         </xsl:call-template>
       </td>
       <td>

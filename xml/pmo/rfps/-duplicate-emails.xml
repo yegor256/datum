@@ -16,7 +16,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <rfps version="1" updated="2016-12-29T09:03:21.684Z">
-  <rfp>
+  <rfp id="4">
     <login>yegor256</login>
     <paid>stripe:$50</paid>
     <created>2016-12-29T09:03:21.684Z</created>
@@ -25,7 +25,7 @@ SOFTWARE.
     <time>20</time>
     <sow>We need a new iPhone app</sow>
   </rfp>
-  <rfp>
+  <rfp id="66">
     <login>dmarkov</login>
     <paid>stripe:$50</paid>
     <created>2016-12-29T09:03:21.684Z</created>
