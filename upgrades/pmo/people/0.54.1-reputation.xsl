@@ -22,6 +22,8 @@ SOFTWARE.
     <xsl:copy>
       <xsl:apply-templates select="@*|node()"/>
       <reputation>0</reputation>
+      <projects>0</projects>
+      <jobs>0</jobs>
     </xsl:copy>
   </xsl:template>
   <xsl:template match="@*|node()">
