@@ -53,7 +53,7 @@ SOFTWARE.
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="reputation" type="xs:integer" minOccurs="0"/>
+      <xs:element name="reputation" type="xs:integer"/>
       <xs:element name="jobs" type="xs:integer" minOccurs="0"/>
       <xs:element name="projects" type="xs:integer" minOccurs="0"/>
       <xs:element name="rate" type="cash" minOccurs="0" maxOccurs="1"/>
