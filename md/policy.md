@@ -133,7 +133,7 @@ is not applicable to it.
 
 <a name="36" href="#36">§36</a>
 "Speed Bonus."
-Zerocray measures the time interval between the moment
+Zerocracy measures the time interval between the moment
 a job is assigned to you and the moment it goes out of scope.
 If this interval is shorter than 4 hours, you get extra 10 minutes.
 
