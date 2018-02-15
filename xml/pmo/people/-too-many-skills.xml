@@ -18,17 +18,12 @@ SOFTWARE.
 <people version="1" updated="2016-12-29T09:03:21.684Z">
   <person id="alex-palevsky">
     <mentor>yegor256</mentor>
-    <links>
-      <link rel="slack" href="7YYZZT9RR"/>
-      <link rel="slack" href="7YYKYT9RR"/>
-      <link rel="slack" href="U66KYT9RR"/>
-    </links>
     <skills updated="2016-12-29T09:03:21.684Z">
       <skill>lisp</skill>
       <skill>haskell</skill>
       <skill>java</skill>
-      <skill>c#</skill>
-      <skill>c++</skill>
+      <skill>csharp</skill>
+      <skill>cpp</skill>
       <skill>docker</skill>
     </skills>
     <rate>¥25</rate>

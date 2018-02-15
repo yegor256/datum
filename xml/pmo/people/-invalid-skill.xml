@@ -15,25 +15,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="SNAPSHOT" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:simpleType name="login">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[a-z0-9\-]{3,}"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="projectID">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[A-Z0-9]{9,}|PMO"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="projectTitle">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[\d\w._-]{3,}"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="skill">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[a-z]{1,16}"/>
-    </xs:restriction>
-  </xs:simpleType>
-</xs:schema>
+<people version="1" updated="2016-12-29T09:03:21.684Z">
+  <person id="alex-palevsky">
+    <mentor>yegor256</mentor>
+    <skills updated="2016-12-29T09:03:21.684Z">
+      <skill>c#</skill>
+    </skills>
+    <rate>¥25</rate>
+    <vacation>true</vacation>
+  </person>
+</people>

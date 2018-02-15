@@ -76,7 +76,7 @@ SOFTWARE.
       <xs:element name="skills">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="skill" minOccurs="0" maxOccurs="4" type="xs:string"/>
+            <xs:element name="skill" minOccurs="0" maxOccurs="4" type="skill"/>
           </xs:sequence>
           <xs:attribute name="updated" type="xs:dateTime" use="required"/>
         </xs:complexType>
