@@ -18,9 +18,10 @@ SOFTWARE.
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="SNAPSHOT" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
   <xs:complexType name="impedimentOrder">
     <xs:sequence>
-      <xs:element name="impediment" type="impediment" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="impediment" type="impediment" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="id" use="required" type="jobID"/>
   </xs:complexType>
@@ -28,6 +29,7 @@ SOFTWARE.
     <xs:simpleContent>
       <xs:extension base="xs:string">
         <xs:attribute ref="type" use="required"/>
+        <xs:attribute name="login" type="login" use="required"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
