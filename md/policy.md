@@ -195,7 +195,7 @@ In either case you will be paid 15 minutes.
 The best way to recruit Zerocrat and develop your project with us is to
 find and hire an architect&mdash;one of our [best developers](https://www.0crat.com/gang).
 You have to fill out [the form](https://www.0crat.com/rfp),
-pay non-refundable $64, and wait until one of them [replies](#40).
+pay non-refundable $16, and wait until one of them [replies](#40).
 The RFP will expire and automatically disappear in 32 days.
 You can submit a new RFP only when the first one expires or is purchased.
 
