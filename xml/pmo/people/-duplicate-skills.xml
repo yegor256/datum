@@ -18,9 +18,6 @@ SOFTWARE.
 <people version="1" updated="2016-12-29T09:03:21.684Z">
   <person id="yegor256">
     <name>Yegor Bugayenko</name>
-    <reputation>9140</reputation>
-    <jobs>12</jobs>
-    <projects>256</projects>
     <rate>£30.50</rate>
     <wallet bank="paypal">yegor256@gmail.com</wallet>
     <details>YEGOR BUGAYENKO yegor256@gmail.com</details>
@@ -43,8 +40,9 @@ SOFTWARE.
       <link rel="slack" href="U66KYT9RR"/>
     </links>
     <skills updated="2016-12-29T09:03:21.684Z">
-      <skill>lisp</skill>
-      <skill>haskell</skill>
+      <skill>java</skill>
+      <skill>java</skill>
+      <skill>java</skill>
     </skills>
     <rate>¥25</rate>
     <vacation>true</vacation>
