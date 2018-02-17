@@ -15,15 +15,19 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<bans updated="2017-07-17T22:52:16Z" version="0.1">
-  <ban job="gh:test/test#1">
-    <created>2017-07-19T12:00:00</created>
-    <login>yegor256</login>
-    <reason>reason one</reason>
-  </ban>
-  <ban job="gh:test/test#1">
-    <created>2018-01-02T12:10:44</created>
-    <login>yegor256</login>
-    <reason>reason two</reason>
-  </ban>
-</bans>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="3.0">
+  <xsl:output method="xml" indent="yes"/>
+  <xsl:strip-space elements="*"/>
+  <xsl:key name="group" match="/bans/ban" use="concat(@job, '|', login)"/>
+  <xsl:template match="/bans">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates select="ban[generate-id() = generate-id(key('group', concat(@job, '|', login))[last()])]"/>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="@*|node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>
