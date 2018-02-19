@@ -48,13 +48,6 @@ SOFTWARE.
   <xs:complexType name="person">
     <xs:all>
       <xs:element name="mentor" type="login" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="name" minOccurs="0" maxOccurs="1">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:pattern value=".{3,120}"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
       <xs:element name="reputation" type="xs:integer"/>
       <xs:element name="jobs" type="xs:integer"/>
       <xs:element name="projects" type="xs:integer"/>
