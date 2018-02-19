@@ -10,7 +10,7 @@ If you want to discuss the Policy or your troubles with the bot,
 please join this [Telegram chat](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
 
 We recommend you to read these articles first;
-they explain our management phylosophy
+they explain our management philosophy
 (based on [XDSD](http://www.xdsd.org))
 and its basic principles:
 
@@ -158,7 +158,7 @@ To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
 
 <a name="32" href="#32">§32</a>
 "Job Status."
-You can always check status of any job, just say `status` to Zerocrat in the job ticket.
+You can always check the status of any job, just say `status` to Zerocrat in the job ticket.
 
 <a name="40" href="#40">§40</a>
 "Reply to RFP."
@@ -192,7 +192,7 @@ You will be asked to review pull requests if you have `REV` role assigned.
 Be as critical as you can, as [this article](http://www.yegor256.com/2015/02/09/serious-code-reviewer.html) explains.
 Either you accept or reject the changes, inform the architect, right in the ticket&mdash;the
 architect will either merge the pull request or close it.
-In either case you will be paid 15 minutes.
+In either case, you will be paid 15 minutes.
 
 ## Product Owner (<a name="PO"/>PO</a>)
 
@@ -274,7 +274,7 @@ project say `destroy` and then [kick off](https://get.slack.help/hc/en-us/articl
 To attract programmers to your project, you can publish it on the
 [Board](https://www.0crat.com/board); just say `publish on` to Zerocrat in order to do it.
 When your project is published, its statistical information will be visible in the Web.
-You can unpublish it any time, just say `publish off`.
+You can unpublish it anytime, just say `publish off`.
 
 <a name="37" href="#37">§37</a>
 "Vesting."
