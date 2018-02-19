@@ -28,7 +28,9 @@ SOFTWARE.
             <xs:restriction base="xs:string">
               <xs:enumeration value="paypal"/>
               <xs:enumeration value="btc"/>
-              <xs:enumeration value="upwork"/>
+              <xs:enumeration value="eth"/>
+              <xs:enumeration value="bch"/>
+              <xs:enumeration value="ltc"/>
             </xs:restriction>
           </xs:simpleType>
         </xs:attribute>
