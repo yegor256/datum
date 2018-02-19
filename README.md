@@ -22,7 +22,28 @@ Any problems you have with [Zerocracy](http://www.zerocracy.com)
 please report [here](https://github.com/zerocracy/datum/issues).
 We promise to do our best to resolve them as soon as possible.
 
-## How it works
+## Data model
+
+A project has a list of members, with assigned roles to them. Each project
+member, also known as **user** is identified by his GitHub name, for example
+[yegor256](https://github.com/yegor256).
+
+There is only one piece of work, which is called a **job**. A job
+can either be in scope or not. If the job is in scope, it is listed
+in the `wbs.xml`.
+
+A job, which is in scope, may have an **order** assigned to it, as a record in `orders.xml`.
+An order has a **performer**. An order may be finished (success) or terminated (failure).
+
+A job, which is in scope, may have an **election** in `elections.xml`,
+which is created by Zerocrat automatically. The election is used as a basis
+for the decision making of an order assignment.
+
+An order may have an **impediment**, which is listed in `impediments.xml`. While
+the impediment exists, the order won't be terminated
+[by delay](http://datum.zerocracy.com/pages/policy.html#8).
+
+## Features
 
 Product Owner (`PO`) is a representative of a project sponsor.
 As a PO you can:
