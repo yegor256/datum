@@ -147,7 +147,13 @@ You can use USD, EUR, GBP, or JPY, but all payments will be made in USD.
 
 <a name="20" href="#20">§20</a>
 "Wallet."
-We can send you money either via PayPal <del>or Bitcoin</del>.
+We can send you money either via
+[PayPal](https://www.paypal.com),
+[Bitcoin](https://bitcoin.org/en/),
+[Bitcoin Cash](https://www.bitcoincash.org/),
+[Etherium](https://www.ethereum.org/),
+or
+[Litecoin](https://litecoin.org/).
 To tell us how exactly you want to receive them just say `wallet` to Zerocrat.
 
 <a name="32" href="#32">§32</a>
