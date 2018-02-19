@@ -319,3 +319,32 @@ You will be paid 15 minutes for the review, no matter what is your verdict.
 "QA Bonus."
 Job performer will get an extra 5 minutes if QA reports `good` quality.
 If the quality is `bad`, there will be no payment to the job performer at all.
+
+<a name="42" href="#42">§42</a>
+"QA Rules."
+The quality of a job is `good' if all of the following requirements are met:
+
+  * The formatting of a job description, as well as all messages inside it,
+    follows [Github Markdown](https://help.github.com/articles/github-flavored-markdown/) style.
+  * Messages in a job
+    [always](http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html#4-avoid-noiseaddress-your-comments)
+    start with a name of a user they are addressed to.
+  * The job is closed only when the reported problem is solved,
+    [see](http://www.yegor256.com/2015/02/12/top-down-design.html).
+  * Some of ticket messages must mention all pull requests where the problem was actually fixed.
+  * Problem reporter and problem solver are two different persons,
+    [see](http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html#1.-keep-it-one-on-one).
+  * Ticket title and description clearly state what is broken and what kind of fix is expected,
+    [see](http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html#5.-report-when-it-is-broken).
+  * The ticket describes one specific problem and provides a single solution.
+  * Pull request title explains the problem it is fixing.
+  * Pull request description explains the solution proposed and
+    contains a link to the original ticket it is related to.
+  * The code reviewer found at least three problems in the code.
+  * Comments were mostly about design problems, not cosmetic issues.
+  * All problems found by the code reviewer were addressed by
+    the pull request author.
+
+
+
+
