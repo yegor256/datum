@@ -41,5 +41,10 @@ SOFTWARE.
       <xs:attribute name="updated" use="required" type="xs:dateTime"/>
       <xs:attribute name="version" use="required" type="version"/>
     </xs:complexType>
+    <xs:unique name="user-in-job">
+      <xs:selector xpath="ban"/>
+      <xs:field xpath="@job"/>
+      <xs:field xpath="login"/>
+    </xs:unique>
   </xs:element>
 </xs:schema>
