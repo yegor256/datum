@@ -279,7 +279,8 @@ You can unpublish it anytime, just say `publish off`.
 <a name="37" href="#37">§37</a>
 "Vesting."
 On top of [cash](#13) you can give equity to project contributors.
-Just modify the rates in `vesting.xml` and they will
+Just modify the rates in `vesting.xml` (in `Files` tab of the project dashboard)
+and they will
 [automatically](http://www.yegor256.com/2018/02/13/micro-vesting.html) start
 earning project equity after each job [completion](#7).
 
