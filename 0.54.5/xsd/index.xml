@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<index path="/0.54.5/xsd" version="0.54.5">
+  <entry dir="false" path="/0.54.5/xsd/basics.xsd" uri="http://datum.zerocracy.com/0.54.5/xsd/basics.xsd">basics.xsd</entry>
+  <entry dir="true" path="/0.54.5/xsd/pm" uri="http://datum.zerocracy.com/0.54.5/xsd/pm">pm</entry>
+  <entry dir="true" path="/0.54.5/xsd/pmo" uri="http://datum.zerocracy.com/0.54.5/xsd/pmo">pmo</entry>
+</index>
