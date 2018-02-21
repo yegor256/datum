@@ -15,9 +15,20 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<impediments version="1" updated="2016-12-29T09:03:21.684Z">
-  <order id="gh:test/test#1">
-    <impediment type="order" login="g4s8">gh:test/test#123</impediment>
-    <impediment type="unknown" login="g4s8">The user just asked to wait a bit.</impediment>
-  </order>
-</impediments>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:output method="xml"/>
+  <xsl:strip-space elements="*"/>
+  <xsl:template match="impediment[not(@login)]">
+    <xsl:copy>
+      <xsl:attribute name="login">
+        <xsl:text>0crat</xsl:text>
+      </xsl:attribute>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="@*|node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>
