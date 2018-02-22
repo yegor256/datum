@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
-<index path="/latest/xsd/pmo" version="0.54.5">
+<index path="/latest/xsd/pmo" version="0.55">
   <entry dir="false" path="/latest/xsd/pmo/agenda.xsd" uri="http://datum.zerocracy.com/latest/xsd/pmo/agenda.xsd">agenda.xsd</entry>
   <entry dir="false" path="/latest/xsd/pmo/awards.xsd" uri="http://datum.zerocracy.com/latest/xsd/pmo/awards.xsd">awards.xsd</entry>
   <entry dir="false" path="/latest/xsd/pmo/bots.xsd" uri="http://datum.zerocracy.com/latest/xsd/pmo/bots.xsd">bots.xsd</entry>
   <entry dir="false" path="/latest/xsd/pmo/catalog.xsd" uri="http://datum.zerocracy.com/latest/xsd/pmo/catalog.xsd">catalog.xsd</entry>
+  <entry dir="false" path="/latest/xsd/pmo/debts.xsd" uri="http://datum.zerocracy.com/latest/xsd/pmo/debts.xsd">debts.xsd</entry>
   <entry dir="false" path="/latest/xsd/pmo/people.xsd" uri="http://datum.zerocracy.com/latest/xsd/pmo/people.xsd">people.xsd</entry>
   <entry dir="false" path="/latest/xsd/pmo/projects.xsd" uri="http://datum.zerocracy.com/latest/xsd/pmo/projects.xsd">projects.xsd</entry>
   <entry dir="false" path="/latest/xsd/pmo/rfps.xsd" uri="http://datum.zerocracy.com/latest/xsd/pmo/rfps.xsd">rfps.xsd</entry>

@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
-<index path="/latest/xsl/pmo" version="0.54.5">
+<index path="/latest/xsl/pmo" version="0.55">
   <entry dir="false" path="/latest/xsl/pmo/agenda.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/agenda.xsl">agenda.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/awards.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/awards.xsl">awards.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/bots.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/bots.xsl">bots.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/catalog.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/catalog.xsl">catalog.xsl</entry>
+  <entry dir="false" path="/latest/xsl/pmo/debts.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/debts.xsl">debts.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/people.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/people.xsl">people.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/projects.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/projects.xsl">projects.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/rfps.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/rfps.xsl">rfps.xsl</entry>

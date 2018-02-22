@@ -32,7 +32,7 @@ SOFTWARE.
   <xsl:template match="vesting[not(person)]">
     <p>
       <xsl:text>There are no rates set yet, see </xsl:text>
-      <a href="http://datum.zerocracy.com/pages/policy.html#37">
+      <a href="http://www.zerocracy.com/policy.html#37">
         <xsl:text>§37</xsl:text>
       </a>
       <xsl:text>.</xsl:text>

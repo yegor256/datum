@@ -29,31 +29,31 @@ SOFTWARE.
             project. The ARC and the PO are
             allowed to assign roles and resign them. By convention
             we use these role names: </xsl:text>
-            <a href="http://datum.zerocracy.com/pages/policy.html#ARC">
+            <a href="http://www.zerocracy.com/policy.html#ARC">
               <xsl:text>ARC</xsl:text>
             </a>
             <xsl:text> (architect), </xsl:text>
-            <a href="http://datum.zerocracy.com/pages/policy.html#PO">
+            <a href="http://www.zerocracy.com/policy.html#PO">
               <xsl:text>PO</xsl:text>
             </a>
             <xsl:text> (product owner), </xsl:text>
-            <a href="http://datum.zerocracy.com/pages/policy.html#DEV">
+            <a href="http://www.zerocracy.com/policy.html#DEV">
               <xsl:text>DEV</xsl:text>
             </a>
             <xsl:text> (developer), </xsl:text>
-            <a href="http://datum.zerocracy.com/pages/policy.html#REV">
+            <a href="http://www.zerocracy.com/policy.html#REV">
               <xsl:text>REV</xsl:text>
             </a>
             <xsl:text> (code reviewer), </xsl:text>
-            <a href="http://datum.zerocracy.com/pages/policy.html#TST">
+            <a href="http://www.zerocracy.com/policy.html#TST">
               <xsl:text>TST</xsl:text>
             </a>
             <xsl:text> (tester), </xsl:text>
-            <a href="http://datum.zerocracy.com/pages/policy.html#QA">
+            <a href="http://www.zerocracy.com/policy.html#QA">
               <xsl:text>QA</xsl:text>
             </a>
             <xsl:text> (quality assurance), see </xsl:text>
-            <a href="http://datum.zerocracy.com/pages/policy.html#13">§13</a>
+            <a href="http://www.zerocracy.com/policy.html#13">§13</a>
             <xsl:text>.</xsl:text>
           </p>
           <xsl:apply-templates select="roles"/>
