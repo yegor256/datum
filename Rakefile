@@ -263,8 +263,7 @@ task :validate_site, [:version] do |_, args|
     'latest/auto/pm/scope/wbs/01-elections-remove.xsl',
     'latest/rules/pm/no-lost-boosts.xsl',
     'latest/upgrades/pm/claims/0.24-version-and-date.xsl',
-    'latest/xsl/pm/cost/boosts.xsl',
-    'pages/policy.html'
+    'latest/xsl/pm/cost/boosts.xsl'
   ]
   files.each do |f|
     path = "target/site/#{f}"

@@ -58,7 +58,7 @@ SOFTWARE.
   <xsl:template match="owners[not(owner)]">
     <p>
       <xsl:text>There are no owners yet, see </xsl:text>
-      <a href="http://datum.zerocracy.com/pages/policy.html#37">
+      <a href="http://www.zerocracy.com/policy.html#37">
         <xsl:text>§37</xsl:text>
       </a>
       <xsl:text>.</xsl:text>

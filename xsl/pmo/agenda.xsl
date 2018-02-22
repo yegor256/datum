@@ -34,7 +34,7 @@ SOFTWARE.
       <xsl:text>Your agenda is empty at the moment, there are no jobs to work with.
       Most likely you are not a member of any projects yet, or the projects
       have no new jobs for you. Feel free to </xsl:text>
-      <a href="http://datum.zerocracy.com/pages/policy.html#2">
+      <a href="http://www.zerocracy.com/policy.html#2">
         <xsl:text>apply</xsl:text>
       </a>
       <xsl:text> to new projects from the </xsl:text>
@@ -72,7 +72,7 @@ SOFTWARE.
             <xsl:text>Cost</xsl:text>
             <sub>
               <xsl:text>/</xsl:text>
-              <a href="http://datum.zerocracy.com/pages/policy.html#4">
+              <a href="http://www.zerocracy.com/policy.html#4">
                 <xsl:text>§4</xsl:text>
               </a>
             </sub>
@@ -81,7 +81,7 @@ SOFTWARE.
             <xsl:text>Imp.</xsl:text>
             <sub>
               <xsl:text>/</xsl:text>
-              <a href="http://datum.zerocracy.com/pages/policy.html#9">
+              <a href="http://www.zerocracy.com/policy.html#9">
                 <xsl:text>§9</xsl:text>
               </a>
             </sub>

@@ -29,7 +29,7 @@ SOFTWARE.
             to them. This is the full list of jobs where elections
             already happened. The results of them are here, with full details.</xsl:text>
             <xsl:text>See </xsl:text>
-            <a href="http://datum.zerocracy.com/pages/policy.html#3">§3</a>
+            <a href="http://www.zerocracy.com/policy.html#3">§3</a>
             <xsl:text>.</xsl:text>
           </p>
           <xsl:apply-templates select="elections"/>

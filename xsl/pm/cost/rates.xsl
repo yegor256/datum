@@ -32,7 +32,7 @@ SOFTWARE.
   <xsl:template match="rates[not(person)]">
     <p>
       <xsl:text>There are no rates set yet. If you want to set user's rate, see </xsl:text>
-      <a href="http://datum.zerocracy.com/pages/policy.html#13">
+      <a href="http://www.zerocracy.com/policy.html#13">
         <xsl:text>§13</xsl:text>
       </a>
       <xsl:text>.</xsl:text>
@@ -42,7 +42,7 @@ SOFTWARE.
     <p>
       <xsl:text>Full list of rates of people in this project,</xsl:text>
       <xsl:text> which you can change as explained in </xsl:text>
-      <a href="http://datum.zerocracy.com/pages/policy.html#13">
+      <a href="http://www.zerocracy.com/policy.html#13">
         <xsl:text>§13</xsl:text>
       </a>
       <xsl:text>:</xsl:text>

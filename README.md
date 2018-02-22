@@ -14,7 +14,7 @@ Information about current project status is kept in XML and text
 files. This repository contains full list of XSD Schemas for them
 and rules of usage.
 
-Read [our policy](http://datum.zerocracy.com/pages/policy.html),
+Read [our policy](http://www.zerocracy.com/policy.html),
 it covers all processes in these XML files.
 
 Any problems you have with [Zerocracy](http://www.zerocracy.com)
@@ -40,7 +40,7 @@ for the decision making of an order assignment.
 
 An order may have an **impediment**, which is listed in `impediments.xml`. While
 the impediment exists, the order won't be terminated
-[by delay](http://datum.zerocracy.com/pages/policy.html#8).
+[by delay](http://www.zerocracy.com/policy.html#8).
 
 ## Features
 
