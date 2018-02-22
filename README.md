@@ -8,8 +8,6 @@
 [![Availability at SixNines](http://www.sixnines.io/b/2b3a)](http://www.sixnines.io/h/2b3a)
 [![Build Status](https://travis-ci.org/zerocracy/datum.svg?branch=master)](https://travis-ci.org/zerocracy/datum)
 
-Zerocracy is management without managers.
-
 Information about current project status is kept in XML and text
 files. This repository contains full list of XSD Schemas for them
 and rules of usage.
@@ -18,7 +16,7 @@ Read [our policy](http://www.zerocracy.com/policy.html),
 it covers all processes in these XML files.
 
 Any problems you have with [Zerocracy](http://www.zerocracy.com)
-please report [here](https://github.com/zerocracy/datum/issues).
+please report [here](https://github.com/zerocracy/farm/issues).
 We promise to do our best to resolve them as soon as possible.
 
 ## Data model
@@ -41,68 +39,6 @@ for the decision making of an order assignment.
 An order may have an **impediment**, which is listed in `impediments.xml`. While
 the impediment exists, the order won't be terminated
 [by delay](http://www.zerocracy.com/policy.html#8).
-
-## Features
-
-Product Owner (`PO`) is a representative of a project sponsor.
-As a PO you can:
-
-  - [x] [Invite](https://www.0crat.com/invite) `@0crat` to your Slack
-  - [x] [Create](https://get.slack.help/hc/en-us/articles/201402297-Create-a-channel) a new Slack channel for a project
-  - [x] [Invite](#invite-only) a friend: `invite`
-  - [x] Start talking to the bot: `hello`
-  - [x] Fund the project using a credit card
-  - [x] Link the project with GitHub repositor(ies): `links`
-  - [x] Register `ARC`, `DEV`, and `REV` roles: `assign`
-  - [x] Add tickets to the scope in GitHub: `in`
-  - [x] Remote tickets from the scope: `out`
-
-An Architect (`ARC`) is the key technical decision maker
-in the project. As an ARC or a PO you can:
-
-  - [x] Assign a performer to a job: `assign`
-  - [x] Resign a performer: `resign`
-  - [x] Increase/decrease job budget: `boost`
-  - [ ] Attach a job to a milestone: `milestone`
-
-As a Developer (`DEV`) you can:
-
-  - [x] Join one of Slack teams
-  - [x] Start talking to the bot in a private channel: `hello`
-  - [x] Modify your hourly rate: `rate`
-  - [x] Modify your payment details: `wallet`
-  - [x] Quit a project: `quit`
-  - [x] Set/reset "vacation" mode: `vacation`
-  - [x] Reject a job: `resign`
-  - [x] Announce an impediment: `waiting`
-  - [ ] Check the status of a job: `status`
-
-As a Quality Assurance (`QA`) you can:
-
-  - [ ] Confirm the quality of a task: `quality`
-
-The bot can:
-
-  - [x] Assign a job to a performer
-  - [x] Announce job budget
-  - [ ] Announce job deadline
-  - [x] Resign a performer
-  - [ ] Request quality control
-  - [x] Update performer's metrics
-  - [x] Pay for bugs reported
-  - [x] Pay performer for task completion
-
-## Invite Only
-
-You can use the system only if someone invites you. That person has to
-know your GitHub login and say this to `@0crat` bot (provided your name
-is `yegor256`):
-
-```
-@0crat invite yegor256
-```
-
-That's enough. From that moment you have a "mentor."
 
 ## How to contribute?
 
@@ -132,3 +68,20 @@ Third, don't forget to add or modify XSL views in
 After all changes are made, don't forget to run
 [`rake`](https://github.com/ruby/rake).
 You will need Ruby 2.2+ installed.
+
+## License
+
+Copyright (c) 2016-2018 Zerocracy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to read
+the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
