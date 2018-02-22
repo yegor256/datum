@@ -208,25 +208,6 @@ task :site, [:version] do |_, args|
   args.with_defaults(version: '999')
   raise 'You have to call "rake site[123]"' unless args[:version]
   puts "Building a site for v.#{args[:version]}..."
-  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-  dir = FileUtils.mkdir_p('target/site/pages')[0]
-  template = File.read('md/_template.html')
-  mds = Dir['md/*.md']
-  mds.each do |md|
-    file = File.join(dir, File.basename(md).gsub(/\.md$/, '.html'))
-    File.write(
-      file,
-      Mustache.render(
-        template,
-        body: markdown.render(File.read(md)),
-        name: File.basename(md).gsub(/\.md$/, '').capitalize,
-        version: args[:version],
-        date: Time.new.strftime('%-d-%b-%Y')
-      )
-    )
-    print Rainbow('.').green
-  end
-  puts "\n#{mds.length} HTML page(s) created in #{dir}\n\n"
   FileUtils.mkdir_p("target/site/#{args[:version]}")
   FileUtils.cp_r('xsd', "target/site/#{args[:version]}")
   puts "XSDs copied to target/site/#{args[:version]}"
