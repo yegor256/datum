@@ -62,18 +62,19 @@ SOFTWARE.
     </tr>
   </xsl:template>
   <xsl:template match="items">
-    <xsl:for-each select="item">
-      <xsl:if test="position() &gt; 1">
-        <xsl:text>; </xsl:text>
-      </xsl:if>
-      <xsl:value-of select="amount"/>
-      <xsl:text>/</xsl:text>
-      <xsl:value-of select="created"/>
-      <xsl:text>: </xsl:text>
-      <xsl:value-of select="details"/>
-      <xsl:text> (</xsl:text>
-      <xsl:value-of select="reason"/>
-      <xsl:text>)</xsl:text>
-    </xsl:for-each>
+    <ul>
+      <xsl:for-each select="item">
+        <li>
+          <xsl:value-of select="amount"/>
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="created"/>
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="details"/>
+          <xsl:text> (</xsl:text>
+          <xsl:value-of select="reason"/>
+          <xsl:text>)</xsl:text>
+        </li>
+      </xsl:for-each>
+    </ul>
   </xsl:template>
 </xsl:stylesheet>
