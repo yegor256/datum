@@ -18,7 +18,15 @@ SOFTWARE.
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="SNAPSHOT" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
+  <xs:simpleType name="quality">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(good|bad|acceptable)"/>
+    </xs:restriction>
+  </xs:simpleType>
   <xs:complexType name="review">
+    <xs:sequence>
+      <xs:element name="quality" type="quality" minOccurs="0"/>
+    </xs:sequence>
     <xs:attribute name="job" type="jobID"/>
   </xs:complexType>
   <xs:element name="reviews">
