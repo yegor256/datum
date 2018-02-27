@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pm/staff" version="0.55">
+<index path="/latest/upgrades/pm/staff" version="0.56">
   <entry dir="true" path="/latest/upgrades/pm/staff/bans" uri="http://datum.zerocracy.com/latest/upgrades/pm/staff/bans">bans</entry>
   <entry dir="true" path="/latest/upgrades/pm/staff/elections" uri="http://datum.zerocracy.com/latest/upgrades/pm/staff/elections">elections</entry>
 </index>
