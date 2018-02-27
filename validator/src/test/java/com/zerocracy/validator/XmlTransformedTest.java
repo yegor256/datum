@@ -16,10 +16,12 @@
  */
 package com.zerocracy.validator;
 
+import com.jcabi.xml.ClasspathSources;
 import com.jcabi.xml.XMLDocument;
 import com.jcabi.xml.XSLDocument;
 import java.io.InputStream;
 import org.cactoos.io.ResourceOf;
+import org.cactoos.text.TextOf;
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
@@ -42,9 +44,9 @@ public final class XmlTransformedTest {
             MatcherAssert.assertThat(
                 new XmlTransformed(
                     new XMLDocument(xml),
-                    XSLDocument.make(xsl)
+                    new XSLDocument(new TextOf(xsl).asString(), new ClasspathSources())
                 ).value().node().getFirstChild().getNodeName(),
-                CoreMatchers.equalTo("tritems")
+                CoreMatchers.equalTo("html")
             );
         }
     }

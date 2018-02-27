@@ -15,7 +15,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<items>
-  <item>one</item>
-  <item>two</item>
-</items>
+<equity updated="2017-07-27T04:06:33Z" version="0.1">
+  <cap>$4000000</cap>
+  <shares>1000000</shares>
+  <owners>
+    <owner id="yegor256">500000</owner>
+    <owner id="dmarkov">100</owner>
+  </owners>
+</equity>
