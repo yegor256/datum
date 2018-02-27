@@ -62,7 +62,9 @@ SOFTWARE.
         </tr>
       </thead>
       <tbody>
-        <xsl:apply-templates select="person"/>
+        <xsl:apply-templates select="person">
+          <xsl:sort select="@id" order="ascending"/>
+        </xsl:apply-templates>
       </tbody>
     </table>
   </xsl:template>
