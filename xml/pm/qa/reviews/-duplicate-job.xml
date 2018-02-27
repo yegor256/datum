@@ -16,6 +16,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <reviews version="1" updated="2017-08-05T17:11:42.123Z">
-  <review job="gh:test/test#1"/>
-  <review job="gh:test/test#1"/>
+  <review job="gh:test/test#1">
+    <requested>2017-08-05T17:11:42.123Z</requested>
+    <inspector>qauser</inspector>
+  </review>
+  <review job="gh:test/test#1">
+    <requested>2017-08-05T17:11:42.123Z</requested>
+    <inspector>qauser</inspector>
+  </review>
 </reviews>

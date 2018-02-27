@@ -45,6 +45,18 @@ SOFTWARE.
           <th>
             <xsl:text>Job</xsl:text>
           </th>
+          <th>
+            <xsl:text>Requested</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Inspector</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Verdict</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Done</xsl:text>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -59,6 +71,24 @@ SOFTWARE.
       <td>
         <xsl:call-template name="job">
           <xsl:with-param name="id" select="@job"/>
+        </xsl:call-template>
+      </td>
+      <td>
+        <xsl:call-template name="date">
+          <xsl:with-param name="iso" select="requested"/>
+        </xsl:call-template>
+      </td>
+      <td>
+        <xsl:call-template name="user">
+          <xsl:with-param name="id" select="inspector"/>
+        </xsl:call-template>
+      </td>
+      <td>
+        <xsl:value-of select="quality"/>
+      </td>
+      <td>
+        <xsl:call-template name="date">
+          <xsl:with-param name="iso" select="done"/>
         </xsl:call-template>
       </td>
     </tr>

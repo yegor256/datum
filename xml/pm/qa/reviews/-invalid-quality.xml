@@ -18,5 +18,7 @@ SOFTWARE.
 <reviews version="1" updated="2017-08-05T17:11:42.123Z">
   <review job="gh:test/test#2">
     <quality>strange</quality>
+    <requested>2017-08-05T17:11:42.123Z</requested>
+    <inspector>qauser</inspector>
   </review>
 </reviews>
