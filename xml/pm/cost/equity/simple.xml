@@ -16,6 +16,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <equity updated="2017-07-27T04:06:33Z" version="0.1">
+  <entity>Zerocracy, Inc.</entity>
+  <address>555 Bryant Str, Ste 470, Palo Alto, CA 94301</address>
+  <ceo>Yegor Bugayenko</ceo>
   <cap>$4000000</cap>
   <shares>1000000</shares>
   <owners>
