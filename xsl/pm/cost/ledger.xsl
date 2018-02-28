@@ -102,17 +102,11 @@ SOFTWARE.
           <th>
             <xsl:text>ID</xsl:text>
           </th>
-          <th>
-            <xsl:text>Created</xsl:text>
-          </th>
           <th style="text-align:right">
             <xsl:text>Amount</xsl:text>
           </th>
           <th>
-            <xsl:text>Dt</xsl:text>
-          </th>
-          <th>
-            <xsl:text>Ct</xsl:text>
+            <xsl:text>Dt/Ct</xsl:text>
           </th>
           <th>
             <xsl:text>Details</xsl:text>
@@ -128,31 +122,33 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="transaction">
     <tr>
-      <td style="text-align:right">
+      <td>
         <xsl:value-of select="@id"/>
         <xsl:if test="@parent">
           <sub>
             <xsl:value-of select="@parent"/>
           </sub>
         </xsl:if>
-      </td>
-      <td>
-        <xsl:call-template name="date">
-          <xsl:with-param name="iso" select="created"/>
-        </xsl:call-template>
+        <span style="display:block;font-size:0.8em">
+          <xsl:call-template name="date">
+            <xsl:with-param name="iso" select="created"/>
+          </xsl:call-template>
+        </span>
       </td>
       <td style="text-align:right">
         <xsl:value-of select="amount"/>
       </td>
       <td>
-        <xsl:value-of select="dt"/>
-        <xsl:text>:</xsl:text>
-        <xsl:value-of select="dtx"/>
-      </td>
-      <td>
-        <xsl:value-of select="ct"/>
-        <xsl:text>:</xsl:text>
-        <xsl:value-of select="ctx"/>
+        <span style="display:block">
+          <xsl:value-of select="dt"/>
+          <xsl:text>:</xsl:text>
+          <xsl:value-of select="dtx"/>
+        </span>
+        <span style="display:block">
+          <xsl:value-of select="ct"/>
+          <xsl:text>:</xsl:text>
+          <xsl:value-of select="ctx"/>
+        </span>
       </td>
       <td>
         <xsl:value-of select="details"/>
