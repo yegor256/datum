@@ -36,6 +36,10 @@ SOFTWARE.
             <xs:element name="item" type="item" minOccurs="0" maxOccurs="unbounded"/>
           </xs:sequence>
         </xs:complexType>
+        <xs:unique name="uniqueItem">
+          <xs:selector xpath="item"/>
+          <xs:field xpath="details"/>
+        </xs:unique>
       </xs:element>
     </xs:all>
     <xs:attribute name="login" use="required" type="login"/>
