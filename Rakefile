@@ -32,7 +32,7 @@ CLEAN.include 'target'
 
 task :default, [:version] => %i[
   clean xsd
-  xsl auto xcop underscores
+  xsl xsltest auto xcop underscores
   rubocop copyright
 ]
 
@@ -148,6 +148,16 @@ task :xsl do
   end
   raise "#{total} errors" unless total.zero?
   puts "\nAll #{xsls.length} XML/XSL files are clean\n\n"
+end
+
+desc 'Run XSL tests'
+task :xsltest do
+  puts 'Running XSL tests...'
+  Dir['xsl-test/**/*.xsl'].each do |p|
+    xsl = Nokogiri::XSLT(File.open(p))
+    xsl.transform(Nokogiri::XML('<empty/>'))
+  end
+  puts "\nAll XSL tests passed\n\n"
 end
 
 desc 'Run all auto-updates and check their results'
