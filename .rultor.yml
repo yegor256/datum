@@ -11,6 +11,7 @@ release:
     rake site[${tag}] validate_site[${tag}]
     cp -r target/site /tmp
     git checkout gh-pages
+    git rm -f '*'
     for d in $(ls /tmp/site); do rm -rf $d; cp -r /tmp/site/$d .; git add $d; done
     git commit --allow-empty -m "${tag}"
   commanders:
