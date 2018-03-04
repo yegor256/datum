@@ -109,7 +109,9 @@ SOFTWARE.
       <xsl:text>; </xsl:text>
       <xsl:value-of select="@points"/>
       <xsl:text>; </xsl:text>
-      <xsl:value-of select="text()"/>
+      <xsl:call-template name="par">
+        <xsl:with-param name="text" select="text()"/>
+      </xsl:call-template>
     </li>
   </xsl:template>
 </xsl:stylesheet>

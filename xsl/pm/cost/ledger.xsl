@@ -151,7 +151,9 @@ SOFTWARE.
         </span>
       </td>
       <td>
-        <xsl:value-of select="details"/>
+        <xsl:call-template name="par">
+          <xsl:with-param name="text" select="details"/>
+        </xsl:call-template>
       </td>
     </tr>
   </xsl:template>
