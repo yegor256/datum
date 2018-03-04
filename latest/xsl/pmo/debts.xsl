@@ -69,9 +69,13 @@ SOFTWARE.
           <xsl:text> </xsl:text>
           <xsl:value-of select="created"/>
           <xsl:text> </xsl:text>
-          <xsl:value-of select="details"/>
+          <xsl:call-template name="par">
+            <xsl:with-param name="text" select="details"/>
+          </xsl:call-template>
           <xsl:text> (</xsl:text>
-          <xsl:value-of select="reason"/>
+          <xsl:call-template name="par">
+            <xsl:with-param name="text" select="reason"/>
+          </xsl:call-template>
           <xsl:text>)</xsl:text>
         </li>
       </xsl:for-each>

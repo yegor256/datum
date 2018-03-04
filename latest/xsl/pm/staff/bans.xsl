@@ -73,7 +73,9 @@ SOFTWARE.
         </xsl:call-template>
       </td>
       <td>
-        <xsl:value-of select="reason"/>
+        <xsl:call-template name="par">
+          <xsl:with-param name="text" select="reason"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:call-template name="date">

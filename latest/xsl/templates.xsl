@@ -114,40 +114,6 @@ SOFTWARE.
   </xsl:template>
   <xsl:template name="par">
     <xsl:param name="text"/>
-    <xsl:choose>
-      <xsl:when test="contains($text, '§')">
-        <xsl:if test="substring-before($text, '§') != ''">
-          <xsl:value-of select="substring-before($text, '§')"/>
-        </xsl:if>
-        <xsl:call-template name="buildParagraphAnchor">
-          <xsl:with-param name="tail" select="substring-after($text, '§')"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="$text"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-  <xsl:template name="buildParagraphAnchor">
-    <xsl:param name="tail"/>
-    <xsl:variable name="paragraphNumber">
-      <xsl:choose>
-        <xsl:when test="contains($tail, ' ')">
-          <xsl:value-of select="substring-before($tail, ' ')"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="$tail"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <a href="http://www.zerocracy.com/policy.html#{$paragraphNumber}">
-      <xsl:text>§</xsl:text>
-      <xsl:value-of select="$paragraphNumber"/>
-    </a>
-    <xsl:if test="contains($tail, ' ')">
-      <xsl:call-template name="award-tokenize">
-        <xsl:with-param name="text" select="concat(' ', substring-after($tail, ' '))"/>
-      </xsl:call-template>
-    </xsl:if>
+    <xsl:value-of select="$text"/>
   </xsl:template>
 </xsl:stylesheet>
