@@ -212,7 +212,7 @@ task :site, [:version] do |_, args|
   FileUtils.cp_r('xsd', "target/site/#{args[:version]}")
   puts "XSDs copied to target/site/#{args[:version]}"
   FileUtils.mkdir_p('target/site/latest')
-  %w[auto rules xsd xsl upgrades].each do |p|
+  %w[auto rules xsd xsl upgrades pages].each do |p|
     FileUtils.cp_r(p, 'target/site/latest')
     puts "#{p} copied to target/site/latest"
   end
