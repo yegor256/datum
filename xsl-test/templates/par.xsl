@@ -22,8 +22,8 @@ SOFTWARE.
     <xsl:call-template name="assert-that">
       <!--
       @todo #314:30min This test is ignored because template PAR is not
-      implemented properly. Let's implement it using recursion and enable
-      this test by removing the line after this puzzle.
+       implemented properly. Let's implement it using recursion and enable
+       this test by removing the line after this puzzle.
       -->
       <xsl:with-param name="ignore" select="'true'"/>
       <xsl:with-param name="message" select="'Fails to format project name'"/>
