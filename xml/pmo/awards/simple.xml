@@ -28,6 +28,6 @@ SOFTWARE.
     <project>A65TGR50F</project>
     <job>gh:test/test#1</job>
     <points>-15</points>
-    <reason>Bad mistake made</reason>
+    <reason>Bad mistake made §42</reason>
   </award>
 </awards>
