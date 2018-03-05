@@ -29,41 +29,14 @@ SOFTWARE.
       </body>
     </html>
   </xsl:template>
-  <xsl:template match="options[not(option)]">
+  <xsl:template match="options">
     <p>
-      <xsl:text>There are no user options.</xsl:text>
+      <xsl:text>You can download and upload options file here</xsl:text>
+      <!--
+        @todo #258:30min Add some controls to allow user to download and
+         upload options.xml file. On upload validation against xsd
+         schema should be performed.
+      -->
     </p>
-  </xsl:template>
-  <xsl:template match="options[option]">
-    <p>
-      <xsl:text>User options: </xsl:text>
-    </p>
-    <table data-sortable="true">
-      <thead>
-        <tr>
-          <th>
-            <xsl:text>name</xsl:text>
-          </th>
-          <th>
-            <xsl:text>value</xsl:text>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <xsl:apply-templates select="option"/>
-      </tbody>
-    </table>
-  </xsl:template>
-  <xsl:template match="option">
-    <tr>
-      <td>
-        <code>
-          <xsl:value-of select="@name"/>
-        </code>
-      </td>
-      <td>
-        <xsl:value-of select="text()"/>
-      </td>
-    </tr>
   </xsl:template>
 </xsl:stylesheet>

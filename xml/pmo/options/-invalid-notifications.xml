@@ -16,10 +16,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <options version="0.25" updated="2016-12-29T09:03:21.684Z">
-  <maxJobsInAgenda>10</maxJobsInAgenda>
   <notify>
-    <students>false</students>
-    <rfps>false</rfps>
-    <publish>true</publish>
+    <students>yes</students>
+    <rfps>no</rfps>
+    <publish>maybe</publish>
   </notify>
 </options>

@@ -16,6 +16,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <options version="0.25" updated="2016-12-29T09:03:21.684Z">
-  <option name="maxJobs">10</option>
-  <option name="maxJobs">11</option>
+  <unknown>option</unknown>
 </options>
