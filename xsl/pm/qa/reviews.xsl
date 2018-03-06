@@ -21,7 +21,9 @@ SOFTWARE.
     <html lang="en">
       <body>
         <section>
-          <h1>QA Reviews</h1>
+          <h1>
+            <xsl:text>QA Reviews</xsl:text>
+          </h1>
           <p>
             <xsl:text>This document contains all jobs under QA review.</xsl:text>
           </p>
@@ -37,7 +39,9 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="reviews[review]">
     <p>
-      <xsl:text>This is the full list of jobs under QA review.</xsl:text>
+      <xsl:text>Thare are </xsl:text>
+      <xsl:value-of select="count(review)"/>
+      <xsl:text> reviews pending:</xsl:text>
     </p>
     <table data-sortable="true">
       <thead>
@@ -52,10 +56,16 @@ SOFTWARE.
             <xsl:text>Inspector</xsl:text>
           </th>
           <th>
-            <xsl:text>Verdict</xsl:text>
+            <xsl:text>Performer</xsl:text>
           </th>
           <th>
-            <xsl:text>Done</xsl:text>
+            <xsl:text>Cash</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Mins</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Bonus</xsl:text>
           </th>
         </tr>
       </thead>
@@ -84,12 +94,18 @@ SOFTWARE.
         </xsl:call-template>
       </td>
       <td>
-        <xsl:value-of select="quality"/>
+        <xsl:call-template name="user">
+          <xsl:with-param name="id" select="performer"/>
+        </xsl:call-template>
       </td>
       <td>
-        <xsl:call-template name="date">
-          <xsl:with-param name="iso" select="done"/>
-        </xsl:call-template>
+        <xsl:value-of select="cash"/>
+      </td>
+      <td>
+        <xsl:value-of select="minutes"/>
+      </td>
+      <td>
+        <xsl:value-of select="bonus"/>
       </td>
     </tr>
   </xsl:template>
