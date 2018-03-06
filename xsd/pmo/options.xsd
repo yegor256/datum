@@ -24,15 +24,16 @@ SOFTWARE.
       <xs:element name="publish" type="xs:boolean" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:simpleType name="jobLimit">
-    <xs:restriction base="xs:integer">
-      <xs:minInclusive value="1"/>
-    </xs:restriction>
-  </xs:simpleType>
   <xs:element name="options">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="maxJobsInAgenda" type="jobLimit" minOccurs="0"/>
+        <xs:element name="maxJobsInAgenda" minOccurs="0">
+          <xs:simpleType xml:base="xs:integer">
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
         <xs:element name="notify" type="notify" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="updated" use="required" type="xs:dateTime"/>

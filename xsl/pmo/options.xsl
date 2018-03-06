@@ -31,12 +31,49 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="options">
     <p>
-      <xsl:text>You can download and upload options file here</xsl:text>
-      <!--
-        @todo #258:30min Add some controls to allow user to download and
-         upload options.xml file. On upload validation against xsd
-         schema should be performed.
-      -->
+      <xsl:text>Your options:</xsl:text>
     </p>
+    <table data-sortable="true">
+      <thead>
+        <tr>
+          <th>
+            <xsl:text>Option</xsl:text>
+          </th>
+          <th>
+            <xsl:text>Value</xsl:text>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:if test="maxJobsInAgenda">
+          <tr>
+            <td>
+              <xsl:text>Max jobs in agend</xsl:text>
+            </td>
+            <td>
+              <xsl:value-of select="maxJobsInAgenda"/>
+            </td>
+          </tr>
+        </xsl:if>
+        <xsl:if test="notify">
+          <tr>
+            <td>
+              <xsl:text>Notify</xsl:text>
+            </td>
+            <td>
+              <xsl:if test="notify/rfps">
+                <xsl:text>RFPS, </xsl:text>
+              </xsl:if>
+              <xsl:if test="notify/publish">
+                <xsl:text>publish, </xsl:text>
+              </xsl:if>
+              <xsl:if test="notify/students">
+                <xsl:text>students</xsl:text>
+              </xsl:if>
+            </td>
+          </tr>
+        </xsl:if>
+      </tbody>
+    </table>
   </xsl:template>
 </xsl:stylesheet>
