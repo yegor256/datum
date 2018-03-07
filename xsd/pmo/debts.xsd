@@ -30,6 +30,15 @@ SOFTWARE.
   </xs:complexType>
   <xs:complexType name="debt">
     <xs:all>
+      <xs:element name="failure" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="when" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+            <xs:element name="attempt" minOccurs="1" maxOccurs="1" type="xs:int"/>
+            <xs:element name="reason" minOccurs="1" maxOccurs="1" type="xs:string"/>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
       <xs:element name="items" minOccurs="0" maxOccurs="1">
         <xs:complexType>
           <xs:sequence>
