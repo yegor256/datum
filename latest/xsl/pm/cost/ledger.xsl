@@ -129,7 +129,7 @@ SOFTWARE.
             <xsl:value-of select="@parent"/>
           </sub>
         </xsl:if>
-        <span style="display:block;font-size:0.8em">
+        <span style="display:block;font-size:0.8em;line-height:0.8em;">
           <xsl:call-template name="date">
             <xsl:with-param name="iso" select="created"/>
           </xsl:call-template>
