@@ -42,6 +42,9 @@ SOFTWARE.
           <th>
             <xsl:text>Items</xsl:text>
           </th>
+          <th>
+            <xsl:text>Failure</xsl:text>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -58,6 +61,9 @@ SOFTWARE.
       </td>
       <td>
         <xsl:apply-templates select="items"/>
+      </td>
+      <td>
+        <xsl:apply-templates select="failure"/>
       </td>
     </tr>
   </xsl:template>
@@ -80,5 +86,13 @@ SOFTWARE.
         </li>
       </xsl:for-each>
     </ul>
+  </xsl:template>
+  <xsl:template match="failure">
+    <xsl:text>#</xsl:text>
+    <xsl:value-of select="attempt"/>
+    <xsl:text> </xsl:text>
+    <xsl:value-of select="created"/>
+    <xsl:text>: </xsl:text>
+    <xsl:value-of select="reason"/>
   </xsl:template>
 </xsl:stylesheet>

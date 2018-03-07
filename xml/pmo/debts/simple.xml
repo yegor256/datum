@@ -34,8 +34,8 @@ SOFTWARE.
   </debt>
   <debt login="dmarkov">
     <failure>
+      <created>2016-12-29T09:03:21.694Z</created>
       <attempt>2</attempt>
-      <when>2016-12-29T09:03:21.694Z</when>
       <reason>Can't pay to PayPal now...</reason>
     </failure>
     <items>
