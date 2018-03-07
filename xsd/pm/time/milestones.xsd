@@ -20,7 +20,7 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/time/types.xsd"/>
   <xs:complexType name="milestone">
     <xs:sequence>
-      <xs:element name="date" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+      <xs:element name="date" type="xs:dateTime"/>
     </xs:sequence>
     <xs:attribute name="id" type="milestoneID" use="required"/>
   </xs:complexType>

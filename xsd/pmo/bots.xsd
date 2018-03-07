@@ -19,11 +19,11 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/basics.xsd"/>
   <xs:complexType name="bot">
     <xs:all>
-      <xs:element name="bot_access_token" type="xs:string" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="access_token" type="xs:string" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="team_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="team_id" type="xs:string" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+      <xs:element name="bot_access_token" type="xs:string"/>
+      <xs:element name="access_token" type="xs:string"/>
+      <xs:element name="team_name" type="xs:string"/>
+      <xs:element name="team_id" type="xs:string"/>
+      <xs:element name="created" type="xs:dateTime"/>
     </xs:all>
     <xs:attribute name="id" use="required">
       <xs:simpleType>

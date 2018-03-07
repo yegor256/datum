@@ -21,9 +21,9 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
   <xs:complexType name="ban">
     <xs:all>
-      <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-      <xs:element name="login" minOccurs="1" maxOccurs="1" type="login"/>
-      <xs:element name="reason" minOccurs="1" maxOccurs="1">
+      <xs:element name="created" type="xs:dateTime"/>
+      <xs:element name="login" type="login"/>
+      <xs:element name="reason">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:pattern value="[A-Za-z ]+"/>

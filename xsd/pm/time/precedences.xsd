@@ -21,7 +21,7 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
   <xs:complexType name="precedence">
     <xs:sequence>
-      <xs:element name="type" minOccurs="0" maxOccurs="1">
+      <xs:element name="type" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="finish-to-start"/>
@@ -31,7 +31,7 @@ SOFTWARE.
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="predecessor" minOccurs="1" maxOccurs="1">
+      <xs:element name="predecessor">
         <xs:complexType>
           <xs:simpleContent>
             <xs:extension base="milestoneID">
@@ -40,7 +40,7 @@ SOFTWARE.
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
-      <xs:element name="successor" minOccurs="1" maxOccurs="1">
+      <xs:element name="successor">
         <xs:complexType>
           <xs:simpleContent>
             <xs:extension base="milestoneID">

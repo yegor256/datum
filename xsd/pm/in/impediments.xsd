@@ -20,7 +20,7 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
   <xs:complexType name="impedimentOrder">
     <xs:sequence>
-      <xs:element name="impediment" type="impediment" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="impediment" type="impediment" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="id" use="required" type="jobID"/>
   </xs:complexType>

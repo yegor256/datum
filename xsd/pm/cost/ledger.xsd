@@ -33,19 +33,19 @@ SOFTWARE.
   </xs:simpleType>
   <xs:complexType name="transaction">
     <xs:all>
-      <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-      <xs:element name="amount" minOccurs="1" maxOccurs="1" type="cash"/>
-      <xs:element name="details" minOccurs="1" maxOccurs="1">
+      <xs:element name="created" type="xs:dateTime"/>
+      <xs:element name="amount" type="cash"/>
+      <xs:element name="details">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:pattern value=".{16,}"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="dt" minOccurs="1" maxOccurs="1" type="account"/>
-      <xs:element name="dtx" minOccurs="1" maxOccurs="1" type="accountx"/>
-      <xs:element name="ct" minOccurs="1" maxOccurs="1" type="account"/>
-      <xs:element name="ctx" minOccurs="1" maxOccurs="1" type="accountx"/>
+      <xs:element name="dt" type="account"/>
+      <xs:element name="dtx" type="accountx"/>
+      <xs:element name="ct" type="account"/>
+      <xs:element name="ctx" type="accountx"/>
     </xs:all>
     <xs:attribute name="id" use="required" type="xs:integer"/>
     <xs:attribute name="parent" use="optional" type="xs:integer"/>
@@ -53,17 +53,17 @@ SOFTWARE.
   <xs:element name="ledger">
     <xs:complexType>
       <xs:all>
-        <xs:element name="deficit" minOccurs="0" maxOccurs="1" type="xs:dateTime"/>
-        <xs:element name="balance" minOccurs="0" maxOccurs="1">
+        <xs:element name="deficit" minOccurs="0" type="xs:dateTime"/>
+        <xs:element name="balance" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="account" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:all>
-                    <xs:element name="name" type="account" minOccurs="1" maxOccurs="1"/>
-                    <xs:element name="namex" type="accountx" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="dt" type="cash" minOccurs="1" maxOccurs="1"/>
-                    <xs:element name="ct" type="cash" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="name" type="account"/>
+                    <xs:element name="namex" type="accountx" minOccurs="0"/>
+                    <xs:element name="dt" type="cash"/>
+                    <xs:element name="ct" type="cash"/>
                   </xs:all>
                 </xs:complexType>
               </xs:element>
@@ -75,7 +75,7 @@ SOFTWARE.
             <xs:field xpath="namex"/>
           </xs:unique>
         </xs:element>
-        <xs:element name="transactions" minOccurs="0" maxOccurs="1">
+        <xs:element name="transactions" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="transaction" type="transaction" minOccurs="0" maxOccurs="unbounded"/>

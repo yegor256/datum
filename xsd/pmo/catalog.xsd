@@ -29,26 +29,26 @@ SOFTWARE.
   </xs:complexType>
   <xs:complexType name="project">
     <xs:all>
-      <xs:element name="parent" minOccurs="0" maxOccurs="1" type="projectID"/>
-      <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-      <xs:element name="alive" minOccurs="1" maxOccurs="1" type="xs:boolean"/>
-      <xs:element name="fee" minOccurs="1" maxOccurs="1" type="cash"/>
-      <xs:element name="prefix" minOccurs="0" maxOccurs="1">
+      <xs:element name="parent" minOccurs="0" type="projectID"/>
+      <xs:element name="created" type="xs:dateTime"/>
+      <xs:element name="alive" type="xs:boolean"/>
+      <xs:element name="fee" type="cash"/>
+      <xs:element name="prefix" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:pattern value="([0-9]{4}/[0-9]{2}/[A-Z0-9]{9,}|PMO)/"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="links" minOccurs="0" maxOccurs="1">
+      <xs:element name="links" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
             <xs:element name="link" type="link" minOccurs="0" maxOccurs="unbounded"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:element name="publish" minOccurs="1" maxOccurs="1" type="xs:boolean"/>
-      <xs:element name="title" minOccurs="1" maxOccurs="1" type="projectTitle"/>
+      <xs:element name="publish" type="xs:boolean"/>
+      <xs:element name="title" type="projectTitle"/>
     </xs:all>
     <xs:attribute name="id" type="projectID" use="required"/>
   </xs:complexType>

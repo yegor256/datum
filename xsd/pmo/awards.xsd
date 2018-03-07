@@ -21,11 +21,11 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
   <xs:complexType name="award">
     <xs:all>
-      <xs:element name="added" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-      <xs:element name="project" minOccurs="1" maxOccurs="1" type="projectID"/>
-      <xs:element name="job" minOccurs="1" maxOccurs="1" type="jobID"/>
-      <xs:element name="points" minOccurs="1" maxOccurs="1" type="xs:int"/>
-      <xs:element name="reason" minOccurs="1" maxOccurs="1" type="xs:string"/>
+      <xs:element name="added" type="xs:dateTime"/>
+      <xs:element name="project" type="projectID"/>
+      <xs:element name="job" type="jobID"/>
+      <xs:element name="points" type="xs:int"/>
+      <xs:element name="reason" type="xs:string"/>
     </xs:all>
   </xs:complexType>
   <xs:element name="awards">

@@ -47,14 +47,14 @@ SOFTWARE.
   </xs:complexType>
   <xs:complexType name="person">
     <xs:all>
-      <xs:element name="mentor" type="login" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="mentor" type="login" minOccurs="0"/>
       <xs:element name="reputation" type="xs:integer"/>
       <xs:element name="jobs" type="xs:integer"/>
       <xs:element name="projects" type="xs:integer"/>
-      <xs:element name="rate" type="cash" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="wallet" type="wallet" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="details" minOccurs="0" maxOccurs="1" type="xs:string"/>
-      <xs:element name="links" minOccurs="0" maxOccurs="1">
+      <xs:element name="rate" type="cash" minOccurs="0"/>
+      <xs:element name="wallet" type="wallet" minOccurs="0"/>
+      <xs:element name="details" minOccurs="0" type="xs:string"/>
+      <xs:element name="links" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
             <xs:element name="link" type="link" minOccurs="0" maxOccurs="unbounded"/>
@@ -66,7 +66,7 @@ SOFTWARE.
           <xs:field xpath="@href"/>
         </xs:unique>
       </xs:element>
-      <xs:element name="vacation" minOccurs="0" maxOccurs="1">
+      <xs:element name="vacation" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:boolean"/>
         </xs:simpleType>

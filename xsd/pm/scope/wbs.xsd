@@ -21,8 +21,8 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
   <xs:complexType name="job">
     <xs:all>
-      <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-      <xs:element name="role" minOccurs="1" maxOccurs="1">
+      <xs:element name="created" type="xs:dateTime"/>
+      <xs:element name="role">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:pattern value="[A-Z]{2,3}"/>

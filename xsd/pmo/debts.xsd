@@ -22,24 +22,24 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/staff/types.xsd"/>
   <xs:complexType name="item">
     <xs:all>
-      <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-      <xs:element name="amount" minOccurs="1" maxOccurs="1" type="cash"/>
-      <xs:element name="details" minOccurs="1" maxOccurs="1" type="xs:string"/>
-      <xs:element name="reason" minOccurs="1" maxOccurs="1" type="xs:string"/>
+      <xs:element name="created" type="xs:dateTime"/>
+      <xs:element name="amount" type="cash"/>
+      <xs:element name="details" type="xs:string"/>
+      <xs:element name="reason" type="xs:string"/>
     </xs:all>
   </xs:complexType>
   <xs:complexType name="debt">
     <xs:all>
-      <xs:element name="failure" minOccurs="0" maxOccurs="1">
+      <xs:element name="failure" minOccurs="0">
         <xs:complexType>
           <xs:all>
-            <xs:element name="when" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-            <xs:element name="attempt" minOccurs="1" maxOccurs="1" type="xs:int"/>
-            <xs:element name="reason" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            <xs:element name="when" type="xs:dateTime"/>
+            <xs:element name="attempt" type="xs:int"/>
+            <xs:element name="reason" type="xs:string"/>
           </xs:all>
         </xs:complexType>
       </xs:element>
-      <xs:element name="items" minOccurs="0" maxOccurs="1">
+      <xs:element name="items" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
             <xs:element name="item" type="item" minOccurs="0" maxOccurs="unbounded"/>

@@ -21,8 +21,8 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/cost/types.xsd"/>
   <xs:complexType name="estimate">
     <xs:all>
-      <xs:element name="cash" type="cash" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
+      <xs:element name="cash" type="cash" minOccurs="0"/>
+      <xs:element name="created" type="xs:dateTime"/>
     </xs:all>
     <xs:attribute name="id" use="required" type="jobID"/>
   </xs:complexType>

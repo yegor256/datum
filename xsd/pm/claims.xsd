@@ -27,27 +27,27 @@ SOFTWARE.
   </xs:complexType>
   <xs:complexType name="claim">
     <xs:all>
-      <xs:element name="type" minOccurs="1" maxOccurs="1">
+      <xs:element name="type">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:pattern value="[A-Za-z ]+"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="created" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>
-      <xs:element name="until" minOccurs="0" maxOccurs="1" type="xs:dateTime"/>
-      <xs:element name="author" minOccurs="0" maxOccurs="1" type="login"/>
-      <xs:element name="token" minOccurs="0" maxOccurs="1">
+      <xs:element name="created" type="xs:dateTime"/>
+      <xs:element name="until" minOccurs="0" type="xs:dateTime"/>
+      <xs:element name="author" minOccurs="0" type="login"/>
+      <xs:element name="token" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:pattern value="(telegram|github|slack|user|job|test);.+"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="params" minOccurs="0" maxOccurs="1">
+      <xs:element name="params" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="param" type="param" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="param" type="param" maxOccurs="unbounded"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>

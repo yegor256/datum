@@ -21,7 +21,7 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
   <xs:complexType name="job">
     <xs:sequence>
-      <xs:element name="election" type="election" minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="election" type="election" maxOccurs="unbounded">
         <xs:unique name="voteAuthor">
           <xs:selector xpath="vote"/>
           <xs:field xpath="@author"/>
@@ -32,7 +32,7 @@ SOFTWARE.
   </xs:complexType>
   <xs:complexType name="election">
     <xs:sequence>
-      <xs:element name="vote" type="vote" minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="vote" type="vote" maxOccurs="unbounded">
         <xs:unique name="personLogin">
           <xs:selector xpath="person"/>
           <xs:field xpath="@login"/>
@@ -43,7 +43,7 @@ SOFTWARE.
   </xs:complexType>
   <xs:complexType name="vote">
     <xs:sequence>
-      <xs:element name="person" minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="person" maxOccurs="unbounded">
         <xs:complexType>
           <xs:simpleContent>
             <xs:extension base="xs:string">

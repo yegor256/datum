@@ -22,11 +22,11 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/cost/types.xsd"/>
   <xs:complexType name="order">
     <xs:all>
-      <xs:element name="added" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="project" type="projectID" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="role" type="role" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="impediment" type="xs:string" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="estimate" type="cash" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="added" type="xs:dateTime"/>
+      <xs:element name="project" type="projectID"/>
+      <xs:element name="role" type="role"/>
+      <xs:element name="impediment" type="xs:string" minOccurs="0"/>
+      <xs:element name="estimate" type="cash" minOccurs="0"/>
     </xs:all>
     <xs:attribute name="job" use="required" type="jobID"/>
   </xs:complexType>
