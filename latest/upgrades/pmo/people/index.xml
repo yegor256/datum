@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pmo/people" version="0.58.1">
+<index path="/latest/upgrades/pmo/people" version="0.59">
   <entry dir="false" path="/latest/upgrades/pmo/people/0.24-version-and-date.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pmo/people/0.24-version-and-date.xsl" order="0.24">0.24-version-and-date.xsl</entry>
   <entry dir="false" path="/latest/upgrades/pmo/people/0.54.3-reputation.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pmo/people/0.54.3-reputation.xsl" order="0.54.3">0.54.3-reputation.xsl</entry>
   <entry dir="false" path="/latest/upgrades/pmo/people/0.54.3-skills.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pmo/people/0.54.3-skills.xsl" order="0.54.3">0.54.3-skills.xsl</entry>

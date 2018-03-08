@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="/latest/auto/pm/staff/roles" version="0.58.1">
+<index path="/latest/auto/pm/staff/roles" version="0.59">
   <entry dir="false" path="/latest/auto/pm/staff/roles/01-rates-remove.xsl" uri="http://datum.zerocracy.com/latest/auto/pm/staff/roles/01-rates-remove.xsl" order="1">01-rates-remove.xsl</entry>
 </index>

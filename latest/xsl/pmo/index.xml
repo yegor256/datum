@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/xsl/pmo" version="0.58.1">
+<index path="/latest/xsl/pmo" version="0.59">
   <entry dir="false" path="/latest/xsl/pmo/agenda.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/agenda.xsl">agenda.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/awards.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/awards.xsl">awards.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/bots.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/bots.xsl">bots.xsl</entry>
@@ -9,4 +9,5 @@
   <entry dir="false" path="/latest/xsl/pmo/projects.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/projects.xsl">projects.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/rfps.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/rfps.xsl">rfps.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/speed.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/speed.xsl">speed.xsl</entry>
+  <entry dir="false" path="/latest/xsl/pmo/verbosity.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/verbosity.xsl">verbosity.xsl</entry>
 </index>
