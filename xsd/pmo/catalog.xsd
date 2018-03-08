@@ -32,6 +32,21 @@ SOFTWARE.
       <xs:element name="parent" minOccurs="0" type="projectID"/>
       <xs:element name="created" type="xs:dateTime"/>
       <xs:element name="alive" type="xs:boolean"/>
+      <xs:element name="recharge" minOccurs="0">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="amount" type="cash"/>
+            <xs:element name="system">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="stripe"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
       <xs:element name="fee" type="cash"/>
       <xs:element name="prefix" minOccurs="0">
         <xs:simpleType>
