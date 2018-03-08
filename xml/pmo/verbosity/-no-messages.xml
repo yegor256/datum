@@ -18,6 +18,5 @@ SOFTWARE.
 <verbosity version="1" updated="2017-08-08T22:22:22.222Z">
   <order job="gh:test/test#1">
     <project>ABCDEF123</project>
-    <commits>1</commits>
   </order>
 </verbosity>

@@ -40,9 +40,6 @@ SOFTWARE.
                 <th>
                   <xsl:text>Messages</xsl:text>
                 </th>
-                <th>
-                  <xsl:text>Commits</xsl:text>
-                </th>
               </tr>
             </thead>
             <tbody>
@@ -69,9 +66,6 @@ SOFTWARE.
       </td>
       <td>
         <xsl:value-of select="messages"/>
-      </td>
-      <td>
-        <xsl:value-of select="commits"/>
       </td>
     </tr>
   </xsl:template>

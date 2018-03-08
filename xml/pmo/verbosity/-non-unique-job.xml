@@ -19,11 +19,9 @@ SOFTWARE.
   <order job="gh:test/test#1">
     <project>ABCDEF123</project>
     <messages>3</messages>
-    <commits>1</commits>
   </order>
   <order job="gh:test/test#1">
     <project>ABCDEF123</project>
     <messages>3</messages>
-    <commits>1</commits>
   </order>
 </verbosity>

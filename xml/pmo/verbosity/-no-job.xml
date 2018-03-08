@@ -19,6 +19,5 @@ SOFTWARE.
   <order>
     <project>ABCDEF123</project>
     <messages>3</messages>
-    <commits>1</commits>
   </order>
 </verbosity>
