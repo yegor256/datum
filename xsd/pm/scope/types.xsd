@@ -18,7 +18,7 @@ SOFTWARE.
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="SNAPSHOT" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:simpleType name="jobID">
     <xs:restriction base="xs:string">
-      <xs:pattern value="gh:[A-Z0-9a-z.\-#/]{3,}"/>
+      <xs:pattern value="none|gh:[A-Z0-9a-z.\-#/]{3,}"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="role">

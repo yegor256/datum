@@ -26,6 +26,13 @@ SOFTWARE.
   <award>
     <added>2016-12-29T09:03:21.684Z</added>
     <project>A65TGR50F</project>
+    <job>none</job>
+    <points>10</points>
+    <reason>Very good work</reason>
+  </award>
+  <award>
+    <added>2016-12-29T09:03:21.684Z</added>
+    <project>A65TGR50F</project>
     <job>gh:test/test#1</job>
     <points>-15</points>
     <reason>Bad mistake made §42</reason>
