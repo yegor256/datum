@@ -33,6 +33,7 @@ SOFTWARE.
       <xs:element name="created" type="xs:dateTime"/>
       <xs:element name="alive" type="xs:boolean"/>
       <xs:element name="fee" type="cash"/>
+      <xs:element name="adviser" type="login"/>
       <xs:element name="prefix" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
