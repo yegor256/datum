@@ -121,30 +121,34 @@ task :xsl do
   total = 0
   xsls = Dir['xsl/**/*.xsl']
   xsls.each do |p|
+    stylesheet = Nokogiri::XML(File.open(p))
+    ver = stylesheet.xpath(
+      '/xsl:stylesheet/@version',
+      'xsl' => 'http://www.w3.org/1999/XSL/Transform'
+    )[0].to_s
+    raise "XSL version #{ver} is not 2.0 in #{p}" unless ver == '2.0'
     next if File.basename(p) == 'templates.xsl'
     f = p.sub(%r{xsl/}, 'xml/').sub(%r{/([^/]+)\.xsl$}, '/\1/simple.xml')
-    begin
-      xslt = Nokogiri::XSLT(File.open(p))
-      label = p.sub(%r{.+/([^/]+)\.xsl$}, '\1.html')
-      xml = Nokogiri::XML(File.open(f))
-      root = xml.xpath('/*').first
-      raise "version and updated attributes are required <#{f}>" if
-        root.attr('version').nil? || root.attr('updated').nil?
-      html = xslt.transform(
-        Nokogiri::XML(File.open(f)),
-        ['today', "'#{Time.now.iso8601}'"]
-      )
-      html.remove_namespaces!
-      if html.xpath('/html/body/section').empty?
-        puts html
-        raise "HTML <section> absent in HTML from #{f}"
-      end
-      File.write(File.join(dir, label), html)
-      open(File.join(dir, 'index.html'), 'a') do |i|
-        i.puts "<p><a href='#{label}'>#{p}</a></p>"
-      end
-      print Rainbow('.').green
+    xslt = Nokogiri::XSLT(File.open(p))
+    label = p.sub(%r{.+/([^/]+)\.xsl$}, '\1.html')
+    xml = Nokogiri::XML(File.open(f))
+    root = xml.xpath('/*').first
+    raise "version and updated attributes are required <#{f}>" if
+      root.attr('version').nil? || root.attr('updated').nil?
+    html = xslt.transform(
+      Nokogiri::XML(File.open(f)),
+      ['today', "'#{Time.now.iso8601}'"]
+    )
+    html.remove_namespaces!
+    if html.xpath('/html/body/section').empty?
+      puts html
+      raise "HTML <section> absent in HTML from #{f}"
     end
+    File.write(File.join(dir, label), html)
+    open(File.join(dir, 'index.html'), 'a') do |i|
+      i.puts "<p><a href='#{label}'>#{p}</a></p>"
+    end
+    print Rainbow('.').green
   end
   raise "#{total} errors" unless total.zero?
   puts "\nAll #{xsls.length} XML/XSL files are clean\n\n"
