@@ -48,6 +48,7 @@ SOFTWARE.
         </xs:complexType>
       </xs:element>
       <xs:element name="fee" type="cash"/>
+      <xs:element name="adviser" type="login"/>
       <xs:element name="prefix" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
