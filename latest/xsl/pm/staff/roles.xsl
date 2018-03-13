@@ -27,8 +27,11 @@ SOFTWARE.
           <p>
             <xsl:text>This is a full list of people and their roles in the
             project. The ARC and the PO are
-            allowed to assign roles and resign them. By convention
-            we use these role names: </xsl:text>
+            allowed to assign roles and resign them. By </xsl:text>
+            <a href="http://www.yegor256.com/2016/07/10/software-project-roles.html">
+              <xsl:text>convention</xsl:text>
+            </a>
+            <xsl:text> we use these role names: </xsl:text>
             <a href="http://www.zerocracy.com/policy.html#ARC">
               <xsl:text>ARC</xsl:text>
             </a>

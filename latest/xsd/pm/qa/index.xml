@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="/latest/xsd/pm/qa" version="0.59.1">
+<index path="/latest/xsd/pm/qa" version="0.60">
   <entry dir="false" path="/latest/xsd/pm/qa/reviews.xsd" uri="http://datum.zerocracy.com/latest/xsd/pm/qa/reviews.xsd">reviews.xsd</entry>
 </index>

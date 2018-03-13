@@ -92,7 +92,7 @@ SOFTWARE.
       <td>
         <xsl:value-of select="@id"/>
         <xsl:if test="until">
-          <span title="{until}" style="color:red">
+          <span title="{until}" style="color:red;display:block;font-size:0.8em;line-height:0.8em;">
             <xsl:text>until</xsl:text>
           </span>
         </xsl:if>
