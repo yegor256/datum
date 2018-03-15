@@ -32,6 +32,7 @@ CLEAN.include 'target'
 
 task :default, [:version] => %i[
   clean xsd
+  xslversions
   xsl xsltest auto xcop underscores
   rubocop copyright
 ]
@@ -109,6 +110,19 @@ task :upgrades, [:version] do |_, args|
   puts "\nAll XSL upgrades are clean\n\n"
 end
 
+desc 'Validate all XSL files for versions'
+task :xslversions do
+  puts 'Checking versions of XSL files...'
+  Dir['**/*.xsl'].each do |p|
+    stylesheet = Nokogiri::XML(File.open(p))
+    ver = stylesheet.xpath(
+      '/xsl:stylesheet/@version',
+      'xsl' => 'http://www.w3.org/1999/XSL/Transform'
+    )[0].to_s
+    raise "XSL version #{ver} is not 2.0 in #{p}" unless ver == '2.0'
+  end
+end
+
 desc 'Validate all XML/XSL files'
 task :xsl do
   puts 'Checking XML and XSL files...'
@@ -121,12 +135,6 @@ task :xsl do
   total = 0
   xsls = Dir['xsl/**/*.xsl']
   xsls.each do |p|
-    stylesheet = Nokogiri::XML(File.open(p))
-    ver = stylesheet.xpath(
-      '/xsl:stylesheet/@version',
-      'xsl' => 'http://www.w3.org/1999/XSL/Transform'
-    )[0].to_s
-    raise "XSL version #{ver} is not 2.0 in #{p}" unless ver == '2.0'
     next if File.basename(p) == 'templates.xsl'
     f = p.sub(%r{xsl/}, 'xml/').sub(%r{/([^/]+)\.xsl$}, '/\1/simple.xml')
     xslt = Nokogiri::XSLT(File.open(p))
