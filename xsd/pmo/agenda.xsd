@@ -29,6 +29,7 @@ SOFTWARE.
       <xs:element name="estimate" type="cash" minOccurs="0"/>
     </xs:all>
     <xs:attribute name="job" use="required" type="jobID"/>
+    <xs:attribute name="title" use="required" type="jobTitle"/>
   </xs:complexType>
   <xs:element name="agenda">
     <xs:complexType>

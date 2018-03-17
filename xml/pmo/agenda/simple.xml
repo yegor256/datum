@@ -16,13 +16,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 <agenda version="0.25" updated="2016-12-29T09:03:21.684Z">
-  <order job="gh:test/test#1">
+  <order job="gh:test/test#1" title="Github Issue Title">
     <project>A65TGR50F</project>
     <href>https://github.com/test/test</href>
     <added>2016-12-29T09:03:21.684Z</added>
     <role>DEV</role>
   </order>
-  <order job="gh:test/test#2">
+  <order job="gh:test/test#2" title="Another Issue">
     <project>A65TGR50F</project>
     <added>2016-12-29T09:03:21.684Z</added>
     <role>DEV</role>

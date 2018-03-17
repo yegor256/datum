@@ -60,6 +60,9 @@ SOFTWARE.
             <xsl:text>Job</xsl:text>
           </th>
           <th>
+            <xsl:text>Title</xsl:text>
+          </th>
+          <th>
             <xsl:text>Project</xsl:text>
           </th>
           <th>
@@ -101,6 +104,9 @@ SOFTWARE.
         <xsl:call-template name="job">
           <xsl:with-param name="id" select="@job"/>
         </xsl:call-template>
+      </td>
+      <td>
+        <xsl:value-of select="@title"/>
       </td>
       <td>
         <xsl:call-template name="project">
