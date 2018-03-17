@@ -21,6 +21,10 @@ SOFTWARE.
       <xs:pattern value="none|gh:[A-Z0-9a-z.\-#/]{3,}"/>
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="jobTitle">
+    <xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="role">
     <xs:restriction base="xs:string">
       <xs:pattern value="DEV|REV|QA|ARC"/>
