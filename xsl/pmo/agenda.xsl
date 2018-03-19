@@ -106,7 +106,7 @@ SOFTWARE.
         </xsl:call-template>
       </td>
       <td>
-        <xsl:value-of select="@title"/>
+        <xsl:value-of select="title"/>
       </td>
       <td>
         <xsl:call-template name="project">

@@ -25,11 +25,11 @@ SOFTWARE.
       <xs:element name="added" type="xs:dateTime"/>
       <xs:element name="project" type="projectID"/>
       <xs:element name="role" type="role"/>
+      <xs:element name="title" type="jobTitle"/>
       <xs:element name="impediment" type="xs:string" minOccurs="0"/>
       <xs:element name="estimate" type="cash" minOccurs="0"/>
     </xs:all>
     <xs:attribute name="job" use="required" type="jobID"/>
-    <xs:attribute name="title" use="required" type="jobTitle"/>
   </xs:complexType>
   <xs:element name="agenda">
     <xs:complexType>
