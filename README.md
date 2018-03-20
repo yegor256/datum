@@ -41,6 +41,26 @@ An order may have an **impediment**, which is listed in `impediments.xml`. While
 the impediment exists, the order won't be terminated
 [by delay](http://www.zerocracy.com/policy.html#8).
 
+## Upgrades
+
+When we modify XSD schemas here, production XML documents don't catch up
+automatically. If we introduce a new XML element in, say, `wbs.xsd`, XML
+documents `wbs.xml` in real production projects won't have it. Right after
+we switch to a new version of Datum, they all will become invalid.
+
+In order to solve this problem we have a collection of "upgrades,"
+which are XSL transformations. When
+[`Xocument`](https://github.com/zerocracy/farm/blob/0.21.1/src/main/java/com/zerocracy/Xocument.java)
+opens an XML document, it checks the `version` attribute of its root element.
+If the version is lower than [`Xocument.VERSION`](https://github.com/zerocracy/farm/blob/0.21.1/src/main/java/com/zerocracy/Xocument.java#L71),
+it applies all necessary XSL transformations. Right at that moment
+we have a chance to upgrade XML documents and add necessary elements or attributes
+(or delete deprecated ones).
+
+Every time you introduce something new to an XSD schema, don't forget to add
+an upgrade XSL. The name of upgrade XSL file must start with a version,
+where it has to be applied.
+
 ## How to contribute?
 
 We keep XSD Schema files in the [`xsd`](https://github.com/zerocracy/datum/tree/master/xsd)
