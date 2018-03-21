@@ -143,9 +143,11 @@ task :xsl do
     root = xml.xpath('/*').first
     raise "version and updated attributes are required <#{f}>" if
       root.attr('version').nil? || root.attr('updated').nil?
-    html = xslt.transform(
-      Nokogiri::XML(File.open(f)),
-      ['today', "'#{Time.now.iso8601}'"]
+    html = Nokogiri::XML(
+      xsl_transform(
+        f, p,
+        'today' => "'#{Time.now.iso8601}'"
+      )
     )
     html.remove_namespaces!
     if html.xpath('/html/body/section').empty?
@@ -330,4 +332,9 @@ task :copyright do
     --include '*.txt' \
     --include 'Rakefile' \
     ."
+end
+
+def xsl_transform(xml, xsl, params = {})
+  saxon = '~/.m2/repository/net/sf/saxon/Saxon-HE/9.8.0-8/Saxon-HE-9.8.0-8.jar'
+  `java -jar #{saxon} -s:#{xml} -xsl:#{xsl}`
 end
