@@ -29,7 +29,9 @@ SOFTWARE.
             <xsl:value-of select="count(award)"/>
             <xsl:text> awards. The list is updated automatically every time you get a new award.</xsl:text>
             <xsl:text> Total score is </xsl:text>
-            <xsl:value-of select="sum(award/points)"/>
+            <xsl:call-template name="points">
+              <xsl:with-param name="sum" select="sum(award/points)"/>
+            </xsl:call-template>
             <xsl:text>.</xsl:text>
           </p>
           <table data-sortable="true">
@@ -65,11 +67,10 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="award">
     <tr>
-      <td>
-        <xsl:if test="points &gt; 0">
-          <xsl:text>+</xsl:text>
-        </xsl:if>
-        <xsl:value-of select="points"/>
+      <td style="text-align:right">
+        <xsl:call-template name="points">
+          <xsl:with-param name="sum" select="points"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:call-template name="project">

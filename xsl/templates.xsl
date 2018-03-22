@@ -120,6 +120,32 @@ SOFTWARE.
       </a>
     </code>
   </xsl:template>
+  <xsl:template name="points">
+    <xsl:param name="sum"/>
+    <span>
+      <xsl:attribute name="style">
+        <xsl:text>color:</xsl:text>
+        <xsl:choose>
+          <xsl:when test="$sum &gt; 256">
+            <xsl:text>darkgreen</xsl:text>
+          </xsl:when>
+          <xsl:when test="$sum &gt; 0">
+            <xsl:text>orange</xsl:text>
+          </xsl:when>
+          <xsl:when test="$sum &lt; 0">
+            <xsl:text>darkred</xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>inherit</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+      <xsl:if test="$sum &gt; 0">
+        <xsl:text>+</xsl:text>
+      </xsl:if>
+      <xsl:value-of select="$sum"/>
+    </span>
+  </xsl:template>
   <xsl:template name="role">
     <xsl:param name="role"/>
     <code>
