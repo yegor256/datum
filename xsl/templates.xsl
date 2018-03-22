@@ -29,6 +29,9 @@ SOFTWARE.
           <xsl:value-of select="$issue"/>
         </a>
       </xsl:when>
+      <xsl:when test="$id = 'none'">
+        <xsl:text>—</xsl:text>
+      </xsl:when>
       <xsl:otherwise>
         <code>
           <xsl:value-of select="$id"/>
