@@ -137,18 +137,12 @@ task :xsl do
   xsls.each do |p|
     next if File.basename(p) == 'templates.xsl'
     f = p.sub(%r{xsl/}, 'xml/').sub(%r{/([^/]+)\.xsl$}, '/\1/simple.xml')
-    xslt = Nokogiri::XSLT(File.open(p))
     label = p.sub(%r{.+/([^/]+)\.xsl$}, '\1.html')
     xml = Nokogiri::XML(File.open(f))
     root = xml.xpath('/*').first
     raise "version and updated attributes are required <#{f}>" if
       root.attr('version').nil? || root.attr('updated').nil?
-    html = Nokogiri::XML(
-      xsl_transform(
-        f, p,
-        'today' => "'#{Time.now.iso8601}'"
-      )
-    )
+    html = Nokogiri::XML(xsl_transform(f, p))
     html.remove_namespaces!
     if html.xpath('/html/body/section').empty?
       puts html
@@ -334,7 +328,7 @@ task :copyright do
     ."
 end
 
-def xsl_transform(xml, xsl, params = {})
+def xsl_transform(xml, xsl)
   saxon = '~/.m2/repository/net/sf/saxon/Saxon-HE/9.8.0-8/Saxon-HE-9.8.0-8.jar'
   `java -jar #{saxon} -s:#{xml} -xsl:#{xsl}`
 end
