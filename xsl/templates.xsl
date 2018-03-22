@@ -104,6 +104,17 @@ SOFTWARE.
   <xsl:template name="project">
     <xsl:param name="id"/>
     <code>
+      <xsl:attribute name="style">
+        <xsl:text>background-color:</xsl:text>
+        <xsl:choose>
+          <xsl:when test="$id = 'PMO'">
+            <xsl:text>lightcoral</xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>inherit</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
       <a href="https://www.0crat.com/p/{$id}" title="Project {$id}">
         <xsl:value-of select="$id"/>
       </a>
