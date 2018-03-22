@@ -109,6 +109,20 @@ SOFTWARE.
   <xsl:template name="role">
     <xsl:param name="role"/>
     <code>
+      <xsl:attribute name="style">
+        <xsl:text>background-color:</xsl:text>
+        <xsl:choose>
+          <xsl:when test="$role = 'REV'">
+            <xsl:text>lightsalmon</xsl:text>
+          </xsl:when>
+          <xsl:when test="$role = 'QA'">
+            <xsl:text>lightseagreen</xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>inherit</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
       <xsl:value-of select="$role"/>
     </code>
   </xsl:template>
