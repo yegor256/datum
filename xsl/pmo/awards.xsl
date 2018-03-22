@@ -33,6 +33,11 @@ SOFTWARE.
               <xsl:with-param name="sum" select="sum(award/points)"/>
             </xsl:call-template>
             <xsl:text>.</xsl:text>
+            <xsl:text> Remember, we automatically delete expired awards, according to </xsl:text>
+            <a href="http://www.zerocracy.com/policy.html#18">
+              <xsl:text>§18</xsl:text>
+            </a>
+            <xsl:text>.</xsl:text>
           </p>
           <table data-sortable="true">
             <thead>
@@ -45,9 +50,6 @@ SOFTWARE.
                 </th>
                 <th>
                   <xsl:text>Job</xsl:text>
-                </th>
-                <th>
-                  <xsl:text>Added</xsl:text>
                 </th>
                 <th>
                   <xsl:text>Reason</xsl:text>
@@ -71,6 +73,11 @@ SOFTWARE.
         <xsl:call-template name="points">
           <xsl:with-param name="sum" select="points"/>
         </xsl:call-template>
+        <span style="line-height:0.8em;font-size:0.8em;color:gray;display:block;">
+          <xsl:call-template name="date">
+            <xsl:with-param name="iso" select="added"/>
+          </xsl:call-template>
+        </span>
       </td>
       <td>
         <xsl:call-template name="project">
@@ -80,11 +87,6 @@ SOFTWARE.
       <td>
         <xsl:call-template name="job">
           <xsl:with-param name="id" select="job"/>
-        </xsl:call-template>
-      </td>
-      <td>
-        <xsl:call-template name="date">
-          <xsl:with-param name="iso" select="added"/>
         </xsl:call-template>
       </td>
       <td>
