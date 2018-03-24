@@ -21,7 +21,7 @@ SOFTWARE.
   <xsl:template match="order[not(title)]">
     <xsl:copy>
       <xsl:apply-templates select="@*|node()"/>
-      <xsl:element name="role">
+      <xsl:element name="title">
         <xsl:text>-</xsl:text>
       </xsl:element>
     </xsl:copy>
