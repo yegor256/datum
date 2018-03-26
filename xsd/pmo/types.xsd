@@ -36,4 +36,9 @@ SOFTWARE.
       <xs:pattern value="[a-z]{1,16}"/>
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="personality">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[IE][NS][TF][PJ]-[AT]"/>
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>
