@@ -61,7 +61,7 @@ SOFTWARE.
       </xsl:call-template>
     </xsl:variable>
     <xsl:variable name="diff" select="$now - $then"/>
-    <span title="{$iso}">
+    <xsl:variable name="ago">
       <xsl:choose>
         <xsl:when test="$diff &lt; 60">
           <xsl:value-of select="$diff"/>
@@ -84,7 +84,9 @@ SOFTWARE.
           <xsl:text> years</xsl:text>
         </xsl:otherwise>
       </xsl:choose>
-      <xsl:text> ago</xsl:text>
+    </xsl:variable>
+    <span title="${ago} ago at {$iso}">
+      <xsl:value-of select="$ago"/>
     </span>
   </xsl:template>
   <xsl:template name="user">
