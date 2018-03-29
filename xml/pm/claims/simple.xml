@@ -47,4 +47,9 @@ SOFTWARE.
     <created>2016-12-29T09:03:21.684Z</created>
     <token>github;yegor256</token>
   </claim>
+  <claim id="2722301077">
+    <type>Notify</type>
+    <created>2016-12-29T09:03:21.684Z</created>
+    <token>project;C99998888</token>
+  </claim>
 </claims>

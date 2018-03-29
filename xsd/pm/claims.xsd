@@ -40,7 +40,7 @@ SOFTWARE.
       <xs:element name="token" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:pattern value="(telegram|github|slack|user|job|test);.+"/>
+            <xs:pattern value="(telegram|github|slack|user|job|test|project);.+"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
