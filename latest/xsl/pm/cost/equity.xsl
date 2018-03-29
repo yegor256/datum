@@ -107,7 +107,7 @@ SOFTWARE.
         <xsl:text>%</xsl:text>
       </td>
       <xsl:if test="starts-with(/equity/cap,'$')">
-        <xsl:variable name="cap" select="substring(/equity/cap,2)" as="number"/>
+        <xsl:variable name="cap" select="number(substring(/equity/cap,2))"/>
         <td style="text-align:right">
           <xsl:text>$</xsl:text>
           <xsl:value-of select="format-number(text() div /equity/shares * $cap,'0.00')"/>
