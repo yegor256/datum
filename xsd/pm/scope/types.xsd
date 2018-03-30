@@ -23,7 +23,7 @@ SOFTWARE.
   </xs:simpleType>
   <xs:simpleType name="jobTitle">
     <xs:restriction base="xs:string">
-      <xs:pattern value="[^\s]{1,}"/>
+      <xs:pattern value=".{1,}"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="role">
