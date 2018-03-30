@@ -113,9 +113,10 @@ SOFTWARE.
             <xsl:text>lightcoral</xsl:text>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:text>inherit</xsl:text>
+            <xsl:text>#daf1e0</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
+        <xsl:text>;</xsl:text>
       </xsl:attribute>
       <a href="https://www.0crat.com/p/{$id}" title="Project {$id}">
         <xsl:value-of select="$id"/>
@@ -141,6 +142,7 @@ SOFTWARE.
             <xsl:text>inherit</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
+        <xsl:text>;</xsl:text>
       </xsl:attribute>
       <xsl:if test="$sum &gt; 0">
         <xsl:text>+</xsl:text>
@@ -161,9 +163,10 @@ SOFTWARE.
             <xsl:text>lightseagreen</xsl:text>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:text>inherit</xsl:text>
+            <xsl:text>#daf1e0</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
+        <xsl:text>;</xsl:text>
       </xsl:attribute>
       <xsl:value-of select="$role"/>
     </code>
