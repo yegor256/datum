@@ -7,6 +7,7 @@ branches:
     - master
 install:
   - travis_retry bundle update
+  - mvn dependency:get -DgroupId=net.sf.saxon -DartifactId=Saxon-HE -Dversion=9.8.0-8
 script:
   - rake
 

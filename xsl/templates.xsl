@@ -29,6 +29,9 @@ SOFTWARE.
           <xsl:value-of select="$issue"/>
         </a>
       </xsl:when>
+      <xsl:when test="$id = 'none'">
+        <xsl:text>—</xsl:text>
+      </xsl:when>
       <xsl:otherwise>
         <code>
           <xsl:value-of select="$id"/>
@@ -58,7 +61,7 @@ SOFTWARE.
       </xsl:call-template>
     </xsl:variable>
     <xsl:variable name="diff" select="$now - $then"/>
-    <span title="{$iso}">
+    <xsl:variable name="ago">
       <xsl:choose>
         <xsl:when test="$diff &lt; 60">
           <xsl:value-of select="$diff"/>
@@ -81,7 +84,9 @@ SOFTWARE.
           <xsl:text> years</xsl:text>
         </xsl:otherwise>
       </xsl:choose>
-      <xsl:text> ago</xsl:text>
+    </xsl:variable>
+    <span title="${ago} ago at {$iso}">
+      <xsl:value-of select="$ago"/>
     </span>
   </xsl:template>
   <xsl:template name="user">
@@ -101,14 +106,68 @@ SOFTWARE.
   <xsl:template name="project">
     <xsl:param name="id"/>
     <code>
+      <xsl:attribute name="style">
+        <xsl:text>background-color:</xsl:text>
+        <xsl:choose>
+          <xsl:when test="$id = 'PMO'">
+            <xsl:text>lightcoral</xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>#daf1e0</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+        <xsl:text>;</xsl:text>
+      </xsl:attribute>
       <a href="https://www.0crat.com/p/{$id}" title="Project {$id}">
         <xsl:value-of select="$id"/>
       </a>
     </code>
   </xsl:template>
+  <xsl:template name="points">
+    <xsl:param name="sum"/>
+    <span>
+      <xsl:attribute name="style">
+        <xsl:text>color:</xsl:text>
+        <xsl:choose>
+          <xsl:when test="$sum &gt; 256">
+            <xsl:text>darkgreen</xsl:text>
+          </xsl:when>
+          <xsl:when test="$sum &gt; 0">
+            <xsl:text>orange</xsl:text>
+          </xsl:when>
+          <xsl:when test="$sum &lt; 0">
+            <xsl:text>darkred</xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>inherit</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+        <xsl:text>;</xsl:text>
+      </xsl:attribute>
+      <xsl:if test="$sum &gt; 0">
+        <xsl:text>+</xsl:text>
+      </xsl:if>
+      <xsl:value-of select="$sum"/>
+    </span>
+  </xsl:template>
   <xsl:template name="role">
     <xsl:param name="role"/>
     <code>
+      <xsl:attribute name="style">
+        <xsl:text>background-color:</xsl:text>
+        <xsl:choose>
+          <xsl:when test="$role = 'REV'">
+            <xsl:text>lightsalmon</xsl:text>
+          </xsl:when>
+          <xsl:when test="$role = 'QA'">
+            <xsl:text>lightseagreen</xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>#daf1e0</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+        <xsl:text>;</xsl:text>
+      </xsl:attribute>
       <xsl:value-of select="$role"/>
     </code>
   </xsl:template>

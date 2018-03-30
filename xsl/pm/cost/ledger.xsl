@@ -58,10 +58,10 @@ SOFTWARE.
           <th>
             <xsl:text>Account</xsl:text>
           </th>
-          <th>
+          <th style="text-align:right">
             <xsl:text>Dt</xsl:text>
           </th>
-          <th>
+          <th style="text-align:right">
             <xsl:text>Ct</xsl:text>
           </th>
         </tr>
@@ -83,10 +83,14 @@ SOFTWARE.
         </xsl:if>
       </td>
       <td style="text-align:right">
-        <xsl:value-of select="dt"/>
+        <xsl:call-template name="amount">
+          <xsl:with-param name="cash" select="dt"/>
+        </xsl:call-template>
       </td>
       <td style="text-align:right">
-        <xsl:value-of select="ct"/>
+        <xsl:call-template name="amount">
+          <xsl:with-param name="cash" select="ct"/>
+        </xsl:call-template>
       </td>
     </tr>
   </xsl:template>
@@ -156,5 +160,16 @@ SOFTWARE.
         </xsl:call-template>
       </td>
     </tr>
+  </xsl:template>
+  <xsl:template name="amount">
+    <xsl:param name="cash"/>
+    <xsl:choose>
+      <xsl:when test="$cash = '0'">
+        <xsl:text>—</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$cash"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 </xsl:stylesheet>

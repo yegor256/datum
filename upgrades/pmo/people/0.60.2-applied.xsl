@@ -15,11 +15,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<equity updated="2017-07-27T04:06:33Z" version="0.1">
-  <cap>$4000000</cap>
-  <shares>1000000</shares>
-  <owners>
-    <owner id="yegor256">500000</owner>
-    <owner id="dmarkov">100</owner>
-  </owners>
-</equity>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+  <xsl:output method="xml"/>
+  <xsl:strip-space elements="*"/>
+  <xsl:template match="person[not(applied)]">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+      <applied>2018-01-01T00:00:00.000Z</applied>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="@*|node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>

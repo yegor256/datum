@@ -2,6 +2,7 @@ install: |
   sudo apt-get update
   sudo gem install pdd
   sudo apt-get install -y pandoc
+  mvn dependency:get -DgroupId=net.sf.saxon -DartifactId=Saxon-HE -Dversion=9.8.0-8
 release:
   script: |-
     [[ "${tag}" =~ ^[0-9]+(\.[0-9]+)*$ ]] || exit -1
