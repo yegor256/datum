@@ -54,7 +54,7 @@ SOFTWARE.
       <xs:element name="rate" type="cash" minOccurs="0"/>
       <xs:element name="wallet" type="wallet" minOccurs="0"/>
       <xs:element name="details" minOccurs="0" type="xs:string"/>
-      <xs:element name="applied" type="xs:dateTime"/>
+      <xs:element name="applied" minOccurs="0" type="xs:dateTime"/>
       <xs:element name="links" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
