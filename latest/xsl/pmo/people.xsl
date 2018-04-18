@@ -43,16 +43,10 @@ SOFTWARE.
             <xsl:text>Rate</xsl:text>
           </th>
           <th>
-            <xsl:text>Wallet</xsl:text>
+            <xsl:text>Mentor</xsl:text>
           </th>
           <th>
             <xsl:text>Details</xsl:text>
-          </th>
-          <th>
-            <xsl:text>Links</xsl:text>
-          </th>
-          <th>
-            <xsl:text>Vacation</xsl:text>
           </th>
         </tr>
       </thead>
@@ -63,6 +57,11 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="person">
     <tr>
+      <xsl:attribute name="style">
+        <xsl:if test="vacation/text() = 'true'">
+          <xsl:text>opacity:0.5;</xsl:text>
+        </xsl:if>
+      </xsl:attribute>
       <td>
         <xsl:call-template name="user">
           <xsl:with-param name="id" select="@id"/>
@@ -72,6 +71,12 @@ SOFTWARE.
         <xsl:value-of select="rate"/>
       </td>
       <td>
+        <xsl:call-template name="user">
+          <xsl:with-param name="id" select="mentor"/>
+        </xsl:call-template>
+      </td>
+      <td>
+        <xsl:text>Wallet: </xsl:text>
         <xsl:choose>
           <xsl:when test="wallet">
             <xsl:value-of select="wallet/@bank"/>
@@ -82,17 +87,10 @@ SOFTWARE.
             <xsl:text>—</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
-      </td>
-      <td>
+        <xsl:text>; Identity: </xsl:text>
         <xsl:apply-templates select="details"/>
-      </td>
-      <td>
+        <xsl:text>; Links: </xsl:text>
         <xsl:apply-templates select="links"/>
-      </td>
-      <td>
-        <xsl:if test="vacation/text() = 'true'">
-          <xsl:text>On</xsl:text>
-        </xsl:if>
       </td>
     </tr>
   </xsl:template>
