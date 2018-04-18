@@ -43,6 +43,9 @@ SOFTWARE.
             <xsl:text>Rate</xsl:text>
           </th>
           <th>
+            <xsl:text>Mentor</xsl:text>
+          </th>
+          <th>
             <xsl:text>Details</xsl:text>
           </th>
         </tr>
@@ -66,6 +69,11 @@ SOFTWARE.
       </td>
       <td>
         <xsl:value-of select="rate"/>
+      </td>
+      <td>
+        <xsl:call-template name="user">
+          <xsl:with-param name="id" select="mentor"/>
+        </xsl:call-template>
       </td>
       <td>
         <xsl:text>Wallet: </xsl:text>
