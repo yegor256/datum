@@ -22,23 +22,23 @@ SOFTWARE.
       <body>
         <section>
           <h1>
-            <xsl:text>Vacations</xsl:text>
+            <xsl:text>Vacancies</xsl:text>
           </h1>
-          <xsl:apply-templates select="vacations"/>
+          <xsl:apply-templates select="vacancies"/>
         </section>
       </body>
     </html>
   </xsl:template>
-  <xsl:template match="vacations[not(vacation)]">
+  <xsl:template match="vacancies[not(vacancy)]">
     <p>
       <xsl:text>There are no vacations as of yet.</xsl:text>
     </p>
   </xsl:template>
-  <xsl:template match="vacations[vacation]">
+  <xsl:template match="vacancies[vacancy]">
     <p>
       <xsl:text>This is the full list of </xsl:text>
-      <xsl:value-of select="count(vacation)"/>
-      <xsl:text> vacations.</xsl:text>
+      <xsl:value-of select="count(vacancy)"/>
+      <xsl:text> vacancies.</xsl:text>
     </p>
     <table data-sortable="true">
       <thead>
@@ -58,13 +58,13 @@ SOFTWARE.
         </tr>
       </thead>
       <tbody>
-        <xsl:apply-templates select="vacation">
+        <xsl:apply-templates select="vacancy">
           <xsl:sort select="added" order="descending" data-type="text"/>
         </xsl:apply-templates>
       </tbody>
     </table>
   </xsl:template>
-  <xsl:template match="vacation">
+  <xsl:template match="vacancy">
     <tr>
       <td>
         <xsl:call-template name="project">

@@ -15,10 +15,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.61" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.61/xsd/basics.xsd"/>
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.61/xsd/pmo/types.xsd"/>
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.61/xsd/pm/scope/types.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.61.1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.61.1/xsd/basics.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.61.1/xsd/pmo/types.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.61.1/xsd/pm/scope/types.xsd"/>
   <xs:simpleType name="count">
     <xs:restriction base="xs:integer">
       <xs:minInclusive value="0"/>

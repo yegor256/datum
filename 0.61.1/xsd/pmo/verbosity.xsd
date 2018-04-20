@@ -15,30 +15,33 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.61" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.61/xsd/basics.xsd"/>
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.61/xsd/pmo/types.xsd"/>
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.61/xsd/pm/scope/types.xsd"/>
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.61/xsd/pm/cost/types.xsd"/>
-  <xs:complexType name="vacation">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.61.1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.61.1/xsd/basics.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.61.1/xsd/pmo/types.xsd"/>
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.61.1/xsd/pm/scope/types.xsd"/>
+  <xs:simpleType name="count">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="order">
     <xs:all>
-      <xs:element name="added" type="xs:dateTime"/>
-      <xs:element name="author" type="login"/>
-      <xs:element name="text" type="xs:string"/>
+      <xs:element name="project" type="projectID"/>
+      <xs:element name="messages" type="count"/>
     </xs:all>
-    <xs:attribute name="project" use="required" type="projectID"/>
+    <xs:attribute name="job" use="required" type="jobID"/>
   </xs:complexType>
-  <xs:element name="vacations">
+  <xs:element name="verbosity">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="vacation" type="vacation" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="order" type="order" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="updated" use="required" type="xs:dateTime"/>
       <xs:attribute name="version" use="required" type="version"/>
     </xs:complexType>
     <xs:unique name="uniqueID">
-      <xs:selector xpath="vacation"/>
-      <xs:field xpath="@project"/>
+      <xs:selector xpath="order"/>
+      <xs:field xpath="@job"/>
     </xs:unique>
   </xs:element>
 </xs:schema>
