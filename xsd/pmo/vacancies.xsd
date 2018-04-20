@@ -20,7 +20,7 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/cost/types.xsd"/>
-  <xs:complexType name="vacation">
+  <xs:complexType name="vacancy">
     <xs:all>
       <xs:element name="added" type="xs:dateTime"/>
       <xs:element name="author" type="login"/>
@@ -28,16 +28,16 @@ SOFTWARE.
     </xs:all>
     <xs:attribute name="project" use="required" type="projectID"/>
   </xs:complexType>
-  <xs:element name="vacations">
+  <xs:element name="vacancies">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="vacation" type="vacation" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="vacancy" type="vacancy" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="updated" use="required" type="xs:dateTime"/>
       <xs:attribute name="version" use="required" type="version"/>
     </xs:complexType>
     <xs:unique name="uniqueID">
-      <xs:selector xpath="vacation"/>
+      <xs:selector xpath="vacancy"/>
       <xs:field xpath="@project"/>
     </xs:unique>
   </xs:element>

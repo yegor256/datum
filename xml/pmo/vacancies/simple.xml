@@ -15,15 +15,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<vacations version="0.25" updated="2016-12-29T09:03:21.684Z">
-  <vacation project="C12345678">
+<vacancies version="0.25" updated="2016-12-29T09:03:21.684Z">
+  <vacancy project="C12345678">
     <added>2016-12-29T09:03:21.684Z</added>
     <author>yegor256</author>
     <text>We need 5 Java developers</text>
-  </vacation>
-  <vacation project="C12345670">
+  </vacancy>
+  <vacancy project="C12345670">
     <added>2016-12-29T09:03:21.684Z</added>
     <author>yegor256</author>
     <text>We need a PHP developer</text>
-  </vacation>
-</vacations>
+  </vacancy>
+</vacancies>
