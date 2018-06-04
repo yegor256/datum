@@ -84,6 +84,26 @@ SOFTWARE.
           <xs:field xpath="."/>
         </xs:unique>
       </xs:element>
+      <xs:element name="badges" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="badge" minOccurs="0" maxOccurs="3">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="master"/>
+                  <xs:enumeration value="guru"/>
+                  <xs:enumeration value="champion"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="updated" type="xs:dateTime" use="required"/>
+        </xs:complexType>
+        <xs:unique name="personBadge">
+          <xs:selector xpath="badge"/>
+          <xs:field xpath="."/>
+        </xs:unique>
+      </xs:element>
     </xs:all>
     <xs:attribute name="id" use="required" type="login"/>
   </xs:complexType>
