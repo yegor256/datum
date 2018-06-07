@@ -19,6 +19,7 @@ release:
 architect:
 - yegor256
 - davvd
+- g4s8
 merge:
   commanders:
     - yegor256
