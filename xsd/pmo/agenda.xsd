@@ -28,6 +28,7 @@ SOFTWARE.
       <xs:element name="title" type="jobTitle"/>
       <xs:element name="impediment" type="xs:string" minOccurs="0"/>
       <xs:element name="estimate" type="cash" minOccurs="0"/>
+      <xs:element name="inspector" type="login" minOccurs="0"/>
     </xs:all>
     <xs:attribute name="job" use="required" type="jobID"/>
   </xs:complexType>
