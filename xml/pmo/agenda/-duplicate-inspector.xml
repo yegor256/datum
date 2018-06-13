@@ -19,8 +19,8 @@ SOFTWARE.
   <order job="gh:test/test#1">
     <project>A65TGR50F</project>
     <title>Test Issue</title>
-    <href>https://github.com/test/test</href>
     <added>2016-12-29T09:03:21.684Z</added>
+    <role>DEV</role>
     <inspector>yegor256</inspector>
     <inspector>g4s8</inspector>
   </order>

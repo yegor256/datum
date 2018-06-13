@@ -19,7 +19,7 @@ SOFTWARE.
   <order job="gh:test/test#1">
     <project>A65TGR50F</project>
     <title>Test Issue</title>
-    <href>https://github.com/test/test</href>
+    <role>DEV</role>
     <added>2016-12-29T09:03:21.684Z</added>
     <inspector>$@#^$@*@#</inspector>
   </order>
