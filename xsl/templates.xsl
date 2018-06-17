@@ -46,7 +46,23 @@ SOFTWARE.
     <xsl:variable name="day" select="number(substring($iso, 9, 2))"/>
     <xsl:variable name="hour" select="number(substring($iso, 12, 2))"/>
     <xsl:variable name="minute" select="number(substring($iso, 15, 2))"/>
-    <xsl:value-of select="$minute + $hour * 60 + $day * 60 * 24 + $month * 60 * 24 * 30 + $year * 60 * 24 * 365"/>
+    <xsl:variable name="monthdays" select="28"/>
+    <xsl:choose>
+      <xsl:when 
+              test="$month = 1 or $month = 3 or $month = 5 or $month = 7 or $month = 8 or $month = 10 or $month = 12">
+        <xsl:variable name="monthdays" select="31" />
+      </xsl:when>
+      <xsl:when 
+              test="$month = 4 or $month = 6 or $month = 9 or $month = 11">
+        <xsl:variable name="monthdays" select="30" />
+      </xsl:when>
+      <xsl:when
+                test="$month = 2 and ($year mod 4 = 0 and $year mod 100 != 0) or $year mod 400">
+        <xsl:variable name="monthdays" select="29" />
+      </xsl:when>
+    </xsl:choose>
+    <xsl:value-of
+            select="$minute + $hour * 60 + $day * 60 * 24 + $month * 60 * 24 * $monthdays + $year * 60 * 24 * 365"/>
   </xsl:template>
   <xsl:template name="date">
     <xsl:param name="iso"/>
