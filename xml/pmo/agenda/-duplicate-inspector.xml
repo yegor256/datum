@@ -18,18 +18,10 @@ SOFTWARE.
 <agenda version="0.25" updated="2016-12-29T09:03:21.684Z">
   <order job="gh:test/test#1">
     <project>A65TGR50F</project>
-    <href>https://github.com/test/test</href>
-    <title>Github Issue Title</title>
+    <title>Test Issue</title>
     <added>2016-12-29T09:03:21.684Z</added>
     <role>DEV</role>
-  </order>
-  <order job="gh:test/test#2">
-    <project>A65TGR50F</project>
-    <added>2016-12-29T09:03:21.684Z</added>
-    <title>T</title>
-    <role>DEV</role>
-    <impediment>yes</impediment>
-    <estimate>$30</estimate>
     <inspector>yegor256</inspector>
+    <inspector>g4s8</inspector>
   </order>
 </agenda>
