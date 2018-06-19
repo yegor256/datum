@@ -51,6 +51,7 @@ SOFTWARE.
       <xs:element name="reputation" type="xs:integer"/>
       <xs:element name="jobs" type="xs:integer"/>
       <xs:element name="projects" type="xs:integer"/>
+      <xs:element name="speed" type="xs:integer"/>
       <xs:element name="rate" type="cash" minOccurs="0"/>
       <xs:element name="wallet" type="wallet" minOccurs="0"/>
       <xs:element name="details" minOccurs="0" type="xs:string"/>
