@@ -86,9 +86,23 @@ number it upgrades an `.xml` file to. All versions are
 Third, don't forget to add or modify XSL views in
 [`upgrades`](https://github.com/zerocracy/datum/tree/master/xsl) directory.
 
-After all changes are made, don't forget to run
-[`rake`](https://github.com/ruby/rake).
-You will need Ruby 2.2+ installed.
+After all changes are made, don't forget to run:
+```sh
+bundle update
+rake
+```
+
+To make `rake` working you will need to install:
+ - Ruby 2.2+
+ - [rake](https://github.com/ruby/rake) (`gem install rake`)
+ - [bundler](https://bundler.io/)  (`gem install bundler`)
+ - [maven](https://maven.apache.org/)
+ 
+To install all dependencies for rake run in project directory:
+```sh
+bundle install
+mvn dependency:get -DgroupId=net.sf.saxon -DartifactId=Saxon-HE -Dversion=9.8.0-8
+```
 
 ## License
 
