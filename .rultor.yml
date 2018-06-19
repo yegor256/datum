@@ -14,15 +14,10 @@ release:
     git checkout gh-pages
     for d in $(ls /tmp/site); do rm -rf $d; cp -r /tmp/site/$d .; git add $d; done
     git commit --allow-empty -m "${tag}"
-  commanders:
-    - yegor256
 architect:
-- yegor256
-- davvd
 - g4s8
+- yegor256
 merge:
-  commanders:
-    - yegor256
   script: |-
     pdd -f /dev/null
     bundle install
