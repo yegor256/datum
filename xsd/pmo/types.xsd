@@ -41,4 +41,9 @@ SOFTWARE.
       <xs:pattern value="[IE][NS][TF][PJ]-[AT]"/>
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="speed">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>
