@@ -21,7 +21,7 @@ SOFTWARE.
   <xsl:template match="person[not(speed)]">
     <xsl:copy>
       <xsl:apply-templates select="@*|node()"/>
-      <speed>0</speed>
+      <speed>0.0</speed>
     </xsl:copy>
   </xsl:template>
   <xsl:template match="@*|node()">
