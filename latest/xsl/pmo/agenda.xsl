@@ -89,6 +89,15 @@ SOFTWARE.
               </a>
             </sub>
           </th>
+          <th>
+            <xsl:text>QA Rev.</xsl:text>
+            <sub>
+              <xsl:text>/</xsl:text>
+              <a href="http://www.zerocracy.com/policy.html#30">
+                <xsl:text>§30</xsl:text>
+              </a>
+            </sub>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -135,6 +144,11 @@ SOFTWARE.
       </td>
       <td>
         <xsl:value-of select="impediment"/>
+      </td>
+      <td>
+        <xsl:call-template name="user">
+          <xsl:with-param name="id" select="inspector"/>
+        </xsl:call-template>
       </td>
     </tr>
   </xsl:template>
