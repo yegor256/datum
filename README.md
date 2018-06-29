@@ -98,7 +98,7 @@ To make `rake` working you will need to install:
  - [bundler](https://bundler.io/)  (`gem install bundler`)
  - [maven](https://maven.apache.org/)
  
-To install all dependencies for rake run in project directory:
+To install all dependencies for `rake` run in project directory:
 ```sh
 bundle install
 mvn dependency:get -DgroupId=net.sf.saxon -DartifactId=Saxon-HE -Dversion=9.8.0-8
