@@ -27,7 +27,7 @@ SOFTWARE.
     <xsl:param name="expected"/>
     <xsl:param name="actual"/>
     <xsl:if test="$ignore = 'false'">
-      <xsl:if test="not(deep-equal($expected , $actual))">
+      <xsl:if test="not(deep-equal($expected, $actual))">
         <xsl:message terminate="yes">
           <xsl:text>FAILURE: </xsl:text>
           <xsl:value-of select="$message"/>
