@@ -146,9 +146,9 @@ SOFTWARE.
         <xsl:value-of select="impediment"/>
       </td>
       <td>
-        <xsl:call-template name="user">
-          <xsl:with-param name="id" select="inspector"/>
-        </xsl:call-template>
+        <a href="https://www.0crat.com/u/{inspector}" title="@{inspector}">
+          <img src="https://socatar.com/github/{inspector}/90-90" style="width:30px;height:30px;border-radius:3px;vertical-align:middle;"/>
+        </a>
       </td>
     </tr>
   </xsl:template>
