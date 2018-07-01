@@ -146,9 +146,11 @@ SOFTWARE.
         <xsl:value-of select="impediment"/>
       </td>
       <td>
-        <a href="https://www.0crat.com/u/{inspector}" title="@{inspector}">
-          <img src="https://socatar.com/github/{inspector}/90-90" style="width:30px;height:30px;border-radius:3px;vertical-align:middle;"/>
-        </a>
+          <xsl:when test="inspector">
+            <a href="https://www.0crat.com/u/{inspector}" title="@{inspector}">
+              <img src="https://socatar.com/github/{inspector}/90-90" style="width:30px;height:30px;border-radius:3px;vertical-align:middle;"/>
+            </a>
+          </xsl:when>
       </td>
     </tr>
   </xsl:template>
