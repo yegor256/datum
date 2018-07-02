@@ -113,14 +113,12 @@ SOFTWARE.
         <xsl:call-template name="job">
           <xsl:with-param name="id" select="@job"/>
         </xsl:call-template>
-      </td>
-      <td>
-        <xsl:value-of select="title"/>
-      </td>
-      <td>
         <xsl:call-template name="project">
           <xsl:with-param name="id" select="project"/>
         </xsl:call-template>
+      </td>
+      <td>
+        <xsl:value-of select="title"/>
       </td>
       <td>
         <xsl:call-template name="date">
