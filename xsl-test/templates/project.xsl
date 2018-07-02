@@ -23,7 +23,7 @@ SOFTWARE.
       <xsl:with-param name="message" select="'Fails to format project name'"/>
       <xsl:with-param name="expected">
         <span>
-          <code>
+          <code style="background-color:#daf1e0;">
             <a href="https://www.0crat.com/p/ABCDEFGHI" title="Project ABCDEFGHI">
               <xsl:text>ABCDEFGHI</xsl:text>
             </a>
