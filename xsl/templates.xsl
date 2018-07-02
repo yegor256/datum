@@ -188,7 +188,7 @@ SOFTWARE.
     <xsl:analyze-string select="$text" regex="(§[0-9]*)">
       <xsl:matching-substring>
         <xsl:variable select="regex-group(1)" name="paragraph" />
-        <a href="{concat('http://www.zerocracy.com/policy.html#', substring-after($paragraph,'§'))}">
+        <a href="{concat('https://www.zerocracy.com/policy.html#', substring-after($paragraph,'§'))}">
           <xsl:value-of select="$paragraph" />
         </a>
       </xsl:matching-substring>
