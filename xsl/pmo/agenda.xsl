@@ -63,9 +63,6 @@ SOFTWARE.
             <xsl:text>Title</xsl:text>
           </th>
           <th>
-            <xsl:text>Project</xsl:text>
-          </th>
-          <th>
             <xsl:text>Added</xsl:text>
           </th>
           <th>
