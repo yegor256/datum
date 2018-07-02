@@ -22,7 +22,7 @@ Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8
 
 gem 'mustache', '1.0.5'
-gem 'nokogiri', '~>1.8'
+gem 'nokogiri', '1.7.2'
 gem 'rainbow', '~>2.2'
 gem 'rake', '12.0.0'
 gem 'redcarpet', '3.4.0'
