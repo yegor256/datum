@@ -22,14 +22,14 @@ SOFTWARE.
     <xsl:param name="expected"/>
     <xsl:param name="actual"/>
     <xsl:if test="$ignore = 'false'">
-      <xsl:if test="$expected != $actual">
+      <xsl:if test="not(deep-equal($expected, $actual))">
         <xsl:message terminate="yes">
           <xsl:text>FAILURE: </xsl:text>
           <xsl:value-of select="$message"/>
           <xsl:text> (actual "</xsl:text>
-          <xsl:value-of select="$actual_xml"/>
+          <xsl:value-of select="$actual"/>
           <xsl:text>" is not equal to expected "</xsl:text>
-          <xsl:value-of select="$expected_xml"/>
+          <xsl:value-of select="$expected"/>
           <xsl:text>")</xsl:text>
         </xsl:message>
       </xsl:if>
