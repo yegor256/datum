@@ -15,26 +15,25 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
+<!--
+  Tests for par template (templates.xsl//xsl:template[@name='par']). Tests
+  if par template is generating text with references to policy paragraphs.
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="2.0">
   <xsl:include href="../assertions.xsl"/>
   <xsl:include href="../../xsl/templates.xsl"/>
   <xsl:template match="/">
     <xsl:call-template name="assert-that">
-      <!--
-      @todo #314:30min This test is ignored because template PAR is not
-       implemented properly. Let's implement it using recursion and enable
-       this test by removing the line after this puzzle.
-      -->
-      <xsl:with-param name="ignore" select="'true'"/>
-      <xsl:with-param name="message" select="'Fails to format project name'"/>
+      <xsl:with-param name="ignore" select="'false'"/>
+      <xsl:with-param name="message" select="'Fails to format paragraph'"/>
       <xsl:with-param name="expected">
         <span>
           <xsl:text>See </xsl:text>
-          <a href="http://www.zerocracy.com/policy.html#13">
+          <a href="https://www.zerocracy.com/policy.html#13">
             <xsl:text>§13</xsl:text>
           </a>
           <xsl:text> and </xsl:text>
-          <a href="http://www.zerocracy.com/policy.html#2">
+          <a href="https://www.zerocracy.com/policy.html#2">
             <xsl:text>§2</xsl:text>
           </a>
           <xsl:text>.</xsl:text>
