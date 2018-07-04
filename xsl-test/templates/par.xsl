@@ -24,7 +24,7 @@ SOFTWARE.
   <xsl:include href="../../xsl/templates.xsl"/>
   <xsl:template match="/">
     <xsl:call-template name="assert-that">
-      <xsl:with-param name="ignore" select="'false'"/>
+      <xsl:with-param name="ignore" select="'true'"/>
       <xsl:with-param name="message" select="'Fails to format paragraph'"/>
       <xsl:with-param name="expected">
         <span>
