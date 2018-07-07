@@ -31,6 +31,7 @@ SOFTWARE.
   <person id="davvd">
     <mentor>yegor256</mentor>
     <rate>$25</rate>
+    <wallet bank="zld">davvd</wallet>
     <links>
       <link rel="slack" href="7YYZZT99F"/>
     </links>
