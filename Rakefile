@@ -68,9 +68,13 @@ task :xsd, [:version] do |_, args|
         path = p.gsub(%r{^xml/}, 'upgrades/').gsub(%r{/[^/]+$}, '/*.xsl')
         current = Gem::Version.new(args[:version])
         Dir[path].each do |x|
-          if Gem::Version.new(File.basename(x).gsub(/-.+$/, '')) <= current
-            xml = Nokogiri::XSLT(File.read(x)).transform(xml)
-          end
+          next unless Gem::Version.new(
+            File.basename(x).gsub(/-.+$/, '')
+          ) <= current
+          tmp = Dir::Tmpname.make_tmpname(['/tmp/x', '.xml'], nil)
+          File.write(tmp, xml)
+          xml = Nokogiri::XML(xsl_transform(tmp, x))
+          File.delete(tmp)
         end
       end
       if File.basename(p).start_with?('-')
@@ -162,8 +166,10 @@ desc 'Run XSL tests'
 task :xsltest do
   puts 'Running XSL tests...'
   Dir['xsl-test/**/*.xsl'].each do |p|
-    xsl = Nokogiri::XSLT(File.open(p))
-    xsl.transform(Nokogiri::XML('<empty/>'))
+    tmp = Dir::Tmpname.make_tmpname(['/tmp/empty', '.xml'], nil)
+    File.write(tmp, Nokogiri::XML('<empty/>'))
+    puts xsl_transform(tmp, p)
+    File.delete(tmp)
   end
   puts "\nAll XSL tests passed\n\n"
 end
@@ -242,7 +248,6 @@ task :site, [:version] do |_, args|
     File.write(f, File.read(f).gsub(/SNAPSHOT/, args[:version]))
   end
   puts "Version #{args[:version]} injected into all site files"
-  xslt = Nokogiri::XSLT(File.read('misc/index-html.xsl'))
   Dir['target/site/**/*'].reject { |d| File.file?(d) }.each do |d|
     xml = Nokogiri::XML::Builder.new do |x|
       path = d.gsub('target/site', '')
@@ -264,8 +269,12 @@ task :site, [:version] do |_, args|
         end
       end
     end.doc
-    File.write(File.join(d, 'index.xml'), xml.to_s)
-    File.write(File.join(d, 'index.html'), xslt.transform(xml))
+    index = File.join(d, 'index.xml')
+    File.write(index, xml.to_s)
+    File.write(
+      File.join(d, 'index.html'),
+      Nokogiri::XML(xsl_transform(index, 'misc/index-html.xsl'))
+    )
   end
   puts 'Index files created'
   puts "The site is ready in target/site\n\n"
