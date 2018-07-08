@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<index path="/0.61.6/xsd/pm" version="0.61.6">
+  <entry dir="false" path="/0.61.6/xsd/pm/claims.xsd" uri="http://datum.zerocracy.com/0.61.6/xsd/pm/claims.xsd">claims.xsd</entry>
+  <entry dir="true" path="/0.61.6/xsd/pm/cost" uri="http://datum.zerocracy.com/0.61.6/xsd/pm/cost">cost</entry>
+  <entry dir="true" path="/0.61.6/xsd/pm/in" uri="http://datum.zerocracy.com/0.61.6/xsd/pm/in">in</entry>
+  <entry dir="true" path="/0.61.6/xsd/pm/qa" uri="http://datum.zerocracy.com/0.61.6/xsd/pm/qa">qa</entry>
+  <entry dir="true" path="/0.61.6/xsd/pm/scope" uri="http://datum.zerocracy.com/0.61.6/xsd/pm/scope">scope</entry>
+  <entry dir="true" path="/0.61.6/xsd/pm/staff" uri="http://datum.zerocracy.com/0.61.6/xsd/pm/staff">staff</entry>
+  <entry dir="true" path="/0.61.6/xsd/pm/time" uri="http://datum.zerocracy.com/0.61.6/xsd/pm/time">time</entry>
+</index>
