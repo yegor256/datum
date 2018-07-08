@@ -25,7 +25,7 @@ SOFTWARE.
             <xsl:text>Negligence</xsl:text>
           </h1>
           <p>
-            <xsl:text>Amount of times when user was ejected from a job by delay.</xsl:text>
+            <xsl:text>List of jobs where user was ejected by delay.</xsl:text>
           </p>
           <table data-sortable="true">
             <thead>
