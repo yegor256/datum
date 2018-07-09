@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pmo/bots" version="0.61.6">
+<index path="/latest/upgrades/pmo/bots" version="0.61.7">
   <entry dir="false" path="/latest/upgrades/pmo/bots/0.24-version-and-date.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pmo/bots/0.24-version-and-date.xsl" order="0.24">0.24-version-and-date.xsl</entry>
 </index>
