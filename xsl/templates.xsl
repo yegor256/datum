@@ -185,12 +185,12 @@ SOFTWARE.
     </code>
   </xsl:template>
   <xsl:template name="par">
-    <xsl:param name="text" />
+    <xsl:param name="text"/>
     <xsl:analyze-string select="$text" regex="(§[0-9]*)">
       <xsl:matching-substring>
-        <xsl:variable select="regex-group(1)" name="paragraph" />
+        <xsl:variable select="regex-group(1)" name="paragraph"/>
         <a href="{concat('https://www.zerocracy.com/policy.html#', substring-after($paragraph,'§'))}">
-          <xsl:value-of select="$paragraph" />
+          <xsl:value-of select="$paragraph"/>
         </a>
       </xsl:matching-substring>
       <xsl:non-matching-substring>
