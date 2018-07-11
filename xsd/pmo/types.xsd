@@ -46,4 +46,9 @@ SOFTWARE.
       <xs:minInclusive value="0"/>
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="repo">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z0-9a-z.\-/]{3,}"/>
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>
