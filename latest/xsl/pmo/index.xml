@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<index path="/latest/xsl/pmo" version="0.61.7">
+<index path="/latest/xsl/pmo" version="0.62.1">
   <entry dir="false" path="/latest/xsl/pmo/agenda.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/agenda.xsl">agenda.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/awards.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/awards.xsl">awards.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/blanks.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/blanks.xsl">blanks.xsl</entry>
@@ -10,6 +10,7 @@
   <entry dir="false" path="/latest/xsl/pmo/options.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/options.xsl">options.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/people.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/people.xsl">people.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/projects.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/projects.xsl">projects.xsl</entry>
+  <entry dir="false" path="/latest/xsl/pmo/releases.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/releases.xsl">releases.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/resumes.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/resumes.xsl">resumes.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/rfps.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/rfps.xsl">rfps.xsl</entry>
   <entry dir="false" path="/latest/xsl/pmo/speed.xsl" uri="http://datum.zerocracy.com/latest/xsl/pmo/speed.xsl">speed.xsl</entry>

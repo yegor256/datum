@@ -186,7 +186,17 @@ SOFTWARE.
   </xsl:template>
   <xsl:template name="par">
     <xsl:param name="text"/>
-    <xsl:value-of select="$text"/>
+    <xsl:analyze-string select="$text" regex="§([0-9]+)">
+      <xsl:matching-substring>
+        <xsl:variable select="regex-group(1)" name="paragraph"/>
+        <a href="{concat('https://www.zerocracy.com/policy.html#', $paragraph)}">
+          <xsl:value-of select="concat('§',$paragraph)"/>
+        </a>
+      </xsl:matching-substring>
+      <xsl:non-matching-substring>
+        <xsl:value-of select="."/>
+      </xsl:non-matching-substring>
+    </xsl:analyze-string>
   </xsl:template>
   <xsl:template name="stackoverflow">
     <xsl:param name="id"/>
