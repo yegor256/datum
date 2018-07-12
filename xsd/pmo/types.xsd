@@ -48,7 +48,7 @@ SOFTWARE.
   </xs:simpleType>
   <xs:simpleType name="repo">
     <xs:restriction base="xs:string">
-      <xs:pattern value="[A-Z0-9a-z.\-/]{3,}"/>
+      <xs:pattern value="[A-Za-z\d\-]{1,39}/[A-Za-z\d\-]{1,39}"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>
