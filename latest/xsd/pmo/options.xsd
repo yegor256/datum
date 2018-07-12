@@ -15,8 +15,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.62.1" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.62.1/xsd/basics.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.62.2" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.62.2/xsd/basics.xsd"/>
   <xs:complexType name="notify">
     <xs:sequence>
       <xs:element name="students" type="xs:boolean" minOccurs="0"/>

@@ -15,28 +15,29 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.62.1" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.62.1/xsd/basics.xsd"/>
-  <xs:include schemaLocation="http://datum.zerocracy.com/0.62.1/xsd/pmo/types.xsd"/>
-  <xs:complexType name="release">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.62.2" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="http://datum.zerocracy.com/0.62.2/xsd/basics.xsd"/>
+  <xs:complexType name="notify">
     <xs:sequence>
-      <xs:element name="published" type="xs:dateTime"/>
+      <xs:element name="students" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="rfps" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="publish" type="xs:boolean" minOccurs="0"/>
     </xs:sequence>
-    <xs:attribute name="repo" type="repo" use="required"/>
-    <xs:attribute name="tag" type="xs:string" use="required"/>
   </xs:complexType>
-  <xs:element name="releases">
+  <xs:element name="options">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="release" type="release" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="maxJobsInAgenda" minOccurs="0">
+          <xs:simpleType xml:base="xs:integer">
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="notify" type="notify" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="updated" use="required" type="xs:dateTime"/>
       <xs:attribute name="version" use="required" type="version"/>
     </xs:complexType>
-    <xs:unique name="idUnique">
-      <xs:selector xpath="release"/>
-      <xs:field xpath="@repo"/>
-      <xs:field xpath="@tag"/>
-    </xs:unique>
   </xs:element>
 </xs:schema>
