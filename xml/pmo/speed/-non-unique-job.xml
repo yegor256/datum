@@ -19,9 +19,11 @@ SOFTWARE.
   <order job="gh:test/test#1">
     <project>ABCDEF123</project>
     <minutes>2405</minutes>
+    <added>2016-12-29T09:03:21.684Z</added>
   </order>
   <order job="gh:test/test#1">
     <project>ABCDEF123</project>
     <minutes>1024</minutes>
+    <added>2016-12-29T09:03:21.684Z</added>
   </order>
 </speed>

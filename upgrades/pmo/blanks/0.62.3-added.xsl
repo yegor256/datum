@@ -15,15 +15,20 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<verbosity version="1" updated="2017-08-08T22:22:22.222Z">
-  <order job="gh:test/test#1">
-    <project>ABCDEF123</project>
-    <messages>3</messages>
-    <added>2016-12-29T09:03:21.684Z</added>
-  </order>
-  <order job="gh:test/test#1">
-    <project>ABCDEF123</project>
-    <messages>3</messages>
-    <added>2016-12-29T09:03:21.684Z</added>
-  </order>
-</verbosity>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+  <xsl:output method="xml"/>
+  <xsl:strip-space elements="*"/>
+  <xsl:template match="blank[not(added)]">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+      <xsl:element name="added">
+        <xsl:text>2018-07-28T00:00:00.000Z</xsl:text>
+      </xsl:element>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="@*|node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>

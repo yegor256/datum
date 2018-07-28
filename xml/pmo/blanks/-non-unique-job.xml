@@ -19,9 +19,11 @@ SOFTWARE.
   <blank job="gh:test/test#1">
     <project>ABCDEF123</project>
     <kind>issue</kind>
+    <added>2016-12-29T09:03:21.684Z</added>
   </blank>
   <blank job="gh:test/test#1">
     <project>ABCDEF123</project>
     <kind>issue</kind>
+    <added>2016-12-29T09:03:21.684Z</added>
   </blank>
 </blanks>

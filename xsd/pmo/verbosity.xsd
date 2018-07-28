@@ -28,6 +28,7 @@ SOFTWARE.
     <xs:all>
       <xs:element name="project" type="projectID"/>
       <xs:element name="messages" type="count"/>
+      <xs:element name="added" type="xs:dateTime"/>
     </xs:all>
     <xs:attribute name="job" use="required" type="jobID"/>
   </xs:complexType>
