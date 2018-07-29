@@ -40,6 +40,9 @@ SOFTWARE.
                 <th>
                   <xsl:text>Messages</xsl:text>
                 </th>
+                <th>
+                  <xsl:text>Added</xsl:text>
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -66,6 +69,11 @@ SOFTWARE.
       </td>
       <td>
         <xsl:value-of select="messages"/>
+      </td>
+      <td>
+        <xsl:call-template name="date">
+          <xsl:with-param name="iso" select="added"/>
+        </xsl:call-template>
       </td>
     </tr>
   </xsl:template>
