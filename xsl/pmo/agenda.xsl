@@ -106,6 +106,16 @@ SOFTWARE.
   </xsl:template>
   <xsl:template match="order">
     <tr>
+      <xsl:attribute name="style">
+        <xsl:choose>
+          <xsl:when test="inspector">
+            <xsl:text>opacity:0.5;</xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text></xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
       <td>
         <xsl:call-template name="job">
           <xsl:with-param name="id" select="@job"/>
