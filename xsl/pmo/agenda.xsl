@@ -112,7 +112,7 @@ SOFTWARE.
             <xsl:text>opacity:0.5;</xsl:text>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:text></xsl:text>
+            <xsl:text/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
