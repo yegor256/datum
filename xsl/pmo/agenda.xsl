@@ -111,6 +111,9 @@ SOFTWARE.
           <xsl:when test="inspector">
             <xsl:text>opacity:0.5;</xsl:text>
           </xsl:when>
+          <xsl:otherwise>
+            <xsl:text/>
+          </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
       <td>
