@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pmo/verbosity" version="0.62.3">
+<index path="/latest/upgrades/pmo/verbosity" version="0.62.4">
   <entry dir="false" path="/latest/upgrades/pmo/verbosity/0.62.3-added.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pmo/verbosity/0.62.3-added.xsl" order="0.62.3">0.62.3-added.xsl</entry>
 </index>
