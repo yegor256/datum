@@ -15,27 +15,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<people version="1" updated="2016-12-29T09:03:21.684Z">
-  <person id="yegor256">
-    <reputation>9140</reputation>
-    <jobs>12</jobs>
-    <projects>256</projects>
-    <rate>£30.50</rate>
-    <speed>1024.1</speed>
-    <wallet bank="paypal">yegor256@gmail.com</wallet>
-    <details>YEGOR BUGAYENKO yegor256@gmail.com</details>
-    <links>
-      <link rel="slack" href="7YYZZT99S"/>
-    </links>
-  </person>
-  <person id="davvd">
-    <mentor>yegor256</mentor>
-    <rate>$25</rate>
-    <wallet bank="zld">davvd</wallet>
-    <links>
-      <link rel="slack" href="7YYZZT99F"/>
-    </links>
-  </person>
+<people version="1" updated="2018-09-21T00:00:00.000Z">
   <person id="alex-palevsky">
     <mentor>yegor256</mentor>
     <links>
@@ -54,6 +34,6 @@ SOFTWARE.
     </badges>
     <rate>¥25</rate>
     <vacation>true</vacation>
-    <active>true</active>
+    <active>blah</active>
   </person>
 </people>

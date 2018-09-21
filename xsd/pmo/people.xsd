@@ -108,6 +108,11 @@ SOFTWARE.
       </xs:element>
     </xs:all>
     <xs:attribute name="id" use="required" type="login"/>
+    <xs:element name="active" minOccurs="0">
+      <xs:simpleType>
+        <xs:restriction base="xs:boolean"/>
+      </xs:simpleType>
+    </xs:element>
   </xs:complexType>
   <xs:element name="people">
     <xs:complexType>
