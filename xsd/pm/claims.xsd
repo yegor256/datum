@@ -53,7 +53,14 @@ SOFTWARE.
         </xs:complexType>
       </xs:element>
     </xs:all>
-    <xs:attribute name="id" type="xs:long" use="required"/>
+    <!--
+      @todo #388:30min Remove id attribute.
+       Claim id constraint was changed from long to uuid,
+       but to process existing claims with long id attribute after schema upgrade
+       old value was marked as optional to remove it later in next release.
+    -->
+    <xs:attribute name="id" type="xs:long" use="optional"/>
+    <xs:attribute name="uuid" type="uuid" use="optional"/>
   </xs:complexType>
   <xs:element name="claims">
     <xs:complexType>
@@ -64,9 +71,5 @@ SOFTWARE.
       <xs:attribute name="version" use="required" type="version"/>
       <xs:attribute name="busy" use="optional" type="xs:dateTime"/>
     </xs:complexType>
-    <xs:unique name="uniqueID">
-      <xs:selector xpath="claim"/>
-      <xs:field xpath="@id"/>
-    </xs:unique>
   </xs:element>
 </xs:schema>
