@@ -43,12 +43,12 @@ SOFTWARE.
     <created>2016-12-29T09:03:21.684Z</created>
     <token>user;yegor256</token>
   </claim>
-  <claim id="2722301000">
+  <claim id="e5241c4e-e47d-4b85-b07f-27afbeba090c">
     <type>bootstrap the project</type>
     <created>2016-12-29T09:03:21.684Z</created>
     <token>github;yegor256</token>
   </claim>
-  <claim id="2722301077">
+  <claim id="83199f5d-d808-4136-b918-b871537fb96e">
     <type>Notify</type>
     <created>2016-12-29T09:03:21.684Z</created>
     <token>project;C99998888</token>
