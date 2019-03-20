@@ -28,6 +28,16 @@ SOFTWARE.
       <link rel="jira" href="https://jira.example.com"/>
     </links>
     <title>PROJ</title>
+    <architect>yegor256</architect>
+    <members>
+      <member>first</member>
+      <member>second</member>
+      <member>third</member>
+    </members>
+    <jobs>0</jobs>
+    <orders>0</orders>
+    <cash deficit="false">$0</cash>
+    <languages>none</languages>
   </project>
   <project id="PMO">
     <created>2016-12-29T09:03:21.684Z</created>
