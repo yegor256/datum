@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# Copyright (c) 2016-2018 Zerocracy
+# Copyright (c) 2016-2019 Zerocracy
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to read
@@ -16,7 +16,7 @@
 # SOFTWARE.
 
 source 'https://rubygems.org'
-ruby '2.3.3'
+ruby '2.6.0'
 
 Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8

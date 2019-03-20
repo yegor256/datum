@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# Copyright (c) 2016-2018 Zerocracy
+# Copyright (c) 2016-2019 Zerocracy
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to read
@@ -71,7 +71,7 @@ task :xsd, [:version] do |_, args|
           next unless Gem::Version.new(
             File.basename(x).gsub(/-.+$/, '')
           ) <= current
-          tmp = Dir::Tmpname.make_tmpname(['/tmp/x', '.xml'], nil)
+          tmp = make_tmpname
           File.write(tmp, xml)
           xml = Nokogiri::XML(xsl_transform(tmp, x))
           File.delete(tmp)
@@ -166,7 +166,7 @@ desc 'Run XSL tests'
 task :xsltest do
   puts 'Running XSL tests...'
   Dir['xsl-test/**/*.xsl'].each do |p|
-    tmp = Dir::Tmpname.make_tmpname(['/tmp/empty', '.xml'], nil)
+    tmp = make_tmpname
     File.write(tmp, Nokogiri::XML('<empty/>'))
     puts xsl_transform(tmp, p)
     File.delete(tmp)
@@ -340,4 +340,9 @@ end
 def xsl_transform(xml, xsl)
   saxon = '~/.m2/repository/net/sf/saxon/Saxon-HE/9.8.0-8/Saxon-HE-9.8.0-8.jar'
   `java -jar #{saxon} -s:#{xml} -xsl:#{xsl}`
+end
+
+def make_tmpname
+  t = Time.now.strftime('%Y%m%d')
+  "tmp-#{t}-#{$PID}-#{rand(0x100000000).to_s(36)}-fd"
 end
