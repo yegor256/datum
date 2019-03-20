@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<index path="/0.64/xsd/pmo" version="0.64">
+  <entry dir="false" path="/0.64/xsd/pmo/agenda.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/agenda.xsd">agenda.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/awards.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/awards.xsd">awards.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/blanks.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/blanks.xsd">blanks.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/bots.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/bots.xsd">bots.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/catalog.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/catalog.xsd">catalog.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/debts.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/debts.xsd">debts.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/negligence.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/negligence.xsd">negligence.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/options.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/options.xsd">options.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/people.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/people.xsd">people.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/projects.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/projects.xsd">projects.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/resumes.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/resumes.xsd">resumes.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/rfps.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/rfps.xsd">rfps.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/speed.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/speed.xsd">speed.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/types.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/types.xsd">types.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/vacancies.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/vacancies.xsd">vacancies.xsd</entry>
+  <entry dir="false" path="/0.64/xsd/pmo/verbosity.xsd" uri="http://datum.zerocracy.com/0.64/xsd/pmo/verbosity.xsd">verbosity.xsd</entry>
+</index>
