@@ -27,6 +27,13 @@ SOFTWARE.
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="projectCash">
+    <xs:simpleContent>
+      <xs:extension base="cash">
+        <xs:attribute name="deficit" type="xs:boolean"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:complexType name="project">
     <xs:all>
       <xs:element name="parent" minOccurs="0" type="projectID"/>
@@ -65,6 +72,18 @@ SOFTWARE.
       </xs:element>
       <xs:element name="publish" type="xs:boolean"/>
       <xs:element name="title" type="projectTitle"/>
+      <xs:element name="architect" type="login"/>
+      <xs:element name="members">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="member" type="login" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="jobs" type="xs:integer"/>
+      <xs:element name="orders" type="xs:integer"/>
+      <xs:element name="cash" type="projectCash"/>
+      <xs:element name="languages" type="xs:string"/>
     </xs:all>
     <xs:attribute name="id" type="projectID" use="required"/>
   </xs:complexType>
