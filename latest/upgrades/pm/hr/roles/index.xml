@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pm/hr/roles" version="0.64">
+<index path="/latest/upgrades/pm/hr/roles" version="0.64.1">
   <entry dir="false" path="/latest/upgrades/pm/hr/roles/0.24-version-and-date.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pm/hr/roles/0.24-version-and-date.xsl" order="0.24">0.24-version-and-date.xsl</entry>
 </index>

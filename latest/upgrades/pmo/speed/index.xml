@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pmo/speed" version="0.64">
+<index path="/latest/upgrades/pmo/speed" version="0.64.1">
   <entry dir="false" path="/latest/upgrades/pmo/speed/0.62.3-added.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pmo/speed/0.62.3-added.xsl" order="0.62.3">0.62.3-added.xsl</entry>
 </index>
