@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<index path="/latest/upgrades/pm/staff/bans" version="0.64.1">
+<index path="/latest/upgrades/pm/staff/bans" version="0.64.2">
   <entry dir="false" path="/latest/upgrades/pm/staff/bans/0.55-remove-duplicates.xsl" uri="http://datum.zerocracy.com/latest/upgrades/pm/staff/bans/0.55-remove-duplicates.xsl" order="0.55">0.55-remove-duplicates.xsl</entry>
 </index>
