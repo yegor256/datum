@@ -54,6 +54,7 @@ SOFTWARE.
               <xsl:value-of select="daysToCloseTask"/>
             </td>
           </tr>
+        </xsl:if>
       </tbody>
     </table>
   </xsl:template>
