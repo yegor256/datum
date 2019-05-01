@@ -32,4 +32,4 @@ SOFTWARE.
       <xs:attribute name="version" use="required" type="version"/>
     </xs:complexType>
   </xs:element>
-</schema>
+</xs:schema>
