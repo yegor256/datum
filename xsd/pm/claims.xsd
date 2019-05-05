@@ -38,6 +38,7 @@ SOFTWARE.
       <xs:element name="until" minOccurs="0" type="xs:dateTime"/>
       <xs:element name="author" minOccurs="0" type="login"/>
       <xs:element name="unique" minOccurs="0" type="xs:string"/>
+      <xs:element name="priority" minOccurs="0" type="xs:string"/>
       <xs:element name="token" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
