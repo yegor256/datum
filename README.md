@@ -10,6 +10,8 @@
 [![Build Status](https://travis-ci.org/zerocracy/datum.svg?branch=master)](https://travis-ci.org/zerocracy/datum)
 [![Hits-of-Code](https://hitsofcode.com/github/zerocracy/datum)](https://hitsofcode.com/view/github/zerocracy/datum)
 
+[![Availability at SixNines](http://www.sixnines.io/b/2761)](http://www.sixnines.io/h/2761)
+
 Information about current project status is kept in XML and text
 files. This repository contains full list of XSD Schemas for them
 and rules of usage.
