@@ -5,9 +5,10 @@
 [![DevOps By Rultor.com](http://www.rultor.com/b/zerocracy/datum)](http://www.rultor.com/p/zerocracy/datum)
 [![We recommend RubyMine](http://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
 
-[![Stability of Webhook](http://www.rehttp.net/b?u=http%3A%2F%2Fwww.0crat.com%2Fghook)](http://www.rehttp.net/i?u=http%3A%2F%2Fwww.0crat.com%2Fghook)
+[![Stability of Webhook](https://www.rehttp.net/b?u=http%3A%2F%2Fwww.0crat.com%2Fghook)](https://www.rehttp.net/i?u=http%3A%2F%2Fwww.0crat.com%2Fghook)
 [![Availability at SixNines](http://www.sixnines.io/b/2b3a)](http://www.sixnines.io/h/2b3a)
 [![Build Status](https://travis-ci.org/zerocracy/datum.svg?branch=master)](https://travis-ci.org/zerocracy/datum)
+[![Hits-of-Code](https://hitsofcode.com/github/zerocracy/datum)](https://hitsofcode.com/view/github/zerocracy/datum)
 
 Information about current project status is kept in XML and text
 files. This repository contains full list of XSD Schemas for them
@@ -87,9 +88,10 @@ Third, don't forget to add or modify XSL views in
 [`upgrades`](https://github.com/zerocracy/datum/tree/master/xsl) directory.
 
 After all changes are made, don't forget to run:
-```sh
-bundle update
-rake
+
+```
+$ bundle update
+$ bundle exec rake
 ```
 
 To make `rake` working you will need to install:
@@ -97,26 +99,10 @@ To make `rake` working you will need to install:
  - [rake](https://github.com/ruby/rake) (`gem install rake`)
  - [bundler](https://bundler.io/)  (`gem install bundler`)
  - [maven](https://maven.apache.org/)
- 
+
 To install all dependencies for `rake` run in project directory:
+
 ```sh
-bundle install
-mvn dependency:get -DgroupId=net.sf.saxon -DartifactId=Saxon-HE -Dversion=9.8.0-8
+$ bundle install
+$ mvn dependency:get -DgroupId=net.sf.saxon -DartifactId=Saxon-HE -Dversion=9.8.0-8
 ```
-
-## License
-
-Copyright (c) 2016-2019 Zerocracy
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to read
-the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
-merge, publish, distribute, sublicense, and/or sell copies of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
