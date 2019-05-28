@@ -48,6 +48,7 @@ SOFTWARE.
       <code>cus_CNAv9ocFDTh4Ww</code>
     </recharge>
     <alive>false</alive>
+    <sandbox>true</sandbox>
     <prefix>PMO/</prefix>
     <publish>false</publish>
   </project>
