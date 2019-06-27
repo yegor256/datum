@@ -20,10 +20,12 @@ SOFTWARE.
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pmo/types.xsd"/>
   <xs:include schemaLocation="http://datum.zerocracy.com/SNAPSHOT/xsd/pm/scope/types.xsd"/>
   <xs:complexType name="application">
+    <xs:all>
+      <xs:element name="created" type="xs:dateTime"/>
+      <xs:element name="role" type="role"/>
+      <xs:element name="rate" type="cash"/>
+    </xs:all>
     <xs:attribute name="id" type="login" use="required"/>
-    <xs:element name="created" type="xs:dateTime"/>
-    <xs:element name="role" type="role"/>
-    <xs:element name="rate" type="cash"/>
   </xs:complexType>
   <xs:element name="applications">
     <xs:complexType>
