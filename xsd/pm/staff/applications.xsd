@@ -26,7 +26,7 @@ SOFTWARE.
       <xs:element name="role" type="role"/>
       <xs:element name="rate" type="cash"/>
     </xs:all>
-    <xs:attribute name="id" type="login" use="required"/>
+    <xs:attribute name="login" type="login" use="required"/>
   </xs:complexType>
   <xs:element name="applications">
     <xs:complexType>
