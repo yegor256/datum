@@ -75,8 +75,8 @@ SOFTWARE.
           <xsl:value-of select="role"/>
         </code>
       </td>
-        <xsl:value-of select="rate"/>
       <td>
+        <xsl:value-of select="rate"/>
       </td>
     </tr>
   </xsl:template>
