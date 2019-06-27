@@ -15,6 +15,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
+<!--
+  Tests for par template (templates.xsl//xsl:template[@name='par']). Tests
+  if par template is generating text with references to policy paragraphs.
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="2.0">
   <xsl:include href="../assertions.xsl"/>
   <xsl:include href="../../xsl/templates.xsl"/>
