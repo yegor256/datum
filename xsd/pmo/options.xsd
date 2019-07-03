@@ -34,6 +34,13 @@ SOFTWARE.
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
+        <xs:element name="maxRevJobsInAgenda" minOccurs="0">
+          <xs:simpleType xml:base="xs:integer">
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
         <xs:element name="notify" type="notify" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="updated" use="required" type="xs:dateTime"/>
