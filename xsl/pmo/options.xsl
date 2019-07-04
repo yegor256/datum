@@ -55,6 +55,16 @@ SOFTWARE.
             </td>
           </tr>
         </xsl:if>
+        <xsl:if test="maxRevJobsInAgenda">
+          <tr>
+            <td>
+              <xsl:text>Max REV jobs in agend</xsl:text>
+            </td>
+            <td>
+              <xsl:value-of select="maxRevJobsInAgenda"/>
+            </td>
+          </tr>
+        </xsl:if>
         <xsl:if test="notify">
           <tr>
             <td>
