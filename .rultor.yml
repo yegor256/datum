@@ -10,8 +10,8 @@ release:
     [[ "${tag}" =~ ^[0-9]+(\.[0-9]+)*$ ]] || exit -1
     pdd -f /dev/null
     bundle install
-    rake default[${tag}] upgrades[${tag}]
-    rake site[${tag}] validate_site[${tag}]
+    bundle exec rake default[${tag}] upgrades[${tag}]
+    bundle exec rake site[${tag}] validate_site[${tag}]
     cp -r target/site /tmp
     git checkout gh-pages
     for d in $(ls /tmp/site); do rm -rf $d; cp -r /tmp/site/$d .; git add $d; done
@@ -23,7 +23,7 @@ merge:
   script: |-
     pdd -f /dev/null
     bundle install
-    rake
+    bundle exec rake
 deploy:
   script: |-
     echo 'There is no such thing as deploy'
