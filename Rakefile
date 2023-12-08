@@ -1,6 +1,6 @@
-# encoding: utf-8
+# frozen_string_literal: true
 
-# Copyright (c) 2016-2020 Zerocracy
+# Copyright (c) 2016-2023 Zerocracy
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to read
@@ -22,7 +22,6 @@ require 'net/http'
 require 'date'
 require 'tmpdir'
 require 'fileutils'
-require 'rake/clean'
 require 'redcarpet'
 require 'mustache'
 require 'time'
@@ -31,10 +30,15 @@ require 'rainbow'
 CLEAN.include 'target'
 
 task :default, [:version] => %i[
-  clean xsd
+  clean
+  xsd
   xslversions
-  xsl xsltest auto xcop underscores
-  rubocop copyright
+  xsl
+  xsltest
+  xcop
+  underscores
+  rubocop
+  copyright
 ]
 
 desc 'Validate all XML/XSD files'
@@ -44,18 +48,18 @@ task :xsd, [:version] do |_, args|
   puts 'Checking XML files for XSD validity...'
   Dir.mktmpdir do |temp|
     FileUtils.cp_r('xsd/', temp)
-    Dir[temp + '/**/*.xsd'].each do |f|
+    Dir["#{temp}/**/*.xsd"].each do |f|
       File.write(
         f,
         File.read(f).gsub(
           'http://datum.zerocracy.com/SNAPSHOT/xsd',
-          temp + '/xsd'
+          "#{temp}/xsd"
         )
       )
     end
     xmls = Dir['xml/**/*.xml']
     xmls.each do |p|
-      f = p.sub(%r{xml/}, temp + '/xsd/').sub(%r{/[^/]+\.xml$}, '.xsd')
+      f = p.sub(%r{xml/}, "#{temp}/xsd/").sub(%r{/[^/]+\.xml$}, '.xsd')
       begin
         xsd = Nokogiri::XML::Schema(File.open(f))
       rescue Nokogiri::XML::SyntaxError => e
@@ -71,6 +75,7 @@ task :xsd, [:version] do |_, args|
           next unless Gem::Version.new(
             File.basename(x).gsub(/-.+$/, '')
           ) <= current
+
           tmp = make_tmpname
           File.write(tmp, xml)
           xml = Nokogiri::XML(xsl_transform(tmp, x))
@@ -95,6 +100,7 @@ task :xsd, [:version] do |_, args|
       print Rainbow('.').green if ok
     end
     raise "#{total} errors" unless total.zero?
+
     puts "\nAll #{xmls.length} XML/XSD files are clean\n\n"
   end
 end
@@ -140,12 +146,14 @@ task :xsl do
   xsls = Dir['xsl/**/*.xsl']
   xsls.each do |p|
     next if File.basename(p) == 'templates.xsl'
+
     f = p.sub(%r{xsl/}, 'xml/').sub(%r{/([^/]+)\.xsl$}, '/\1/simple.xml')
     label = p.sub(%r{.+/([^/]+)\.xsl$}, '\1.html')
     xml = Nokogiri::XML(File.open(f))
     root = xml.xpath('/*').first
     raise "version and updated attributes are required <#{f}>" if
       root.attr('version').nil? || root.attr('updated').nil?
+
     html = Nokogiri::XML(xsl_transform(f, p))
     html.remove_namespaces!
     if html.xpath('/html/body/section').empty?
@@ -153,12 +161,13 @@ task :xsl do
       raise "HTML <section> absent in HTML from #{f}"
     end
     File.write(File.join(dir, label), html)
-    open(File.join(dir, 'index.html'), 'a') do |i|
+    File.open(File.join(dir, 'index.html'), 'a') do |i|
       i.puts "<p><a href='#{label}'>#{p}</a></p>"
     end
     print Rainbow('.').green
   end
   raise "#{total} errors" unless total.zero?
+
   puts "\nAll #{xsls.length} XML/XSL files are clean\n\n"
 end
 
@@ -208,7 +217,7 @@ task :auto do
           Dir.chdir(File.join(temp, "auto-test/#{dir}")) do
             xml = Nokogiri::XML(File.read("#{a['item']}.xml"))
             if xml.xpath(a.text).empty?
-              puts xml.to_s
+              puts xml
               raise "Can't find #{a.text} in #{a['item']}.xml in #{dir}"
             end
           end
@@ -216,9 +225,8 @@ task :auto do
       Dir["rules/#{area}/**/*.xsl"].each do |xsl|
         Dir.chdir(File.join(temp, "auto-test/#{dir}")) do
           xslt = Nokogiri::XSLT(File.read(File.join(home, xsl)))
-          xslt.transform(Nokogiri::XML('<e/>')).xpath('//error').each do |e|
-            raise e
-          end
+          e = xslt.transform(Nokogiri::XML('<e/>')).xpath('//error').first
+          raise e unless e.nil?
         end
       end
     end
@@ -231,6 +239,7 @@ desc 'Build a site for GitHub Pages'
 task :site, [:version] do |_, args|
   args.with_defaults(version: '999')
   raise 'You have to call "rake site[123]"' unless args[:version]
+
   puts "Building a site for v.#{args[:version]}..."
   FileUtils.mkdir_p("target/site/#{args[:version]}")
   FileUtils.cp_r('xsd', "target/site/#{args[:version]}")
@@ -245,13 +254,13 @@ task :site, [:version] do |_, args|
     puts "#{p} copied to target/site"
   end
   Dir['target/site/**/*'].select { |f| File.file?(f) }.each do |f|
-    File.write(f, File.read(f).gsub(/SNAPSHOT/, args[:version]))
+    File.write(f, File.read(f).gsub('SNAPSHOT', args[:version]))
   end
   puts "Version #{args[:version]} injected into all site files"
   Dir['target/site/**/*'].reject { |d| File.file?(d) }.each do |d|
     xml = Nokogiri::XML::Builder.new do |x|
       path = d.gsub('target/site', '')
-      x.index(path: path, version: args[:version]) do
+      x.index(path:, version: args[:version]) do
         Dir.entries(d).reject { |f| f.start_with?('.') }.sort.each do |f|
           x.entry do
             x.parent.set_attribute('dir', !File.file?(File.join(d, f)))
@@ -284,6 +293,7 @@ desc 'Validate that the site is correct'
 task :validate_site, [:version] do |_, args|
   args.with_defaults(version: '999')
   raise 'You have to call "rake validate_site[123]"' unless args[:version]
+
   files = [
     "#{args[:version]}/index.xml",
     "#{args[:version]}/index.html",
@@ -338,7 +348,8 @@ task :copyright do
 end
 
 def xsl_transform(xml, xsl)
-  saxon = '~/.m2/repository/net/sf/saxon/Saxon-HE/9.8.0-8/Saxon-HE-9.8.0-8.jar'
+  ver = '10.0' # 9.8.0-8
+  saxon = "~/.m2/repository/net/sf/saxon/Saxon-HE/#{ver}/Saxon-HE-#{ver}.jar"
   `java -jar #{saxon} -s:#{xml} -xsl:#{xsl}`
 end
 

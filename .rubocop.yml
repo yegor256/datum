@@ -1,5 +1,7 @@
 AllCops:
   DisplayCopNames: true
+  SuggestExtensions: false
+  NewCops: enable
 
 Metrics/BlockLength:
   Max: 100

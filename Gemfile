@@ -1,6 +1,6 @@
-# encoding: utf-8
+# frozen_string_literal: true
 
-# Copyright (c) 2016-2020 Zerocracy
+# Copyright (c) 2016-2023 Zerocracy
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to read
@@ -16,16 +16,16 @@
 # SOFTWARE.
 
 source 'https://rubygems.org'
-ruby '2.6.0'
+ruby '~>3.2'
 
 Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8
 
-gem 'mustache', '1.0.5'
-gem 'nokogiri', '1.7.2'
-gem 'rainbow', '~>2.2'
-gem 'rake', '12.0.0'
-gem 'redcarpet', '3.4.0'
-gem 'rubocop', '0.48.1', require: false
-gem 'rubocop-rspec', '1.15.1', require: false
-gem 'xcop', '~>0.5'
+gem 'mustache', '1.1.1'
+gem 'nokogiri', '1.15.5'
+gem 'rainbow', '3.1.1'
+gem 'rake', '13.1.0'
+gem 'redcarpet', '3.6.0'
+gem 'rubocop', '1.58.0', require: false
+gem 'rubocop-rspec', '2.25.0', require: false
+gem 'xcop', '0.7.1'

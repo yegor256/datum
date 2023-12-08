@@ -1,0 +1,21 @@
+---
+name: codecov
+on:
+  push:
+    branches:
+      - master
+jobs:
+  codecov:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2
+      - run: bundle update
+      - run: bundle exec rake
+      - uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: coverage/.resultset.json
+          fail_ci_if_error: true
