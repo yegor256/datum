@@ -20,5 +20,10 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 17
+      - run: mvn dependency:get -DgroupId=net.sf.saxon -DartifactId=Saxon-HE -Dversion=10.0
       - run: bundle update
       - run: bundle exec rake
