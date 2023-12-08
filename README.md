@@ -1,15 +1,10 @@
-<img src="https://www.0crat.com/svg/logo.svg" width="64px" height="64px"/>
+<img src="https://www.zerocracy.com/logo.svg" width="64px" height="64px"/>
 
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
-[![Managed by Zerocracy](https://www.0crat.com/badge/C3NDPUA8L.svg)](https://www.0crat.com/p/C3NDPUA8L)
 [![DevOps By Rultor.com](http://www.rultor.com/b/zerocracy/datum)](http://www.rultor.com/p/zerocracy/datum)
 [![We recommend RubyMine](https://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
 
-[![Stability of Webhook](https://www.rehttp.net/b?u=http%3A%2F%2Fwww.0crat.com%2Fghook)](https://www.rehttp.net/i?u=http%3A%2F%2Fwww.0crat.com%2Fghook)
-[![Build Status](https://travis-ci.org/zerocracy/datum.svg?branch=master)](https://travis-ci.org/zerocracy/datum)
 [![Hits-of-Code](https://hitsofcode.com/github/zerocracy/datum)](https://hitsofcode.com/view/github/zerocracy/datum)
-
-[![Availability at SixNines](https://www.sixnines.io/b/2761)](https://www.sixnines.io/h/2761)
 
 Information about current project status is kept in XML and text
 files. This repository contains full list of XSD Schemas for them
