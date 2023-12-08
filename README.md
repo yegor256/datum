@@ -4,6 +4,7 @@
 [![DevOps By Rultor.com](http://www.rultor.com/b/zerocracy/datum)](http://www.rultor.com/p/zerocracy/datum)
 [![We recommend RubyMine](https://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
 
+[![rake](https://github.com/zerocracy/datum/actions/workflows/rake.yml/badge.svg)](https://github.com/zerocracy/datum/actions/workflows/rake.yml)
 [![Hits-of-Code](https://hitsofcode.com/github/zerocracy/datum)](https://hitsofcode.com/view/github/zerocracy/datum)
 
 Information about current project status is kept in XML and text
