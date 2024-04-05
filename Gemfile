@@ -24,7 +24,7 @@ Encoding.default_internal = Encoding::UTF_8
 gem 'mustache', '1.1.1'
 gem 'nokogiri', '1.16.0'
 gem 'rainbow', '3.1.1'
-gem 'rake', '13.1.0'
+gem 'rake', '13.2.1'
 gem 'redcarpet', '3.6.0'
 gem 'rubocop', '1.59.0', require: false
 gem 'rubocop-rspec', '2.25.0', require: false
