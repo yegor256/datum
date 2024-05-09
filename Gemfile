@@ -26,6 +26,6 @@ gem 'nokogiri', '1.16.0'
 gem 'rainbow', '3.1.1'
 gem 'rake', '13.1.0'
 gem 'redcarpet', '3.6.0'
-gem 'rubocop', '1.59.0', require: false
+gem 'rubocop', '1.63.5', require: false
 gem 'rubocop-rspec', '2.25.0', require: false
 gem 'xcop', '0.7.1'
